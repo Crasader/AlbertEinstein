@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "TraceRouteScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*):TraceRouteScene.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "insertedFloorKey">
+            </PersistentString>
+            <PersistentString
+               value = "plistMenuCurrent[data-&gt;nRow].text">
+            </PersistentString>
+            <PersistentString
+               value = "buildingHeaderFloor">
+            </PersistentString>
+            <PersistentString
+               value = "stackCategory">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MapViewScene::draw():MapaViewScene.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "((Pathfinder*)this-&gt;getChildByTag(200) )-&gt;descriptionStep">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IFixedMenu::BuildWayPointState(int, bool, int):Enumerations.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "i">
+            </PersistentString>
+            <PersistentString
+               value = "lstvector[i].name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PListFunctions::readKeyWordSection():PListFunctions.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "keyWord">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IFixedMenu::getCategory(int):Enumerations.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "_waypointID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PListFunctions::readBuildingSection():PListFunctions.mm">
+      </ContextState>
+      <ContextState
+         contextName = "WayPointViewScene::LoadWayPoint():WayPointViewScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "TraceRouteScene::UpdateHeader():TraceRouteScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "LayerWebView::testeReadPlist():LayerWebView.mm">
+      </ContextState>
+      <ContextState
+         contextName = "PListFunctions::readServicesSection():PListFunctions.mm">
+      </ContextState>
+      <ContextState
+         contextName = "PListFunctions::readFloorSection():PListFunctions.mm">
+      </ContextState>
+      <ContextState
+         contextName = "PListFunctions::readWayPointNameFormatado():PListFunctions.mm">
+      </ContextState>
+      <ContextState
+         contextName = "HowToGoScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*):HowToGoScene.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastIdInserted">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IFixedMenu::BuildCategoryWayPointState(int):Enumerations.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "lstSection[i].key">
+            </PersistentString>
+            <PersistentString
+               value = "lstSection[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IFixedMenu::LoadWayPointName(int):Enumerations.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "lstVector[i].name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PListFunctions::readWayPointNameFormatado(int):PListFunctions.mm">
+      </ContextState>
+      <ContextState
+         contextName = "TraceRouteScene::OnBack():TraceRouteScene.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "insertedFloorKey">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

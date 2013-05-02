@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="37" height="21" tilewidth="10" tileheight="10">
+ <properties>
+  <property name="mapName" value="A1-01Pv.png"/>
+  <property name="posX" value="75"/>
+  <property name="posY" value="46"/>
+ </properties>
+ <tileset firstgid="1" name="tiles" tilewidth="10" tileheight="10">
+  <image source="tiles.png" width="128" height="128"/>
+  <tile id="52">
+   <properties>
+    <property name="wall" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="145" name="A1-01Pv" tilewidth="10" tileheight="10">
+  <image source="A1-01Pv.png" width="1748" height="800"/>
+ </tileset>
+ <layer name="floor" width="37" height="21" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJwN0XODFwYAANDfwtpqS1tYTdm2ry5etu2W17IvXHXZtm1ry7Zt29z7432Ct+r7QGA1a1jLOtazgY1sYjNb2Mo2trODnfzLf+xiN3vYyz72c4CDHOIwRzjKMY5zgpOc4jRnqBc1EKhPAxrSiMY0oSnNaE4L/qIlrWhNG9rSjvb8TQf+oSOd6EwXutKN7vSgJ73oTR/6Eko/okcLBGIQk1jE5id+Jg5xiUd8fiEBCfmV3/idP/iTRCQmCUlJRnJSkJJUpCYNaUlHejKQkUxkZgtb2cZ2drCTf/mPXexmD3vZx34OcJBDHOYIRznGcU5wklOc5gxnOcd5LnCRS1zmCle5RosfnNCSVrSmDW1pR3v+pgP/0JFOdKYLXelGd3rQk170pg99CaUf/RnAQMIYxGCGEM5QhhH/RyckICG/8hu/8wd/kojEJCEpyUhOClKSitSkIS3pSE8GMpKJzGQhK9nITg5ykovc5CEve9jLPvZzgIMc4jBHOMoxjnOCk5ziNGc4yznOc4GLXOIyV7jKNa5zg5vc4jZ3uMs97vOADtGd0JFOdKYLXelGd3rQk170pg99CaUf/RnAQMIYxGCGEM5QhjGcEYxkFKMZw1jGMZ4JJI7hhKQkIzkpSEkqUpOGtKQjPRnISCYyk4WsZCM7OchJLnKTh7zkIz8FCKIghQimMEUoyjGOc4KTnOI0ZzjLOc5zgYtc4jJXuMo1rnODm9ziNne4yz3u84CHPOIxT3jKM57zgpe8omdMJ/SmD30JpR/9GcBAwhjEYIYQzlCGMZwRjGQUoxnDWMYxnglMZBKTmcJUpjGdGcxkFmljOSE9GchIJjKThaxkIzs5yEkucpOHvOQjPwUIoiCFCKYwRShKMYpTghBKUorSlKEs5bjARS5xmStc5RrXucFNbnGbO9zlHvd5wEMe8ZgnPOUZz3nBS17xmje85R3v+cBHPvGZL4TFdsJghhDOUIYxnBGMZBSjGcNYxjGeCUxkEpOZwlSmMZ0ZzGQWs5nDXOYxnwUsZBGLWUL2n5yQk1zkJg95yUd+ChBEQQoRTGGKUJRiFKcEIZSkFKUpQ1nKUZ4KVKQSlalCVapRnRrc4jZ3uMs97vOAhzziMU94yjOe84KXvOI1b3jLO97zgY984jNf+Erg50DgGyIQkUhE5lui8B2jGM0YxjKO8UxgIpOYzBSmMo3pzGAms5jNHOYyj/ksYCGLWMwSlrKM5axgJatYzRrWso6gOE4oRDCFKUJRilGcEoRQklKUpgxlKUd5KlCRSlSmClWpRnVqUJNa1KYOdalHfRrQkEY84SnPeM4LXvKK17zhLe94zwc+8onPfOErgbhOiEBEIhGZb4nCd3xPVKLxAz8SnRjEJBaxmcJUpjGdGcxkFrOZw1zmMZ8FLGQRi1nCUpaxnBWsZBWrWcNa1rGeDWxkE5vZwla2sZ0dhMRzQilKU4aylKM8FahIJSpThapUozo1qEktalOHutSjPg1oSCMa04SmNKM5LfiLlrSiNf8DY6/JzA==
+  </data>
+ </layer>
+ <layer name="wall" width="37" height="21">
+  <data encoding="base64" compression="zlib">
+   eJzNllEOwCAIQ7mU97/avvYnpUVAScyMaenLtkSWma0H13ShzNeYbr0rxPM/d/vOUpgMnE3xRPkdbKdMiqaKR807Zdt5vTM1J8vWyZT1TjChvmy2p81+u8iLdKxPLS+TYWX6snqGrZqpgo3VZvt03tHMbIC80/cMOxdUzzbsDBVlqv+zyhMx3Vwf4+Qqpw==
+  </data>
+ </layer>
+ <objectgroup name="waypoint" width="37" height="21">
+  <object name="waypoint" type="waypoint" x="240" y="140" width="20" height="20">
+   <properties>
+    <property name="id" value="1000"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="110" y="140" width="20" height="20">
+   <properties>
+    <property name="id" value="6"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="30" y="160" width="20" height="20">
+   <properties>
+    <property name="id" value="2005"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="110" y="140" width="20" height="20">
+   <properties>
+    <property name="id" value="8"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="320" y="10" width="20" height="20">
+   <properties>
+    <property name="id" value="97"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="icon" width="37" height="21">
+  <object name="recepcao" type="icon" x="100" y="130" width="40" height="40">
+   <properties>
+    <property name="id" value="18"/>
+   </properties>
+  </object>
+  <object name="elevador" type="icon" x="230" y="150" width="40" height="40">
+   <properties>
+    <property name="id" value="2"/>
+   </properties>
+  </object>
+  <object name="banheiro" type="icon" x="20" y="150" width="40" height="40">
+   <properties>
+    <property name="id" value="14"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

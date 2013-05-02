@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="11" height="25" tilewidth="10" tileheight="10">
+ <properties>
+  <property name="mapName" value="B-05Pv.png"/>
+  <property name="posX" value="24"/>
+  <property name="posY" value="33"/>
+ </properties>
+ <tileset firstgid="1" name="tiles" tilewidth="10" tileheight="10">
+  <image source="tiles.png" width="128" height="128"/>
+  <tile id="52">
+   <properties>
+    <property name="wall" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="145" name="B-05Pv" tilewidth="10" tileheight="10">
+  <image source="B-05Pv.png" width="1098" height="1181"/>
+ </tileset>
+ <layer name="floor" width="11" height="25" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJwNw4VVEFAAAMBvAIIiCnbXM1EJAcVawCJEBWsBO2iwF7BBpMRewCKkzBksOswFvHvv0uaEkG6GG91kppvd4la3ud0GG31gkw995GOf+NRnPjdubghTnGq8CU5zujOc6SxnW2a5FVZ6wYte8rJXvOo1Bx1y2BFH/ekvf/vHv/4zb14I+9zvAfMt8KCHPOwRj9puh5122e073/vBj37ys0nzQ0g2xVQ3mGa6GW50k5nWeN9a66y3wUYf2ORDHxmzIISJTjLWycY5xanGm+A0Cy2y2BJLLbPcCiu94EV77LXPfgccdMhhRxz1p1kLQ8g2x1z3muc+93vAfAtstsVW23xrux122mW371yzKIRE17rO9SaZbIqpbjDNO961ymrvWeN9a62z3gYjFocQaZQTjDbGiU4y1snGedoznvWc5y20yGJLLLXML371m9/9YY+99tnvgIPuWBLCTne52z1mmW2Oue41zxe+9JWvfWOzLbba5lvbXb40hBWudJWrXWOia13nepO87g1vesvb3vGuVVZ7zxrDshDGONZxjjfCSKOcYLQxHvO4JzzpKU97xrOe87yF/gcn3J6P
+  </data>
+ </layer>
+ <layer name="wall" width="11" height="25">
+  <data encoding="base64" compression="zlib">
+   eJwzZWBgMCUBEwMoVYvLTnxqSTGXHDeYEqEWmU8vtYTCipDbcdk3qpZ8tbjU44rjwa6WWAwA4FIYpA==
+  </data>
+ </layer>
+ <objectgroup name="waypoint" width="11" height="25">
+  <object name="waypoint" type="waypoint" x="20" y="210" width="20" height="20">
+   <properties>
+    <property name="id" value="1003"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="80" y="40" width="20" height="20">
+   <properties>
+    <property name="id" value="2031"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="10" y="140" width="20" height="20">
+   <properties>
+    <property name="id" value="52"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="icon" width="11" height="25">
+  <object name="elevador" type="icon" x="10" y="200" width="40" height="40">
+   <properties>
+    <property name="id" value="2"/>
+   </properties>
+  </object>
+  <object name="banheiro" type="icon" x="70" y="40" width="40" height="40">
+   <properties>
+    <property name="id" value="14"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

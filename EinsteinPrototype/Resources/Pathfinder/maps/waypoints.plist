@@ -1,0 +1,3753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!--
+     **********************************************************************************************************************************************************
+     **********************************************************************************************************************************************************
+     **********************************************************************************************************************************************************
+     -->
+    <key>WaypointNomeFormatado</key>
+    <dict>
+
+        <key>20</key>
+        <dict>
+        <key>name</key>
+        <array>
+            <string>Centro Cirúrgico</string>
+            <string>Oftalmológico</string>
+        </array>
+        </dict>
+        
+        <key>90</key>
+        <dict>
+            <key>name</key>
+            <array>
+                <string>Laboratorio do</string>
+                <string>Movimento</string>
+            </array>
+        </dict>
+
+        <key>49</key>
+        <dict>
+            <key>name</key>
+            <array>
+                <string>Recepção do Centro  </string>
+                <string>Integrado de Oncologia</string>
+                 <string>e Hemalogia</string>
+            </array>
+        </dict>
+
+        <key>80</key>
+        <dict>
+            <key>name</key>
+            <array>
+                <string>Centro Cirúrgico</string>
+                <string>Avançado</string>
+            </array>
+        </dict>
+
+   		<key>108</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Restaurante Kasher</string>
+                <string>Viena</string>
+            </array>
+		</dict>
+        
+   		<key>92</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Clínica de Especialidades</string>
+                <string>Pediátricas</string>
+            </array>
+		</dict>
+        
+   		<key>81</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Centro Cirúrgico</string>
+                <string>Obstétrico</string>
+            </array>
+		</dict>
+        
+   		<key>45</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Centro de Simulação</string>
+                <string>Realística</string>
+            </array>
+		</dict>
+
+   		<key>55</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Leitos de pronto</string>
+                <string>Atendimento (pré-internação fast)</string>
+            </array>
+		</dict>
+
+        <key>29</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Unidade de Semi </string>
+                <string>Intensiva</string>
+            </array>
+		</dict>
+        
+        <key>46</key>
+        <dict>
+			<key>name</key>
+            <array>
+                <string>Oncologia Ambulatorial </string>
+                <string>Pediátrica</string>
+            </array>
+		</dict>
+ 
+        <key>43</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Convênios/Amil/Omint</string>
+                <string>Sulamerica/Bradesco/QualiCorp</string>
+            </array>
+		</dict>
+    </dict >
+    <!--
+     **********************************************************************************************************************************************************
+     ********************************************************************************************************************************************************** 
+     **********************************************************************************************************************************************************
+     -->
+    <key>keywords</key>
+	<dict>
+        
+        <key>52</key>
+        <dict>
+			<key>name</key>
+			<array>
+                <string>Apartamentos</string>
+                <string>transplante quartos</string>
+            </array>
+        </dict>
+ 
+        <key>96</key>
+        <dict>
+			<key>name</key>
+			<array>
+                <string>Velorio</string>
+            </array>
+        </dict>
+ 
+        <key>15</key>
+		<dict>
+			<key>name</key>
+			<array>
+			<string>Agencia do Banco Safra</string>
+        </array>
+        </dict>
+        
+ 		<key>13</key>
+        <dict>
+			<key>name</key>
+			<array>
+                <string>Drogaria Soares</string>
+                <string>farmacia</string>
+            </array>
+        </dict>
+
+        <key>11</key>
+        <dict>
+			<key>name</key>
+			<array>
+                <string>Entrega de veículos</string>
+                <string>estacionamento</string>
+                <string>entrada</string>
+                <string>taxi</string>
+            </array>
+		</dict>
+
+        <key>89</key>
+		<dict>
+			<key>name</key>
+			<array>
+                <string>estacionamento</string>
+                <string>saida</string>
+ 
+            </array>
+		</dict>
+
+        <key>19</key>
+		<dict>
+			<key>name</key>
+			<array>
+                <string>estacionamento</string>
+                <string>saida</string>
+                
+            </array>
+		</dict>
+        
+        <key>20</key>
+		<dict>
+			<key>name</key>
+			<array>
+                <string>Centro Cirurgico Oftalmologico</string>
+            </array>
+		</dict>
+
+        <key>110</key>
+        <dict>
+			<key>name</key>
+			<array>
+               <string>PAB Bradesco</string>
+            </array>
+		</dict>
+
+        <key>86</key>
+        <dict>
+			<key>name</key>
+			<array>
+                <string>Centro de Reabilitação</string>
+                <string>Reab</string>
+                <string>Fisioterapia</string>
+                <string>Reabi</string>
+                <string>Terapia Ocupacional</string>
+                <string>Audiometria</string>
+            </array>
+		</dict>
+
+        <key>1</key>
+        <dict>
+            <key>name</key>
+            <array>
+               <string>Consultorios (508 a 522)</string>
+            </array>
+        </dict>
+
+        <key>3</key>
+        <dict>
+            <key>name</key>
+            <array>
+                <string>Consultorios (401 a 423)</string>
+                <string>Centro de arritmia</string>
+            </array>
+        </dict>
+
+		<key>4</key>
+		    <dict>
+                <key>name</key>
+	            <array>
+                    <string>Consultorios (301 a 323)</string>
+                    <string>Agendamento de exames</string>
+                </array>
+            </dict>
+
+        
+		<key>5</key>
+		<dict>
+			<key>name</key>
+	            <array>
+                    <string>Consultorios (201 a 223)</string>
+                    <string>Agendamento de exames</string>
+                </array>
+        </dict>
+
+        
+        
+		<key>6</key>
+		<dict>
+			<key>name</key>
+			<array>
+                <string>Consultorios (101 a 123)</string>
+            </array>
+		</dict>
+        
+        <key>7</key>
+		<dict>
+             <key>name</key>
+			<array>
+                <string>Acesso a passarela para o bloco A</string>
+                <string>passarela</string>
+            </array>
+        </dict>
+        
+        <key>21</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Centro de Endoscopia</string>
+                    <string>endoscopia</string>
+                <string>colonoscopia</string>
+                <string>laser</string>
+            </array>
+		</dict>
+
+        <key>95</key>
+        <dict>
+			<key>name</key>
+			<array>
+                <string>Centro de Saude Ocupacional</string>
+                <string>Medicina do Trabalho</string>
+            </array>
+		</dict>
+
+		<key>77</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Banco de leite</string>
+                <string>Sala das maes</string>
+                <string>Sala de amamentacao</string>
+            </array>
+		</dict>
+        
+        <key>79</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Diretoria Clinica</string>
+            </array>
+		</dict>
+
+		<key>83</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Recepção Imagem Paciente Internado</string>
+                <string>Exames / Sala de laudos</string>
+            </array>
+		</dict>
+		
+        <key>84</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Recepcao Atrium 3</string>
+                <string>Entrada 3</string>
+                <string>Entrada Maternidade</string>
+            </array>
+		</dict>
+
+		<key>91</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Consultorios Pediatricos</string>
+                <string>Pediatria</string>
+            </array>
+		</dict>
+
+        
+        <key>8</key>
+		<dict>
+           <key>name</key>
+           <array>
+                <string>Central de Imunizacao</string>
+                <string>Vacinas</string>
+                <string>Vacinacao</string>
+                <string>Centro de Cirurgia da Obesidade (Bariatrica)</string>
+            </array>
+ 		</dict>
+
+        <key>48</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>IIEP (Instituto Israelita de Ensino e Pesquisa)</string>
+                <string>IEP</string>
+                <string>pesquisa</string>
+                <string>Pesquisa clinica</string>
+                <string>Pesquisa</string>
+                <string>Experimental</string>
+                <string>Biblioteca</string>
+                <string>Instituto do Cerebro</string>
+                <string>Pediatria</string>
+            </array>
+		</dict>
+	
+
+        <key>54</key>
+		<dict>
+			<key>name</key>
+            <array>			 
+			<string>Pré-Internação</string>
+            <string>Medicina Fetal</string>
+            </array>
+		</dict>
+
+        <key>67</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Departamento de Voluntariado</string>
+                <string>Voluntarias</string>
+            </array>
+  			
+		</dict>
+        
+        
+        <key>72</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Centro de Dialise / Hemodialise</string>
+                <string>Dialise</string>
+            </array>
+		</dict>
+        
+        
+		<key>16</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Central de exames</string>
+                <string>Medicina Diagnostica</string>
+                <string>MDP</string>
+                <string>Medicina Diagnostica e Preventiva</string>
+                <string>Exames</string>
+                <string>Admissao de exames</string>
+            </array>
+		</dict>
+
+        <key>40</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Recepcao Atrium 1</string>
+                <string>Recepcao principal</string>
+                <string>Recepcao Bloco A</string>
+                <string>Entrada 1</string>
+            </array>
+		</dict>
+
+ 		<key>9</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Apartamentos Day Clinic</string>
+                <string>Day Clinic</string>
+            </array>
+		</dict>
+
+        <key>10</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Recepcao</string>
+            </array>
+        </dict>
+        
+        <key>14</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Escultura</string>
+                <string>Estatua Einstein</string>
+            </array>
+ 		</dict>
+
+        <key>35</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Auto Serviço Kasher</string>
+                <string>Copa Kasher</string>
+            </array>
+ 		</dict>
+        
+        
+        <key>44</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>CESAS</string>
+                <string>Centro de Educacao em Saude Abram Szajman</string>
+                <string>Salas de treinamento  Curso Workshop   CSR   Centro de Simulacao Realistica</string>
+          </array>
+		</dict>
+
+		<key>78</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Espaço Corpo Clínico</string>
+                <string>Diretoria Clinica</string>
+            </array>
+        </dict>
+        
+        <key>87</key>
+		<dict>
+			<key>name</key>
+             <array>
+                 <string>Sinagoga</string>
+             </array>
+		</dict>
+
+        <key>88</key>
+		<dict>
+			<key>name</key>
+            <array>
+			<string>Auditório Kleinberger</string>
+            <string>Anfiteatro</string>
+            <string>Auditório</string>
+            <string>Auditório 3º andar</string>
+            </array>
+        </dict>
+
+        <key>93</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Centro Administrativo</string>
+            </array>
+ 		</dict>
+        
+		<key>94</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Recursos Humanos</string>
+                <string>RH</string>
+            </array>
+		</dict>
+
+        <key>80</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Centro Cirurgico Ambulatorial</string>
+                <string> Ambulatorial</string>
+                <string>Centro Cirurgico</string>
+            </array>
+        </dict>
+        
+        <key>22</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Centro Cirurgico Ambulatorial</string>
+                <string> Ambulatorial</string>
+                <string>Centro Cirurgico</string>
+                <string>RH</string>
+            </array>
+		</dict>
+
+        <key>12</key>
+		<dict>
+			<key>name</key>
+            <array>
+                <string>Cafeteria V. Cafe</string>
+                <string>cafeteria</string>
+                <string>viena</string>
+            </array>
+		</dict>
+
+        <key>23</key>
+		<dict>
+			<key>name</key>
+			
+            <array>
+                <string>CTI Pediatrica</string>
+                <string>UTI Pediatrica</string>
+                <string>Apartamentos</string>
+                <string>Internação</string>
+            </array>
+		</dict>
+        
+        <key>62</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Med Service</string>
+                <string>materiais ortopedicos</string>
+                <string>loja de materiais ortopedicos</string>
+            </array>
+        </dict>
+        
+        <key>59</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Loja de Conveniencias</string>
+                <string>lojinha</string>
+                <string>revistaria</string>
+                 <string>banca</string>
+                 <string>floricultura</string>
+            </array>
+        </dict>
+        
+        <key>25</key>
+		<dict>
+			<key>name</key>
+	        <array>
+                <string>Apartamentos</string>
+                <string>Internação Clínica Médica e Cirúrgica</string>
+                <string>Internacao Clinica Medica e Cirurgica</string>
+                <string>Apartamentos</string>
+                <string>Quartos</string>
+            </array>
+        </dict>
+        
+        
+		<key>26</key>
+		<dict>
+			<key>name</key>
+	        <array>
+                <string>Apartamentos</string>
+                <string>Internação Clínica Médica e Cirúrgica</string>
+                <string>Internacao Clinica Medica e Cirurgica</string>
+                <string>Apartamentos</string>
+                <string>Quartos</string>
+            </array>
+        </dict>
+
+		<key>27</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Apartamentos</string>
+                <string>Quartos</string>
+            </array>
+        </dict>
+        
+        
+        <key>65</key>
+		<dict>
+			<key>name</key>
+	        <array>
+                <string>Caixas Eletrônicos</string>
+                <string>Itau</string>
+                <string>Bradesco</string>
+                <string>Safra</string>
+            </array>
+		</dict>
+
+        <key>46</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Oncologia Ambulatorial Pediátrica</string>
+                <string>Radio</string>
+            </array>
+        </dict>
+
+		<key>47</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Oncologia Ambulatorial Adulto</string>
+                <string>Radio</string>
+            </array>
+        </dict>
+
+        <key>49</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Recepcao do Centro Integrado de Oncologia e Hematologia</string>
+                <string>Radio</string>
+            </array>
+        </dict>
+
+        <key>50</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Consultórios de Oncologia e Radioterapia</string>
+                <string>Radioterapia</string>
+                <string>Radio</string>
+            </array>
+        </dict>
+ 
+        <key>63</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Jacques Janine</string>
+                <string>cabeleireiro</string>
+                <string>salao beleza</string>
+                <string>salao</string>
+            </array>
+        </dict>
+
+        <key>90</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Laboratorio do Movimento</string>
+              <string>LEME</string>
+            </array>
+        </dict>
+ 
+        <key>82</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Pre Parto</string>
+                <string>LEME</string>
+                <string>nutricao</string>
+            </array>
+        </dict>
+
+        <key>2</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Conforto Médico</string>
+                <string>Conforto Medico</string>
+                <string>Agendamento de exames</string>
+            </array>
+        </dict>
+        
+        <key>81</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Centro Cirurgico Obstetrico</string>
+            </array>
+        </dict>
+ 
+        
+        <key>58</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Ressonancia Magnetica</string>
+                <string>Pet Scan</string>
+                <string>REMA</string>
+                </array>
+        </dict>
+      
+        
+        <key>56</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Recepcao da Unidade de Primeiro Atendimento</string>
+                <string>PA</string>
+                <string>UPA</string>
+                <string>Pronto Socorro</string>
+                <string>Emergencia</string>
+            </array>
+        </dict>
+ 
+
+        <key>33</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Intervenção Cardiovascular</string>
+                <string>Intervencao Cardiovascular</string>
+                <string>Hemodinamica</string>
+            </array>
+        </dict>
+        
+       <key>39</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Centro de Atendimento Comercial</string>
+                <string>Departamento Comercial </string>
+                <string>Comercial</string>
+            </array>
+        </dict>
+        
+        <key>47</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Ambulatório de Oncologia Adulto</string>
+                <string>Ambulatorio de Oncologia Adulto</string>
+                <string>Onco Quimio Oncologia Quimioterapia Consultorios Oncologia</string>
+            </array>
+        </dict>
+
+        <key>32</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Banco de Sangue</string>
+                <string>Doacao de Sangue </string>
+            </array>
+        </dict>
+
+        <key>10</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                  <string>Recepção</string>
+                  <string>Recepcao</string>
+            </array>
+        </dict>
+
+        <key>30</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Internação Oncologia e TMO</string>
+                <string>Onco hemato</string>
+            </array>
+       </dict>
+ 
+        <key>34</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Internação Clínica Médica e Cirúrgica e Semi-Intensiva Neurológica</string>
+                <string>Internação Clinica Medica e Cirurgica e Semi-Intensiva Neurologica </string>
+                 <string>Apartamentos Neuro Quartos Neuro Apartamentos Psiquiatria Quartos Psiquiatria </string>
+            </array>
+        </dict>
+ 
+        <key>25</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Internação Clínica Médica e Cirúrgica</string>
+                <string>Internacao Clinica Medica e Cirurgica</string>
+                <string>Médica e Cirurgica Apartamentos Geriatria  Quartos Geriatria Internacao Geriatria</string>
+            </array>
+        </dict>
+
+        <key>109</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Auditorio Moise Safra</string>
+            </array>
+        </dict>
+
+        <key>38</key>
+        <dict>
+			<key>name</key>
+	        <array>
+                <string>Atendimento ao Paciente internacional</string>
+                <string>Convenios Internacionais</string>
+            </array>
+        </dict>
+
+    </dict>
+    <!--
+     **********************************************************************************************************************************************************
+     **********************************************************************************************************************************************************
+     **********************************************************************************************************************************************************
+     -->
+	<key>Services</key>
+	<dict>
+		<key>991</key>
+		<dict>
+			<key>name</key>
+			<string>Restaurantes/Café</string>
+			<key>categoryID</key>
+			<string>222</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+
+		<key>107</key>
+		<dict>
+			<key>name</key>
+			<string>Café Viena</string>
+			<key>categoryID</key>
+			<string>991</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		
+        <key>85</key>
+		<dict>
+			<key>name</key>
+			<string>Café Viena</string>
+			<key>categoryID</key>
+			<string>991</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>12</key>
+		<dict>
+			<key>name</key>
+			<string>Cafeteria V. Café</string>
+			<key>categoryID</key>
+			<string>991</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>37</key>
+		<dict>
+			<key>name</key>
+			<string>Restaurante Viena</string>
+			<key>categoryID</key>
+			<string>991</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>60</key>
+		<dict>
+			<key>name</key>
+			<string>Kopenhagen</string>
+			<key>categoryID</key>
+			<string>991</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>108</key>
+		<dict>
+			<key>name</key>
+			<string>Restaurante Kasher Viena</string>
+			<key>categoryID</key>
+			<string>991</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>992</key>
+		<dict>
+			<key>name</key>
+			<string>Cabeleireiro</string>
+			<key>categoryID</key>
+			<string>222</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+		<key>63</key>
+		<dict>
+			<key>name</key>
+			<string>Jacques Janine</string>
+			<key>categoryID</key>
+			<string>992</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>993</key>
+		<dict>
+			<key>name</key>
+			<string>Box Convênios</string>
+			<key>categoryID</key>
+			<string>222</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+		<key>43</key>
+		<dict>
+			<key>name</key>
+			<string>Amil / Sulamerica / Omint / Bradesco / QualiCorp</string>
+			<key>categoryID</key>
+			<string>993</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>61</key>
+		<dict>
+			<key>name</key>
+			<string>Espaço Gama</string>
+			<key>categoryID</key>
+			<string>222</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>62</key>
+		<dict>
+			<key>name</key>
+			<string>Med Service</string>
+			<key>categoryID</key>
+			<string>993</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>59</key>
+		<dict>
+			<key>name</key>
+			<string>Loja de Conveniências</string>
+			<key>categoryID</key>
+			<string>222</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>96</key>
+		<dict>
+			<key>name</key>
+			<string>Velório</string>
+			<key>categoryID</key>
+			<string>222</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>13</key>
+		<dict>
+			<key>name</key>
+			<string>Drogaria Soares</string>
+			<key>categoryID</key>
+			<string>222</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>994</key>
+		<dict>
+			<key>name</key>
+			<string>Banco/Caixa Eletrônicos</string>
+			<key>categoryID</key>
+			<string>222</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>name</key>
+			<string>Caixas Eletrônicos</string>
+			<key>categoryID</key>
+			<string>994</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>15</key>
+		<dict>
+			<key>name</key>
+			<string>Agência do Banco Safra</string>
+			<key>categoryID</key>
+			<string>994</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>76</key>
+		<dict>
+			<key>name</key>
+			<string>UTI Neo Natal</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+        
+        
+        <key>22</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Cirúrgico</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+
+        <key>332</key>
+		<dict>
+			<key>name</key>
+			<string>Maternidade</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+
+        <key>73</key>
+		<dict>
+			<key>name</key>
+			<string>Maternidade 9º Andar</string>
+			<key>categoryID</key>
+			<string>332</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		
+        <key>74</key>
+		<dict>
+			<key>name</key>
+			<string>Maternidade</string>
+			<key>categoryID</key>
+			<string>332</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+        
+        
+		<key>75</key>
+		<dict>
+			<key>name</key>
+			<string>Maternidade 7º Andar</string>
+			<key>categoryID</key>
+			<string>332</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+
+        
+		<key>80</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Cirúrgico Avançado</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>82</key>
+		<dict>
+			<key>name</key>
+			<string>Pré Parto</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>81</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Cirúrgico Obstétrico</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>86</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Reabilitação</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>92</key>
+		<dict>
+			<key>name</key>
+			<string>Clínica de Especialidades Pediátricas</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>45</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Simulação Realística</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>995</key>
+		<dict>
+			<key>name</key>
+			<string>Oncologia</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+		<key>46</key>
+		<dict>
+			<key>name</key>
+			<string>Oncologia Ambulatorial Pediátrica</string>
+			<key>categoryID</key>
+			<string>995</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>47</key>
+		<dict>
+			<key>name</key>
+			<string>Oncologia Ambulatorial Adulto</string>
+			<key>categoryID</key>
+			<string>995</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>49</key>
+		<dict>
+			<key>name</key>
+			<string>Recepção do Centro Integrado de Oncologia e Hematologia</string>
+			<key>categoryID</key>
+			<string>995</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>50</key>
+		<dict>
+			<key>name</key>
+			<string>Radioterapia</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>53</key>
+		<dict>
+			<key>name</key>
+			<string>Radiologia Intervencionista</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>55</key>
+		<dict>
+			<key>name</key>
+			<string>Leitos de pronto de atendimento (pré-internação fast)</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>57</key>
+		<dict>
+			<key>name</key>
+			<string>Medicina Nuclear</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>58</key>
+		<dict>
+			<key>name</key>
+			<string>Ressonância Magnética</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>90</key>
+		<dict>
+			<key>name</key>
+			<string>Laboratório do Movimento</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>17</key>
+		<dict>
+			<key>name</key>
+			<string>Central de Exames</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>18</key>
+		<dict>
+			<key>name</key>
+			<string>Coleta Laboratorial</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>20</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Cirúrgico Oftalmológico</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>21</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Endoscopia</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+
+		<key>23</key>
+		<dict>
+			<key>name</key>
+			<string>UTI Pediátrica</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>29</key>
+		<dict>
+			<key>name</key>
+			<string>Unidade de Semi Intensiva</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>31</key>
+		<dict>
+			<key>name</key>
+			<string>UTI Adulto</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>996</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+		<key>1</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (508 a 522)</string>
+			<key>categoryID</key>
+			<string>996</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (401 a 423)</string>
+			<key>categoryID</key>
+			<string>996</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (301 a 323)</string>
+			<key>categoryID</key>
+			<string>996</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (201 a 223)</string>
+			<key>categoryID</key>
+			<string>996</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (101 a 123)</string>
+			<key>categoryID</key>
+			<string>996</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>8</key>
+		<dict>
+			<key>name</key>
+			<string>Central de Imunização</string>
+			<key>categoryID</key>
+			<string>111</string>
+			<key>hasChild</key>
+			<string>n</string>
+		</dict>
+		<key>330</key>
+		<dict>
+			<key>name</key>
+			<string>Feminino</string>
+			<key>categoryID</key>
+			<string>444</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+		<key>331</key>
+		<dict>
+			<key>name</key>
+			<string>Masculino </string>
+			<key>categoryID</key>
+			<string>444</string>
+			<key>hasChild</key>
+			<string>s</string>
+		</dict>
+	</dict>
+    <!--
+     **********************************************************************************************************************************************************
+     **********************************************************************************************************************************************************
+     **********************************************************************************************************************************************************
+     -->
+	
+	
+	<key>buildings</key>
+	<dict>
+		<key>1</key>
+		<string>Bloco A1</string>
+		<key>2</key>
+		<string>Bloco A</string>
+		<key>3</key>
+		<string>Bloco B</string>
+		<key>4</key>
+		<string>Bloco D</string>
+		<key>5</key>
+		<string>Bloco E</string>
+	</dict>
+	<key>floors</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - 5º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>5</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - 4º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>4</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - 3º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>3</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - 2º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>2</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - 1º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>1</integer>
+			<key>transferRight</key>
+			<true/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - Intermediário 1</string>
+			<key>floorNumber</key>
+			<integer>0</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>7</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - Intermediário 2</string>
+			<key>floorNumber</key>
+			<integer>-1</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>8</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - Intermediário 3</string>
+			<key>floorNumber</key>
+			<integer>-2</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>9</key>
+		<dict>
+			<key>name</key>
+			<string>A1 - Intermediário 4</string>
+			<key>floorNumber</key>
+			<integer>-3</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>1</integer>
+		</dict>
+		<key>10</key>
+		<dict>
+			<key>name</key>
+			<string>A - 12º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>12</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>11</key>
+		<dict>
+			<key>name</key>
+			<string>A - 11º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>11</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>12</key>
+		<dict>
+			<key>name</key>
+			<string>A - 10º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>10</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>13</key>
+		<dict>
+			<key>name</key>
+			<string>A - 9º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>9</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>14</key>
+		<dict>
+			<key>name</key>
+			<string>A - 8º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>8</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>15</key>
+		<dict>
+			<key>name</key>
+			<string>A - 7º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>7</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>16</key>
+		<dict>
+			<key>name</key>
+			<string>A - 6º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>6</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>17</key>
+		<dict>
+			<key>name</key>
+			<string>A - 5º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>5</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>18</key>
+		<dict>
+			<key>name</key>
+			<string>A - 4º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>4</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>19</key>
+		<dict>
+			<key>name</key>
+			<string>A - 3º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>3</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>20</key>
+		<dict>
+			<key>name</key>
+			<string>A - 2º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>2</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>21</key>
+		<dict>
+			<key>name</key>
+			<string>A - 1º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>1</integer>
+			<key>transferRight</key>
+			<true/>
+			<key>transferLeft</key>
+			<true/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>22</key>
+		<dict>
+			<key>name</key>
+			<string>A - Intermediário 1</string>
+			<key>floorNumber</key>
+			<integer>0</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>23</key>
+		<dict>
+			<key>name</key>
+			<string>A - Intermediário 2</string>
+			<key>floorNumber</key>
+			<integer>-1</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>24</key>
+		<dict>
+			<key>name</key>
+			<string>A - Intermediário 3</string>
+			<key>floorNumber</key>
+			<integer>-2</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>25</key>
+		<dict>
+			<key>name</key>
+			<string>A - Intermediário 4</string>
+			<key>floorNumber</key>
+			<integer>-3</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>2</integer>
+		</dict>
+		<key>26</key>
+		<dict>
+			<key>name</key>
+			<string>B - 5º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>5</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>3</integer>
+		</dict>
+		<key>27</key>
+		<dict>
+			<key>name</key>
+			<string>B - 4º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>4</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>3</integer>
+		</dict>
+		<key>28</key>
+		<dict>
+			<key>name</key>
+			<string>B - 3º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>3</integer>
+			<key>transferRight</key>
+			<true/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>3</integer>
+		</dict>
+		<key>29</key>
+		<dict>
+			<key>name</key>
+			<string>B - 2º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>2</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>3</integer>
+		</dict>
+		<key>30</key>
+		<dict>
+			<key>name</key>
+			<string>B - 1º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>1</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<true/>
+			<key>buildingID</key>
+			<integer>3</integer>
+		</dict>
+		<key>31</key>
+		<dict>
+			<key>name</key>
+			<string>B - Intermediário 1</string>
+			<key>floorNumber</key>
+			<integer>0</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>3</integer>
+		</dict>
+		<key>35</key>
+		<dict>
+			<key>name</key>
+			<string>D - 15º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>15</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>36</key>
+		<dict>
+			<key>name</key>
+			<string>D - 13º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>13</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>37</key>
+		<dict>
+			<key>name</key>
+			<string>D - 12º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>12</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>38</key>
+		<dict>
+			<key>name</key>
+			<string>D - 11º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>11</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>39</key>
+		<dict>
+			<key>name</key>
+			<string>D - 10º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>10</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>40</key>
+		<dict>
+			<key>name</key>
+			<string>D - 9º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>9</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>41</key>
+		<dict>
+			<key>name</key>
+			<string>D - 8º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>8</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>name</key>
+			<string>D - 7º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>7</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>43</key>
+		<dict>
+			<key>name</key>
+			<string>D - 6º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>6</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>44</key>
+		<dict>
+			<key>name</key>
+			<string>D - 5º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>5</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>45</key>
+		<dict>
+			<key>name</key>
+			<string>D - 4º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>4</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>46</key>
+		<dict>
+			<key>name</key>
+			<string>D - 3º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>3</integer>
+			<key>transferRight</key>
+			<true/>
+			<key>transferLeft</key>
+			<true/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>47</key>
+		<dict>
+			<key>name</key>
+			<string>D - 2º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>2</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>4</integer>
+		</dict>
+		<key>48</key>
+		<dict>
+			<key>name</key>
+			<string>E - 4º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>4</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>5</integer>
+		</dict>
+		<key>49</key>
+		<dict>
+			<key>name</key>
+			<string>E - 3º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>3</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<true/>
+			<key>buildingID</key>
+			<integer>5</integer>
+		</dict>
+		<key>50</key>
+		<dict>
+			<key>name</key>
+			<string>E - 1º Pavimento</string>
+			<key>floorNumber</key>
+			<integer>1</integer>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<false/>
+			<key>buildingID</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>waypoints</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (508 a 522)</string>
+			<key>floorID</key>
+			<string>1</string>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>name</key>
+			<string>Conforto Médico</string>
+			<key>floorID</key>
+			<string>1</string>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (401 a 423)</string>
+			<key>floorID</key>
+			<string>2</string>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (301 a 323)</string>
+			<key>floorID</key>
+			<string>3</string>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (201 a 223)</string>
+			<key>floorID</key>
+			<string>4</string>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios (101 a 123)</string>
+			<key>floorID</key>
+			<string>5</string>
+		</dict>
+		<key>7</key>
+		<dict>
+			<key>name</key>
+			<string>Acesso a passarela para o bloco A</string>
+			<key>floorID</key>
+			<string>5</string>
+		</dict>
+		<key>8</key>
+		<dict>
+			<key>name</key>
+			<string>Central de Imunização</string>
+			<key>floorID</key>
+			<string>5</string>
+		</dict>
+		<key>9</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos Day Clinic</string>
+			<key>floorID</key>
+			<string>6</string>
+		</dict>
+		<key>10</key>
+		<dict>
+			<key>name</key>
+			<string>Recepção</string>
+			<key>floorID</key>
+			<string>7</string>
+		</dict>
+		<key>11</key>
+		<dict>
+			<key>name</key>
+			<string>Entrega de veículos</string>
+			<key>floorID</key>
+			<string>7</string>
+		</dict>
+		<key>12</key>
+		<dict>
+			<key>name</key>
+			<string>Cafeteria V. Café</string>
+			<key>floorID</key>
+			<string>7</string>
+		</dict>
+		<key>13</key>
+		<dict>
+			<key>name</key>
+			<string>Drogaria Soares</string>
+			<key>floorID</key>
+			<string>7</string>
+		</dict>
+		<key>14</key>
+		<dict>
+			<key>name</key>
+			<string>Escultura</string>
+			<key>floorID</key>
+			<string>7</string>
+		</dict>
+		<key>15</key>
+		<dict>
+			<key>name</key>
+			<string>Agência do Banco Safra</string>
+			<key>floorID</key>
+			<string>7</string>
+		</dict>
+		<key>16</key>
+		<dict>
+			<key>name</key>
+			<string>Medicina Diagnóstica</string>
+			<key>floorID</key>
+			<string>8</string>
+		</dict>
+		<key>17</key>
+		<dict>
+			<key>name</key>
+			<string>Central de Exames</string>
+			<key>floorID</key>
+			<string>8</string>
+		</dict>
+		<key>18</key>
+		<dict>
+			<key>name</key>
+			<string>Coleta Laboratorial</string>
+			<key>floorID</key>
+			<string>8</string>
+		</dict>
+		<key>19</key>
+		<dict>
+			<key>name</key>
+			<string>Retirada de veículos</string>
+			<key>floorID</key>
+			<string>8</string>
+		</dict>
+		<key>20</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Cirúrgico Oftalmológico</string>
+			<key>floorID</key>
+			<string>9</string>
+		</dict>
+		<key>21</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Endoscopia</string>
+			<key>floorID</key>
+			<string>9</string>
+		</dict>
+		<key>22</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Cirúrgico</string>
+			<key>floorID</key>
+			<string>9</string>
+		</dict>
+		<key>23</key>
+		<dict>
+			<key>name</key>
+			<string>CTI Pediátrica</string>
+			<key>floorID</key>
+			<string>10</string>
+		</dict>
+		<key>24</key>
+		<dict>
+			<key>name</key>
+			<string>Pediatria</string>
+			<key>floorID</key>
+			<string>10</string>
+		</dict>
+		<key>25</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>11</string>
+		</dict>
+		<key>26</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>12</string>
+		</dict>
+		<key>27</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>13</string>
+		</dict>
+		<key>28</key>
+		<dict>
+			<key>name</key>
+			<string>Unidade de Semi Intensiva e Coronariana</string>
+			<key>floorID</key>
+			<string>14</string>
+		</dict>
+		<key>29</key>
+		<dict>
+			<key>name</key>
+			<string>Unidade de Semi Intensiva</string>
+			<key>floorID</key>
+			<string>15</string>
+		</dict>
+		<key>30</key>
+		<dict>
+			<key>name</key>
+			<string>Internação Oncologia e TMO</string>
+			<key>floorID</key>
+			<string>16</string>
+		</dict>
+		<key>31</key>
+		<dict>
+			<key>name</key>
+			<string>UTI</string>
+			<key>floorID</key>
+			<string>17</string>
+		</dict>
+		<key>32</key>
+		<dict>
+			<key>name</key>
+			<string>Banco de Sangue</string>
+			<key>floorID</key>
+			<string>18</string>
+		</dict>
+		<key>33</key>
+		<dict>
+			<key>name</key>
+			<string>Intervenção Cardiovascular</string>
+			<key>floorID</key>
+			<string>18</string>
+		</dict>
+		<key>34</key>
+		<dict>
+			<key>name</key>
+			<string>Internação Clínica Médica e Cirúrgica e Semi-Intensiva Neurológica</string>
+			<key>floorID</key>
+			<string>19</string>
+		</dict>
+		<key>35</key>
+		<dict>
+			<key>name</key>
+			<string>Auto Serviço Kasher</string>
+			<key>floorID</key>
+			<string>19</string>
+		</dict>
+		<key>36</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>20</string>
+		</dict>
+		<key>37</key>
+		<dict>
+			<key>name</key>
+			<string>Restaurante Viena</string>
+			<key>floorID</key>
+			<string>21</string>
+		</dict>
+		<key>38</key>
+		<dict>
+			<key>name</key>
+			<string>Atendimento ao Paciente internacional</string>
+			<key>floorID</key>
+			<string>21</string>
+		</dict>
+		<key>39</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Atendimento Comercial</string>
+			<key>floorID</key>
+			<string>21</string>
+		</dict>
+		<key>40</key>
+		<dict>
+			<key>name</key>
+			<string>Recepção Atrium 1</string>
+			<key>floorID</key>
+			<string>21</string>
+		</dict>
+		<key>41</key>
+		<dict>
+			<key>name</key>
+			<string>Admissão Internação</string>
+			<key>floorID</key>
+			<string>21</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>name</key>
+			<string>SAC</string>
+			<key>floorID</key>
+			<string>21</string>
+		</dict>
+		<key>43</key>
+		<dict>
+			<key>name</key>
+			<string>Convênios - Amil/Sulamerica/Omint/Bradesco/QualiCorp</string>
+			<key>floorID</key>
+			<string>21</string>
+		</dict>
+		<key>44</key>
+		<dict>
+			<key>name</key>
+			<string>CESAS</string>
+			<key>floorID</key>
+			<string>22</string>
+		</dict>
+		<key>45</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Simulação Realística</string>
+			<key>floorID</key>
+			<string>22</string>
+		</dict>
+		<key>46</key>
+		<dict>
+			<key>name</key>
+			<string>Ambulatório de Oncologia Pediátrica</string>
+			<key>floorID</key>
+			<string>22</string>
+		</dict>
+		<key>47</key>
+		<dict>
+			<key>name</key>
+			<string>Ambulatório de Oncologia Adulto</string>
+			<key>floorID</key>
+			<string>23</string>
+		</dict>
+		<key>48</key>
+		<dict>
+			<key>name</key>
+			<string>IIEP (Instituto Israelita de Ensino e Pesquisa)</string>
+			<key>floorID</key>
+			<string>23</string>
+		</dict>
+		<key>49</key>
+		<dict>
+			<key>name</key>
+			<string>Recepção do Centro Integrado de Oncologia e Hematologia</string>
+			<key>floorID</key>
+			<string>24</string>
+		</dict>
+		<key>50</key>
+		<dict>
+			<key>name</key>
+			<string>Radioterapia</string>
+			<key>floorID</key>
+			<string>24</string>
+		</dict>
+		<key>51</key>
+		<dict>
+			<key>name</key>
+			<string>Retiradas de Veículos exclusiva do Centro Integrado de Oncologia e Hematologia</string>
+			<key>floorID</key>
+			<string>25</string>
+		</dict>
+		<key>52</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>26</string>
+		</dict>
+		<key>53</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Intervenção</string>
+			<key>floorID</key>
+			<string>27</string>
+		</dict>
+		<key>54</key>
+		<dict>
+			<key>name</key>
+			<string>Pré-Internação</string>
+			<key>floorID</key>
+			<string>28</string>
+		</dict>
+		<key>55</key>
+		<dict>
+			<key>name</key>
+			<string> Leitos de pronto de atendimento (pré-internação fast) </string>
+			<key>floorID</key>
+			<string>29</string>
+		</dict>
+		<key>56</key>
+		<dict>
+			<key>name</key>
+			<string>Recepção da Unidade de Primeiro Atendimento</string>
+			<key>floorID</key>
+			<string>30</string>
+		</dict>
+		<key>57</key>
+		<dict>
+			<key>name</key>
+			<string>Medicina Nuclear</string>
+			<key>floorID</key>
+			<string>31</string>
+		</dict>
+		<key>58</key>
+		<dict>
+			<key>name</key>
+			<string>Ressonância Magnética</string>
+			<key>floorID</key>
+			<string>31</string>
+		</dict>
+		<key>59</key>
+		<dict>
+			<key>name</key>
+			<string>Loja de Conveniências</string>
+			<key>floorID</key>
+			<string>28</string>
+		</dict>
+		<key>60</key>
+		<dict>
+			<key>name</key>
+			<string>Kopenhagen</string>
+			<key>floorID</key>
+			<string>28</string>
+		</dict>
+		<key>61</key>
+		<dict>
+			<key>name</key>
+			<string>Espaço Gama</string>
+			<key>floorID</key>
+			<string>28</string>
+		</dict>
+		<key>62</key>
+		<dict>
+			<key>name</key>
+			<string>Med Service</string>
+			<key>floorID</key>
+			<string>28</string>
+		</dict>
+		<key>63</key>
+		<dict>
+			<key>name</key>
+			<string>Jacques Janine</string>
+			<key>floorID</key>
+			<string>29</string>
+		</dict>
+		<key>64</key>
+		<dict>
+			<key>name</key>
+			<string>Convênios</string>
+			<key>floorID</key>
+			<string>29</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>name</key>
+			<string>Caixas Eletrônicos</string>
+			<key>floorID</key>
+			<string>29</string>
+		</dict>
+		<key>67</key>
+		<dict>
+			<key>name</key>
+			<string>Departamento de Voluntariado</string>
+			<key>floorID</key>
+			<string>35</string>
+		</dict>
+		<key>68</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>36</string>
+		</dict>
+		<key>69</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>37</string>
+		</dict>
+		<key>70</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>38</string>
+		</dict>
+		<key>71</key>
+		<dict>
+			<key>name</key>
+			<string>Apartamentos</string>
+			<key>floorID</key>
+			<string>39</string>
+		</dict>
+		<key>72</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Diálise/Hemodiálise</string>
+			<key>floorID</key>
+			<string>39</string>
+		</dict>
+		<key>73</key>
+		<dict>
+			<key>name</key>
+			<string>Maternidade</string>
+			<key>floorID</key>
+			<string>40</string>
+		</dict>
+		<key>74</key>
+		<dict>
+			<key>name</key>
+			<string>Maternidade</string>
+			<key>floorID</key>
+			<string>41</string>
+		</dict>
+		<key>75</key>
+		<dict>
+			<key>name</key>
+			<string>Maternidade</string>
+			<key>floorID</key>
+			<string>42</string>
+		</dict>
+		<key>76</key>
+		<dict>
+			<key>name</key>
+			<string>UTI Neo Natal</string>
+			<key>floorID</key>
+			<string>42</string>
+		</dict>
+		<key>77</key>
+		<dict>
+			<key>name</key>
+			<string>Banco de leite</string>
+			<key>floorID</key>
+			<string>42</string>
+		</dict>
+		<key>78</key>
+		<dict>
+			<key>name</key>
+			<string>Espaço Corpo Clínico</string>
+			<key>floorID</key>
+			<string>43</string>
+		</dict>
+		<key>79</key>
+		<dict>
+			<key>name</key>
+			<string>Diretoria Clínica</string>
+			<key>floorID</key>
+			<string>43</string>
+		</dict>
+		<key>80</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Cirúrgico</string>
+			<key>floorID</key>
+			<string>44</string>
+		</dict>
+		<key>81</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Cirúrgico Obstétrico</string>
+			<key>floorID</key>
+			<string>44</string>
+		</dict>
+		<key>82</key>
+		<dict>
+			<key>name</key>
+			<string>Pré Parto</string>
+			<key>floorID</key>
+			<string>44</string>
+		</dict>
+		<key>83</key>
+		<dict>
+			<key>name</key>
+			<string>Recepção Imagem Paciente Internado</string>
+			<key>floorID</key>
+			<string>45</string>
+		</dict>
+		<key>84</key>
+		<dict>
+			<key>name</key>
+			<string>Recepção Atrium 3</string>
+			<key>floorID</key>
+			<string>46</string>
+		</dict>
+		<key>85</key>
+		<dict>
+			<key>name</key>
+			<string>Café Viena</string>
+			<key>floorID</key>
+			<string>46</string>
+		</dict>
+		<key>86</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Reabilitação</string>
+			<key>floorID</key>
+			<string>46</string>
+		</dict>
+		<key>87</key>
+		<dict>
+			<key>name</key>
+			<string>Sinagoga</string>
+			<key>floorID</key>
+			<string>46</string>
+		</dict>
+		<key>88</key>
+		<dict>
+			<key>name</key>
+			<string>Auditório Kleinberger</string>
+			<key>floorID</key>
+			<string>46</string>
+		</dict>
+		<key>89</key>
+		<dict>
+			<key>name</key>
+			<string>Retirada de Veículos</string>
+			<key>floorID</key>
+			<string>46</string>
+		</dict>
+		<key>90</key>
+		<dict>
+			<key>name</key>
+			<string>Laboratório do Movimento</string>
+			<key>floorID</key>
+			<string>47</string>
+		</dict>
+		<key>91</key>
+		<dict>
+			<key>name</key>
+			<string>Consultórios Pediátricos</string>
+			<key>floorID</key>
+			<string>48</string>
+		</dict>
+		<key>92</key>
+		<dict>
+			<key>name</key>
+			<string>Clínica de Especialidades Pediátricas</string>
+			<key>floorID</key>
+			<string>48</string>
+		</dict>
+		<key>93</key>
+		<dict>
+			<key>name</key>
+			<string>Centro Administrativo</string>
+			<key>floorID</key>
+			<string>49</string>
+		</dict>
+		<key>94</key>
+		<dict>
+			<key>name</key>
+			<string>Recursos Humanos</string>
+			<key>floorID</key>
+			<string>49</string>
+		</dict>
+		<key>95</key>
+		<dict>
+			<key>name</key>
+			<string>Centro de Saúde Ocupacional</string>
+			<key>floorID</key>
+			<string>49</string>
+		</dict>
+		<key>96</key>
+		<dict>
+			<key>name</key>
+			<string>Velório</string>
+			<key>floorID</key>
+			<string>50</string>
+		</dict>
+		<key>97</key>
+		<dict>
+			<key>name</key>
+			<string>A1 -&gt; A Right Transfer</string>
+			<key>floorID</key>
+			<string>5</string>
+			<key>transferRight</key>
+			<true/>
+			<key>transferLeft</key>
+			<false/>
+		</dict>
+		<key>98</key>
+		<dict>
+			<key>name</key>
+			<string>A -&gt; A1 Left Transfer</string>
+			<key>floorID</key>
+			<string>21</string>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<true/>
+		</dict>
+		<key>99</key>
+		<dict>
+			<key>name</key>
+			<string>A -&gt; B Right Transfer</string>
+			<key>floorID</key>
+			<string>21</string>
+			<key>transferRight</key>
+			<true/>
+			<key>transferLeft</key>
+			<false/>
+		</dict>
+		<key>100</key>
+		<dict>
+			<key>name</key>
+			<string>B -&gt; A Left Transfer</string>
+			<key>floorID</key>
+			<string>30</string>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<true/>
+		</dict>
+		<key>101</key>
+		<dict>
+			<key>name</key>
+			<string>B -&gt; D Right Transfer</string>
+			<key>floorID</key>
+			<string>28</string>
+			<key>transferRight</key>
+			<true/>
+			<key>transferLeft</key>
+			<false/>
+		</dict>
+		<key>102</key>
+		<dict>
+			<key>name</key>
+			<string>D -&gt; B Left Transfer</string>
+			<key>floorID</key>
+			<string>46</string>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<true/>
+		</dict>
+		<key>103</key>
+		<dict>
+			<key>name</key>
+			<string>D -&gt; E Right Transfer</string>
+			<key>floorID</key>
+			<string>46</string>
+			<key>transferRight</key>
+			<true/>
+			<key>transferLeft</key>
+			<false/>
+		</dict>
+		<key>104</key>
+		<dict>
+			<key>name</key>
+			<string>E -&gt; D Left Transfer</string>
+			<key>floorID</key>
+			<string>49</string>
+			<key>transferRight</key>
+			<false/>
+			<key>transferLeft</key>
+			<true/>
+		</dict>
+		<key>105</key>
+		<dict>
+			<key>name</key>
+			<string>Recepção Atrium 2</string>
+			<key>floorID</key>
+			<string>30</string>
+		</dict>
+		<key>106</key>
+		<dict>
+			<key>name</key>
+			<string>Sala VIP</string>
+			<key>floorID</key>
+			<string>30</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>name</key>
+			<string>Café Viena</string>
+			<key>floorID</key>
+			<string>30</string>
+		</dict>
+		<key>108</key>
+		<dict>
+			<key>name</key>
+			<string>Restaurante Kasher Viena</string>
+			<key>floorID</key>
+			<string>30</string>
+		</dict>
+		<key>109</key>
+		<dict>
+			<key>name</key>
+			<string>Auditorio Moise Safra</string>
+			<key>floorID</key>
+			<string>30</string>
+		</dict>
+		<key>110</key>
+		<dict>
+			<key>name</key>
+			<string>PAB Bradesco</string>
+			<key>floorID</key>
+			<string>50</string>
+		</dict>
+		<key>1000</key>
+		<dict>
+			<key>name</key>
+			<string>Elevadores 37 a 41</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<true/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>1001</key>
+		<dict>
+			<key>name</key>
+			<string>Elevadores 31 a 36</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<true/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>1002</key>
+		<dict>
+			<key>name</key>
+			<string>Elevadores 1 a 4</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<true/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>1003</key>
+		<dict>
+			<key>name</key>
+			<string>Elevadores 25 e 26</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<true/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>1004</key>
+		<dict>
+			<key>name</key>
+			<string>Elevadores 22 e 23</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<true/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>1005</key>
+		<dict>
+			<key>name</key>
+			<string>Elevadores 16 a 21</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<true/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>1006</key>
+		<dict>
+			<key>name</key>
+			<string>Elevadores 50 a 53</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<true/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>1007</key>
+		<dict>
+			<key>name</key>
+			<string>Elevadores 46 a 49</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<true/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>2000</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>1</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2001</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>1</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2002</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>2</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2003</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>3</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2004</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>4</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2005</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>5</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2006</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>6</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2007</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>7</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2008</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>7</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2009</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>8</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2010</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>8</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2011</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>8</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2012</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>9</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2013</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>9</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2014</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>10</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2015</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>11</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2016</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>12</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2017</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>13</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2018</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>14</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2019</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>15</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2020</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>16</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2021</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>17</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2022</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>18</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2023</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>19</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2024</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>20</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2025</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>20</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2026</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>21</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2028</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>22</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2029</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>24</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2030</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>25</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2031</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>26</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2032</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>26</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2033</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>27</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2034</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>28</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2035</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>28</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2036</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>28</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2037</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>28</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2038</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>28</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2039</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>29</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2040</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>30</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2041</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>30</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2042</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>31</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2043</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>36</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2044</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>37</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2045</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>38</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2046</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>39</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2047</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>40</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2048</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>41</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2049</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>42</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2050</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>45</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2051</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>47</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2052</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>47</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2053</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>48</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2054</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>49</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2055</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>49</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2056</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>50</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2057</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>50</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+		<key>2058</key>
+		<dict>
+			<key>name</key>
+			<string>WC</string>
+			<key>floorID</key>
+			<integer>50</integer>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<false/>
+			<key>wc</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>elevators</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>name</key>
+			<string>37 a 41</string>
+			<key>waypointID</key>
+			<string>1000</string>
+			<key>buildingID</key>
+			<string>1</string>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>name</key>
+			<string>31 a 36</string>
+			<key>waypointID</key>
+			<string>1001</string>
+			<key>buildingID</key>
+			<string>1</string>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>name</key>
+			<string>1 a 4</string>
+			<key>waypointID</key>
+			<string>1002</string>
+			<key>buildingID</key>
+			<string>2</string>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>name</key>
+			<string>24 e 25</string>
+			<key>waypointID</key>
+			<string>1003</string>
+			<key>buildingID</key>
+			<string>3</string>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>name</key>
+			<string>22 e 23</string>
+			<key>waypointID</key>
+			<string>1004</string>
+			<key>buildingID</key>
+			<string>3</string>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>name</key>
+			<string>16 a 21</string>
+			<key>waypointID</key>
+			<string>1005</string>
+			<key>buildingID</key>
+			<string>4</string>
+		</dict>
+		<key>7</key>
+		<dict>
+			<key>name</key>
+			<string>50 a 53</string>
+			<key>waypointID</key>
+			<string>1006</string>
+			<key>buildingID</key>
+			<string>5</string>
+		</dict>
+		<key>8</key>
+		<dict>
+			<key>name</key>
+			<string>46 a 49</string>
+			<key>waypointID</key>
+			<string>1007</string>
+			<key>buildingID</key>
+			<string>5</string>
+		</dict>
+	</dict>
+	<key>escalators</key>
+	<dict/>
+	<key>alternatives</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>waypointID</key>
+			<string>22</string>
+			<key>elevatorID</key>
+			<string>2</string>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>waypointID</key>
+			<string>96</string>
+			<key>elevatorID</key>
+			<string>8</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

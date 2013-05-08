@@ -140,7 +140,7 @@ void MapViewScene::btnTopButton(CCObject *sender)
 
 void MapViewScene::OnBack()
 {
-    
+    this->removeChildByTag(Global::TAG_Child_Layer, true);
   
     returnToHome();
 }
@@ -169,7 +169,7 @@ void MapViewScene::draw()
     char buffer [50];
     
     if( pathfinder->getTotalStep() > 0)
-        sprintf(buffer,"Passo %d de %d", pathfinder->getStep(),pathfinder->getTotalStep());
+        sprintf(buffer,"Passo %d de %d", abs(pathfinder->getStepActual()),pathfinder->getStepsCount());
     else
         sprintf(buffer," Aguarde Carregando ");
 

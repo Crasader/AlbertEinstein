@@ -89,9 +89,14 @@ public:
     int getStep();
     int getTotalStep();
 	
+	void calculateTotalSteps();
+	void nextStepCount(CCNode *sender);
+	
 	std::string descriptionStep;
 	CCArray *getArrayIcons();
 	
+	int getStepsCount();
+	int getStepActual();
 	
 private:
     //AStar *aStar;
@@ -114,6 +119,10 @@ private:
     //CCTMXTiledMap *actualMap;
    
 	CCDictionary *plistWaypoints;
+	
+	int valueI;
+	int stepsCount;
+	int stepActual;
 
 };
 

@@ -119,9 +119,16 @@ void Pathfinder::start(int startID, int endID){
 		return;
 	}
 	
-	this->actualMapIndex = 0;
-	//this->actualMap = NULL;
-	this->nextMap();
+	
+	//LOADING HERE
+	
+	
+	this->valueI = 0;
+	this->stepsCount = 0;
+	this->calculateTotalSteps();
+	
+	//this->actualMapIndex = 0;
+	//this->nextMap();
 }
 
 void Pathfinder::releaseActualMap(){
@@ -389,8 +396,9 @@ void Pathfinder::drawLines(LineType lineType){
 	//	lastPointToAngleCalc = ccp(lastPointToAngleCalc.x - 4, lastPointToAngleCalc.y - 4);
 	}
 	
+	CCSprite *arrow;
 	if(lineType != LINE_STEP){
-		CCSprite *arrow = CCSprite::create(lineType == LINE_SHADOW ? "setaSombra.png" : "seta.png");
+		arrow = CCSprite::create(lineType == LINE_SHADOW ? "setaSombra.png" : "seta.png");
 		this->addChild(arrow);
 		arrow->setPosition(lastPoint);
 		//arrow->setScale(2);
@@ -412,8 +420,10 @@ void Pathfinder::drawLines(LineType lineType){
 			//posY -= 4;
 		}
 		
+		float angle2 = 0;
+		CCSprite *arrowStep;
 		if(lineType == LINE_STEP){
-			CCSprite *arrowStep = CCSprite::create("seta.png");
+			arrowStep = CCSprite::create("seta.png");
 			this->addChild(arrowStep);
 			arrowStep->setPosition(lastPoint);
 			//arrow->setScale(2);
@@ -422,7 +432,7 @@ void Pathfinder::drawLines(LineType lineType){
 			//arrowStep->setAnchorPoint(ccp(0, 0.5f));
 			
 			ASTile pointRefRotation2 = arrayPoints.at(i - 1);
-			float angle2 = atan2f(pointRefRotation2.getPointY() - path.getPointY(), pointRefRotation2.getPointX() - path.getPointX());
+			angle2 = atan2f(pointRefRotation2.getPointY() - path.getPointY(), pointRefRotation2.getPointX() - path.getPointX());
 			arrowStep->setRotation(angle2 * 180 / M_PI * -1);
 			
 		}
@@ -441,6 +451,17 @@ void Pathfinder::drawLines(LineType lineType){
 		}
 		
 		float distance = ccpDistance(lastPoint, ccp(posX, posY));
+		if(i == 1){
+			distance -= 30;
+			CCPoint endPoint;
+			endPoint.x = sinf(CC_DEGREES_TO_RADIANS(atan2f(posX - lastPointToAngleCalc.x , posYtoAngleCalc - lastPointToAngleCalc.y) * 180 / M_PI * -1)) * distance;
+			endPoint.y = cosf(CC_DEGREES_TO_RADIANS(atan2f(posX - lastPointToAngleCalc.x , posYtoAngleCalc - lastPointToAngleCalc.y) * 180 / M_PI * -1)) * distance;
+			arrow->setPosition(ccpAdd(ccp(posX, posY), endPoint));
+			if(lineType == LINE_STEP){
+				arrowStep->setPosition(ccpAdd(ccp(posX, posY), endPoint));
+			}
+			
+		}
 		
 		CCSprite *line = CCSprite::create(lineType == LINE_SHADOW ? "linhaSombra.png" : (lineType == LINE_STEP ? "linha.png" : "linha.png"));
 		this->addChild(line);
@@ -533,6 +554,7 @@ void Pathfinder::step(int nextValue, bool firstTime){
 					CCSize tileSize = actualMap->getTileSize();
 					
 					this->actualStep += nextValue;
+					this->stepActual += nextValue;
 					
 					//ACTUAL POINT
 					ASTile actual = (ASTile)arrayPoints.at(this->actualStep);
@@ -1127,3 +1149,106 @@ CCArray *Pathfinder::getArrayIcons(){
 	return this->arrayIcons;
 }
 
+
+void Pathfinder::calculateTotalSteps(){
+	AStar astar;
+	std::vector<ASTile> arrayPath;
+	std::vector< std::vector<ASTile> > arrayTiles;
+	
+	//for(i; i < this->arrayMapNames->count(); i++){
+	if(this->valueI < this->arrayMapNames->count()){
+		const char *mName = ((CCString *)this->arrayMapNames->objectAtIndex(this->valueI))->getCString();
+		CCTMXTiledMap *mTiled = CCTMXTiledMap::create(mName);
+		CCTMXLayer *layerWall = mTiled->layerNamed("wall");
+		
+		int w = mTiled->getMapSize().width;
+		int h = mTiled->getMapSize().height;
+		int j = 0;
+		
+		for(j = 0; j < w; j++){
+			std::vector<ASTile> array;
+			int yPoint = 0;
+			for(int k = h -1; k >= 0; k--){
+				ASTile tile;
+				tile.setPointX(j);
+				tile.setPointY(yPoint);
+				yPoint++;
+				
+				int gID = layerWall->tileGIDAt(ccp(j, k));
+				if(gID > 0){
+					CCDictionary *tileProperties = mTiled->propertiesForGID(gID);
+					if(tileProperties){
+						if(tileProperties->valueForKey("wall")->intValue() == 1){
+							tile.setPassable(false);
+						}
+					}
+				}
+				
+				array.push_back(tile);
+			}
+			
+			arrayTiles.push_back(array);
+		}
+
+		Floor *actualFloor = (Floor *)this->arrayMaps->objectAtIndex(this->valueI);
+		CCTMXObjectGroup *waypoints = mTiled->objectGroupNamed("waypoint");
+		
+		ASTile begin;
+		ASTile end;
+		
+		for(j = 0; j < waypoints->getObjects()->count(); j++){
+			CCDictionary *object = (CCDictionary *)waypoints->getObjects()->objectAtIndex(j);
+			int objX = object->valueForKey("x")->intValue() / mTiled->getTileSize().width;
+			int objY = object->valueForKey("y")->intValue() / mTiled->getTileSize().height;
+			
+			if(object->valueForKey("id")->intValue() == actualFloor->getStartID()){
+				begin = arrayTiles.at(objX).at(objY);
+				begin.setPassable(true);
+			}
+			
+			if(object->valueForKey("id")->intValue() == actualFloor->getEndID()){
+				end = arrayTiles.at(objX).at(objY);
+				end.setPassable(true);
+			}
+		}
+
+		
+		arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+		
+		stepsCount += arrayPath.size();
+		
+		arrayPath.clear();
+		astar.clear();
+		arrayTiles.clear();
+		
+		CCActionInterval *interval1 = CCActionInterval::create(2.0f);
+		CCCallFuncN *callfunc1 = CCCallFuncN::create(this, callfuncN_selector(Pathfinder::nextStepCount));
+		CCFiniteTimeAction *sequence1 = CCSequence::create(interval1, callfunc1, NULL);
+		this->runAction(sequence1);
+		
+	}else{
+		//Loading Out
+		
+		
+		this->stepsCount += this->arrayMapNames->count();
+		this->stepActual = 0;
+		this->actualMapIndex = 0;
+		this->nextMap();
+	}
+}
+
+void Pathfinder::nextStepCount(CCNode *sender){
+	CCLog("%d", stepsCount);
+	
+	this->valueI++;
+	this->calculateTotalSteps();
+	
+}
+
+int Pathfinder::getStepsCount(){
+	return this->stepsCount;
+}
+
+int Pathfinder::getStepActual(){
+	return this->stepActual;
+}

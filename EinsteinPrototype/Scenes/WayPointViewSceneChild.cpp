@@ -26,7 +26,7 @@ void WayPointViewChildScene::OnBack()
 {
     CCLayer* parent =  ((CCLayer*)this->getParent());
 	*infoOpen = false;
-	delete(infoOpen);
+	//delete(infoOpen);
     parent->removeChildByTag(Global::TAG_Child_WayPoint, true);
     CCApplication::sharedApplication().hideBars(true);
 }

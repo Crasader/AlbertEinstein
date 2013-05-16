@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EinsteinPrototype/General/AStar/AStar.cpp"
-         timestampString = "380480007.862341"
+         timestampString = "390418934.799287"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68"
+         startingLineNumber = "74"
+         endingLineNumber = "74"
          landmarkName = "AStar::findBestPath(std::vector&lt; std::vector&lt;ASTile&gt; &gt;tiles, ASTile begin, ASTile end, bool smoothed)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EinsteinPrototype/General/AStar/AStar.cpp"
-         timestampString = "386099738.245874"
+         timestampString = "390418934.799287"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144"
+         startingLineNumber = "149"
+         endingLineNumber = "149"
          landmarkName = "AStar::startChildren(ASTile* actualTile)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EinsteinPrototype/General/AStar/AStar.cpp"
-         timestampString = "386099738.245874"
+         timestampString = "390418934.799287"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "323"
-         endingLineNumber = "323"
+         startingLineNumber = "328"
+         endingLineNumber = "328"
          landmarkName = "AStar::smooth()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,18 +60,18 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EinsteinPrototype/General/AStar/AStar.cpp"
-         timestampString = "386099738.245874"
+         timestampString = "390418934.799287"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "321"
-         endingLineNumber = "321">
+         startingLineNumber = "326"
+         endingLineNumber = "326">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
-         timestampString = "384880820.930451"
+         timestampString = "390236146.574603"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "216"
@@ -84,12 +84,90 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-         timestampString = "385591742.125449"
+         timestampString = "390265651.317306"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "216"
-         endingLineNumber = "216"
+         startingLineNumber = "217"
+         endingLineNumber = "217"
          landmarkName = "TraceRouteScene::clearHeader()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
+         timestampString = "390424133.510049"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1226"
+         endingLineNumber = "1226"
+         landmarkName = "Pathfinder::calculateTotalSteps()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
+         timestampString = "390424133.510049"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1280"
+         endingLineNumber = "1280"
+         landmarkName = "Pathfinder::calculateTotalSteps()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
+         timestampString = "390424133.510049"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1285"
+         endingLineNumber = "1285"
+         landmarkName = "Pathfinder::calculateTotalSteps()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
+         timestampString = "390424133.510049"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1233"
+         endingLineNumber = "1233"
+         landmarkName = "Pathfinder::calculateTotalSteps()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
+         timestampString = "390424133.510049"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1266"
+         endingLineNumber = "1266"
+         landmarkName = "Pathfinder::calculateTotalSteps()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
+         timestampString = "390424133.510049"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1282"
+         endingLineNumber = "1282"
+         landmarkName = "Pathfinder::calculateTotalSteps()"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

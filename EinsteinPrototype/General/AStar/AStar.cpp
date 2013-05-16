@@ -43,11 +43,11 @@ void AStar::clear(){
 }
 
 std::vector<ASTile> AStar::findBestPath(std::vector< std::vector<ASTile> >tiles, ASTile begin, ASTile end, bool smoothed){
-    this->openList = std::vector<ASTile*>();
-    this->closedList = std::vector<ASTile*>();
-    this->nonPassableList = std::vector<ASTile*>();
-    this->pathArray = std::vector<ASTile>();
-    
+	this->openList = std::vector<ASTile*>();
+	this->closedList = std::vector<ASTile*>();
+	this->nonPassableList = std::vector<ASTile*>();
+	this->pathArray = std::vector<ASTile>();
+	
 	this->arrayTiles = std::vector< std::vector<ASTile *> >();
 	for(int i = 0; i < tiles.size(); i++){
 		std::vector<ASTile *> arrTiles;
@@ -58,21 +58,26 @@ std::vector<ASTile> AStar::findBestPath(std::vector< std::vector<ASTile> >tiles,
 		this->arrayTiles.push_back(arrTiles);
 	}
 	
-    this->nodesX = this->arrayTiles.size();
+	this->nodesX = this->arrayTiles.size();
     this->nodesY = this->arrayTiles.at(0).size();
     
     this->startTile = this->arrayTiles.at(begin.getPointX()).at(begin.getPointY());
-    this->finalTile = this->arrayTiles.at(end.getPointX()).at(end.getPointY());
-    
-    this->startAStar();
 	
+	//CCLOG("pX, %d", end.getPointX());
+	//CCLOG("pY, %d", end.getPointY());
+	//CCLOG("size, %d", this->arrayTiles.size());
+	//CCLOG("size0, %d", this->arrayTiles.at(0).size());
+	this->finalTile = this->arrayTiles.at(end.getPointX()).at(end.getPointY());
+	
+	
+    this->startAStar();
 	if(smoothed){
 		this->smooth();
 	}
 	
 	this->eraseUnnecessaryTiles();
 	this->clear();
-    return this->pathArray;
+	return this->pathArray;
 }
 
 void AStar::eraseUnnecessaryTiles(){

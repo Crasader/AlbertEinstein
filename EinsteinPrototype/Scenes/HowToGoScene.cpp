@@ -59,7 +59,7 @@ void HowToGoScene::OnBack()
     else
     {
         lastIdInserted = stackCategory.top();
-        if(( lastIdInserted ==  222) || ( lastIdInserted ==  111))
+		if(( lastIdInserted ==  222) || ( lastIdInserted ==  111))
             machine.isCategoryChild = false;
         
         if( lastIdInserted ==  222)

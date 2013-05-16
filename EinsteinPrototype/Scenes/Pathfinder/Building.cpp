@@ -141,7 +141,7 @@ Floor *Building::getFloor(int floorNumber){
 }
 
 void Building::clearArray(){
-	if(arrayBuildings){
+	if(arrayBuildings != NULL){
 		arrayBuildings->removeAllObjects();
 		arrayBuildings = NULL;
 	}

@@ -58,7 +58,7 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
     this->touched = false;
 
     CCLOG("MapViewScene: WayPoint: %d  TargeWayPoint %d",_wayPoint, _targetWayPoint);
-    Global::ULTIMO_PONTO_CHEGADA_WAYPOINT = _wayPoint;
+    Global::ULTIMO_PONTO_CHEGADA_WAYPOINT = _targetWayPoint;
     CCApplication::sharedApplication().hideBars(true);
     this->wayPoint = _wayPoint;
     targetWayPoint = _targetWayPoint;
@@ -70,7 +70,7 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
 	blackScreen->setAnchorPoint(ccp(0,0));
 	this->addChild(blackScreen);
     
-    Pathfinder *pathfinder = Pathfinder::create();
+	Pathfinder *pathfinder = Pathfinder::create();
     pathfinder->setAnchorPoint(ccp(0, 0));
     pathfinder->setScale(1.0f);
     pathfinder->start(_wayPoint, _targetWayPoint);

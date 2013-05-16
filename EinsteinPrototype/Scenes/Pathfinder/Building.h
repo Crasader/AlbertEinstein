@@ -35,7 +35,7 @@ public:
 	int getMinFloor();
 
 private:
-    static CCDictionary *arrayBuildings;
+	static CCDictionary *arrayBuildings;
     static int numBuildings;
     
     CCArray *arrayElevators;

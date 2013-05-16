@@ -14,6 +14,8 @@
 #include <vector>
 #include <string>
 
+#include "AnimatedSprite.h"
+
 using namespace cocos2d;
 
 typedef enum{
@@ -124,6 +126,10 @@ private:
 	int stepsCount;
 	int stepActual;
 
+	
+	AnimatedSprite *loading;
+	CCRenderTexture *white;
+	
 };
 
 #endif

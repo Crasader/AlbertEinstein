@@ -16,6 +16,14 @@ Pathfinder::Pathfinder(){
 	this->plistWaypoints = CCDictionary::createWithContentsOfFileThreadSafe("waypoints.plist");
 	this->plistWaypoints->retain();
 
+	
+	this->loading = new AnimatedSprite("loader_einstein1.png");
+	this->loading->addAnimation(AnimatedSprite::animationWithFile("loader_einstein", 145, 0.030f), "anim");
+	
+	this->white = CCRenderTexture::create(1000, 1000, kCCTexture2DPixelFormat_RGBA4444);
+	this->white->clear(1, 1, 1, 0);
+	
+	
     init();
 	//this->aStar = AStar::create();
 	
@@ -54,6 +62,8 @@ Pathfinder *Pathfinder::create(){
 
 
 Pathfinder::~Pathfinder(){
+	CCLOG("ABCDEc");
+	
 	//REMOVER MAP
 	this->releaseActualMap();
 	
@@ -99,6 +109,8 @@ Pathfinder::~Pathfinder(){
 	
 	this->removeAllChildrenWithCleanup(true);
 	
+	//delete(this->loading);
+	
 }
 
 void Pathfinder::start(int startID, int endID){
@@ -120,15 +132,23 @@ void Pathfinder::start(int startID, int endID){
 	}
 	
 	
-	//LOADING HERE
-	
-	
 	this->valueI = 0;
 	this->stepsCount = 0;
 	this->calculateTotalSteps();
 	
 	//this->actualMapIndex = 0;
 	//this->nextMap();
+	
+	//ADD LOADING
+	this->white->setAnchorPoint(ccp(0.5f, 0.5f));
+	this->white->setPosition(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 - 30));
+	this->addChild(this->white);
+	
+	this->loading->runAnimation("anim",true, false);
+	this->loading->setAnchorPoint(ccp(0.5f, 0.5f));
+	this->loading->setPosition(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 - 30));
+	this->addChild(this->loading);
+	
 }
 
 void Pathfinder::releaseActualMap(){
@@ -532,6 +552,8 @@ void Pathfinder::showStepLine(bool firstTime){
 	int step = firstTime ? actualStep + 1 : actualStep;
 	
 	if(step * 3 - 1 >= 0){
+		
+		/*
 		for(int i = 0; i < this->arrayActualSteps->count(); i++){
 			((CCSprite *)this->arrayActualSteps->objectAtIndex(i))->setVisible(false);
 		}
@@ -539,6 +561,27 @@ void Pathfinder::showStepLine(bool firstTime){
 		((CCSprite *)this->arrayActualSteps->objectAtIndex(step * 3 - 1))->setVisible(true);
 		((CCSprite *)this->arrayActualSteps->objectAtIndex(step * 3 - 2))->setVisible(true);
 		((CCSprite *)this->arrayActualSteps->objectAtIndex(step * 3 - 3))->setVisible(true);
+		*/
+		
+		int i;
+		for(i = 0; i < this->arrayActualSteps->count(); i++){
+			((CCSprite *)this->arrayActualSteps->objectAtIndex(i))->setVisible(false);
+		}
+		
+		for(i = this->arrayActualSteps->count() - 1; i >= 0; i = i - 2){
+			if(step * 3 - 2 > i){
+				((CCSprite *)this->arrayActualSteps->objectAtIndex(i+1))->setVisible(true);
+				break;
+			}
+			
+			((CCSprite *)this->arrayActualSteps->objectAtIndex(i))->setVisible(true);
+			((CCSprite *)this->arrayActualSteps->objectAtIndex(--i))->setVisible(true);
+		}
+		
+		if(actualStep <= 1){
+			((CCSprite *)this->arrayActualSteps->objectAtIndex(0))->setVisible(true);
+		}
+		
 	}
 }
 
@@ -637,12 +680,18 @@ void Pathfinder::step(int nextValue, bool firstTime){
 						
 						CCFiniteTimeAction *sequence;
 						if(nextValue == -1){
+							//NEXT
+							
+							
 							if((int)angle == (int)previousAngle){
 								sequence = CCSequence::create(change, move, callfunc, NULL);
 							}else{
 								sequence = CCSequence::create(change, move, rotate, callfunc, NULL);
 							}
 						}else{
+							//PREVIOUS
+				
+							
 							if((int)angle == (int)previousAngle){
 								sequence = CCSequence::create(change, move, callfunc, NULL);
 							}else{
@@ -700,12 +749,14 @@ void Pathfinder::step(int nextValue, bool firstTime){
 						}
 					}
 				}else{
+					
+					
 					if(nextValue == -1){
 						if(this->actualMapIndex < this->arrayMaps->count() - 1){
 							this->releaseActualMap();
 							this->actualMapIndex++;
 						
-							CCActionInterval *interval1 = CCActionInterval::create(2.0f);
+							CCActionInterval *interval1 = CCActionInterval::create(3.0f);
 							CCCallFuncN *callfunc1 = CCCallFuncN::create(this, callfuncN_selector(Pathfinder::nextMapInterval));
 							CCFiniteTimeAction *sequence1 = CCSequence::create(interval1, callfunc1, NULL);
 							this->runAction(sequence1);
@@ -717,7 +768,7 @@ void Pathfinder::step(int nextValue, bool firstTime){
 							this->releaseActualMap();
 							this->actualMapIndex--;
 						
-							CCActionInterval *interval2 = CCActionInterval::create(2.0f);
+							CCActionInterval *interval2 = CCActionInterval::create(3.0f);
 							CCCallFuncN *callfunc2 = CCCallFuncN::create(this, callfuncN_selector(Pathfinder::previousMapInterval));
 							CCFiniteTimeAction *sequence2 = CCSequence::create(interval2, callfunc2, NULL);
 							this->runAction(sequence2);
@@ -725,6 +776,17 @@ void Pathfinder::step(int nextValue, bool firstTime){
 							//this->previousMap();
 						}
 					}
+					
+					//ADD LOADING
+					this->loading->runAnimation("anim",true, false);
+					CCPoint converted = this->convertToNodeSpace(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 + 30));
+					this->loading->setRotation(-angle);
+					this->loading->setPosition(converted);
+					this->loading->setVisible(true);
+					
+					this->white->setPosition(converted);
+					this->setRotation(-angle);
+					this->white->setVisible(true);
 				}
 			}
 		//}
@@ -770,10 +832,20 @@ CCString *Pathfinder::getNextMapInfo(){
 }
 
 void Pathfinder::nextMapInterval(CCNode *sender){
+	//REMOVE LOADING
+	//this->removeChild(this->loading, false);
+	this->loading->setVisible(false);
+	this->white->setVisible(false);
+	
 	this->nextMap();
 }
 
 void Pathfinder::previousMapInterval(CCNode *sender){
+	//REMOVE LOADING
+	//this->removeChild(this->loading, false);
+	this->loading->setVisible(false);
+	this->white->setVisible(false);
+	
 	this->previousMap();
 }
 
@@ -1227,8 +1299,10 @@ void Pathfinder::calculateTotalSteps(){
 		this->runAction(sequence1);
 		
 	}else{
-		//Loading Out
-		
+		//REMOVE LOADING
+//		this->removeChild(this->loading, false);
+		this->loading->setVisible(false);
+		this->white->setVisible(false);
 		
 		this->stepsCount += this->arrayMapNames->count();
 		this->stepActual = 0;

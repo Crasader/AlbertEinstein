@@ -136,15 +136,16 @@ void TraceRouteScene::CreateButtons(RotaState newState)
     CCMenu* menuEntradaSaida = CCMenu::create();
     insertedBuildingKey = 0;
     switch (newState) {
-		case     ROTA_AZ:
+		case ROTA_AZ:
 			state = TARGET_BUILDING;
+			BuildFloorState(-1);
             BuildBuildingStateWithLastPoint(true);
             createMenuItem(menuEntradaSaida, ROTA_AZ, "az_press.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
             createMenuItem(menuEntradaSaida, ROTA_POR_ANDAR, "porandar_btn.png", "porandar_press.png", 85,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
             createMenuItem(menuEntradaSaida, ROTA_FAVORITOS, "favoritos_btn.png", "favoritos_press.png", 177,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
             break;
             
-		case     ROTA_POR_ANDAR:
+		case ROTA_POR_ANDAR:
             state = TARGET_FLOOR;
             BuildFloorState(-1);
             createMenuItem(menuEntradaSaida, ROTA_AZ, "az_btn.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
@@ -152,7 +153,7 @@ void TraceRouteScene::CreateButtons(RotaState newState)
             createMenuItem(menuEntradaSaida, ROTA_FAVORITOS, "favoritos_btn.png", "favoritos_press.png", 177,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
             break;
             
-		case  ROTA_FAVORITOS:
+		case ROTA_FAVORITOS:
             state = TARGET_WAYPOINT;
             BuildFavorites(this->wayPoint,true);
             createMenuItem(menuEntradaSaida, ROTA_AZ, "az_btn.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);

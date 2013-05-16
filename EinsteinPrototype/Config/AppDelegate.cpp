@@ -20,6 +20,8 @@ AppDelegate::AppDelegate()
 
 AppDelegate::~AppDelegate()
 {
+	   CCSpriteFrameCache::sharedSpriteFrameCache()->removeSpriteFramesFromFile("loading.plist");
+	
 }
 
 bool AppDelegate::applicationDidFinishLaunching()
@@ -46,8 +48,8 @@ bool AppDelegate::applicationDidFinishLaunching()
 	scene->addChild(layer); 
     pDirector->runWithScene(scene);
     
-    
-    
+	
+	CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("loading.plist");
     
     
 

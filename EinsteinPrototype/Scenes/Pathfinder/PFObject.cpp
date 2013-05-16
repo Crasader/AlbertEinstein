@@ -14,7 +14,6 @@ PFObject::PFObject(int ID, CCString *name){
 }
 
 PFObject::~PFObject(){
-        
 }
 
 int PFObject::getID(){

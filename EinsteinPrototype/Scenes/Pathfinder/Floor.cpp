@@ -29,6 +29,7 @@ Floor *Floor::create(int ID, CCString *name, int floorNumber, bool transferRight
 	
 	if(!arrayFloors){
 		arrayFloors = CCDictionary::create();
+		arrayFloors->retain();
 	}
 		
 	arrayFloors->setObject(f, ID);
@@ -128,9 +129,14 @@ void Floor::setEscalator(Escalator *value){
 }
 
 void Floor::clearArray(){
-	if(arrayFloors){
-		arrayFloors->removeAllObjects();
+	/*if(arrayFloors != NULL){
+		if(arrayFloors->count() > 0){
+			arrayFloors->removeAllObjects();
+		}
 		arrayFloors = NULL;
-	}
+	}*/
+	
+	arrayFloors->release();
+	arrayFloors = NULL;
 }
 

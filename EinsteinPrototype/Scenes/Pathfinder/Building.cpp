@@ -30,6 +30,7 @@ void Building::create(int ID, CCString *name){
     
     if(!arrayBuildings){
         arrayBuildings = CCDictionary::create();
+		arrayBuildings->retain();
         numBuildings = 0;
     }
         
@@ -141,10 +142,16 @@ Floor *Building::getFloor(int floorNumber){
 }
 
 void Building::clearArray(){
-	if(arrayBuildings != NULL){
-		arrayBuildings->removeAllObjects();
+	/*if(arrayBuildings != NULL){
+		if(arrayBuildings->count() > 0){
+			arrayBuildings->removeAllObjects();
+		}
+		
 		arrayBuildings = NULL;
-	}
+	}*/
+	
+	arrayBuildings->release();
+	arrayBuildings = NULL;
 }
 
 int Building::getMaxFloor(){

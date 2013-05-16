@@ -25,6 +25,7 @@ Elevator *Elevator::create(int ID, CCString *name, PFObject *waypoint){
     
     if(!arrayElevators){
         arrayElevators = CCDictionary::create();
+		arrayElevators->retain();
     }
         
     arrayElevators->setObject(e, ID);
@@ -40,8 +41,13 @@ PFObject *Elevator::getWaypoint(){
 }
 
 void Elevator::clearArray(){
-	if(arrayElevators){
-		arrayElevators->removeAllObjects();
+	/*if(arrayElevators != NULL){
+		if(arrayElevators->count() > 0){
+			arrayElevators->removeAllObjects();
+		}
 		arrayElevators = NULL;
-	}
+	}*/
+	
+	arrayElevators->release();
+	arrayElevators = NULL;
 }

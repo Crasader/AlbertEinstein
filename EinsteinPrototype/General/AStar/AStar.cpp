@@ -63,10 +63,8 @@ std::vector<ASTile> AStar::findBestPath(std::vector< std::vector<ASTile> >tiles,
     
     this->startTile = this->arrayTiles.at(begin.getPointX()).at(begin.getPointY());
 	
-	//CCLOG("pX, %d", end.getPointX());
-	//CCLOG("pY, %d", end.getPointY());
-	//CCLOG("size, %d", this->arrayTiles.size());
-	//CCLOG("size0, %d", this->arrayTiles.at(0).size());
+	CCLOG("pX, %d", end.getPointX());
+	CCLOG("pY, %d", end.getPointY());
 	this->finalTile = this->arrayTiles.at(end.getPointX()).at(end.getPointY());
 	
 	

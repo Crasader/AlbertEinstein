@@ -11,6 +11,7 @@
 
 #include "Elevator.h"
 #include "Floor.h"
+#include <map>
 
 using namespace cocos2d;
 

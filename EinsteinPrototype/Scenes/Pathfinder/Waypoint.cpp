@@ -48,6 +48,7 @@ Waypoint *Waypoint::create(int ID, CCString *name, bool isElevator, bool isEscal
     
     if(!arrayWaypoints){
         arrayWaypoints = CCDictionary::create();
+		arrayWaypoints->retain();
     }
     
     arrayWaypoints->setObject(w, ID);
@@ -60,6 +61,7 @@ Waypoint *Waypoint::create(int ID, CCString *name){
     
     if(!arrayWaypoints){
         arrayWaypoints = CCDictionary::create();
+		arrayWaypoints->retain();
     }
         
     arrayWaypoints->setObject(w, ID);
@@ -72,6 +74,7 @@ Waypoint *Waypoint::create(int ID, CCString *name, bool isTransferRight = false,
     
     if(!arrayWaypoints){
         arrayWaypoints = CCDictionary::create();
+		arrayWaypoints->retain();
     }
         
     arrayWaypoints->setObject(w, ID);
@@ -111,10 +114,15 @@ bool Waypoint::getIsWC(){
 }
 
 void Waypoint::clearArray(){
-	if(arrayWaypoints){
-		arrayWaypoints->removeAllObjects();
+	/*if(arrayWaypoints != NULL){
+		if(arrayWaypoints->count() > 0){
+			arrayWaypoints->removeAllObjects();
+		}
 		arrayWaypoints = NULL;
-	}
+	}*/
+	
+	arrayWaypoints->release();
+	arrayWaypoints = NULL;
 }
 
 

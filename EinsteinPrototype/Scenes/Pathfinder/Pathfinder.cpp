@@ -1276,9 +1276,9 @@ void Pathfinder::calculateTotalSteps(){
 			int objX = object->valueForKey("x")->intValue() / mTiled->getTileSize().width;
 			int objY = object->valueForKey("y")->intValue() / mTiled->getTileSize().height;
 			
-			CCLOG("ID: %d", object->valueForKey("id")->intValue());
-			CCLOG("startID %d", actualFloor->getStartID());
-			CCLOG("endID: %d", actualFloor->getEndID());
+			//CCLOG("ID: %d", object->valueForKey("id")->intValue());
+			//CCLOG("startID %d", actualFloor->getStartID());
+			//CCLOG("endID: %d", actualFloor->getEndID());
 			
 			if(object->valueForKey("id")->intValue() == actualFloor->getStartID()){
 				begin = arrayTiles.at(objX).at(objY);

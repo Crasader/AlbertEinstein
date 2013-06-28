@@ -70,6 +70,8 @@ public:
  
      @since v0.99.5
      */
+	 std::string fullPathForFilename(const char* pszFileName);
+	 
     std::string& removeSuffixFromFile(std::string& path);
 
     /**

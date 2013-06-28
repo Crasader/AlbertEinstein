@@ -7,7 +7,7 @@
 
 #include "HowToGoScene.h"
 #include "MapaViewScene.h"
-#include  "HomeScene.h"
+#include "HomeScene.h"
 #include "LayerWebView.h"
 #include "MinhasRotasScenes.h"
 
@@ -205,7 +205,7 @@ void HowToGoScene::initListView(HomeMenuState category)
         case MAPAS:
             this->size=setUpTopImage(Global::TOP_SRC_IMAGE_Mapas);
             setUpImageTop();
-            this->addChild(new GLES(),3,Global::TAG_Child_Layer);
+            this->addChild(Building3DLayer::create(),3,Global::TAG_Child_Layer);
             initFixedMenu(MAPAS);
             addButtonTop(MAPAS);
             return;

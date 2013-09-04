@@ -109,6 +109,9 @@
         case 9:
             [mWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://maps.google.com/maps/ms?msid=217401198874215165552.0004d8741f31b6bb773cb&msa=0&ll=-23.56084,-46.660438&spn=0.030683,0.055532&iwloc=0004d8742367e4c5f5dfa"]]];
             break;
+		case 10:
+			[mWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://maps.google.com.br/maps?q=Av+Magalh%C3%A3es+de+Castro+12.000,+Morumbi+%E2%80%93+S%C3%A3o+Paulo+%E2%80%93+SP&hl=pt-BR&ie=UTF8&sll=-22.546052,-48.635514&sspn=8.97272,11.348877&t=h&hnear=Av.+Magalh%C3%A3es+de+Castro,+12000+-+Morumbi,+S%C3%A3o+Paulo,+05502-001&z=17"]]];
+			break;
         case 19:
             [mWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://maps.google.com.br/maps?f=q&source=embed&hl=pt&geocode=&q=R.+Ruggero+Fasano,+7+-+Morumbi+&aq=&sll=-23.599543,-46.716249&sspn=0.006971,0.012467&vpsrc=0&doflg=ptk&ie=UTF8&hq=&hnear=R.+Ruggero+Fasano,+7+-+Morumbi,+S%C3%A3o+Paulo,+05653-120&ll=-23.599543,-46.716249&spn=0.006971,0.012467&t=m&z=14&iwloc=0004d8886e53ce64c284f"]]];
             break;

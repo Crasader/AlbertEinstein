@@ -9,12 +9,37 @@
 #include "WayPointViewScene.h"
 #include "MinhasRotasScenes.h"
 
+using namespace std;
+
 WayPointViewScene::WayPointViewScene(HomeMenuState category, int wayPoint,StateMachine _stateMachinePreviousPage)
 {
     //Variavel que diz se exibe ou não facebook/4square
     enableCheckin= (category ==  SERVICOS);
 
     this->actualCategory = category;
+    this->wayPoint = wayPoint;
+    
+    //Carrega o menu ( botoes inferiores (inicio,mapas,favoritos, procurar)
+    InitView();
+    
+    //Carrega informacoes de waypoint ( titulo, nome, descrição e etc)
+    LoadWayPoint();
+    
+    //Muda o titulo para o nome do Waypoint. Essa tela limita para 24 caracters mais o terminador /0
+    ChangeTitle(wayPoint);
+    this->stateMachinePreviousPage=_stateMachinePreviousPage;
+    this->addButtonTop();
+    
+    isChangeToRoute =  false;
+    is4SquareLoginCalled =  false;
+}
+
+WayPointViewScene::WayPointViewScene(int wayPoint,StateMachine _stateMachinePreviousPage)
+{
+    //Variavel que diz se exibe ou não facebook/4square
+    //enableCheckin= (category ==  SERVICOS);
+
+    //this->actualCategory = category;
     this->wayPoint = wayPoint;
     
     //Carrega o menu ( botoes inferiores (inicio,mapas,favoritos, procurar)

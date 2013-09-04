@@ -10,6 +10,7 @@
 #include "HomeScene.h"
 #include "LayerWebView.h"
 #include "MinhasRotasScenes.h"
+#include "GLES.h"
 
 HowToGoScene::HowToGoScene(HomeMenuState category)
 {
@@ -177,11 +178,12 @@ void HowToGoScene::setUpImageTop()
     this->size.width = 0.75*CCDirector::sharedDirector()->getWinSize().width;
 }
 
-//Inicializa a View, podendo carregar uma pagina html caso seje como_chegar ou carregar uma MAPA 3D.
+//Inicializa a View, podendo carregar uma pagina html caso seja como_chegar ou carregar uma MAPA 3D.
 //Tambem inicializa servicos ou especialidades
 void HowToGoScene::initListView(HomeMenuState category)
 {
     lastIdInserted = 0;
+	
     actualCategory = category;
  
     switch (category)
@@ -205,7 +207,7 @@ void HowToGoScene::initListView(HomeMenuState category)
         case MAPAS:
             this->size=setUpTopImage(Global::TOP_SRC_IMAGE_Mapas);
             setUpImageTop();
-            this->addChild(Building3DLayer::create(),3,Global::TAG_Child_Layer);
+            this->addChild(Building3DLayer::create(),0,Global::TAG_Child_Layer);
             initFixedMenu(MAPAS);
             addButtonTop(MAPAS);
             return;

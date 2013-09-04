@@ -16,16 +16,13 @@
 #include "AlertViewScene.h"
 
  
-
- 
 #include <locale>
 #include <iostream>
 #include <algorithm>
-#include "GLES.h"
 #include <stack>
 
-using namespace cocos2d;
-using namespace std;
+//using namespace cocos2d;
+//using namespace std;
 
 
 
@@ -103,7 +100,7 @@ struct StateMachine
     }
 };
 
-class IFixedMenu :  public CCLayer
+class IFixedMenu :  public cocos2d::CCLayer
 {
 protected:
     
@@ -120,15 +117,16 @@ protected:
 public:
     IFixedMenu();
     ~IFixedMenu();
-    
+
     
     void cleanUp();
     void returnToHome();
     void changeScene(CCLayer *Node);
     void initListView(cocos2d::CCSize size, cocos2d::extension::CCListViewDelegate* parent );
     void BuildCategoryWayPointState(int bKey);
-    void insertLabel(ccColor3B color, CCPoint position,  bool bold,  const char* datatext, CCNode* parent, int size);
-    void insertLabel(ccColor3B color, CCPoint position, int tagValue,int zOrder, bool bold,  const char* datatext, CCNode* parent, int size);
+	void BuildWayPointByBuilding(int bKey);
+    void insertLabel(cocos2d::ccColor3B color, cocos2d::CCPoint position,  bool bold,  const char* datatext, CCNode* parent, int size);
+    void insertLabel(cocos2d::ccColor3B color, cocos2d::CCPoint position, int tagValue,int zOrder, bool bold,  const char* datatext, CCNode* parent, int size);
     
     
     static std::vector<std::string>  LoadWayPointNameToArray(int wayPointID);
@@ -154,8 +152,8 @@ public:
     void initFixedMenu();
     void initFixedMenu(HomeMenuState newState);
     void FixedMenuCallBack(CCObject *sender);
-    void createMenuItem(CCMenu* menuParent, int tag, char* spriteFileName,char* spriteFileNameSelected, float posX, float posY,SEL_MenuHandler menuCallback, CCNode* parent);
-    void createMenuItemLabel(cocos2d::extension::CCListViewCell* cell, int tag, const  char* Text,const ccColor3B& color3, float posX, float posY,SEL_MenuHandler menuCallback, CCNode* parent);
+    void createMenuItem(cocos2d::CCMenu* menuParent, int tag, char* spriteFileName,char* spriteFileNameSelected, float posX, float posY,cocos2d::SEL_MenuHandler menuCallback, CCNode* parent);
+    void createMenuItemLabel(cocos2d::extension::CCListViewCell* cell, int tag, const  char* Text,const cocos2d::ccColor3B& color3, float posX, float posY,cocos2d::SEL_MenuHandler menuCallback, CCNode* parent);
     void ChangeTitle(const char* title);
     void ChangeTitle(int waypointID);
  
@@ -163,7 +161,7 @@ public:
     void addButtonTop();
     void addButtonTop(HomeMenuState menu);
     void btnTop(CCObject *sender);
-    CCSize setUpTopImage(const char* spritename);
+    cocos2d::CCSize setUpTopImage(const char* spritename);
     void setDefaultListView(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data, float space);
 };
 
@@ -204,7 +202,7 @@ public:
 	void registerWithTouchDispatcher();
 	void keyboardWillShow(cocos2d::CCIMEKeyboardNotificationInfo& info);
     
-    void keyboardWillHide(CCIMEKeyboardNotificationInfo& info) ;
+    void keyboardWillHide(cocos2d::CCIMEKeyboardNotificationInfo& info) ;
 	// CCLayer
 	bool ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
 	void ccTouchEnded(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);

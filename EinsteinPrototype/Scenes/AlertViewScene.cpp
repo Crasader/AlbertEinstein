@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Farofa Studios. All rights reserved.
 //
 #include "AlertViewScene.h"
+
+using namespace cocos2d;
+
 bool AlertViewScene::isActive =  false;
 
 void AlertViewScene::showMessageRota(CCNode* sender, SEL_MenuHandler callbackFunction ,int wayPoint)

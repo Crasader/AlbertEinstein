@@ -61,12 +61,15 @@ std::vector<ASTile> AStar::findBestPath(std::vector< std::vector<ASTile> >tiles,
 	this->nodesX = this->arrayTiles.size();
     this->nodesY = this->arrayTiles.at(0).size();
     
+	std::cout<<"X "<<this->nodesX<<"("<<begin.getPointX()<<" "<<end.getPointX()<<")";
+	std::cout<<" Y "<<this->nodesY<<"("<<begin.getPointY()<< " " << end.getPointY() <<")\n";
+	
     this->startTile = this->arrayTiles.at(begin.getPointX()).at(begin.getPointY());
 	
 	//CCLOG("pX, %d", end.getPointX());
 	//CCLOG("pY, %d", end.getPointY());
+	//LUCAS
 	this->finalTile = this->arrayTiles.at(end.getPointX()).at(end.getPointY());
-	
 	
     this->startAStar();
 	if(smoothed){
@@ -93,7 +96,11 @@ void AStar::eraseUnnecessaryTiles(){
 		
 		float distance = ccpDistance(ccp(tileStart.getPointX(), tileStart.getPointY()), ccp(tileInValidation.getPointX(), tileInValidation.getPointY()));
 		
-		if(angleNext_Validation == angleValidation_Start || distance < 3){
+		int realAngle = angleValidation_Start-angleNext_Validation;
+		std::cout<<"A: "<<realAngle<<" "<<angleNext_Validation<<" "<<angleValidation_Start<<"\n";
+		
+		//if(angleNext_Validation == angleValidation_Start /*|| distance < 3*/){
+		if(realAngle > -30 && realAngle < 30) {
 			this->pathArray.erase(this->pathArray.begin() + indexTileInValidation);
 		}else{
 			indexTileStart++;

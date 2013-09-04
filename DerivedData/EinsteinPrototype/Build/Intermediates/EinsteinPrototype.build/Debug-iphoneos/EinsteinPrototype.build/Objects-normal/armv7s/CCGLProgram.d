@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/shaders/CCGLProgram.cpp \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/shaders/CCGLProgram.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/include/ccMacros.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCCommon.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCPlatformMacros.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/include/ccConfig.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCPlatformConfig.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCPlatformDefine.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCStdC.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCObject.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCGL.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/shaders/ccGLStateCache.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCFileUtils.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/include/ccTypes.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCGeometry.h \
+  EinsteinPrototype/libs/cocos2dx/support/data_support/uthash.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCString.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/matrix.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../mat4.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../utility.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../vec3.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/kazmath.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../vec2.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../mat3.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../quaternion.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../plane.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../aabb.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/GL/../ray2.h

@@ -10,6 +10,8 @@
 #include "LayerWebView.h"
 #include "AlertViewScene.h"
 
+using namespace cocos2d;
+
 void ParkingViewScene::OnBack()
 {
     LayerWebView::forceRelease();

@@ -1,0 +1,31 @@
+dependencies: \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/textures/CCTexture2D.cpp \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/textures/CCTexture2D.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCObject.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCPlatformMacros.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/include/ccConfig.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCPlatformConfig.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCPlatformDefine.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCGeometry.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/include/ccTypes.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCGL.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/CCCommon.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/include/ccMacros.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCStdC.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/CCConfiguration.h \
+  EinsteinPrototype/libs/cocos2dx/platform/platform.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCThread.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCImage.h \
+  EinsteinPrototype/libs/cocos2dx/support/ccUtils.h \
+  EinsteinPrototype/libs/cocos2dx/textures/CCTexturePVR.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCArray.h \
+  EinsteinPrototype/libs/cocos2dx/support/data_support/ccCArray.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/CCDirector.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/mat4.h \
+  EinsteinPrototype/libs/cocos2dx/kazmath/include/kazmath/utility.h \
+  EinsteinPrototype/libs/cocos2dx/shaders/CCGLProgram.h \
+  EinsteinPrototype/libs/cocos2dx/shaders/ccGLStateCache.h \
+  EinsteinPrototype/libs/cocos2dx/shaders/CCShaderCache.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCDictionary.h \
+  EinsteinPrototype/libs/cocos2dx/support/data_support/uthash.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCString.h

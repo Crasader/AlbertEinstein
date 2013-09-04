@@ -19,18 +19,24 @@ void HomeScene::InitHome()
     IFixedMenu::initFixedMenu(INICIO);
     CCMenu* options = CCMenu::create();
     
-	CCSprite* logo = CCSprite::create("homeLogo.png");
+	CCSprite* logo = CCSprite::create("bg_new.png");
 	logo->setAnchorPoint(ccp(0, 0));
-	logo->setPosition(ccp(0, 315));
+	logo->setPosition(ccp(0, 0));
     
+	CCSize winsize = CCDirector::sharedDirector()->getWinSize();
     
     //Cria os menus que ficam no meio da tela ( como chegar, banheiros, especialidades e etc) 
-    createMenuItem(options, COMO_CHEGAR, "ComoChegar.png", "ComoChegar_H.png",0, 209, menu_selector(HomeScene::FixedMenuCallBack), this);
-    createMenuItem(options, BANHEIROS, "Banheiros.png", "Banheiros_H.png",0, 102, menu_selector(HomeScene::FixedMenuCallBack), this);
-    createMenuItem(options, ESPECIALIDADES_MEDICAS, "EspecialidadesMedicas.png", "EspecialidadesMedicas_H.png",107, 209, menu_selector(HomeScene::FixedMenuCallBack), this);
-    createMenuItem(options, ESTACIOMENTOS, "Estacionamento.png", "Estacionamento_H.png",107, 102, menu_selector(HomeScene::FixedMenuCallBack), this);
-    createMenuItem(options, SERVICOS, "Servicos.png", "Servicos_H.png",215, 209, menu_selector(HomeScene::FixedMenuCallBack), this);
-    createMenuItem(options, INFORMACOES, "Informacoes.png", "Informacoes_H.png",215, 102, menu_selector(HomeScene::FixedMenuCallBack), this);
+    createMenuItem(options, COMO_CHEGAR, "comochegar_new.png", "comochegar_new_hover.png", 20, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
+    
+	createMenuItem(options, ESPECIALIDADES_MEDICAS, "especialidades_new.png", "especialidade_new_hover.png",winsize.width/2 - 35, winsize.height - 126, menu_selector(HomeScene::FixedMenuCallBack), this);
+    
+	createMenuItem(options, SERVICOS, "servicos_new.png", "servicos_new_hover.png",winsize.width - 20 - 70, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
+	
+	createMenuItem(options, BANHEIROS, "sanitarios_new.png", "sanitarios_new_hover.png", 20, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
+    
+	createMenuItem(options, ESTACIOMENTOS, "estacionamento_new.png", "estacionamento_new_hover.png",winsize.width/2 - 35, 90, menu_selector(HomeScene::FixedMenuCallBack), this);
+    
+    createMenuItem(options, INFORMACOES, "informacoes_new.png", "informacoes_new_hover.png",winsize.width - 20 - 70, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
 
     options->setAnchorPoint(ccp(0, 0));
 	options->setPosition(ccp(0, 0)); 
@@ -41,8 +47,8 @@ void HomeScene::InitHome()
 
     CCLayerColor* container = CCLayerColor::create(ccc4(255,255,255,255));
     container->addChild(welcome);
+	container->addChild(logo);
     container->addChild(options);
-    container->addChild(logo);
     this->addChild(container);
 }
 

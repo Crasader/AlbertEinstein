@@ -19,6 +19,6 @@ void SplashHTMLoading::initView()
 {
     addAnimation(AnimatedSprite::animationWithFile("loader_einstein", 145, 0.030f), "anim");
     runAnimation("anim",true, false);
-    CCSize s = CCDirector::sharedDirector()->getWinSize();
+    cocos2d::CCSize s = cocos2d::CCDirector::sharedDirector()->getWinSize();
     this->setPosition(ccp(s.width/2,s.height/2));
 }

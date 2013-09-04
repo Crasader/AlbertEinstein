@@ -1597,6 +1597,7 @@ void CCListView::fixFirstRow(void)
 // align last row
 void CCListView::fixLastRow(void)
 {
+	CCLOG("AAAAAA: ",__PRETTY_FUNCTION__);
     unsigned int nLastRow = CCRange::CCMaxRange(m_drawedRows);
     CCListViewCell *cell = cellAtRow(nLastRow);
     if (cell)
@@ -1626,6 +1627,7 @@ void CCListView::fixLastRow(void)
         CCMoveBy *moveBy = CCMoveBy::create(m_fActionDuration, CCPointMake(disX, disY));
         CCEaseInOut *ease = CCEaseInOut::create(moveBy, 2);
         CCFiniteTimeAction *actions = CCSequence::create(ease, CCCallFunc::create(this, callfunc_selector(CCListView::finishFix)), NULL);
+		
         m_layerPanel->runAction(actions);
     }
     else
@@ -2089,6 +2091,25 @@ void CCListView::ccTouchMoved(CCTouch* touch, CCEvent* event)
     {
         m_nSlideDir = nsliderDir;
         m_layerPanel->setPosition(CCPointMake(m_ptPanelOffset.x, m_ptPanelOffset.y + (m_ptTouchEnd.y - m_ptTouchBegan.y)));
+		
+		//std::cout<<m_layerPanel->getPosition().x<<" "<<m_layerPanel->getPosition().y<<"\n";
+		
+		//LUCAS - ANCHOR FOR SEARCH
+		
+		CCPoint pos = m_layerPanel->getPosition();
+		
+		if(pos.y <= -20) {
+			pos.y = -20;
+			m_layerPanel->setPosition(pos);
+		}
+
+		CCSize size = CCDirector::sharedDirector()->getWinSize();
+
+		if(pos.y - size.height >= m_nNumberOfRows * 30) {
+			pos.y = m_nNumberOfRows * 30 + size.height;
+			m_layerPanel->setPosition(pos);
+		}
+		
         if (CCListViewSlideDirUp == m_nSlideDir)
         {
             // drag up
@@ -2143,7 +2164,7 @@ void CCListView::ccTouchEnded(CCTouch* touch, CCEvent* event)
         return;
     }
 
-    m_fActionDuration = ND_LISTVIEW_ACTION_INTERVAL;
+    m_fActionDuration = ND_LISTVIEW_ACTION_INTERVAL / 10;
     clock_t timeElapse = clock() - m_timeTouchBegan;
 #if (CC_TARGET_PLATFORM != CC_PLATFORM_WIN32) && (CC_TARGET_PLATFORM != CC_PLATFORM_MAC)
     // It will take more time on mobile platform, this parameter may need to be adjusted according to the platform you use.

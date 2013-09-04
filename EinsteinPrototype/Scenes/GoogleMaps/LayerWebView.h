@@ -21,7 +21,7 @@ class LayerWebView : public IFixedMenu, public cocos2d::extension::CCListViewDel
 private:
 
 	int mWebViewLoadCounter;
-    CCSize size;
+    cocos2d::CCSize size;
     
     SocialType type;
     

@@ -470,6 +470,26 @@
 		78C936D316E9164C00E3D57B /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 78C9363616E9164C00E3D57B /* tiles.png */; };
 		78C936D416E9164C00E3D57B /* waypoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78C9363716E9164C00E3D57B /* waypoints.plist */; };
 		78F9D19C16F7B6700016BB21 /* backInBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 78F9D19B16F7B6700016BB21 /* backInBlack.png */; };
+		8A86067C17B404B1006260DE /* bt_proxMapa.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A86067B17B404B1006260DE /* bt_proxMapa.png */; };
+		8A894A72177B2B8400971A22 /* Building3D in Resources */ = {isa = PBXBuildFile; fileRef = 8A894A71177B2B8400971A22 /* Building3D */; };
+		8A894A74177B479F00971A22 /* model04.b in Resources */ = {isa = PBXBuildFile; fileRef = 8A894A73177B2E7800971A22 /* model04.b */; };
+		8A894A76177B47BC00971A22 /* model04.b in Resources */ = {isa = PBXBuildFile; fileRef = 8A894A75177B47BC00971A22 /* model04.b */; };
+		8A894A7E177B7FA800971A22 /* Untitled-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A894A7D177B7FA800971A22 /* Untitled-1.png */; };
+		8A894A80177B7FAD00971A22 /* icone2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A894A7F177B7FAD00971A22 /* icone2.png */; };
+		8A8F69971786111D0083087A /* BlockListScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F69951786111D0083087A /* BlockListScene.cpp */; };
+		8A96B38E17A058D900042CC5 /* informacoes_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B38717A058D900042CC5 /* informacoes_new.png */; };
+		8A96B38F17A058D900042CC5 /* estacionamento_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B38817A058D900042CC5 /* estacionamento_new.png */; };
+		8A96B39017A058D900042CC5 /* sanitarios_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B38917A058D900042CC5 /* sanitarios_new.png */; };
+		8A96B39117A058D900042CC5 /* servicos_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B38A17A058D900042CC5 /* servicos_new.png */; };
+		8A96B39217A058D900042CC5 /* especialidades_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B38B17A058D900042CC5 /* especialidades_new.png */; };
+		8A96B39317A058D900042CC5 /* comochegar_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B38C17A058D900042CC5 /* comochegar_new.png */; };
+		8A96B39417A058D900042CC5 /* bg_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B38D17A058D900042CC5 /* bg_new.png */; };
+		8A96B39B17A069A100042CC5 /* informacoes_new_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B39517A069A000042CC5 /* informacoes_new_hover.png */; };
+		8A96B39C17A069A100042CC5 /* estacionamento_new_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B39617A069A100042CC5 /* estacionamento_new_hover.png */; };
+		8A96B39D17A069A100042CC5 /* sanitarios_new_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B39717A069A100042CC5 /* sanitarios_new_hover.png */; };
+		8A96B39E17A069A100042CC5 /* servicos_new_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B39817A069A100042CC5 /* servicos_new_hover.png */; };
+		8A96B39F17A069A100042CC5 /* especialidade_new_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B39917A069A100042CC5 /* especialidade_new_hover.png */; };
+		8A96B3A017A069A100042CC5 /* comochegar_new_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B39A17A069A100042CC5 /* comochegar_new_hover.png */; };
 		A520ECD2170DE90C00F1A19C /* fechar_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A520ECD0170DE90C00F1A19C /* fechar_btn.png */; };
 		A520ECD3170DE90C00F1A19C /* fechar_press.png in Resources */ = {isa = PBXBuildFile; fileRef = A520ECD1170DE90C00F1A19C /* fechar_press.png */; };
 		A520ECD6170DE95F00F1A19C /* popup.png in Resources */ = {isa = PBXBuildFile; fileRef = A520ECD5170DE95F00F1A19C /* popup.png */; };
@@ -651,7 +671,7 @@
 		5DE088E516C2C52B000E8658 /* HomeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HomeScene.cpp; sourceTree = "<group>"; };
 		5DE088E616C2C52B000E8658 /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScene.h; sourceTree = "<group>"; };
 		5DE088E816C2CC73000E8658 /* HowToGoScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HowToGoScene.cpp; sourceTree = "<group>"; };
-		5DE088E916C2CC73000E8658 /* HowToGoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToGoScene.h; sourceTree = "<group>"; };
+		5DE088E916C2CC73000E8658 /* HowToGoScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = HowToGoScene.h; sourceTree = "<group>"; };
 		5DE088EB16C2D1D3000E8658 /* Enumerations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enumerations.h; sourceTree = "<group>"; };
 		5DE3400E16CD28AD00C108ED /* AlertViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AlertViewScene.cpp; sourceTree = "<group>"; };
 		5DE3400F16CD28AD00C108ED /* AlertViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewScene.h; sourceTree = "<group>"; };
@@ -788,7 +808,7 @@
 		787EAFE015EE995600AED252 /* ASTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ASTile.cpp; sourceTree = "<group>"; };
 		787EAFE215EE9EDC00AED252 /* AStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
 		787EAFE315EE9EEF00AED252 /* AStar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AStar.cpp; sourceTree = "<group>"; };
-		78815FC915DBE99900D64777 /* EinsteinPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EinsteinPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78815FC915DBE99900D64777 /* EinsteinMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EinsteinMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78815FCD15DBE99900D64777 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		78815FCF15DBE99900D64777 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		78815FD115DBE99900D64777 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -1344,6 +1364,27 @@
 		78C9363616E9164C00E3D57B /* tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles.png; sourceTree = "<group>"; };
 		78C9363716E9164C00E3D57B /* waypoints.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = waypoints.plist; sourceTree = "<group>"; };
 		78F9D19B16F7B6700016BB21 /* backInBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backInBlack.png; sourceTree = "<group>"; };
+		8A86067B17B404B1006260DE /* bt_proxMapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_proxMapa.png; sourceTree = "<group>"; };
+		8A894A71177B2B8400971A22 /* Building3D */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Building3D; sourceTree = "<group>"; };
+		8A894A73177B2E7800971A22 /* model04.b */ = {isa = PBXFileReference; lastKnownFileType = file; path = model04.b; sourceTree = "<group>"; };
+		8A894A75177B47BC00971A22 /* model04.b */ = {isa = PBXFileReference; lastKnownFileType = file; name = model04.b; path = Resources/model04.b; sourceTree = "<group>"; };
+		8A894A7D177B7FA800971A22 /* Untitled-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-1.png"; sourceTree = "<group>"; };
+		8A894A7F177B7FAD00971A22 /* icone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone2.png; sourceTree = "<group>"; };
+		8A8F69951786111D0083087A /* BlockListScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlockListScene.cpp; sourceTree = "<group>"; };
+		8A8F69961786111D0083087A /* BlockListScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockListScene.h; sourceTree = "<group>"; };
+		8A96B38717A058D900042CC5 /* informacoes_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = informacoes_new.png; sourceTree = "<group>"; };
+		8A96B38817A058D900042CC5 /* estacionamento_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionamento_new.png; sourceTree = "<group>"; };
+		8A96B38917A058D900042CC5 /* sanitarios_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sanitarios_new.png; sourceTree = "<group>"; };
+		8A96B38A17A058D900042CC5 /* servicos_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = servicos_new.png; sourceTree = "<group>"; };
+		8A96B38B17A058D900042CC5 /* especialidades_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = especialidades_new.png; sourceTree = "<group>"; };
+		8A96B38C17A058D900042CC5 /* comochegar_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comochegar_new.png; sourceTree = "<group>"; };
+		8A96B38D17A058D900042CC5 /* bg_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_new.png; sourceTree = "<group>"; };
+		8A96B39517A069A000042CC5 /* informacoes_new_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = informacoes_new_hover.png; sourceTree = "<group>"; };
+		8A96B39617A069A100042CC5 /* estacionamento_new_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionamento_new_hover.png; sourceTree = "<group>"; };
+		8A96B39717A069A100042CC5 /* sanitarios_new_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sanitarios_new_hover.png; sourceTree = "<group>"; };
+		8A96B39817A069A100042CC5 /* servicos_new_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = servicos_new_hover.png; sourceTree = "<group>"; };
+		8A96B39917A069A100042CC5 /* especialidade_new_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = especialidade_new_hover.png; sourceTree = "<group>"; };
+		8A96B39A17A069A100042CC5 /* comochegar_new_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comochegar_new_hover.png; sourceTree = "<group>"; };
 		A520ECD0170DE90C00F1A19C /* fechar_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fechar_btn.png; sourceTree = "<group>"; };
 		A520ECD1170DE90C00F1A19C /* fechar_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fechar_press.png; sourceTree = "<group>"; };
 		A520ECD5170DE95F00F1A19C /* popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup.png; sourceTree = "<group>"; };
@@ -1555,6 +1596,21 @@
 		5DE3401116CE74EC00C108ED /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				8A86067B17B404B1006260DE /* bt_proxMapa.png */,
+				8A96B38717A058D900042CC5 /* informacoes_new.png */,
+				8A96B38817A058D900042CC5 /* estacionamento_new.png */,
+				8A96B38917A058D900042CC5 /* sanitarios_new.png */,
+				8A96B38A17A058D900042CC5 /* servicos_new.png */,
+				8A96B38B17A058D900042CC5 /* especialidades_new.png */,
+				8A96B38C17A058D900042CC5 /* comochegar_new.png */,
+				8A96B38D17A058D900042CC5 /* bg_new.png */,
+				8A96B39517A069A000042CC5 /* informacoes_new_hover.png */,
+				8A96B39617A069A100042CC5 /* estacionamento_new_hover.png */,
+				8A96B39717A069A100042CC5 /* sanitarios_new_hover.png */,
+				8A96B39817A069A100042CC5 /* servicos_new_hover.png */,
+				8A96B39917A069A100042CC5 /* especialidade_new_hover.png */,
+				8A96B39A17A069A100042CC5 /* comochegar_new_hover.png */,
+				8A894A73177B2E7800971A22 /* model04.b */,
 				A5AD98811725D29400994FDD /* loading.plist */,
 				A5AD98821725D29400994FDD /* loading.png */,
 				A5D669EF1721870800DF2494 /* jquery.js */,
@@ -1836,6 +1892,8 @@
 				5D7FB44216C585AB0017B36E /* WayPointViewScene.h */,
 				A57BD627170B57FB00C618B7 /* WayPointViewSceneChild.cpp */,
 				A57BD628170B57FB00C618B7 /* WayPointViewSceneChild.h */,
+				8A8F69951786111D0083087A /* BlockListScene.cpp */,
+				8A8F69961786111D0083087A /* BlockListScene.h */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1854,6 +1912,8 @@
 		78815FBE15DBE99900D64777 = {
 			isa = PBXGroup;
 			children = (
+				8A894A7F177B7FAD00971A22 /* icone2.png */,
+				8A894A7D177B7FA800971A22 /* Untitled-1.png */,
 				A5D841DB16E65CBB00DCF486 /* Security.framework */,
 				78815FDD15DBE99A00D64777 /* EinsteinPrototype */,
 				78815FCC15DBE99900D64777 /* Frameworks */,
@@ -1864,7 +1924,7 @@
 		78815FCA15DBE99900D64777 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				78815FC915DBE99900D64777 /* EinsteinPrototype.app */,
+				78815FC915DBE99900D64777 /* EinsteinMaps.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1914,6 +1974,7 @@
 				78815FED15DBE99A00D64777 /* Icon-Small@2x.png */,
 				78815FEF15DBE99A00D64777 /* Icon.png */,
 				78815FF115DBE99A00D64777 /* Icon@2x.png */,
+				8A894A75177B47BC00971A22 /* model04.b */,
 				A5B882B2171CA0B10067DF63 /* IMGServices */,
 				78815FF315DBE99A00D64777 /* Info.plist */,
 				78815FF415DBE99A00D64777 /* iTunesArtwork */,
@@ -2857,6 +2918,7 @@
 		A525BE4816E0D46600EF454A /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				8A894A71177B2B8400971A22 /* Building3D */,
 				A525BE5A16E0D4A700EF454A /* GLES.cpp */,
 				A525BE5B16E0D4A800EF454A /* GLES.h */,
 				A525BE4B16E0D46600EF454A /* fileUtil.cpp */,
@@ -2974,7 +3036,7 @@
 			);
 			name = EinsteinPrototype;
 			productName = EinsteinPrototype;
-			productReference = 78815FC915DBE99900D64777 /* EinsteinPrototype.app */;
+			productReference = 78815FC915DBE99900D64777 /* EinsteinMaps.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -3419,6 +3481,25 @@
 				7884B1171746B2E700EAAB79 /* Default@2x.png in Resources */,
 				7884B1181746B2E700EAAB79 /* Icon-72@2x.png in Resources */,
 				7884B1191746B2E700EAAB79 /* Icon-Small-50@2x.png in Resources */,
+				8A894A72177B2B8400971A22 /* Building3D in Resources */,
+				8A894A74177B479F00971A22 /* model04.b in Resources */,
+				8A894A76177B47BC00971A22 /* model04.b in Resources */,
+				8A894A7E177B7FA800971A22 /* Untitled-1.png in Resources */,
+				8A894A80177B7FAD00971A22 /* icone2.png in Resources */,
+				8A96B38E17A058D900042CC5 /* informacoes_new.png in Resources */,
+				8A96B38F17A058D900042CC5 /* estacionamento_new.png in Resources */,
+				8A96B39017A058D900042CC5 /* sanitarios_new.png in Resources */,
+				8A96B39117A058D900042CC5 /* servicos_new.png in Resources */,
+				8A96B39217A058D900042CC5 /* especialidades_new.png in Resources */,
+				8A96B39317A058D900042CC5 /* comochegar_new.png in Resources */,
+				8A96B39417A058D900042CC5 /* bg_new.png in Resources */,
+				8A96B39B17A069A100042CC5 /* informacoes_new_hover.png in Resources */,
+				8A96B39C17A069A100042CC5 /* estacionamento_new_hover.png in Resources */,
+				8A96B39D17A069A100042CC5 /* sanitarios_new_hover.png in Resources */,
+				8A96B39E17A069A100042CC5 /* servicos_new_hover.png in Resources */,
+				8A96B39F17A069A100042CC5 /* especialidade_new_hover.png in Resources */,
+				8A96B3A017A069A100042CC5 /* comochegar_new_hover.png in Resources */,
+				8A86067C17B404B1006260DE /* bt_proxMapa.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3642,6 +3723,7 @@
 				A5D669F21721870900DF2494 /* jquery.js in Sources */,
 				A5D669F31721870900DF2494 /* jquery.mobile-1.2.0.js in Sources */,
 				A5D669F41721870900DF2494 /* jquery.mobile-1.2.0.min.js in Sources */,
+				8A8F69971786111D0083087A /* BlockListScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3717,13 +3799,16 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = EinsteinPrototype/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = EinsteinPrototype/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/EinsteinPrototype/libs/iOScURL\"",
@@ -3732,7 +3817,7 @@
 					"-lxml2",
 					"-lz",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EinsteinMaps;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -3744,12 +3829,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = EinsteinPrototype/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = EinsteinPrototype/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/EinsteinPrototype/libs/iOScURL\"",
@@ -3758,7 +3846,7 @@
 					"-lxml2",
 					"-lz",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EinsteinMaps;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";

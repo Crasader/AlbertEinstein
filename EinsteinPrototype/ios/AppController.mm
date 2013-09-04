@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "EAGLView.h"
 #import "AppDelegate.h"
+#import "GLES.h"
 
 #import "RootViewController.h"
 
@@ -21,19 +22,47 @@
 // cocos2d application instance
 static AppDelegate s_sharedApplication;
 
+EAGLView *__glView;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Override point for customization after application launch.
 
     // Add the view controller's view to the window and display.
     window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
-    EAGLView *__glView = [EAGLView viewWithFrame: [window bounds]
+    __glView = [EAGLView viewWithFrame: [window bounds]
                                      pixelFormat: kEAGLColorFormatRGBA8
                                      depthFormat: GL_DEPTH_COMPONENT16
                               preserveBackbuffer: NO
                                       sharegroup: nil
                                    multiSampling: NO
                                  numberOfSamples: 0 ];
+				
+	[__glView setMultipleTouchEnabled:YES];
+	
+	UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
+	pan.minimumNumberOfTouches = 1;
+	pan.maximumNumberOfTouches = 2;
+	pan.cancelsTouchesInView = NO;
+	[__glView addGestureRecognizer:pan];
+	[pan release];
+	
+	UITapGestureRecognizer *tap =
+       [[UITapGestureRecognizer alloc]
+       initWithTarget:self 
+       action:@selector(tapDetected:)];
+    tap.numberOfTapsRequired = 1;
+	tap.cancelsTouchesInView = NO;
+    [__glView addGestureRecognizer:tap];
+    [tap release];
+	
+	UIPinchGestureRecognizer *pinch =
+		[[UIPinchGestureRecognizer alloc]
+       initWithTarget:self 
+       action:@selector(pinchDetected:)];
+	pinch.cancelsTouchesInView = NO;
+    [__glView addGestureRecognizer:pinch];
+    [pinch release];
 
     // Use RootViewController manage EAGLView
     viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
@@ -50,6 +79,17 @@ static AppDelegate s_sharedApplication;
     return YES;
 }
 
+- (IBAction)panDetected:(UIPanGestureRecognizer *)sender {
+	Building3DLayer::pan(sender.numberOfTouches,[sender locationInView:__glView].x,[sender locationInView:__glView].y);
+}
+
+- (IBAction)tapDetected:(UITapGestureRecognizer *)sender {
+    Building3DLayer::tap([sender locationInView:__glView].x,[sender locationInView:__glView].y);
+}
+
+- (IBAction)pinchDetected:(UIPinchGestureRecognizer *)sender {
+    Building3DLayer::pinch(sender.velocity);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*

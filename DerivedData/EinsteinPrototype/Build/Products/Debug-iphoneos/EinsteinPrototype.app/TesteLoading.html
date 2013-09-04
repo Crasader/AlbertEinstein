@@ -1,0 +1,56 @@
+<meta name=​"viewport" content=​"width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+        <script src="./jquery.mobile-1.2.0.js"></script>
+        <script src="./jquery-1.8.2.min.js"></script>
+
+    </head>
+    <script>
+        $(document).ready(function()
+                          {
+                          $("#loadpage").hide();
+                          });
+        </script>
+    </head>
+    
+    <body>
+		
+        
+        
+        <div id="loadpage" style="position:absolute;
+            left:0px; top:0px; background-color:white;
+            layer-background-color:white; height:100%;
+            width:100%;">
+            <p  style="font-size: large;">
+            <img src="spinner.gif">
+                <B>Loading ... ... Please wait!</B>
+                </p>
+        </div>
+        
+        
+        <div id="page" >
+            </div>
+        
+        <script>
+            
+            
+
+            
+            $.get('https://maps.google.com.br/maps?f=q&source=embed&hl=pt&geocode=&q=Av.+Brasil,+953+%E2%80%93+Jardins+%E2%80%93+S%C3%A3o+Paulo+%E2%80%93+SP&aq=&sll=-23.59913,-46.715176&sspn=0.006971,0.012467&ie=UTF8&hq=&hnear=Av.+Brasil,+953+-+Jardim+S%C3%A3o+Paulo,+Americana+-+S%C3%A3o+Paulo,+13468-000&t=m&z=14&iwloc=A', function(data)
+                  {
+                 // $('#page').html(data);
+                  
+                var newDocument = "&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; \n\t&quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;\n&lt;html&gt;\n&lt;head&gt;\n\t&lt;title&gt;Greetings!&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n\t&lt;p&gt;Howdy!&lt;/p&gt;\n&lt;/body&gt;\n&lt;/html&gt;";
+                  document.documentElement.innerHTML= data;;
+
+                  });
+            
+            
+            
+        </script>
+    </body>
+    
+</html>

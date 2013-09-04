@@ -11,6 +11,8 @@
 
 #include "WayPointViewSceneChild.h"
 
+#include <stdexcept>
+
 void MapViewScene::releaseData()
 {
     delete destination;
@@ -76,6 +78,8 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
     pathfinder->start(_wayPoint, _targetWayPoint);
     this->addChild(pathfinder,0,Global::TAG_Child_Layer);
     setTouchEnabled(true);
+	
+	this->addChild(pathfinder->getLoading());
 
     CCMenu *menu = CCMenu::create();
     createMenuItem(menu, 111, "esquerda_Btn.png", "esquerda_Press.png", 0, 0, menu_selector(MapViewScene::btnMoveBack), menu);
@@ -150,22 +154,72 @@ void MapViewScene::draw()
     CCLabelTTF *labelTitle;
     std::string cS;
     
+	Pathfinder *pathfinder = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) );
+	
+	CCString *info;
+	try {
+		int buildingActual = pathfinder->getMapBuildings().at(pathfinder->getActualMapIndex());
+		int buildingNext = pathfinder->getMapBuildings().at(pathfinder->getActualMapIndex() + 1);
+		int floorNext = pathfinder->getMapFloors().at(pathfinder->getActualMapIndex() + 1);
+		int floorNumber = floorNext <= 0 ? floorNext * -1 + 1 : floorNext;
+		
+		if(buildingActual == buildingNext)
+		{
+			if(floorNext <= 0){
+				info = CCString::createWithFormat("o elevador até o Intermediário %d", floorNumber);
+			}else{
+				info = CCString::createWithFormat("o elevador até o %dº Pavimento", floorNumber);
+			}
+		}
+		else
+		{
+			switch(buildingNext){
+				case 1:
+					info = CCString::create("o Bloco A1");
+					break;
+				case 2:
+					info = CCString::create("o Bloco A");
+					break;
+				case 3:
+					info = CCString::create("o Bloco B");
+					break;
+				case 4:
+					info = CCString::create("o Bloco D");
+					break;
+				case 5:
+					info = CCString::create("o Bloco E");
+					break;
+			}
+		}
+	}
+	catch(std::out_of_range)
+	{
+		info = CCString::createWithFormat(" %s",destination);
+	}
+	
+	
     if( strcmp(((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() , "VOCÊ CHEGOU AO SEU DESTINO") ==0)
         cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string("\n") + destination ;
     else
-        cS =  ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string(" em direcao a ") + destination ;
+	{
+		if(((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.find("Siga para") != std::string::npos ||
+			((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.find("Pegue o elevador") != std::string::npos)
+			cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string(" em direcao a ") + destination;
+		else
+			cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string(" em direcao a") + info->getCString();
+	}
     labelTitle = CCLabelTTF::create(cS.c_str(), CCSizeMake(302, 100),  kCCTextAlignmentLeft, "Lucida Grande", 16);
     labelTitle->setPosition(ccp(15, 370));
     labelTitle->setAnchorPoint(ccp(0,0.5));
     labelTitle->setColor(ccc3(0, 0, 0));
+	
+	
     
     if(this->getChildByTag(80) != NULL)
         this->removeChildByTag(80, true);
     
     this->addChild(labelTitle,3,80);
     
-    
-    Pathfinder *pathfinder = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) );
     char buffer [50];
     
     if( pathfinder->getTotalStep() > 0)
@@ -225,10 +279,33 @@ void MapViewScene::ccTouchesMoved(CCSet *touches, CCEvent *event){
     CCPoint location = touch->locationInView();
     location = CCDirector::sharedDirector()->convertToGL(location);
 	
-	if(this->touched)
+	Pathfinder *p = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer));
+
+	if(this->touched && !p->getStepLock())
     {
-		Pathfinder *p = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer));
 		p->setPosition(ccpAdd(p->getPosition(), ccp(location.x - this->touchLocation.x, location.y - this->touchLocation.y)));
+		CCPoint pos = p->getPosition();
+		
+		CCSprite* mapImage = (CCSprite*)p->getChildByTag(999); //map image
+		
+		if(pos.x > mapImage->boundingBox().size.width/2) {
+			pos.x = mapImage->boundingBox().size.width/2;
+			p->setPosition(pos);
+		}
+		else if(pos.x < mapImage->boundingBox().size.width/-2) {
+			pos.x = mapImage->boundingBox().size.width/-2;
+			p->setPosition(pos);
+		}
+		
+		if(pos.y > mapImage->boundingBox().size.height/2) {
+			pos.y = mapImage->boundingBox().size.height/2;
+			p->setPosition(pos);
+		}
+		else if(pos.y < mapImage->boundingBox().size.height/-2) {
+			pos.y = mapImage->boundingBox().size.height/-2;
+			p->setPosition(pos);
+		}
+		
 		this->touchLocation = location;
 	}
 }

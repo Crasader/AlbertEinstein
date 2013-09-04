@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="17" height="100" tilewidth="10" tileheight="10">
+ <properties>
+  <property name="mapName" value="E-03Pv.png"/>
+  <property name="posX" value="33"/>
+  <property name="posY" value="0"/>
+ </properties>
+ <tileset firstgid="1" name="tiles" tilewidth="10" tileheight="10">
+  <image source="tiles.png" width="128" height="128"/>
+  <tile id="52">
+   <properties>
+    <property name="wall" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="145" name="E-03Pv" tilewidth="10" tileheight="10">
+  <image source="E-03Pv.png" width="998" height="1181"/>
+ </tileset>
+ <layer name="floor" width="17" height="100" visible="0">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer name="wall" width="17" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt1EEOwCAIRFEu5f2v1q2LkswUbEj7TdioeSIaVkSshqiMLxq71VFbN7e7/RgYbxod/UPJR8njiZHl4dwlW8vOct7AMTIXA2Ofc6MyThnTeqFau9OGshdjjqG8+bS/joGBgYGBgYGBgYGBgfEPoxoXjQBl3Q==
+  </data>
+ </layer>
+ <objectgroup name="waypoint" width="17" height="100">
+  <object name="waypoint" type="waypoint" x="10" y="520" width="20" height="20">
+   <properties>
+    <property name="id" value="1006"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="10" y="110" width="20" height="20">
+   <properties>
+    <property name="id" value="1007"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="30" y="180" width="20" height="20">
+   <properties>
+    <property name="id" value="2054"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="130" y="310" width="20" height="20">
+   <properties>
+    <property name="id" value="2055"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="70" y="230" width="20" height="20">
+   <properties>
+    <property name="id" value="94"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="120" y="360" width="20" height="20">
+   <properties>
+    <property name="id" value="93"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="20" y="10" width="20" height="20">
+   <properties>
+    <property name="id" value="95"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="20" y="970" width="20" height="20">
+   <properties>
+    <property name="id" value="104"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="icon" width="17" height="100">
+  <object name="banheiro" type="icon" x="40" y="170" width="40" height="40">
+   <properties>
+    <property name="id" value="14"/>
+   </properties>
+  </object>
+  <object name="elevador" type="icon" x="0" y="510" width="40" height="40">
+   <properties>
+    <property name="id" value="2"/>
+   </properties>
+  </object>
+  <object name="recepcao" type="icon" x="110" y="350" width="40" height="40">
+   <properties>
+    <property name="id" value="18"/>
+   </properties>
+  </object>
+  <object name="banheiro" type="icon" x="120" y="260" width="40" height="40">
+   <properties>
+    <property name="id" value="14"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

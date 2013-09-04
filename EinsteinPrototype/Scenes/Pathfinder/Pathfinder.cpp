@@ -13,6 +13,9 @@
 #include "ChangeAnchorPoint.h"
 
 Pathfinder::Pathfinder(){
+	
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
+
 	this->plistWaypoints = CCDictionary::createWithContentsOfFileThreadSafe("waypoints.plist");
 	this->plistWaypoints->retain();
 
@@ -20,7 +23,7 @@ Pathfinder::Pathfinder(){
 	this->loading = new AnimatedSprite("loader_einstein1.png");
 	this->loading->addAnimation(AnimatedSprite::animationWithFile("loader_einstein", 145, 0.030f), "anim");
 	
-	this->white = CCRenderTexture::create(1000, 1000, kCCTexture2DPixelFormat_RGBA4444);
+	this->white = CCRenderTexture::create(1024, 1024, kCCTexture2DPixelFormat_RGBA4444);
 	this->white->clear(1, 1, 1, 0);
 	
 	
@@ -51,7 +54,7 @@ Pathfinder::Pathfinder(){
 	this->arrayIcons = NULL;
 	
 	angle = 0;
-	stepLock = false;
+	stepLock = true;
 }
 
 Pathfinder *Pathfinder::create(){
@@ -108,12 +111,14 @@ Pathfinder::~Pathfinder(){
 	Escalator::clearArray();
 	
 	this->removeAllChildrenWithCleanup(true);
+	this->loading->getParent()->removeChild(this->loading, true);
 	
 	//delete(this->loading);
 	
 }
 
 void Pathfinder::start(int startID, int endID){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	//startID = 6;
     
     //endID = 40; //Transfer
@@ -135,7 +140,12 @@ void Pathfinder::start(int startID, int endID){
 	
 	this->valueI = 0;
 	this->stepsCount = 0;
+	try {
 	this->calculateTotalSteps();
+	} catch(std::exception& e) {
+		std::cout<<"Exception at "<<__LINE__<<" "<<__FILE__<<"\n";
+		std::terminate();
+	}
 	
 	//this->actualMapIndex = 0;
 	//this->nextMap();
@@ -148,14 +158,15 @@ void Pathfinder::start(int startID, int endID){
 	this->loading->runAnimation("anim",true, false);
 	this->loading->setAnchorPoint(ccp(0.5f, 0.5f));
 	this->loading->setPosition(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 - 30));
-	this->addChild(this->loading);
+	//this->addChild(this->loading);
 	
 }
 
 void Pathfinder::releaseActualMap(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	CCTMXTiledMap *actualMap = (CCTMXTiledMap *)this->getChildByTag(100);
 	CCSprite *actualMapImage = (CCSprite *)this->getChildByTag(999);
-	
+
 	if(actualMap){
 		int i;
 		
@@ -178,6 +189,10 @@ void Pathfinder::releaseActualMap(){
 			this->arrayIcons = NULL;
 		}
 		
+		if(this->getChildByTag(151515)) {
+			this->removeChildByTag(151515, true);
+		}
+		
 		if(this->arrayLines){
 			for(i = 0; i < this->arrayLines->count(); i++){
 				this->removeChild((CCSprite *) this->arrayLines->objectAtIndex(i), true);
@@ -197,6 +212,7 @@ void Pathfinder::releaseActualMap(){
 }
 
 void Pathfinder::loadMap(CCString *mapName, bool isVisible){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	const char *actualMapName = mapName->getCString();
 	//CCLOG(actualMapName);
 	CCTMXTiledMap* actualMap = CCTMXTiledMap::create(actualMapName);
@@ -303,9 +319,45 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
 	arrayPoints.push_back(begin);
 	//this->aStar->clear();
 	
+	std::cout<<"MAP COUNT AND INDEX: "<<this->arrayMaps->count()<<" "<<this->actualMapIndex<<"\n";
+	if(this->arrayMaps->count()-1 > this->actualMapIndex) {
+	
+		CCSprite *spriteDefault = CCSprite::create("bt_proxMapa.png");
+		CCSprite *spriteSelected = CCSprite::create("bt_proxMapa.png");
+
+		CCMenuItemSprite *item = CCMenuItemSprite::create(spriteDefault, spriteSelected, this, menu_selector(Pathfinder::goToNextMap));
+		
+		CCMenu* next = CCMenu::create();
+		next->setAnchorPoint(ccp(0.5,0.5));
+
+		item->setAnchorPoint(ccp(0, 0));
+		item->setPosition(ccp(0,0));
+		next->setPosition(ccp(arrayPoints.front().getPointX()*10, arrayPoints.front().getPointY()*10));
+		next->addChild(item, 0, 0);
+		item->setRotation(25);
+		this->addChild(next, 0, 151515);
+	
+	}
+	
+	/*this->arrayIcons = CCArray::create();
+	this->arrayIcons->retain();*/
+	
+	//this->arrayIcons->addObject(next);
+	//this->addChild(next);
+	//CCSprite *icon = CCSprite::create("az_btn.png");
+	//icon->setPosition(ccp(arrayPoints.front().getPointX()*10, arrayPoints.front().getPointY()*10));
+	//this->addChild(icon);
+
+	
+}
+
+void Pathfinder::goToNextMap(CCObject* obj = NULL)
+{
+	this->step(-this->actualStep,false);
 }
 
 void Pathfinder::loadIcons(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	this->arrayIcons = CCArray::create();
 	this->arrayIcons->retain();
 	
@@ -368,6 +420,7 @@ void Pathfinder::loadIcons(){
 }
 
 void Pathfinder::executeAStar(bool smooth){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	/*//START + END TILE - OBJECTS with IDs
 	Floor *actualFloor = (Floor *)this->arrayMaps->objectAtIndex(this->actualMapIndex);
 	CCTMXObjectGroup *waypoints = this->actualMap->objectGroupNamed("waypoint");
@@ -407,6 +460,7 @@ void Pathfinder::executeAStar(bool smooth){
 }
 
 void Pathfinder::drawLines(LineType lineType){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	CCTMXTiledMap *actualMap = (CCTMXTiledMap *)this->getChildByTag(100);
 	
 	ASTile point = arrayPoints.at(0);
@@ -507,12 +561,14 @@ void Pathfinder::drawLines(LineType lineType){
 }
 
 void Pathfinder::drawAllLines(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	this->drawLines(LINE_SHADOW);
 	//this->drawLines(LINE_NORMAL);
 	this->drawLines(LINE_STEP);
 }
 
-void Pathfinder::nextMap(){
+void Pathfinder::nextMap(CCObject* pObj = NULL){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	//this->releaseActualMap();
 	
 	if(this->arrayMaps->count() > this->actualMapIndex){
@@ -527,11 +583,13 @@ void Pathfinder::nextMap(){
 
 	this->actualStep = this->arrayPoints.size();
 	//this->nextStep(true);
+	this->stepLock = false;
 	this->step(-1, true);
 	
 }
 
 void Pathfinder::previousMap(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	//this->releaseActualMap();
 	
 	if(this->actualMapIndex >= 0){
@@ -551,6 +609,7 @@ void Pathfinder::previousMap(){
 }
 
 void Pathfinder::showStepLine(bool firstTime){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	int step = firstTime ? actualStep + 1 : actualStep;
 	
 	if(step * 3 - 1 >= 0){
@@ -587,7 +646,9 @@ void Pathfinder::showStepLine(bool firstTime){
 	}
 }
 
-void Pathfinder::step(int nextValue, bool firstTime){
+void Pathfinder::step(int nextValue, bool firstTime, bool animate){
+	std::cout<<this->actualStep<< " " << this->stepActual << " " << this->getTotalStep() << " " << this->stepsCount << "\n";
+
 	if(!this->stepLock){
 		//if(this->arrayPoints){
 			if(this->arrayPoints.size() > 0){
@@ -718,6 +779,20 @@ void Pathfinder::step(int nextValue, bool firstTime){
 							
 							icon->runAction(iconSequence);
 						}
+						{
+							CCActionInterval *interval = CCActionInterval::create(0.6f);
+							CCRotateTo *iconRotate = CCRotateTo::create(0.6f, -angle);
+							CCFiniteTimeAction *iconSequence;
+							if(nextValue == -1){
+								iconSequence = CCSequence::create(interval, iconRotate, NULL);
+							}else{
+								iconSequence = CCSequence::create(iconRotate, interval, NULL);
+							}
+							
+							if(this->getChildByTag(151515))
+								this->getChildByTag(151515)->getChildByTag(0)->runAction(iconSequence);
+						}
+						
 						
 					}else{
 						if(nextValue == -1){
@@ -739,6 +814,8 @@ void Pathfinder::step(int nextValue, bool firstTime){
 							CCSprite *icon = (CCSprite *)this->arrayIcons->objectAtIndex(i);
 							icon->setRotation(nextValue == -1 ? -angle : angle);
 						}
+						if(this->getChildByTag(151515))
+							this->getChildByTag(151515)->getChildByTag(0)->setRotation(nextValue == -1 ? -angle : angle);
 						
 						//LOG DE DIRECAO
 						if(nextValue == -1){
@@ -753,10 +830,13 @@ void Pathfinder::step(int nextValue, bool firstTime){
 				}else{
 					
 					
-					if(nextValue == -1){
+					if(nextValue < 0){
 						if(this->actualMapIndex < this->arrayMaps->count() - 1){
 							this->releaseActualMap();
 							this->actualMapIndex++;
+							
+							//this->actualStep += (nextValue+1); << o next map muda esse
+							this->stepActual += (nextValue+1);
 						
 							CCActionInterval *interval1 = CCActionInterval::create(3.0f);
 							CCCallFuncN *callfunc1 = CCCallFuncN::create(this, callfuncN_selector(Pathfinder::nextMapInterval));
@@ -764,6 +844,17 @@ void Pathfinder::step(int nextValue, bool firstTime){
 							this->runAction(sequence1);
 
 							//this->nextMap();
+							
+							this->stepLock = true;
+							
+							//ADD LOADING
+							this->loading->runAnimation("anim",true, false);
+							CCPoint converted = this->convertToNodeSpace(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 + 30));
+								this->loading->setVisible(true);
+							
+							this->white->setPosition(converted);
+							this->setRotation(-angle);
+							this->white->setVisible(true);
 						}
 					}else{
 						if(this->actualMapIndex > 0){
@@ -776,19 +867,19 @@ void Pathfinder::step(int nextValue, bool firstTime){
 							this->runAction(sequence2);
 						
 							//this->previousMap();
+							
+							//ADD LOADING
+							this->loading->runAnimation("anim",true, false);
+							CCPoint converted = this->convertToNodeSpace(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 + 30));
+								this->loading->setVisible(true);
+							
+							this->white->setPosition(converted);
+							this->setRotation(-angle);
+							this->white->setVisible(true);
 						}
 					}
 					
-					//ADD LOADING
-					this->loading->runAnimation("anim",true, false);
-					CCPoint converted = this->convertToNodeSpace(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 + 30));
-					this->loading->setRotation(-angle);
-					this->loading->setPosition(converted);
-					this->loading->setVisible(true);
 					
-					this->white->setPosition(converted);
-					this->setRotation(-angle);
-					this->white->setVisible(true);
 				}
 			}
 		//}
@@ -796,6 +887,7 @@ void Pathfinder::step(int nextValue, bool firstTime){
 }
 
 CCString *Pathfinder::getNextMapInfo(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	int buildingActual = this->mapBuildings.at(this->actualMapIndex);
 	
 	int buildingNext = this->mapBuildings.at(this->actualMapIndex + 1);
@@ -813,19 +905,19 @@ CCString *Pathfinder::getNextMapInfo(){
 	}else{
 		switch(buildingNext){
 			case 1:
-				info = CCString::create("Siga pra o Bloco A1");
+				info = CCString::create("Siga para o Bloco A1");
 				break;
 			case 2:
-				info = CCString::create("Siga pra o Bloco A");
+				info = CCString::create("Siga para o Bloco A");
 				break;
 			case 3:
-				info = CCString::create("Siga pra o Bloco B");
+				info = CCString::create("Siga para o Bloco B");
 				break;
 			case 4:
-				info = CCString::create("Siga pra o Bloco D");
+				info = CCString::create("Siga para o Bloco D");
 				break;
 			case 5:
-				info = CCString::create("Siga pra o Bloco E");
+				info = CCString::create("Siga para o Bloco E");
 				break;
 		}
 	}
@@ -834,6 +926,7 @@ CCString *Pathfinder::getNextMapInfo(){
 }
 
 void Pathfinder::nextMapInterval(CCNode *sender){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	//REMOVE LOADING
 	//this->removeChild(this->loading, false);
 	this->loading->setVisible(false);
@@ -843,6 +936,7 @@ void Pathfinder::nextMapInterval(CCNode *sender){
 }
 
 void Pathfinder::previousMapInterval(CCNode *sender){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	//REMOVE LOADING
 	//this->removeChild(this->loading, false);
 	this->loading->setVisible(false);
@@ -852,10 +946,12 @@ void Pathfinder::previousMapInterval(CCNode *sender){
 }
 
 void Pathfinder::unlockStep(CCNode *sender){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	this->stepLock = false;
 }
 
 void Pathfinder::findPath(int idBegin, int idEnd){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
     this->arrayMaps->removeAllObjects();
     this->arrayMapNames->removeAllObjects();
     
@@ -950,6 +1046,7 @@ void Pathfinder::findPath(int idBegin, int idEnd){
 }
 
 int Pathfinder::getStep(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
     return arrayPoints.size()-actualStep;
 }
 
@@ -960,6 +1057,7 @@ int Pathfinder::getTotalStep(){
 
 
 void Pathfinder::findWC(int idBegin){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	int i, j, meters, metersToWC, nearestWC;
 	Waypoint *wc;
 	bool wcFounded = false;
@@ -1119,6 +1217,7 @@ void Pathfinder::findWC(int idBegin){
 }
 
 void Pathfinder::init(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
     CCDictElement *element = NULL;
 	CCString *key;
 	int iKey;
@@ -1220,11 +1319,13 @@ void Pathfinder::init(){
 
 
 CCArray *Pathfinder::getArrayIcons(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	return this->arrayIcons;
 }
 
 
 void Pathfinder::calculateTotalSteps(){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	AStar astar;
 	std::vector<ASTile> arrayPath;
 	std::vector< std::vector<ASTile> > arrayTiles;
@@ -1258,13 +1359,11 @@ void Pathfinder::calculateTotalSteps(){
 						}
 					}
 				}
-				
 				array.push_back(tile);
 			}
-			
 			arrayTiles.push_back(array);
 		}
-
+		
 		Floor *actualFloor = (Floor *)this->arrayMaps->objectAtIndex(this->valueI);
 		CCTMXObjectGroup *waypoints = mTiled->objectGroupNamed("waypoint");
 		
@@ -1280,7 +1379,10 @@ void Pathfinder::calculateTotalSteps(){
 			//CCLOG("startID %d", actualFloor->getStartID());
 			//CCLOG("endID: %d", actualFloor->getEndID());
 			
+			std::cout<<object->valueForKey("id")->intValue()<<" ";
+			
 			if(object->valueForKey("id")->intValue() == actualFloor->getStartID()){
+				
 				begin = arrayTiles.at(objX).at(objY);
 				begin.setPassable(true);
 			}
@@ -1290,8 +1392,8 @@ void Pathfinder::calculateTotalSteps(){
 				end.setPassable(true);
 			}
 		}
-
 		
+		std::cout<<" - "<<mName<<" "<< actualFloor->getStartID() << " " << actualFloor->getEndID() <<"\n";
 		arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
 		
 		stepsCount += arrayPath.size();
@@ -1319,17 +1421,26 @@ void Pathfinder::calculateTotalSteps(){
 }
 
 void Pathfinder::nextStepCount(CCNode *sender){
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
 	CCLog("%d", stepsCount);
 	
 	this->valueI++;
+	//this->calculateTotalSteps();
+	try {
 	this->calculateTotalSteps();
+	} catch(std::exception& e) {
+		std::cout<<"Exception at "<<__LINE__<<" "<<__FILE__<<"\n";
+		std::terminate();
+	}
 	
 }
 
 int Pathfinder::getStepsCount(){
+
 	return this->stepsCount;
 }
 
 int Pathfinder::getStepActual(){
+
 	return this->stepActual;
 }

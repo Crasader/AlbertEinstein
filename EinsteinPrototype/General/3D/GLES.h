@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include <fstream>
+#include "Enumerations.h"
 
 typedef struct
 {
@@ -37,125 +38,66 @@ typedef struct
 	float rX;
 } STATE;
 
-class Building3DLayer : public cocos2d::CCLayer
+class Building3DLayer : /*public IFixedMenu//,*/ public cocos2d::CCLayer
 {
 private:
-	SCENE _scene;
-	STATE _state;
-	kmMat4 _projection, _mvp;
-	GLuint _bufferObject;
-	GLuint _attrib[11];
+	//GLuint _bufferObject;
+	//GLuint _attrib[11];
 	enum {
 		VERTEX = 0, NORMAL, AMBIENT_COLOR, DIFFUSE_COLOR, MV, MVP, LIGHT_COLOR, SELECTED, PICK_VERTEX, PICK_MVP, PICK_COLOR
 	};
-	cocos2d::CCGLProgram* _renderProgram;
-	cocos2d::CCGLProgram* _pickProgram;
+	//cocos2d::CCGLProgram* _renderProgram;
+	//cocos2d::CCGLProgram* _pickProgram;
 public:
     virtual bool init();
 	virtual void draw() override;
-	std::string readBinaryFile(const std::string& filename)
+	std::string readBinaryFile(const std::string& filename);
+	GLuint createBuffer(const std::string& filename);
+	static void loadDefaultState();
+	static void move(float x, float y);
+	static void rotate(float x, float y);
+	static void zoom(float sc);
+	static void pan(int fingerNum, int x, int y)
 	{
-		std::string path = cocos2d::CCFileUtils::sharedFileUtils()->fullPathFromRelativePath(filename.c_str());
+		static int lastFinger = 0;
+		static cocos2d::CCPoint last_position(0,0);
 		
-		size_t filesize;
-		unsigned char* data = cocos2d::CCFileUtils::sharedFileUtils()->getFileData(path.c_str(), "r", &filesize);
-		
-		return std::string(data, data+filesize);
-	}
-	GLuint createBuffer(const std::string& filename)
-	{
-		std::string model = readBinaryFile(filename);
-		
-		const char* p = model.c_str();
-		
-		unsigned vertexCount;
-		memcpy(&vertexCount, p, sizeof(unsigned));
-		p += sizeof(unsigned);
-
-		memcpy(&_scene.count, p, sizeof(unsigned));
-		p += sizeof(unsigned);
-
-		_scene.objects = (OBJECT**)malloc(_scene.count * sizeof(OBJECT*));
-		
-		int i;
-		for (i = 0; i < _scene.count; i++)
+		if(fingerNum != lastFinger)
 		{
-			_scene.objects[i] = (OBJECT*)malloc(sizeof(OBJECT));
-			memcpy(_scene.objects[i], p, sizeof(OBJECT));
-			p += sizeof(OBJECT);
+			last_position = cocos2d::CCPoint(0,0);
+			lastFinger = fingerNum;
 		}
 		
-		GLuint bufferObject;
+		if(last_position.x == 0 && last_position.y == 0)
+			last_position = cocos2d::CCPoint(x,y);
 		
-		glGenBuffers(1, &bufferObject);
-		glBindBuffer(GL_ARRAY_BUFFER, bufferObject);
-		glBufferData(GL_ARRAY_BUFFER, vertexCount * sizeof(VERTEXDATA), p, GL_STATIC_DRAW);
-		glBindBuffer(GL_ARRAY_BUFFER, 0u);
-		
-		_bufferObject = bufferObject;
-		
-		return bufferObject;
+		if(fingerNum == 1)
+		{
+			cocos2d::CCPoint delta;
+			delta.x = x - last_position.x;
+			delta.y = y - last_position.y;
+			
+			last_position = cocos2d::CCPoint(x,y);
+			
+			rotate(delta.x,delta.y);
+		}
+		else if(fingerNum == 2)
+		{
+			cocos2d::CCPoint delta;
+			delta.x = x - last_position.x;
+			delta.y = y - last_position.y;
+			
+			last_position = cocos2d::CCPoint(x,y);
+			
+			move(delta.x,delta.y);
+		}
 	}
-	void loadDefaultState()
+	static void pinch(float velocity)
 	{
-		kmMat4Translation(&_state.modelview, 0, -20.f, -200.f);
-		_state.rX = 0.f;
-		
-		kmMat4Multiply(&_mvp, &_projection, &_state.modelview);
+		zoom(velocity*2);
 	}
-	void move(float x, float y)
-	{
-		kmMat4 copy, trans;
-		
-		kmMat4Assign(&copy, &_state.modelview);
-		kmMat4Translation(&trans, x, 0, 0);
-		kmMat4Multiply(&_state.modelview, &trans, &copy);
-		
-		kmMat4Assign(&copy, &_state.modelview);
-		kmMat4RotationX(&trans, _state.rX);
-		kmMat4Translation(&trans, trans.mat[3*4+1] * y, trans.mat[3*4+2] * y, trans.mat[3*4+3] * y);
-		kmMat4Multiply(&_state.modelview, &trans, &copy);
-		
-		kmMat4Multiply(&_mvp, &_projection, &_state.modelview);
-		
-	}
-	void rotate(float x, float y)
-	{
-		kmMat4 copy, rot;
-		
-		x /= 33;
-		y /= 33;
-		
-		kmMat4Assign(&copy, &_state.modelview);
-		kmMat4RotationY(&rot, x);
-		kmMat4Multiply(&_state.modelview, &copy, &rot);
-		
-		kmMat4Assign(&copy, &_state.modelview);
-		_state.rX += y;
-		kmVec3 axis = {copy.mat[1*4+1],copy.mat[2*4+1],copy.mat[3*4+1]};
-		kmMat4RotationAxisAngle(&rot, &axis, y);
-		
-		kmMat4Multiply(&_state.modelview, &copy, &rot);
-		
-		kmMat4Multiply(&_mvp, &_projection, &_state.modelview);
-	}
-	void zoom(float sc)
-	{
-		sc *= 2;
-		
-		kmMat4 copy, trans;
-
-		kmMat4Assign(&copy, &_state.modelview);
-		kmMat4Translation(&trans, 0.f, 0.f, sc);
-		kmMat4Multiply(&_state.modelview, &trans, &copy);
-
-		kmMat4Multiply(&_mvp, &_projection, &_state.modelview);
-	}
-	void didPan(CCObject* obj);
-	void didPinch(CCObject* obj);
-	void ccTouchesBegan(cocos2d::CCSet *touch, cocos2d::CCEvent *events) override;
-	void ccTouchesMoved(cocos2d::CCSet *touch, cocos2d::CCEvent *events) override;
-	void ccTouchesEnded(cocos2d::CCSet *touch, cocos2d::CCEvent *events) override;
+	static void tap(int x, int y);
+	static void pick(int x,  int y);
     static cocos2d::CCScene* scene();
 	static Building3DLayer* create()
 	{

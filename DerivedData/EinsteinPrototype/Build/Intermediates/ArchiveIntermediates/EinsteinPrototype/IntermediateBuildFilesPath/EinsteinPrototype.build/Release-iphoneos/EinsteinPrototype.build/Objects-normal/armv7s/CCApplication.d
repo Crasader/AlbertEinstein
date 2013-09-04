@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCApplication.mm \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCApplication.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCCommon.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCPlatformMacros.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/include/ccConfig.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCPlatformConfig.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCPlatformDefine.h \
+  EinsteinPrototype/libs/cocos2dx/platform/CCApplicationProtocol.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/include/ccTypes.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCGeometry.h \
+  EinsteinPrototype/libs/cocos2dx/cocoa/CCObject.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCGL.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/cocos2dx/platform/ios/CCDirectorCaller.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/iOScURL/curl/curl.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/iOScURL/curl/curlver.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/iOScURL/curl/curlbuild.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/iOScURL/curl/curlrules.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/iOScURL/curl/easy.h \
+  /Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/EinsteinPrototype/libs/iOScURL/curl/multi.h

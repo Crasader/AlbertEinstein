@@ -17,7 +17,7 @@
  
 
 
-class ErrorViewScene : public CCLayer {
+class ErrorViewScene : public cocos2d::CCLayer {
     
 public:
     ErrorViewScene();

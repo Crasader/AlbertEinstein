@@ -14,6 +14,11 @@
 #include <string>
 
 #include "PListFunctions.h"
+#include "GLES.h"
+
+using namespace std;
+using namespace cocos2d;
+
 const char* Global::TOP_SRC_IMAGE_ComoChegar = "Header_Blue.png";
 const char* Global::TOP_SRC_IMAGE_Mapas = "HeaderMapas.png";
 const char* Global::TOP_SRC_IMAGE_Rotas   ="HeaderMinhasrotas.png";
@@ -29,6 +34,53 @@ int Global:: TAG_Parent_Layer = 300;
 int Global::TAG_Child_Layer = 200;
 int Global::TAG_Child_WayPoint =400;
 int Global::TAG_Alert_Layer = 220;
+
+/* NATURAL SORTING (http://jan.varho.org/?p=263) */
+
+static int digitcnt(const char **p, int decimal)
+{
+	const char *s;
+	while (!decimal && **p == '0')
+		(*p)++;
+	s = *p;
+	while (isdigit(*s))
+		s++;
+	return s - *p;
+}
+
+static int digitcmp(const char **p1, const char **p2, int decimal)
+{
+	int c, c1 = digitcnt(p1, decimal), c2 = digitcnt(p2, decimal);
+	if (decimal || c1 == c2)
+		if ((c = strncmp(*p1, *p2, c1 < c2? c1: c2)))
+			return c;
+	if (c1 != c2)
+		return c1 - c2;
+	*p1 += c1, *p2 += c2;
+	return 0;
+}
+
+int strnatcmp(const char *s1, const char *s2)
+{
+	int c, decimal = 0;
+	do {
+		while (isdigit(*s1) && isdigit(*s2))
+			if ((c = digitcmp(&s1, &s2, decimal)))
+				return c;
+		if (*s1 != *s2)
+			return (unsigned char)*s1 - (unsigned char)*s2;
+		decimal = *s1++ == '.';
+	} while (*s2++);
+	return 0;
+}
+
+struct compareByNum
+{
+	bool operator()(const std::string& a, const std::string& b)
+	{
+		return strnatcmp(a.c_str(), b.c_str()) < 0;
+	}
+};
  
 
 //adiciona um item a um menu
@@ -47,7 +99,8 @@ void IFixedMenu::createMenuItem(CCMenu* menuParent, int tag,char* spriteFileName
 //Inicializa/re-cria o listview
 void IFixedMenu::initListView(cocos2d::CCSize size, cocos2d::extension::CCListViewDelegate* parent)
 {
-     pList=  cocos2d::extension::CCListView::create(cocos2d::extension::CCListViewModeVertical);
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
+     pList = cocos2d::extension::CCListView::create(cocos2d::extension::CCListViewModeVertical);
      pList->setOpacity(0);
      pList->setContentSize(size);
      pList->setDelegate(parent);
@@ -324,7 +377,6 @@ void IFixedMenu::ChangeTitle(HomeMenuState menu)
             break;
     }
 
-
     if( sprite != NULL)
     {
         
@@ -414,7 +466,7 @@ void IFixedMenu::BuildBuildingStateWithLastPoint(bool include)
 		wID.push_back(lstBuildings[i].key);
     }
     
-    std::sort(waypointStr.begin(), waypointStr.end());
+    std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
 	for(int i = 0; i < waypointStr.size(); i++){
 		std::string itemName = waypointStr.at(i);
 		int itemID;
@@ -483,7 +535,7 @@ void IFixedMenu::BuildFloorState(int buildingKey)
 		}
     }
     
-    std::sort(waypointStr.begin(), waypointStr.end());
+    std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
 	for(int i = 0; i < waypointStr.size(); i++){
 		std::string itemName = waypointStr.at(i);
 		int itemID;
@@ -521,8 +573,6 @@ HomeMenuState IFixedMenu::getCategory(int _waypointID)
     return NONE;
 }
 
-
-
 //Carrega waypoints filhos de uma parentKeyID
 void IFixedMenu::BuildCategoryWayPointState(int bKey)
 {
@@ -552,7 +602,60 @@ void IFixedMenu::BuildCategoryWayPointState(int bKey)
     }
  
     
- 	std::sort(waypointStr.begin(), waypointStr.end());
+ 	std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
+	for(int i = 0; i < waypointStr.size(); i++){
+		std::string itemName = waypointStr.at(i);
+		int itemID;
+		int itemCat;
+		std::string itemParentName;
+		
+		for(int j = 0; j < waypointNormalOrder.size(); j++){
+			std::string bNameNormalOrder = waypointNormalOrder.at(j);
+			if(!itemName.compare(bNameNormalOrder)){
+				itemID = wID.at(j);
+				itemCat = category.at(j);
+				itemParentName = parentStr.at(j);
+				
+				insertItemListView(itemID,itemParentName.c_str(),itemName.c_str(),itemCat);
+				break;
+			}
+		}
+	}
+  
+    setUpMenu();
+ 
+  
+}
+
+void IFixedMenu::BuildWayPointByBuilding(int bKey)
+{
+    cleanUp();
+  
+    std::vector<std::string> waypointStr;
+	std::vector<std::string> waypointNormalOrder;
+	std::vector<std::string> parentStr;
+	std::vector<int> wID;
+	std::vector<int> category;
+    vector<FloorSection> lstSection = PListFunctions::readFloorSection();
+    for(int i = 0; i < lstSection.size();i++)
+    {
+        if(lstSection[i].buildingID == bKey)
+        {
+            
+			wID.push_back(lstSection[i].key);
+			waypointStr.push_back(lstSection[i].name);
+			waypointNormalOrder.push_back(lstSection[i].name);
+			
+			parentStr.push_back(lstSection[i].name);
+			category.push_back(lstSection[i].key);
+            /*
+            insertItemListView(lstSection[i].key,lstSection[i].hasChild,(lstSection[i].name),lstSection[i].categoryID);
+             */
+        }
+    }
+ 
+    
+ 	std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
 	for(int i = 0; i < waypointStr.size(); i++){
 		std::string itemName = waypointStr.at(i);
 		int itemID;
@@ -707,7 +810,7 @@ void IFixedMenu::SearchItem( const char* keyword)
 
     
     
-    std::sort(waypointStr.begin(), waypointStr.end());
+    std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
 	for(int i = 0; i < waypointStr.size(); i++){
 		std::string itemName = waypointStr.at(i);
 		int itemID;
@@ -758,7 +861,7 @@ void IFixedMenu::BuildWayPointState( int floorKey, bool removeWayPoint, int wayp
           }
     }
 
-	std::sort(waypointStr.begin(), waypointStr.end());
+	std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
 	for(int i = 0; i < waypointStr.size(); i++){
 		std::string itemName = waypointStr.at(i);
 		int itemID;

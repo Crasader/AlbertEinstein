@@ -72,7 +72,7 @@ void TraceRouteScene::OnBack()
 
 TraceRouteScene::TraceRouteScene(int _wayPointID, EstacionamentoState _stateEstacionamento ,StateMachine _statePreviousPage)
 {
-   
+   	std::cout<<__PRETTY_FUNCTION__<<"\n";
     this->stateEstacionamento = _stateEstacionamento;
     this->statePreviousPage = _statePreviousPage;
     this->actualCategory = statePreviousPage.actual_category;
@@ -88,6 +88,7 @@ TraceRouteScene::TraceRouteScene(int _wayPointID, EstacionamentoState _stateEsta
 
 TraceRouteScene::TraceRouteScene(int wayPointID,StateMachine _statePreviousPage)
 {
+	std::cout<<__PRETTY_FUNCTION__<<"\n";
     stateRota = ROTA_AZ;
     this->statePreviousPage = _statePreviousPage;
     this->actualCategory = statePreviousPage.actual_category;

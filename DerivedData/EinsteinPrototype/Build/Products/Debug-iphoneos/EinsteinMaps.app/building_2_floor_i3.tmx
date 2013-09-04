@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="79" height="17" tilewidth="10" tileheight="10">
+ <properties>
+  <property name="mapName" value="A-03Ss.png"/>
+  <property name="posX" value="54"/>
+  <property name="posY" value="25"/>
+ </properties>
+ <tileset firstgid="1" name="tiles" tilewidth="10" tileheight="10">
+  <image source="tiles.png" width="128" height="128"/>
+  <tile id="52">
+   <properties>
+    <property name="wall" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="145" name="A-03Ss" tilewidth="10" tileheight="10">
+  <image source="A-03Ss.png" width="2048" height="900"/>
+ </tileset>
+ <layer name="floor" width="79" height="17" visible="0">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer name="wall" width="79" height="17">
+  <data encoding="base64" compression="zlib">
+   eJztllESgCAIRLmU979avzUJJq6EujvDRzKUvFG2IiKF4Y5T1Oq1ltdqyM7OW3zI7p3/ymRXdt75dDq7qH528w9t1rf68njpDF/O9L+A4mDV9Mjj83+p5puj77ivk51ey3P3fO6dAWh2I/MwUoi9ILxiRUWwQ30nm0Z7QpypVbnO3Hc2dug7EMGO4YsLggBIQg==
+  </data>
+ </layer>
+ <objectgroup name="waypoint" width="79" height="17">
+  <object name="waypoint" type="waypoint" x="630" y="80" width="20" height="20">
+   <properties>
+    <property name="id" value="1002"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="740" y="40" width="20" height="20">
+   <properties>
+    <property name="id" value="50"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="320" y="100" width="20" height="20">
+   <properties>
+    <property name="id" value="49"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="680" y="10" width="20" height="20">
+   <properties>
+    <property name="id" value="2029"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="icon" width="79" height="17">
+  <object name="elevador" type="icon" x="620" y="70" width="40" height="40">
+   <properties>
+    <property name="id" value="2"/>
+   </properties>
+  </object>
+  <object name="banheiro" type="icon" x="670" y="0" width="40" height="40">
+   <properties>
+    <property name="id" value="14"/>
+   </properties>
+  </object>
+  <object name="recepcao" type="icon" x="730" y="30" width="40" height="40">
+   <properties>
+    <property name="id" value="18"/>
+   </properties>
+  </object>
+  <object name="recepcao" type="icon" x="310" y="90" width="40" height="40">
+   <properties>
+    <property name="id" value="18"/>
+   </properties>
+  </object>
+  <object name="cafe" type="icon" x="10" y="80" width="40" height="40">
+   <properties>
+    <property name="id" value="8"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

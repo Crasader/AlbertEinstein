@@ -2,841 +2,699 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <!--
-     **********************************************************************************************************************************************************
-     **********************************************************************************************************************************************************
-     **********************************************************************************************************************************************************
-     -->
-    <key>WaypointNomeFormatado</key>
-    <dict>
-
-        <key>20</key>
-        <dict>
-        <key>name</key>
-        <array>
-            <string>Centro Cirúrgico</string>
-            <string>Oftalmológico</string>
-        </array>
-        </dict>
-        
-        <key>90</key>
-        <dict>
-            <key>name</key>
-            <array>
-                <string>Laboratorio do</string>
-                <string>Movimento</string>
-            </array>
-        </dict>
-
-        <key>49</key>
-        <dict>
-            <key>name</key>
-            <array>
-                <string>Recepção do Centro  </string>
-                <string>Integrado de Oncologia</string>
-                 <string>e Hemalogia</string>
-            </array>
-        </dict>
-
-        <key>80</key>
-        <dict>
-            <key>name</key>
-            <array>
-                <string>Centro Cirúrgico</string>
-                <string>Avançado</string>
-            </array>
-        </dict>
-
-   		<key>108</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Restaurante Kasher</string>
-                <string>Viena</string>
-            </array>
-		</dict>
-        
-   		<key>92</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Clínica de Especialidades</string>
-                <string>Pediátricas</string>
-            </array>
-		</dict>
-        
-   		<key>81</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Centro Cirúrgico</string>
-                <string>Obstétrico</string>
-            </array>
-		</dict>
-        
-   		<key>45</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Centro de Simulação</string>
-                <string>Realística</string>
-            </array>
-		</dict>
-
-   		<key>55</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Leitos de pronto</string>
-                <string>Atendimento (pré-internação fast)</string>
-            </array>
-		</dict>
-
-        <key>29</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Unidade de Semi </string>
-                <string>Intensiva</string>
-            </array>
-		</dict>
-        
-        <key>46</key>
-        <dict>
-			<key>name</key>
-            <array>
-                <string>Oncologia Ambulatorial </string>
-                <string>Pediátrica</string>
-            </array>
-		</dict>
- 
-        <key>43</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Convênios/Amil/Omint</string>
-                <string>Sulamerica/Bradesco/QualiCorp</string>
-            </array>
-		</dict>
-    </dict >
-    <!--
-     **********************************************************************************************************************************************************
-     ********************************************************************************************************************************************************** 
-     **********************************************************************************************************************************************************
-     -->
-    <key>keywords</key>
+	<key>WaypointNomeFormatado</key>
 	<dict>
-        
-        <key>52</key>
-        <dict>
-			<key>name</key>
-			<array>
-                <string>Apartamentos</string>
-                <string>transplante quartos</string>
-            </array>
-        </dict>
- 
-        <key>96</key>
-        <dict>
-			<key>name</key>
-			<array>
-                <string>Velorio</string>
-            </array>
-        </dict>
- 
-        <key>15</key>
+		<key>20</key>
 		<dict>
 			<key>name</key>
 			<array>
-			<string>Agencia do Banco Safra</string>
-        </array>
-        </dict>
-        
- 		<key>13</key>
-        <dict>
-			<key>name</key>
-			<array>
-                <string>Drogaria Soares</string>
-                <string>farmacia</string>
-            </array>
-        </dict>
-
-        <key>11</key>
-        <dict>
-			<key>name</key>
-			<array>
-                <string>Entrega de veículos</string>
-                <string>estacionamento</string>
-                <string>entrada</string>
-                <string>taxi</string>
-            </array>
+				<string>Centro Cirúrgico</string>
+				<string>Oftalmológico</string>
+			</array>
 		</dict>
-
-        <key>89</key>
+		<key>90</key>
 		<dict>
 			<key>name</key>
 			<array>
-                <string>estacionamento</string>
-                <string>saida</string>
- 
-            </array>
+				<string>Laboratorio do</string>
+				<string>Movimento</string>
+			</array>
 		</dict>
-
-        <key>19</key>
+		<key>49</key>
 		<dict>
 			<key>name</key>
 			<array>
-                <string>estacionamento</string>
-                <string>saida</string>
-                
-            </array>
+				<string>Recepção do Centro  </string>
+				<string>Integrado de Oncologia</string>
+				<string>e Hemalogia</string>
+			</array>
 		</dict>
-        
-        <key>20</key>
+		<key>80</key>
 		<dict>
 			<key>name</key>
 			<array>
-                <string>Centro Cirurgico Oftalmologico</string>
-            </array>
+				<string>Centro Cirúrgico</string>
+				<string>Avançado</string>
+			</array>
 		</dict>
-
-        <key>110</key>
-        <dict>
+		<key>108</key>
+		<dict>
 			<key>name</key>
 			<array>
-               <string>PAB Bradesco</string>
-            </array>
+				<string>Restaurante Kasher</string>
+				<string>Viena</string>
+			</array>
 		</dict>
-
-        <key>86</key>
-        <dict>
+		<key>92</key>
+		<dict>
 			<key>name</key>
 			<array>
-                <string>Centro de Reabilitação</string>
-                <string>Reab</string>
-                <string>Fisioterapia</string>
-                <string>Reabi</string>
-                <string>Terapia Ocupacional</string>
-                <string>Audiometria</string>
-            </array>
+				<string>Clínica de Especialidades</string>
+				<string>Pediátricas</string>
+			</array>
 		</dict>
-
-        <key>1</key>
-        <dict>
-            <key>name</key>
-            <array>
-               <string>Consultorios (508 a 522)</string>
-            </array>
-        </dict>
-
-        <key>3</key>
-        <dict>
-            <key>name</key>
-            <array>
-                <string>Consultorios (401 a 423)</string>
-                <string>Centro de arritmia</string>
-            </array>
-        </dict>
-
+		<key>81</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Centro Cirúrgico</string>
+				<string>Obstétrico</string>
+			</array>
+		</dict>
+		<key>45</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Centro de Simulação</string>
+				<string>Realística</string>
+			</array>
+		</dict>
+		<key>55</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Leitos de pronto</string>
+				<string>Atendimento (pré-internação fast)</string>
+			</array>
+		</dict>
+		<key>29</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Unidade de Semi </string>
+				<string>Intensiva</string>
+			</array>
+		</dict>
+		<key>46</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Oncologia Ambulatorial </string>
+				<string>Pediátrica</string>
+			</array>
+		</dict>
+		<key>43</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Convênios/Amil/Omint</string>
+				<string>Sulamerica/Bradesco/QualiCorp</string>
+			</array>
+		</dict>
+	</dict>
+	<key>keywords</key>
+	<dict>
+		<key>52</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Apartamentos</string>
+				<string>transplante quartos</string>
+			</array>
+		</dict>
+		<key>96</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Velorio</string>
+			</array>
+		</dict>
+		<key>15</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Agencia do Banco Safra</string>
+			</array>
+		</dict>
+		<key>13</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Drogaria Soares</string>
+				<string>farmacia</string>
+			</array>
+		</dict>
+		<key>11</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Entrega de veículos</string>
+				<string>estacionamento</string>
+				<string>entrada</string>
+				<string>taxi</string>
+			</array>
+		</dict>
+		<key>89</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>estacionamento</string>
+				<string>saida</string>
+			</array>
+		</dict>
+		<key>19</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>estacionamento</string>
+				<string>saida</string>
+			</array>
+		</dict>
+		<key>20</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Centro Cirurgico Oftalmologico</string>
+			</array>
+		</dict>
+		<key>110</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>PAB Bradesco</string>
+			</array>
+		</dict>
+		<key>86</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Centro de Reabilitação</string>
+				<string>Reab</string>
+				<string>Fisioterapia</string>
+				<string>Reabi</string>
+				<string>Terapia Ocupacional</string>
+				<string>Audiometria</string>
+			</array>
+		</dict>
+		<key>1</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Consultorios (508 a 522)</string>
+			</array>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Consultorios (401 a 423)</string>
+				<string>Centro de arritmia</string>
+			</array>
+		</dict>
 		<key>4</key>
-		    <dict>
-                <key>name</key>
-	            <array>
-                    <string>Consultorios (301 a 323)</string>
-                    <string>Agendamento de exames</string>
-                </array>
-            </dict>
-
-        
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Consultorios (301 a 323)</string>
+				<string>Agendamento de exames</string>
+			</array>
+		</dict>
 		<key>5</key>
 		<dict>
 			<key>name</key>
-	            <array>
-                    <string>Consultorios (201 a 223)</string>
-                    <string>Agendamento de exames</string>
-                </array>
-        </dict>
-
-        
-        
+			<array>
+				<string>Consultorios (201 a 223)</string>
+				<string>Agendamento de exames</string>
+			</array>
+		</dict>
 		<key>6</key>
 		<dict>
 			<key>name</key>
 			<array>
-                <string>Consultorios (101 a 123)</string>
-            </array>
+				<string>Consultorios (101 a 123)</string>
+			</array>
 		</dict>
-        
-        <key>7</key>
-		<dict>
-             <key>name</key>
-			<array>
-                <string>Acesso a passarela para o bloco A</string>
-                <string>passarela</string>
-            </array>
-        </dict>
-        
-        <key>21</key>
+		<key>7</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Centro de Endoscopia</string>
-                    <string>endoscopia</string>
-                <string>colonoscopia</string>
-                <string>laser</string>
-            </array>
+			<array>
+				<string>Acesso a passarela para o bloco A</string>
+				<string>passarela</string>
+			</array>
 		</dict>
-
-        <key>95</key>
-        <dict>
+		<key>21</key>
+		<dict>
 			<key>name</key>
 			<array>
-                <string>Centro de Saude Ocupacional</string>
-                <string>Medicina do Trabalho</string>
-            </array>
+				<string>Centro de Endoscopia</string>
+				<string>endoscopia</string>
+				<string>colonoscopia</string>
+				<string>laser</string>
+			</array>
 		</dict>
-
+		<key>95</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Centro de Saude Ocupacional</string>
+				<string>Medicina do Trabalho</string>
+			</array>
+		</dict>
 		<key>77</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Banco de leite</string>
-                <string>Sala das maes</string>
-                <string>Sala de amamentacao</string>
-            </array>
+			<array>
+				<string>Banco de leite</string>
+				<string>Sala das maes</string>
+				<string>Sala de amamentacao</string>
+			</array>
 		</dict>
-        
-        <key>79</key>
+		<key>79</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Diretoria Clinica</string>
-            </array>
+			<array>
+				<string>Diretoria Clinica</string>
+			</array>
 		</dict>
-
 		<key>83</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Recepção Imagem Paciente Internado</string>
-                <string>Exames / Sala de laudos</string>
-            </array>
+			<array>
+				<string>Recepção Imagem Paciente Internado</string>
+				<string>Exames / Sala de laudos</string>
+			</array>
 		</dict>
-		
-        <key>84</key>
+		<key>84</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Recepcao Atrium 3</string>
-                <string>Entrada 3</string>
-                <string>Entrada Maternidade</string>
-            </array>
+			<array>
+				<string>Recepcao Atrium 3</string>
+				<string>Entrada 3</string>
+				<string>Entrada Maternidade</string>
+			</array>
 		</dict>
-
 		<key>91</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Consultorios Pediatricos</string>
-                <string>Pediatria</string>
-            </array>
+			<array>
+				<string>Consultorios Pediatricos</string>
+				<string>Pediatria</string>
+			</array>
 		</dict>
-
-        
-        <key>8</key>
-		<dict>
-           <key>name</key>
-           <array>
-                <string>Central de Imunizacao</string>
-                <string>Vacinas</string>
-                <string>Vacinacao</string>
-                <string>Centro de Cirurgia da Obesidade (Bariatrica)</string>
-            </array>
- 		</dict>
-
-        <key>48</key>
+		<key>8</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>IIEP (Instituto Israelita de Ensino e Pesquisa)</string>
-                <string>IEP</string>
-                <string>pesquisa</string>
-                <string>Pesquisa clinica</string>
-                <string>Pesquisa</string>
-                <string>Experimental</string>
-                <string>Biblioteca</string>
-                <string>Instituto do Cerebro</string>
-                <string>Pediatria</string>
-            </array>
+			<array>
+				<string>Central de Imunizacao</string>
+				<string>Vacinas</string>
+				<string>Vacinacao</string>
+				<string>Centro de Cirurgia da Obesidade (Bariatrica)</string>
+			</array>
 		</dict>
-	
-
-        <key>54</key>
+		<key>48</key>
 		<dict>
 			<key>name</key>
-            <array>			 
-			<string>Pré-Internação</string>
-            <string>Medicina Fetal</string>
-            </array>
+			<array>
+				<string>IIEP (Instituto Israelita de Ensino e Pesquisa)</string>
+				<string>IEP</string>
+				<string>pesquisa</string>
+				<string>Pesquisa clinica</string>
+				<string>Pesquisa</string>
+				<string>Experimental</string>
+				<string>Biblioteca</string>
+				<string>Instituto do Cerebro</string>
+				<string>Pediatria</string>
+			</array>
 		</dict>
-
-        <key>67</key>
+		<key>54</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Departamento de Voluntariado</string>
-                <string>Voluntarias</string>
-            </array>
-  			
+			<array>
+				<string>Pré-Internação</string>
+				<string>Medicina Fetal</string>
+			</array>
 		</dict>
-        
-        
-        <key>72</key>
+		<key>67</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Centro de Dialise / Hemodialise</string>
-                <string>Dialise</string>
-            </array>
+			<array>
+				<string>Departamento de Voluntariado</string>
+				<string>Voluntarias</string>
+			</array>
 		</dict>
-        
-        
+		<key>72</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Centro de Dialise / Hemodialise</string>
+				<string>Dialise</string>
+			</array>
+		</dict>
 		<key>16</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Central de exames</string>
-                <string>Medicina Diagnostica</string>
-                <string>MDP</string>
-                <string>Medicina Diagnostica e Preventiva</string>
-                <string>Exames</string>
-                <string>Admissao de exames</string>
-            </array>
+			<array>
+				<string>Central de exames</string>
+				<string>Medicina Diagnostica</string>
+				<string>MDP</string>
+				<string>Medicina Diagnostica e Preventiva</string>
+				<string>Exames</string>
+				<string>Admissao de exames</string>
+			</array>
 		</dict>
-
-        <key>40</key>
+		<key>40</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Recepcao Atrium 1</string>
-                <string>Recepcao principal</string>
-                <string>Recepcao Bloco A</string>
-                <string>Entrada 1</string>
-            </array>
+			<array>
+				<string>Recepcao Atrium 1</string>
+				<string>Recepcao principal</string>
+				<string>Recepcao Bloco A</string>
+				<string>Entrada 1</string>
+			</array>
 		</dict>
-
- 		<key>9</key>
+		<key>9</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Apartamentos Day Clinic</string>
-                <string>Day Clinic</string>
-            </array>
+			<array>
+				<string>Apartamentos Day Clinic</string>
+				<string>Day Clinic</string>
+			</array>
 		</dict>
-
-        <key>10</key>
+		<key>10</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Recepcao</string>
-            </array>
-        </dict>
-        
-        <key>14</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Escultura</string>
-                <string>Estatua Einstein</string>
-            </array>
- 		</dict>
-
-        <key>35</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Auto Serviço Kasher</string>
-                <string>Copa Kasher</string>
-            </array>
- 		</dict>
-        
-        
-        <key>44</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>CESAS</string>
-                <string>Centro de Educacao em Saude Abram Szajman</string>
-                <string>Salas de treinamento  Curso Workshop   CSR   Centro de Simulacao Realistica</string>
-          </array>
+			<array>
+				<string>Recepção</string>
+				<string>Recepcao</string>
+			</array>
 		</dict>
-
+		<key>14</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Escultura</string>
+				<string>Estatua Einstein</string>
+			</array>
+		</dict>
+		<key>35</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Auto Serviço Kasher</string>
+				<string>Copa Kasher</string>
+			</array>
+		</dict>
+		<key>44</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>CESAS</string>
+				<string>Centro de Educacao em Saude Abram Szajman</string>
+				<string>Salas de treinamento  Curso Workshop   CSR   Centro de Simulacao Realistica</string>
+			</array>
+		</dict>
 		<key>78</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Espaço Corpo Clínico</string>
-                <string>Diretoria Clinica</string>
-            </array>
-        </dict>
-        
-        <key>87</key>
-		<dict>
-			<key>name</key>
-             <array>
-                 <string>Sinagoga</string>
-             </array>
+			<array>
+				<string>Espaço Corpo Clínico</string>
+				<string>Diretoria Clinica</string>
+			</array>
 		</dict>
-
-        <key>88</key>
+		<key>87</key>
 		<dict>
 			<key>name</key>
-            <array>
-			<string>Auditório Kleinberger</string>
-            <string>Anfiteatro</string>
-            <string>Auditório</string>
-            <string>Auditório 3º andar</string>
-            </array>
-        </dict>
-
-        <key>93</key>
+			<array>
+				<string>Sinagoga</string>
+			</array>
+		</dict>
+		<key>88</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Centro Administrativo</string>
-            </array>
- 		</dict>
-        
+			<array>
+				<string>Auditório Kleinberger</string>
+				<string>Anfiteatro</string>
+				<string>Auditório</string>
+				<string>Auditório 3º andar</string>
+			</array>
+		</dict>
+		<key>93</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Centro Administrativo</string>
+			</array>
+		</dict>
 		<key>94</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Recursos Humanos</string>
-                <string>RH</string>
-            </array>
+			<array>
+				<string>Recursos Humanos</string>
+				<string>RH</string>
+			</array>
 		</dict>
-
-        <key>80</key>
+		<key>80</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Centro Cirurgico Ambulatorial</string>
-                <string> Ambulatorial</string>
-                <string>Centro Cirurgico</string>
-            </array>
-        </dict>
-        
-        <key>22</key>
-		<dict>
-			<key>name</key>
-            <array>
-                <string>Centro Cirurgico Ambulatorial</string>
-                <string> Ambulatorial</string>
-                <string>Centro Cirurgico</string>
-                <string>RH</string>
-            </array>
+			<array>
+				<string>Centro Cirurgico Ambulatorial</string>
+				<string> Ambulatorial</string>
+				<string>Centro Cirurgico</string>
+			</array>
 		</dict>
-
-        <key>12</key>
+		<key>22</key>
 		<dict>
 			<key>name</key>
-            <array>
-                <string>Cafeteria V. Cafe</string>
-                <string>cafeteria</string>
-                <string>viena</string>
-            </array>
+			<array>
+				<string>Centro Cirurgico Ambulatorial</string>
+				<string> Ambulatorial</string>
+				<string>Centro Cirurgico</string>
+				<string>RH</string>
+			</array>
 		</dict>
-
-        <key>23</key>
+		<key>12</key>
 		<dict>
 			<key>name</key>
-			
-            <array>
-                <string>CTI Pediatrica</string>
-                <string>UTI Pediatrica</string>
-                <string>Apartamentos</string>
-                <string>Internação</string>
-            </array>
+			<array>
+				<string>Cafeteria V. Cafe</string>
+				<string>cafeteria</string>
+				<string>viena</string>
+			</array>
 		</dict>
-        
-        <key>62</key>
-        <dict>
-			<key>name</key>
-	        <array>
-                <string>Med Service</string>
-                <string>materiais ortopedicos</string>
-                <string>loja de materiais ortopedicos</string>
-            </array>
-        </dict>
-        
-        <key>59</key>
-        <dict>
-			<key>name</key>
-	        <array>
-                <string>Loja de Conveniencias</string>
-                <string>lojinha</string>
-                <string>revistaria</string>
-                 <string>banca</string>
-                 <string>floricultura</string>
-            </array>
-        </dict>
-        
-        <key>25</key>
+		<key>23</key>
 		<dict>
 			<key>name</key>
-	        <array>
-                <string>Apartamentos</string>
-                <string>Internação Clínica Médica e Cirúrgica</string>
-                <string>Internacao Clinica Medica e Cirurgica</string>
-                <string>Apartamentos</string>
-                <string>Quartos</string>
-            </array>
-        </dict>
-        
-        
+			<array>
+				<string>CTI Pediatrica</string>
+				<string>UTI Pediatrica</string>
+				<string>Apartamentos</string>
+				<string>Internação</string>
+			</array>
+		</dict>
+		<key>62</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Med Service</string>
+				<string>materiais ortopedicos</string>
+				<string>loja de materiais ortopedicos</string>
+			</array>
+		</dict>
+		<key>59</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Loja de Conveniencias</string>
+				<string>lojinha</string>
+				<string>revistaria</string>
+				<string>banca</string>
+				<string>floricultura</string>
+			</array>
+		</dict>
+		<key>25</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Internação Clínica Médica e Cirúrgica</string>
+				<string>Internacao Clinica Medica e Cirurgica</string>
+				<string>Médica e Cirurgica Apartamentos Geriatria  Quartos Geriatria Internacao Geriatria</string>
+			</array>
+		</dict>
 		<key>26</key>
 		<dict>
 			<key>name</key>
-	        <array>
-                <string>Apartamentos</string>
-                <string>Internação Clínica Médica e Cirúrgica</string>
-                <string>Internacao Clinica Medica e Cirurgica</string>
-                <string>Apartamentos</string>
-                <string>Quartos</string>
-            </array>
-        </dict>
-
+			<array>
+				<string>Apartamentos</string>
+				<string>Internação Clínica Médica e Cirúrgica</string>
+				<string>Internacao Clinica Medica e Cirurgica</string>
+				<string>Apartamentos</string>
+				<string>Quartos</string>
+			</array>
+		</dict>
 		<key>27</key>
-        <dict>
-			<key>name</key>
-	        <array>
-                <string>Apartamentos</string>
-                <string>Quartos</string>
-            </array>
-        </dict>
-        
-        
-        <key>65</key>
 		<dict>
 			<key>name</key>
-	        <array>
-                <string>Caixas Eletrônicos</string>
-                <string>Itau</string>
-                <string>Bradesco</string>
-                <string>Safra</string>
-            </array>
+			<array>
+				<string>Apartamentos</string>
+				<string>Quartos</string>
+			</array>
 		</dict>
-
-        <key>46</key>
-        <dict>
+		<key>65</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Oncologia Ambulatorial Pediátrica</string>
-                <string>Radio</string>
-            </array>
-        </dict>
-
+			<array>
+				<string>Caixas Eletrônicos</string>
+				<string>Itau</string>
+				<string>Bradesco</string>
+				<string>Safra</string>
+			</array>
+		</dict>
+		<key>46</key>
+		<dict>
+			<key>name</key>
+			<array>
+				<string>Oncologia Ambulatorial Pediátrica</string>
+				<string>Radio</string>
+			</array>
+		</dict>
 		<key>47</key>
-        <dict>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Oncologia Ambulatorial Adulto</string>
-                <string>Radio</string>
-            </array>
-        </dict>
-
-        <key>49</key>
-        <dict>
+			<array>
+				<string>Ambulatório de Oncologia Adulto</string>
+				<string>Ambulatorio de Oncologia Adulto</string>
+				<string>Onco Quimio Oncologia Quimioterapia Consultorios Oncologia</string>
+			</array>
+		</dict>
+		<key>49</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Recepcao do Centro Integrado de Oncologia e Hematologia</string>
-                <string>Radio</string>
-            </array>
-        </dict>
-
-        <key>50</key>
-        <dict>
+			<array>
+				<string>Recepcao do Centro Integrado de Oncologia e Hematologia</string>
+				<string>Radio</string>
+			</array>
+		</dict>
+		<key>50</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Consultórios de Oncologia e Radioterapia</string>
-                <string>Radioterapia</string>
-                <string>Radio</string>
-            </array>
-        </dict>
- 
-        <key>63</key>
-        <dict>
+			<array>
+				<string>Consultórios de Oncologia e Radioterapia</string>
+				<string>Radioterapia</string>
+				<string>Radio</string>
+			</array>
+		</dict>
+		<key>63</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Jacques Janine</string>
-                <string>cabeleireiro</string>
-                <string>salao beleza</string>
-                <string>salao</string>
-            </array>
-        </dict>
-
-        <key>90</key>
-        <dict>
+			<array>
+				<string>Jacques Janine</string>
+				<string>cabeleireiro</string>
+				<string>salao beleza</string>
+				<string>salao</string>
+			</array>
+		</dict>
+		<key>90</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Laboratorio do Movimento</string>
-              <string>LEME</string>
-            </array>
-        </dict>
- 
-        <key>82</key>
-        <dict>
+			<array>
+				<string>Laboratorio do Movimento</string>
+				<string>LEME</string>
+			</array>
+		</dict>
+		<key>82</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Pre Parto</string>
-                <string>LEME</string>
-                <string>nutricao</string>
-            </array>
-        </dict>
-
-        <key>2</key>
-        <dict>
+			<array>
+				<string>Pre Parto</string>
+				<string>LEME</string>
+				<string>nutricao</string>
+			</array>
+		</dict>
+		<key>2</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Conforto Médico</string>
-                <string>Conforto Medico</string>
-                <string>Agendamento de exames</string>
-            </array>
-        </dict>
-        
-        <key>81</key>
-        <dict>
+			<array>
+				<string>Conforto Médico</string>
+				<string>Conforto Medico</string>
+				<string>Agendamento de exames</string>
+			</array>
+		</dict>
+		<key>81</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Centro Cirurgico Obstetrico</string>
-            </array>
-        </dict>
- 
-        
-        <key>58</key>
-        <dict>
+			<array>
+				<string>Centro Cirurgico Obstetrico</string>
+			</array>
+		</dict>
+		<key>58</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Ressonancia Magnetica</string>
-                <string>Pet Scan</string>
-                <string>REMA</string>
-                </array>
-        </dict>
-      
-        
-        <key>56</key>
-        <dict>
+			<array>
+				<string>Ressonancia Magnetica</string>
+				<string>Pet Scan</string>
+				<string>REMA</string>
+			</array>
+		</dict>
+		<key>56</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Recepcao da Unidade de Primeiro Atendimento</string>
-                <string>PA</string>
-                <string>UPA</string>
-                <string>Pronto Socorro</string>
-                <string>Emergencia</string>
-            </array>
-        </dict>
- 
-
-        <key>33</key>
-        <dict>
+			<array>
+				<string>Recepcao da Unidade de Primeiro Atendimento</string>
+				<string>PA</string>
+				<string>UPA</string>
+				<string>Pronto Socorro</string>
+				<string>Emergencia</string>
+			</array>
+		</dict>
+		<key>33</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Intervenção Cardiovascular</string>
-                <string>Intervencao Cardiovascular</string>
-                <string>Hemodinamica</string>
-            </array>
-        </dict>
-        
-       <key>39</key>
-        <dict>
+			<array>
+				<string>Intervenção Cardiovascular</string>
+				<string>Intervencao Cardiovascular</string>
+				<string>Hemodinamica</string>
+			</array>
+		</dict>
+		<key>39</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Centro de Atendimento Comercial</string>
-                <string>Departamento Comercial </string>
-                <string>Comercial</string>
-            </array>
-        </dict>
-        
-        <key>47</key>
-        <dict>
+			<array>
+				<string>Centro de Atendimento Comercial</string>
+				<string>Departamento Comercial </string>
+				<string>Comercial</string>
+			</array>
+		</dict>
+		<key>32</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Ambulatório de Oncologia Adulto</string>
-                <string>Ambulatorio de Oncologia Adulto</string>
-                <string>Onco Quimio Oncologia Quimioterapia Consultorios Oncologia</string>
-            </array>
-        </dict>
-
-        <key>32</key>
-        <dict>
+			<array>
+				<string>Banco de Sangue</string>
+				<string>Doacao de Sangue </string>
+			</array>
+		</dict>
+		<key>30</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Banco de Sangue</string>
-                <string>Doacao de Sangue </string>
-            </array>
-        </dict>
-
-        <key>10</key>
-        <dict>
+			<array>
+				<string>Internação Oncologia e TMO</string>
+				<string>Onco hemato</string>
+			</array>
+		</dict>
+		<key>34</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                  <string>Recepção</string>
-                  <string>Recepcao</string>
-            </array>
-        </dict>
-
-        <key>30</key>
-        <dict>
+			<array>
+				<string>Internação Clínica Médica e Cirúrgica e Semi-Intensiva Neurológica</string>
+				<string>Internação Clinica Medica e Cirurgica e Semi-Intensiva Neurologica </string>
+				<string>Apartamentos Neuro Quartos Neuro Apartamentos Psiquiatria Quartos Psiquiatria </string>
+			</array>
+		</dict>
+		<key>109</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Internação Oncologia e TMO</string>
-                <string>Onco hemato</string>
-            </array>
-       </dict>
- 
-        <key>34</key>
-        <dict>
+			<array>
+				<string>Auditorio Moise Safra</string>
+			</array>
+		</dict>
+		<key>38</key>
+		<dict>
 			<key>name</key>
-	        <array>
-                <string>Internação Clínica Médica e Cirúrgica e Semi-Intensiva Neurológica</string>
-                <string>Internação Clinica Medica e Cirurgica e Semi-Intensiva Neurologica </string>
-                 <string>Apartamentos Neuro Quartos Neuro Apartamentos Psiquiatria Quartos Psiquiatria </string>
-            </array>
-        </dict>
- 
-        <key>25</key>
-        <dict>
-			<key>name</key>
-	        <array>
-                <string>Internação Clínica Médica e Cirúrgica</string>
-                <string>Internacao Clinica Medica e Cirurgica</string>
-                <string>Médica e Cirurgica Apartamentos Geriatria  Quartos Geriatria Internacao Geriatria</string>
-            </array>
-        </dict>
-
-        <key>109</key>
-        <dict>
-			<key>name</key>
-	        <array>
-                <string>Auditorio Moise Safra</string>
-            </array>
-        </dict>
-
-        <key>38</key>
-        <dict>
-			<key>name</key>
-	        <array>
-                <string>Atendimento ao Paciente internacional</string>
-                <string>Convenios Internacionais</string>
-            </array>
-        </dict>
-
-    </dict>
-    <!--
-     **********************************************************************************************************************************************************
-     **********************************************************************************************************************************************************
-     **********************************************************************************************************************************************************
-     -->
+			<array>
+				<string>Atendimento ao Paciente internacional</string>
+				<string>Convenios Internacionais</string>
+			</array>
+		</dict>
+	</dict>
 	<key>Services</key>
 	<dict>
 		<key>991</key>
@@ -848,7 +706,6 @@
 			<key>hasChild</key>
 			<string>s</string>
 		</dict>
-
 		<key>107</key>
 		<dict>
 			<key>name</key>
@@ -858,8 +715,7 @@
 			<key>hasChild</key>
 			<string>n</string>
 		</dict>
-		
-        <key>85</key>
+		<key>85</key>
 		<dict>
 			<key>name</key>
 			<string>Café Viena</string>
@@ -1021,9 +877,7 @@
 			<key>hasChild</key>
 			<string>n</string>
 		</dict>
-        
-        
-        <key>22</key>
+		<key>22</key>
 		<dict>
 			<key>name</key>
 			<string>Centro Cirúrgico</string>
@@ -1032,8 +886,7 @@
 			<key>hasChild</key>
 			<string>n</string>
 		</dict>
-
-        <key>332</key>
+		<key>332</key>
 		<dict>
 			<key>name</key>
 			<string>Maternidade</string>
@@ -1042,8 +895,7 @@
 			<key>hasChild</key>
 			<string>s</string>
 		</dict>
-
-        <key>73</key>
+		<key>73</key>
 		<dict>
 			<key>name</key>
 			<string>Maternidade 9º Andar</string>
@@ -1052,8 +904,7 @@
 			<key>hasChild</key>
 			<string>n</string>
 		</dict>
-		
-        <key>74</key>
+		<key>74</key>
 		<dict>
 			<key>name</key>
 			<string>Maternidade</string>
@@ -1062,8 +913,6 @@
 			<key>hasChild</key>
 			<string>n</string>
 		</dict>
-        
-        
 		<key>75</key>
 		<dict>
 			<key>name</key>
@@ -1073,8 +922,6 @@
 			<key>hasChild</key>
 			<string>n</string>
 		</dict>
-
-        
 		<key>80</key>
 		<dict>
 			<key>name</key>
@@ -1255,7 +1102,6 @@
 			<key>hasChild</key>
 			<string>n</string>
 		</dict>
-
 		<key>23</key>
 		<dict>
 			<key>name</key>
@@ -1365,13 +1211,6 @@
 			<string>s</string>
 		</dict>
 	</dict>
-    <!--
-     **********************************************************************************************************************************************************
-     **********************************************************************************************************************************************************
-     **********************************************************************************************************************************************************
-     -->
-	
-	
 	<key>buildings</key>
 	<dict>
 		<key>1</key>

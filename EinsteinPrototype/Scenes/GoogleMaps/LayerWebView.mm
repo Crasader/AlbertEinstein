@@ -191,7 +191,6 @@ void LayerWebView::CCListView_cellForRow(cocos2d::extension::CCListView *listVie
 #include "PListFunctions.h"
 void LayerWebView::CCListView_didClickCellAtRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)
 {
-    
     if(plistMenuCurrent[data->nRow].key == 0)
     {
         PListFunctions::readServicesSection();
@@ -254,5 +253,6 @@ bool LayerWebView::init()
     insertItemListView( 9 ,"Paulista");
     insertItemListView( 2 ,"Perdizes-Higienópolis");
     insertItemListView( 6 ,"Vila Mariana");
+	insertItemListView(10 ,"Cidade Jardim");
     setUpMenu();
 }

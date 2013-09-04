@@ -68,8 +68,9 @@ public:
     
     void execute();
     void start(int idBegin, int idEnd);
-	void nextMap();
-	void step(int nextValue, bool firstTime);
+	void nextMap(CCObject* pObj);
+	void goToNextMap(CCObject* pObj);
+	void step(int nextValue, bool firstTime, bool animate = true);
 	void nextStep(bool firstTime);
 	void previousStep(bool firstTime);
 	void previousMap();
@@ -99,6 +100,13 @@ public:
 	
 	int getStepsCount();
 	int getStepActual();
+	
+	inline int getActualMapIndex() const { return actualMapIndex; }
+	inline const std::vector<int>& getMapBuildings() const { return mapBuildings; }
+	inline const std::vector<int>& getMapFloors() const { return mapFloors; }
+	inline bool getStepLock() { return stepLock; }
+	
+	inline AnimatedSprite* getLoading() const { return loading; }
 	
 private:
     //AStar *aStar;

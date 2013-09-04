@@ -7,6 +7,9 @@
 
 #include "SearchScene.h"
 #include "LayerWebView.h"
+
+using namespace cocos2d;
+
 bool SearchScene::onTextFieldAttachWithIME(CCTextFieldTTF * sender)
 {
     this->cursorLabel->setVisible(true);

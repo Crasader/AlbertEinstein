@@ -1,0 +1,1 @@
+/Users/lucasbittencourt/Documents/Projetos/AlbertEinstein/DerivedData/EinsteinPrototype/Build/Intermediates/ArchiveIntermediates/EinsteinPrototype/InstallationBuildProductsLocation/Applications/EinsteinMaps.app

@@ -16,7 +16,7 @@ ErrorViewScene::ErrorViewScene()
 
 void ErrorViewScene::ShowPage()
 {
-    CCSprite *sprtFundoEstabelecimento = CCSprite::create("Logo.png");
+    cocos2d::CCSprite *sprtFundoEstabelecimento = cocos2d::CCSprite::create("Logo.png");
     sprtFundoEstabelecimento->setAnchorPoint(ccp(0,0));
     sprtFundoEstabelecimento->setPosition(ccp(0, 180));
     this->addChild(sprtFundoEstabelecimento);

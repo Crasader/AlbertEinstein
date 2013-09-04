@@ -2,30 +2,42 @@
 
 //#include "Building3DLayer.h"
 #include "SimpleAudioEngine.h"
-#include "OpenGL_Internal.h"
+//#include "OpenGL_Internal.h"
 //#include "CCPanGestureRecognizer.h"
 //#include "CCPinchGestureRecognizer.h"
 //#include <Array>
+#include "BlockListScene.h"
+#include <algorithm>
 
 using namespace cocos2d;
 using namespace CocosDenshion;
 
+SCENE _scene;
+STATE _state;
+kmMat4 _projection, _mvp;
+
+GLuint _bufferObject = 0;
+GLuint _attrib[11];
+
+cocos2d::CCGLProgram* _renderProgram = NULL;
+cocos2d::CCGLProgram* _pickProgram = NULL;
+
+bool shouldPick = false;
+CCPoint pickPoint(0,0);
+
+#define DIST(x, y) (sqrtf(((x)*(x)) + ((y)*(y))))
+#define numActiveTouches() numberOfActiveTouches(active_touch_list)
+
+bool active = false;
+
 CCScene* Building3DLayer::scene()
 {
     CCScene *scene = CCScene::create();
-    Building3DLayer *layer = Building3DLayer::create();
-    scene->addChild(layer);
+    /*Building3DLayer *layer = Building3DLayer::create();
+    scene->addChild(layer);*/
 
     return scene;
 }
-
-const unsigned VERTEX_NUMBER = 3;
-const unsigned ELEMENT_NUMBER = 3;
-
-GLuint vertex_buffer_id;
-GLuint element_buffer_id;
-
-CCSprite* pSprite;
 
 bool Building3DLayer::init()
 {
@@ -34,106 +46,102 @@ bool Building3DLayer::init()
         return false;
     }
 	
+	active = true;
+	
+	kmMat4 testMat;
+	kmMat4Identity(&testMat);
+	
 	mTexture = CCTextureCache::sharedTextureCache()->addImage("HelloWorld.png");
 
 	this->setTouchEnabled(true);
-	//CCDirector::sharedDirector()->getTouchDispatcher()->addStandardDelegate(this, 0);
 	
-	const size_t mult = 1;
-	
-	GLfloat vertex_list[VERTEX_NUMBER*3] = {1.f * mult,1.f * mult,0.f , -1.f * mult,1.f * mult,0.f , 1.f * mult,-1.f * mult,0.f};
-	glGenBuffers(1, &vertex_buffer_id);
-	glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_id);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*3*VERTEX_NUMBER, vertex_list, GL_STATIC_DRAW);
-	
-	GLuint element_list[ELEMENT_NUMBER] = {0,1,2};
-	glGenBuffers(1, &element_buffer_id);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_id);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint)*ELEMENT_NUMBER, element_list, GL_STATIC_DRAW);
-	
-	_renderProgram = new CCGLProgram();
-	_renderProgram->initWithVertexShaderByteArray(
-		"\
-			attribute vec3 vertex;\
-			attribute vec3 normal;\
-			attribute vec3 ambientColor;\
-			attribute vec3 diffuseColor;\
-			\
-			varying vec4 color;\
-			\
-			uniform mat4 mv;\
-			uniform mat4 mvp;\
-			uniform vec3 lightColor;\
-			uniform bool selected;\
-			\
-			void main(void)\
-			{\
-				vec4 lightPosition = vec4(0.0, 1000.0, 3000.0, 1.0);\
-				\
-				vec4 vertexPosition = mv * vec4(vertex, 1.0);\
-				vec4 mvNormal = mv * vec4(normal, 0.0);\
-				\
-				vec4 lightDirection = normalize(lightPosition - vertexPosition);\
-				\
-				float factor = max(dot(mvNormal, lightDirection), 0.0);\
-				\
-				vec3 bColor;\
-				\
-				if (selected)\
-				{\
-					bColor = ambientColor * lightColor + diffuseColor * lightColor * factor * 0.5;\
-				}\
-				else\
-				{\
-					bColor = ambientColor * lightColor + diffuseColor * lightColor * factor;\
-				}\
-				\
-				color = vec4(bColor, 1.0);\
-				\
-				gl_Position = mvp * vec4(vertex, 1.0);\
-			}",
-			"#ifdef GL_ES\n\
-				precision highp float;\n\
-			#endif\n\
-			\
-			varying vec4 color;\
-			\
-			void main(void)\
-			{\
-				gl_FragColor = color;\
-			}"
-	);
-	_renderProgram->link();
-	
-	_pickProgram = new CCGLProgram;
-	_pickProgram->initWithVertexShaderByteArray(
-		"\
-			attribute vec3 vertex;\
-			\
-			varying vec4 color;\
-			\
-			uniform mat4 mvp;\
-			uniform vec3 pickColor;\
-			\
-			void main(void)\
-			{\
-				color = vec4(pickColor, 1.0);\
-				\
-				gl_Position = mvp * vec4(vertex, 1.0);\
-			}",
+	if(!_renderProgram){
+		_renderProgram = new CCGLProgram();
+		_renderProgram->initWithVertexShaderByteArray(
 			"\
-			#ifdef GL_ES\n\
-				precision highp float;\n\
-			#endif\n\
-			\
-			varying vec4 color;\
-			\
-			void main(void)\
-			{\
-				gl_FragColor = color;\
-			}"
-	);
-	_pickProgram->link();
+				attribute vec3 vertex;\
+				attribute vec3 normal;\
+				attribute vec3 ambientColor;\
+				attribute vec3 diffuseColor;\
+				\
+				varying vec4 color;\
+				\
+				uniform mat4 mv;\
+				uniform mat4 mvp;\
+				uniform vec3 lightColor;\
+				uniform bool selected;\
+				\
+				void main(void)\
+				{\
+					vec4 lightPosition = vec4(0.0, 1000.0, 3000.0, 1.0);\
+					\
+					vec4 vertexPosition = mv * vec4(vertex, 1.0);\
+					vec4 mvNormal = mv * vec4(normal, 0.0);\
+					\
+					vec4 lightDirection = normalize(lightPosition - vertexPosition);\
+					\
+					float factor = max(dot(mvNormal, lightDirection), 0.0);\
+					\
+					vec3 bColor;\
+					\
+					if (selected)\
+					{\
+						bColor = ambientColor * lightColor + diffuseColor * lightColor * factor * 0.5;\
+					}\
+					else\
+					{\
+						bColor = ambientColor * lightColor + diffuseColor * lightColor * factor;\
+					}\
+					\
+					color = vec4(bColor, 1.0);\
+					\
+					gl_Position = mvp * vec4(vertex, 1.0);\
+				}",
+				"#ifdef GL_ES\n\
+					precision highp float;\n\
+				#endif\n\
+				\
+				varying vec4 color;\
+				\
+				void main(void)\
+				{\
+					gl_FragColor = color;\
+				}"
+		);
+		_renderProgram->link();
+	}
+	
+	if(!_pickProgram) {
+		_pickProgram = new CCGLProgram;
+		_pickProgram->initWithVertexShaderByteArray(
+			"\
+				attribute vec3 vertex;\
+				\
+				varying vec4 color;\
+				\
+				uniform mat4 mvp;\
+				uniform vec3 pickColor;\
+				\
+				void main(void)\
+				{\
+					color = vec4(pickColor, 1.0);\
+					\
+					gl_Position = mvp * vec4(vertex, 1.0);\
+				}",
+				"\
+				#ifdef GL_ES\n\
+					precision highp float;\n\
+				#endif\n\
+				\
+				varying vec4 color;\
+				\
+				void main(void)\
+				{\
+					gl_FragColor = color;\
+				}"
+		);
+		_pickProgram->link();
+	}
 	
 	_attrib[VERTEX] = glGetAttribLocation(_renderProgram->getProgram(), "vertex");
 	_attrib[NORMAL] = glGetAttribLocation(_renderProgram->getProgram(), "normal");
@@ -158,111 +166,257 @@ bool Building3DLayer::init()
     return true;
 }
 
-void Building3DLayer::didPan(CCObject* obj)
+std::string Building3DLayer::readBinaryFile(const std::string& filename)
 {
+	std::string path = cocos2d::CCFileUtils::sharedFileUtils()->fullPathFromRelativePath(filename.c_str());
 	
-}
-
-void Building3DLayer::didPinch(CCObject* obj)
-{
-
-}
-
-std::vector<int> active_touch_list;
-
-CCPoint last_location;
-
-int numberOfActiveTouches(const std::vector<int>& arr)
-{
-	int cnt = 0;
-	for(int i = 0; i < 5; i++)
-		arr[i] ? cnt++ : cnt;
-		
-	return cnt;
-}
-
-#define numActiveTouches() numberOfActiveTouches(active_touch_list)
-
-void Building3DLayer::ccTouchesBegan(cocos2d::CCSet *touches, cocos2d::CCEvent *events)
-{
-	CCSetIterator it = touches->begin();
+	size_t filesize;
+	unsigned char* data = cocos2d::CCFileUtils::sharedFileUtils()->getFileData(path.c_str(), "r", &filesize);
 	
-	for(;it != touches->end();++it)
+	return std::string(data, data+filesize);
+}
+
+GLuint Building3DLayer::createBuffer(const std::string& filename)
+{
+	std::string model = readBinaryFile(filename);
+	
+	const char* p = model.c_str();
+	
+	unsigned vertexCount;
+	memcpy(&vertexCount, p, sizeof(unsigned));
+	p += sizeof(unsigned);
+
+	memcpy(&_scene.count, p, sizeof(unsigned));
+	p += sizeof(unsigned);
+
+	_scene.objects = (OBJECT**)malloc(_scene.count * sizeof(OBJECT*));
+	
+	int i;
+	for (i = 0; i < _scene.count; i++)
 	{
-		CCTouch* touch = static_cast<CCTouch*>(*it);
-		active_touch_list[touch->getID()] = 1;
+		_scene.objects[i] = (OBJECT*)malloc(sizeof(OBJECT));
+		memcpy(_scene.objects[i], p, sizeof(OBJECT));
+		p += sizeof(OBJECT);
+	}
+	
+	GLuint bufferObject;
+	
+	glGenBuffers(1, &bufferObject);
+	glBindBuffer(GL_ARRAY_BUFFER, bufferObject);
+	glBufferData(GL_ARRAY_BUFFER, vertexCount * sizeof(VERTEXDATA), p, GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, 0u);
+	
+	_bufferObject = bufferObject;
+	
+	return bufferObject;
+}
+
+void Building3DLayer::loadDefaultState()
+{
+	active = true;
+	//kmMat4Translation(&_state.modelview, -50, -50.f, -250.f);
+	kmMat4Translation(&_state.modelview, 0, 0.f, -600.f);
+	_state.rX = 120.f;
+	
+	kmMat4Multiply(&_mvp, &_projection, &_state.modelview);
+	
+	shouldPick = false;
+	
+	 float cpymvp[] = {2.59177,-0.0653749,-0.0588968,-0.058885,-2.72216e-09,1.45824,-0.53974,-0.539632,-0.18172,-0.9324,-0.840007,-0.839839,-5.19626,17.2396,334.354,336.287};
+	 std::copy(cpymvp,cpymvp+16,_mvp.mat);
+	 
+	 float cpyproj[] = {2.59813,0,0,0,0,1.73209,0,0,0,0,-1.0002,-1,0,0,-2.0002,0};
+	 std::copy(cpyproj,cpyproj+16,_projection.mat);
+	 
+	 float cpymv[] = {0.997551,-0.0377434,0.058885,0,-1.04774e-09,0.841901,0.539632,0,-0.0699428,-0.538311,0.839839,0,-2,9.95307,-336.287,1};
+	 std::copy(cpymv,cpymv+16,_state.modelview.mat);
+}
+void Building3DLayer::move(float x, float y)
+{
+	if(!active) return;
+	kmMat4 copy, trans;
+	
+	y *= -1;
+	
+	kmMat4Assign(&copy, &_state.modelview);
+	kmMat4Translation(&trans, x, 0, 0);
+	kmMat4Multiply(&_state.modelview, &trans, &copy);
+	
+	kmMat4Assign(&copy, &_state.modelview);
+	kmMat4RotationX(&trans, _state.rX);
+	//kmMat4Translation(&trans, trans.mat[3*4+1] * y, trans.mat[3*4+2] * y, trans.mat[3*4+3] * y);
+	kmMat4Translation(&trans, trans.mat[2] * y, trans.mat[6] * y, trans.mat[10] * y);
+	kmMat4Multiply(&_state.modelview, &trans, &copy);
+	
+	kmMat4Multiply(&_mvp, &_projection, &_state.modelview);
+	
+	std::cout<<"\nMVP: {";
+	for(int i = 0; i < 16; i++) {
+		std::cout<<_mvp.mat[i]<<",";
+	}
+	std::cout<<"}\nProjection: {";
+	for(int i = 0; i < 16; i++) {
+		std::cout<<_projection.mat[i]<<",";
+	}
+	std::cout<<"}\nModel View: {";
+	for(int i = 0; i < 16; i++) {
+		std::cout<<_state.modelview.mat[i]<<",";
 	}
 }
 
-#define DIST(x, y) (sqrtf(((x)*(x)) + ((y)*(y))))
-
-void Building3DLayer::ccTouchesMoved(cocos2d::CCSet *touches, cocos2d::CCEvent *pEvent)
+void Building3DLayer::rotate(float x, float y)
 {
-	CCSetIterator it = touches->begin();
+	if(!active) return;
+	kmMat4 copy, rot;
+	
+	x /= 100.f;
+	y /= 100.f;
+	
+	//float piover2 = 3.14/2.f;
+	
+	kmMat4Assign(&copy, &_state.modelview);
+	kmMat4RotationY(&rot, x);
+	kmMat4Multiply(&_state.modelview, &copy, &rot);
+	
+	kmMat4Assign(&copy, &_state.modelview);
+	_state.rX += y;
+	kmVec3 axis = {copy.mat[0],copy.mat[4],copy.mat[8]};
+	kmMat4RotationAxisAngle(&rot, &axis, y);
+	
+	kmMat4Multiply(&_state.modelview, &copy, &rot);
+	
+	kmMat4Multiply(&_mvp, &_projection, &_state.modelview);
 
-	if(numActiveTouches() == 1)
+}
+
+void Building3DLayer::zoom(float sc)
+{
+	sc *= 2;
+	
+	kmMat4 copy, trans;
+
+	kmMat4Assign(&copy, &_state.modelview);
+	kmMat4Translation(&trans, 0.f, 0.f, sc);
+	kmMat4Multiply(&_state.modelview, &trans, &copy);
+
+	kmMat4Multiply(&_mvp, &_projection, &_state.modelview);
+}
+
+void Building3DLayer::pick(int x, int y)
+{
+	if(!active) return;
+	int ix, iy;
+
+	ix = x;
+	iy = y;
+
+	static OBJECT *selectedObject = NULL;
+	unsigned i;
+
+	//glClearColor(0.f, 0.f, 0.f, 1.f);
+	//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	glUseProgram(_pickProgram->getProgram());
+
+	glUniformMatrix4fv(_attrib[PICK_MVP], 1, GL_FALSE, (GLfloat*)&_mvp);
+
+	glEnableVertexAttribArray(_attrib[PICK_VERTEX]);
+
+	glBindBuffer(GL_ARRAY_BUFFER, _bufferObject);
+
+	glVertexAttribPointer(_attrib[PICK_VERTEX], 3, GL_FLOAT, GL_FALSE, sizeof(VERTEXDATA), (void*)offsetof(VERTEXDATA, vX));
+
+	for (i = 0; i < _scene.count; i++)
 	{
-		CCTouch* touch = (CCTouch*)(*it);
-
-		CCPoint delta = touch->locationInView();
-		delta.x -= last_location.x;
-		delta.y -= last_location.y;
-		last_location = touch->locationInView();
-		
-		rotate(delta.x,delta.y);
+		glUniform3f(_attrib[PICK_COLOR],
+			_scene.objects[i]->pickColor[0] / 255.f, _scene.objects[i]->pickColor[1] / 255.f, _scene.objects[i]->pickColor[2] / 255.f);
+		glDrawArrays(GL_TRIANGLES, _scene.objects[i]->first, _scene.objects[i]->count);
 	}
-	if(numActiveTouches() == 2)
+
+	glDisableVertexAttribArray(_attrib[PICK_VERTEX]);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0u);
+	glUseProgram(0u);
+
+	GLubyte color[4];
+	CCSize windowsize = CCDirector::sharedDirector()->getWinSize();
+	
+	int scaleFactor = CCDirector::sharedDirector()->getContentScaleFactor();
+	
+	glReadPixels(std::max(0,ix * scaleFactor - 1), std::max<int>(0,(windowsize.height - iy)*scaleFactor-1), 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, color);
+
+	if (color[0] == 0 && selectedObject != NULL)
 	{
-		static float last_distance = 40;
-		std::vector<CCTouch*> twotouches;
-		int i = 0;
-		for(;it!=touches->end();++it)
+		selectedObject->selected = 0;
+		selectedObject = NULL;
+	}
+	else
+	{
+		for (i = 0; i < _scene.count; i++)
 		{
-			twotouches[i++] = static_cast<CCTouch*>(*it);
-		}
-		
-		CCPoint d1 = twotouches[0]->locationInView();
-		CCPoint d2 = twotouches[1]->locationInView();
-		CCPoint diff(d1.x - d2.x, d1.y - d2.y);
-		
-		if(DIST(diff.x,diff.y) > last_distance + 50)
-		{
-			//PINCH
-			if(last_distance < DIST(diff.x,diff.y))
+			if (_scene.objects[i]->pickColor[0] == color[0])
 			{
-				zoom(1);
+				if (selectedObject != _scene.objects[i] && selectedObject != NULL)
+				{
+					selectedObject->selected = 0;
+				}
+
+				selectedObject = _scene.objects[i];
+				
+				if (strcmp(selectedObject->name, "Mesh6_Group5_Model") == 0 ||
+					strcmp(selectedObject->name, "Mesh3_Group2_Model") == 0 ||
+					strcmp(selectedObject->name, "Mesh1_Group1_Model") == 0 ||
+					strcmp(selectedObject->name, "Mesh4_Group4_Model") == 0 ||
+					strcmp(selectedObject->name, "Mesh25_base_implanta__o_REV12_0_A_C1F7F7448_1_Model") == 0)
+				{
+					selectedObject->selected = 1;
+					/*
+						Mesh6_Group5_Model = A1
+						Mesh3_Group2_Model = A
+						Mesh1_Group1_Model = B
+						Mesh4_Group4_Model = D
+						Mesh25_base_implanta__o_REV12_0_A_C1F7F7448_1_Model = E
+					*/
+					
+					int blockID;
+					std::string selectedObjectName(selectedObject->name);
+					
+					if(selectedObjectName == "Mesh6_Group5_Model") blockID = 1;
+					if(selectedObjectName == "Mesh3_Group2_Model") blockID = 2;
+					if(selectedObjectName == "Mesh1_Group1_Model") blockID = 3;
+					if(selectedObjectName == "Mesh4_Group4_Model") blockID = 4;
+					if(selectedObjectName == "Mesh25_base_implanta__o_REV12_0_A_C1F7F7448_1_Model") blockID = 5;
+					
+					bool e = false;
+					active = false;
+					BlockListScene::createLayerChild(blockID,&e,&active);
+					
+				}
 			}
-			else
-			{
-				zoom(-1);
-			}
-			
-			last_distance = 50;
 		}
-		else
-		{
-			//TWO FINGER PAN
-		}
-		
 	}
 }
 
-void Building3DLayer::ccTouchesEnded(cocos2d::CCSet *touches, cocos2d::CCEvent *events)
+void Building3DLayer::tap(int x, int y)
 {
-	CCSetIterator it = touches->begin();
-	
-	for(;it != touches->end();++it)
-	{
-		CCTouch* touch = static_cast<CCTouch*>(*it);
-		active_touch_list[touch->getID()] = 0;
-	}
+	shouldPick = true;
+	pickPoint = CCPoint(x,y);
 }
 
 void Building3DLayer::draw()
 {
+	if(!active) return;
+
 	glEnable(GL_DEPTH_TEST);
+	
+	if(shouldPick)
+	{
+		pick(pickPoint.x, pickPoint.y);
+		shouldPick = false;
+	}
+	
 	glEnable(GL_CULL_FACE);
-	glClearColor(0.05f, 0.25f, 0.45f, 1.f);
+	glClearColor(1.f,1.f,1.f,1.f);
 	_renderProgram->use();
 	
 	_renderProgram->setUniformLocationWith3f(_attrib[LIGHT_COLOR], 1.f, 1.f, 1.f);
@@ -292,9 +446,12 @@ void Building3DLayer::draw()
 	glUseProgram(0);
 	glDisable(GL_DEPTH_TEST);
 	
+	
 	CCLayer::draw();
 }
 
+#undef DIST
+#undef numActiveTouches
 
 /*#include "glUtil.h"
 

@@ -168,7 +168,7 @@ void MapViewScene::draw()
 			if(floorNext <= 0){
 				info = CCString::createWithFormat("o elevador até o Intermediário %d", floorNumber);
 			}else{
-				info = CCString::createWithFormat("o elevador até o %dº Pavimento", floorNumber);
+				info = CCString::createWithFormat("o elevador até o %dº Andar", floorNumber);
 			}
 		}
 		else
@@ -198,7 +198,7 @@ void MapViewScene::draw()
 	}
 	
 	
-    if( strcmp(((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() , "VOCÊ CHEGOU AO SEU DESTINO") ==0)
+    if( strcmp(((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() , "Você chegou ao seu destino") ==0)
         cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string("\n") + destination ;
     else
 	{
@@ -208,12 +208,14 @@ void MapViewScene::draw()
 		else
 			cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string(" em direcao a") + info->getCString();
 	}
+	
+	if(!(pathfinder->getTotalStep() > 0))
+		cS = "";
+	
     labelTitle = CCLabelTTF::create(cS.c_str(), CCSizeMake(302, 100),  kCCTextAlignmentLeft, "Lucida Grande", 16);
     labelTitle->setPosition(ccp(15, 370));
     labelTitle->setAnchorPoint(ccp(0,0.5));
     labelTitle->setColor(ccc3(0, 0, 0));
-	
-	
     
     if(this->getChildByTag(80) != NULL)
         this->removeChildByTag(80, true);

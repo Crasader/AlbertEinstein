@@ -910,7 +910,7 @@ void KeyboardNotificationLayer::onClickTrackNode(bool bClicked)
         CCSprite *spriteDefault = CCSprite::create("Close_TextBox.png");
         CCMenuItemSprite *item = CCMenuItemSprite::create(spriteDefault, spriteDefault, this, menu_selector(KeyboardNotificationLayer::btnCleanTextBox));
         item->setAnchorPoint(ccp(0, 0));
-        item->setPosition(0,0);
+        item->setPosition(-1,2);
         mnClose->addChild(item);
         mnClose->setPosition(ccp(pTextField->getParent()->getContentSize().width-25, 6));
         __pTrackNode->getParent()->addChild(mnClose,0,346);

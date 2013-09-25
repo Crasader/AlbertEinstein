@@ -693,28 +693,28 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 						//LOG DE DIRECAO
 						if((int)angle < (int)previousAngle){
 							if(nextValue == -1){
-								descriptionStep = "VIRE A DIREITA";
+								descriptionStep = "Vire a direita";
 								CCLog("VIRE A DIREITA");
 							}else{
-								descriptionStep = "VIRE A ESQUERDA";
+								descriptionStep = "Vire a esquerda";
 								CCLog("VIRE A ESQUERDA");
 							}
 						}else if((int)angle > (int)previousAngle){
 							if(nextValue == -1){
-								descriptionStep = "VIRE A ESQUERDA";
+								descriptionStep = "Vire a esquerda";
 								CCLog("VIRE A ESQUERDA");
 							}else{
-								descriptionStep = "VIRE A DIREITA";
+								descriptionStep = "Vire a direita";
 								CCLog("VIRE A DIREITA");
 							}
 							
 						}else{
 							if(this->actualMapIndex == this->arrayMaps->count() - 1){
 								if(this->actualStep == 0){
-									descriptionStep = "VOCÊ CHEGOU AO SEU DESTINO";
+									descriptionStep = "Você chegou ao seu destino";
 									CCLog("VOCÊ CHEGOU AO SEU DESTINO");
 								}else{
-									descriptionStep = "SIGA EM FRENTE";
+									descriptionStep = "Siga em frente";
 									CCLog("SIGA EM FRENTE");
 								}
 							}else{
@@ -723,7 +723,7 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 									descriptionStep = info->getCString();
 									CCLog(info->getCString());
 								}else{
-									descriptionStep = "SIGA EM FRENTE";
+									descriptionStep = "Siga em frente";
 									CCLog("SIGA EM FRENTE");
 								}
 							}
@@ -819,7 +819,7 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 						
 						//LOG DE DIRECAO
 						if(nextValue == -1){
-							descriptionStep = "SIGA EM FRENTE";
+							descriptionStep = "Siga em frente";
 							CCLog("SIGA EM FRENTE");
 						}else{
 							CCString *info = this->getNextMapInfo();
@@ -900,7 +900,7 @@ CCString *Pathfinder::getNextMapInfo(){
 		if(floorNext <= 0){
 			info = CCString::createWithFormat("Pegue o elevador até o Intermediário %d", floorNumber);
 		}else{
-			info = CCString::createWithFormat("Pegue o elevador até o %dº Pavimento", floorNumber);
+			info = CCString::createWithFormat("Pegue o elevador até o %dº Andar", floorNumber);
 		}
 	}else{
 		switch(buildingNext){
@@ -1333,6 +1333,7 @@ void Pathfinder::calculateTotalSteps(){
 	//for(i; i < this->arrayMapNames->count(); i++){
 	if(this->valueI < this->arrayMapNames->count()){
 		const char *mName = ((CCString *)this->arrayMapNames->objectAtIndex(this->valueI))->getCString();
+		std::cout<<"MNAME: "<<mName<<"\n";
 		CCTMXTiledMap *mTiled = CCTMXTiledMap::create(mName);
 		CCTMXLayer *layerWall = mTiled->layerNamed("wall");
 		
@@ -1375,9 +1376,9 @@ void Pathfinder::calculateTotalSteps(){
 			int objX = object->valueForKey("x")->intValue() / mTiled->getTileSize().width;
 			int objY = object->valueForKey("y")->intValue() / mTiled->getTileSize().height;
 			
-			//CCLOG("ID: %d", object->valueForKey("id")->intValue());
-			//CCLOG("startID %d", actualFloor->getStartID());
-			//CCLOG("endID: %d", actualFloor->getEndID());
+			CCLOG("ID: %d", object->valueForKey("id")->intValue());
+			CCLOG("startID %d", actualFloor->getStartID());
+			CCLOG("endID: %d", actualFloor->getEndID());
 			
 			std::cout<<object->valueForKey("id")->intValue()<<" ";
 			

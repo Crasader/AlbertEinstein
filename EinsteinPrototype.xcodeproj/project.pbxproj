@@ -309,9 +309,6 @@
 		7881623415DBE99D00D64777 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7881623315DBE99D00D64777 /* CocosDenshion.m */; };
 		7881623615DBE99D00D64777 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7881623515DBE99D00D64777 /* SimpleAudioEngine.mm */; };
 		7881623915DBE99D00D64777 /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 7881623815DBE99D00D64777 /* SimpleAudioEngine_objc.m */; };
-		7881623E15DBE99D00D64777 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7881623D15DBE99D00D64777 /* main.m */; };
-		7881624115DBE99D00D64777 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7881624015DBE99D00D64777 /* AppController.mm */; };
-		7881624415DBE99D00D64777 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7881624315DBE99D00D64777 /* RootViewController.mm */; };
 		7881624815DBE99D00D64777 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7881624715DBE99D00D64777 /* AppDelegate.cpp */; };
 		7884B1171746B2E700EAAB79 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884B1141746B2E700EAAB79 /* Default@2x.png */; };
 		7884B1181746B2E700EAAB79 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884B1151746B2E700EAAB79 /* Icon-72@2x.png */; };
@@ -662,6 +659,9 @@
 		A5EE42D916DE959100E8E49B /* Masculino_Banheiro.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE42D816DE958900E8E49B /* Masculino_Banheiro.png */; };
 		A5F1A0D3170E055000932CF8 /* ok_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F1A0D1170E055000932CF8 /* ok_btn.png */; };
 		A5F1A0D4170E055000932CF8 /* ok_press.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F1A0D2170E055000932CF8 /* ok_press.png */; };
+		ACEF55B8180844E600CFBB7E /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B4180844E600CFBB7E /* AppController.mm */; };
+		ACEF55B9180844E600CFBB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B5180844E600CFBB7E /* main.m */; };
+		ACEF55BA180844E600CFBB7E /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B7180844E600CFBB7E /* RootViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1200,11 +1200,6 @@
 		7881623715DBE99D00D64777 /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SimpleAudioEngine_objc.h; path = libs/CocosDenshion/ios/SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
 		7881623815DBE99D00D64777 /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SimpleAudioEngine_objc.m; path = libs/CocosDenshion/ios/SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
 		7881623B15DBE99D00D64777 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		7881623D15DBE99D00D64777 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ios/main.m; sourceTree = "<group>"; };
-		7881623F15DBE99D00D64777 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = "<group>"; };
-		7881624015DBE99D00D64777 /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ios/AppController.mm; sourceTree = "<group>"; };
-		7881624215DBE99D00D64777 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ios/RootViewController.h; sourceTree = "<group>"; };
-		7881624315DBE99D00D64777 /* RootViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = RootViewController.mm; path = ios/RootViewController.mm; sourceTree = "<group>"; };
 		7881624615DBE99D00D64777 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7881624715DBE99D00D64777 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		7884B1141746B2E700EAAB79 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
@@ -1569,6 +1564,12 @@
 		A5EE42D816DE958900E8E49B /* Masculino_Banheiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Masculino_Banheiro.png; sourceTree = "<group>"; };
 		A5F1A0D1170E055000932CF8 /* ok_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok_btn.png; sourceTree = "<group>"; };
 		A5F1A0D2170E055000932CF8 /* ok_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok_press.png; sourceTree = "<group>"; };
+		ACEF55A0180743F900CFBB7E /* CCFinishDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFinishDelegate.h; sourceTree = "<group>"; };
+		ACEF55B3180844E600CFBB7E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		ACEF55B4180844E600CFBB7E /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
+		ACEF55B5180844E600CFBB7E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ACEF55B6180844E600CFBB7E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		ACEF55B7180844E600CFBB7E /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1857,6 +1858,7 @@
 				787D5BD31614B8CC00AA4C26 /* SpriteUtils.h */,
 				787CB15716762C2000035FA3 /* Storage.cpp */,
 				787CB15516762C1200035FA3 /* Storage.h */,
+				ACEF55A0180743F900CFBB7E /* CCFinishDelegate.h */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1947,7 +1949,7 @@
 		78815FDD15DBE99A00D64777 /* EinsteinPrototype */ = {
 			isa = PBXGroup;
 			children = (
-				7881623C15DBE99D00D64777 /* ios */,
+				ACEF55B2180844E600CFBB7E /* ios */,
 				787E2E4D16134E530027940D /* Config */,
 				787E2E4E16134E530027940D /* General */,
 				787E2E4F16134E530027940D /* Scenes */,
@@ -2714,18 +2716,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7881623C15DBE99D00D64777 /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				7881623D15DBE99D00D64777 /* main.m */,
-				7881623F15DBE99D00D64777 /* AppController.h */,
-				7881624015DBE99D00D64777 /* AppController.mm */,
-				7881624215DBE99D00D64777 /* RootViewController.h */,
-				7881624315DBE99D00D64777 /* RootViewController.mm */,
-			);
-			name = ios;
-			sourceTree = "<group>";
-		};
 		78826C4A165A5B9A00F88841 /* Pathfinder */ = {
 			isa = PBXGroup;
 			children = (
@@ -3017,6 +3007,18 @@
 				A5D8426316E6752300DCF486 /* typecheck-gcc.h */,
 			);
 			path = curl;
+			sourceTree = "<group>";
+		};
+		ACEF55B2180844E600CFBB7E /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				ACEF55B3180844E600CFBB7E /* AppController.h */,
+				ACEF55B4180844E600CFBB7E /* AppController.mm */,
+				ACEF55B5180844E600CFBB7E /* main.m */,
+				ACEF55B6180844E600CFBB7E /* RootViewController.h */,
+				ACEF55B7180844E600CFBB7E /* RootViewController.mm */,
+			);
+			path = ios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3555,6 +3557,7 @@
 				7881606415DBE99A00D64777 /* CCBFileLoader.cpp in Sources */,
 				7881606815DBE99A00D64777 /* CCBReader.cpp in Sources */,
 				7881606C15DBE99A00D64777 /* CCControlButtonLoader.cpp in Sources */,
+				ACEF55B8180844E600CFBB7E /* AppController.mm in Sources */,
 				7881606F15DBE99A00D64777 /* CCControlLoader.cpp in Sources */,
 				7881607215DBE99A00D64777 /* CCLabelBMFontLoader.cpp in Sources */,
 				7881607515DBE99A00D64777 /* CCLabelTTFLoader.cpp in Sources */,
@@ -3654,10 +3657,12 @@
 				788161C315DBE99D00D64777 /* CCSpriteBatchNode.cpp in Sources */,
 				788161C615DBE99D00D64777 /* CCSpriteFrame.cpp in Sources */,
 				788161C915DBE99D00D64777 /* CCSpriteFrameCache.cpp in Sources */,
+				ACEF55B9180844E600CFBB7E /* main.m in Sources */,
 				788161CD15DBE99D00D64777 /* base64.cpp in Sources */,
 				788161D015DBE99D00D64777 /* CCPointExtension.cpp in Sources */,
 				788161D315DBE99D00D64777 /* CCProfiling.cpp in Sources */,
 				788161D615DBE99D00D64777 /* CCUserDefault.cpp in Sources */,
+				ACEF55BA180844E600CFBB7E /* RootViewController.mm in Sources */,
 				788161D915DBE99D00D64777 /* ccUtils.cpp in Sources */,
 				788161DC15DBE99D00D64777 /* CCVertex.cpp in Sources */,
 				788161E015DBE99D00D64777 /* ccCArray.cpp in Sources */,
@@ -3685,9 +3690,6 @@
 				7881623415DBE99D00D64777 /* CocosDenshion.m in Sources */,
 				7881623615DBE99D00D64777 /* SimpleAudioEngine.mm in Sources */,
 				7881623915DBE99D00D64777 /* SimpleAudioEngine_objc.m in Sources */,
-				7881623E15DBE99D00D64777 /* main.m in Sources */,
-				7881624115DBE99D00D64777 /* AppController.mm in Sources */,
-				7881624415DBE99D00D64777 /* RootViewController.mm in Sources */,
 				7881624815DBE99D00D64777 /* AppDelegate.cpp in Sources */,
 				787EAFE115EE995600AED252 /* ASTile.cpp in Sources */,
 				787EAFE415EE9EEF00AED252 /* AStar.cpp in Sources */,

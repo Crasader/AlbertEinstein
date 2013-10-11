@@ -107,6 +107,9 @@ void HowToGoScene::setUpMenu()
     pList->BackgroundID = 0;
 }
 
+
+
+
 void HowToGoScene::CCListView_numberOfCells(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)
 {
     //Numero de registro que o listview possui.

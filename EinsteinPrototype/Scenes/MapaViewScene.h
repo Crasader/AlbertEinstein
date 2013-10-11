@@ -13,9 +13,9 @@
 #include "Enumerations.h"
 #include "HomeScene.h"
 #include "RotasFileIO.h"
+#import "CCFinishDelegate.h"
 
-
-class MapViewScene: public IFixedMenu
+class MapViewScene: public IFixedMenu , public CCFinishJobDelegate
 {
     
 private:
@@ -32,6 +32,8 @@ public:
     void releaseData();
     MapViewScene(int _wayPoint,int _targetWayPoint);
     
+    void setUpNavigationButtons();
+    void ccFinishJob();
     void Initialize();
     void setUpButtonTop();
     void setUp();

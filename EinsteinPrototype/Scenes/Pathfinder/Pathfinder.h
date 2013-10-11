@@ -15,6 +15,7 @@
 #include <string>
 
 #include "AnimatedSprite.h"
+#include "CCFinishDelegate.h"
 
 using namespace cocos2d;
 
@@ -107,6 +108,8 @@ public:
 	inline bool getStepLock() { return stepLock; }
 	
 	inline AnimatedSprite* getLoading() const { return loading; }
+    
+    CCFinishJobDelegate * m_CCFinishDelegate;
 	
 private:
     //AStar *aStar;
@@ -129,6 +132,7 @@ private:
     //CCTMXTiledMap *actualMap;
    
 	CCDictionary *plistWaypoints;
+    
 	
 	int valueI;
 	int stepsCount;

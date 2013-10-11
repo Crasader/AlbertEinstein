@@ -1049,8 +1049,8 @@ void KeyboardNotificationLayer::setTextField(cocos2d::CCTextFieldTTF* pTextField
 
 void KeyboardNotificationLayer::btnCleanTextBox(CCObject *sender)
 {
-    if(__pTrackNode->getParent()->getChildByTag(346)!=NULL)
-        __pTrackNode->getParent()->removeChildByTag(346, true);
+//    if(__pTrackNode->getParent()->getChildByTag(346)!=NULL)
+//        __pTrackNode->getParent()->removeChildByTag(346, true);
     
     IsCleanUp = true;
     ((CCTextFieldTTF*)__pTrackNode)->setString("");

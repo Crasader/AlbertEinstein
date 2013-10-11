@@ -347,7 +347,8 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
 	//CCSprite *icon = CCSprite::create("az_btn.png");
 	//icon->setPosition(ccp(arrayPoints.front().getPointX()*10, arrayPoints.front().getPointY()*10));
 	//this->addChild(icon);
-
+std::cout<<"MAP LOADED: \n";
+    m_CCFinishDelegate->ccFinishJob();
 	
 }
 

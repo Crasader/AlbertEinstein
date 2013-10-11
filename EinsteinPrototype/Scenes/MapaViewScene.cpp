@@ -76,18 +76,14 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
     pathfinder->setAnchorPoint(ccp(0, 0));
     pathfinder->setScale(1.0f);
     pathfinder->start(_wayPoint, _targetWayPoint);
+    pathfinder->m_CCFinishDelegate = this;
     this->addChild(pathfinder,0,Global::TAG_Child_Layer);
     setTouchEnabled(true);
 	
-	this->addChild(pathfinder->getLoading());
+    this->addChild(pathfinder->getLoading(), 1, 99001);
+	//this->addChild(pathfinder->getLoading());
 
-    CCMenu *menu = CCMenu::create();
-    createMenuItem(menu, 111, "esquerda_Btn.png", "esquerda_Press.png", 0, 0, menu_selector(MapViewScene::btnMoveBack), menu);
-    createMenuItem(menu, 222, "direita_Btn.png", "direita_Press.png", 68, 0, menu_selector(MapViewScene::btnMoveFoward), menu);
-    menu->setAnchorPoint(ccp(0, 0));
-	menu->setPosition(ccp(10, 10));
-    this->addChild(menu,1,20);
-
+   
     CCMenu* menu2 = CCMenu::create();
     createMenuItem(menu2, 123, "Seta1.png", "Seta2.png",0, 0, menu_selector(IFixedMenu::btnTop), this);
     menu2->setPosition(ccp(10,440));
@@ -108,6 +104,23 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
     setUp();
 
 }
+void MapViewScene::ccFinishJob()
+{
+    std::cout<<"MAP FINISH LOADED AND RETURN: \n";
+    this->setUpNavigationButtons();
+    
+}
+void MapViewScene::setUpNavigationButtons()
+{
+    CCMenu *menu = CCMenu::create();
+    createMenuItem(menu, 111, "esquerda_Btn.png", "esquerda_Press.png", 0, 0, menu_selector(MapViewScene::btnMoveBack), menu);
+    createMenuItem(menu, 222, "direita_Btn.png", "direita_Press.png", 68, 0, menu_selector(MapViewScene::btnMoveFoward), menu);
+    menu->setAnchorPoint(ccp(0, 0));
+	menu->setPosition(ccp(10, 10));
+    this->addChild(menu,1,20);
+
+}
+
 
 void MapViewScene::setUpButtonTop()
 {

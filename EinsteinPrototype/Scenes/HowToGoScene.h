@@ -15,7 +15,8 @@
 #include "ParkingScene.h"
 #include "Pathfinder.h"
 #include "Enumerations.h"
- 
+
+
 
 class HowToGoScene : public IFixedMenu, public cocos2d::extension::CCListViewDelegate {
     
@@ -45,12 +46,15 @@ public:
 
     void btnResponse(CCObject *sender);
     
-   
+protected:
+    virtual void ccFinishJob() {};
     
      private:
     CCSize size ;
     
     
     ~HowToGoScene();
+    
+    
  };
 #endif /* defined(__EinsteinPrototype__ListViewScene__) */

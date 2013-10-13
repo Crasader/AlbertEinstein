@@ -348,7 +348,10 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
 	//icon->setPosition(ccp(arrayPoints.front().getPointX()*10, arrayPoints.front().getPointY()*10));
 	//this->addChild(icon);
 std::cout<<"MAP LOADED: \n";
-    m_CCFinishDelegate->ccFinishJob();
+    if (m_CCFinishDelegate) {
+         m_CCFinishDelegate->ccFinishJob();
+    }
+   
 	
 }
 

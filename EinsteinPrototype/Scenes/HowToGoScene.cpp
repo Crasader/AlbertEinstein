@@ -131,6 +131,7 @@ void HowToGoScene::btnResponse(CCObject *sender)
 //Usuario clica na linha
 void HowToGoScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)
 {
+
     if(state ==  TARGET_CATEGORY)
     {
         if(plistMenuCurrent[data->nRow].hasChild == false)//Se nao possui filho é por que é ponto final ( waypoint)

@@ -290,38 +290,58 @@ static bool _initWithString(const char * pText, cocos2d::CCImage::ETextAlign eAl
         unsigned char* data = new unsigned char[(int)(dim.width * dim.height * 4)];
         memset(data, 0, (int)(dim.width * dim.height * 4));
         
-        // draw text
-        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();    
-        CGContextRef context = CGBitmapContextCreate(data, dim.width, dim.height, 8, dim.width * 4, colorSpace, kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-        CGColorSpaceRelease(colorSpace);
         
-        if (! context)
+
+        
+        // draw text
+        CGColorSpaceRef colorSpace  = CGColorSpaceCreateDeviceRGB();
+        CGContextRef context        = CGBitmapContextCreate(data,
+                                                            dim.width,
+                                                            dim.height,
+                                                            8,
+                                                            (int)(dim.width) * 4,
+                                                            colorSpace,
+                                                            kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+        
+        CGColorSpaceRelease(colorSpace);
+        if (context)
+        {
+            context = context;
+        }
+        
+        
+        if (!context)
         {
             delete[] data;
             break;
         }
         
+        // text color
         CGContextSetRGBFillColor(context, 1, 1, 1, 1);
-        CGContextTranslateCTM(context, 0.0f, dim.height);
+        // move Y rendering to the top of the image
+        CGContextTranslateCTM(context, 0.0f, (dim.height - 1) );
         CGContextScaleCTM(context, 1.0f, -1.0f); //NOTE: NSString draws in UIKit referential i.e. renders upside-down compared to CGBitmapContext referential
-        UIGraphicsPushContext(context);
         
-        // measure text size with specified font and determine the rectangle to draw text in
-        unsigned uHoriFlag = eAlign & 0x0f;
-        UITextAlignment align = (2 == uHoriFlag) ? UITextAlignmentRight
-                                : (3 == uHoriFlag) ? UITextAlignmentCenter
-                                : UITextAlignmentLeft;
+        // store the current context
+        UIGraphicsPushContext(context);
         
         // normal fonts
         if( [font isKindOfClass:[UIFont class] ] )
         {
-            [str drawInRect:CGRectMake(0, startH, dim.width, dim.height) withFont:font lineBreakMode:UILineBreakModeWordWrap alignment:align];
+            
+ //           [str drawInRect:CGRectMake(0, startH, dim.width, dim.height) withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:(NSTextAlignment)NSTextAlignmentLeft];
+            [str drawInRect:CGRectMake(0, 0, dim.width, dim.height) withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:(NSTextAlignment)NSTextAlignmentLeft];
+            
+            
+            
         }
-        else // ZFont class 
+        else // ZFont class
         {
-            [FontLabelStringDrawingHelper drawInRect:str rect:CGRectMake(0, startH, dim.width, dim.height) withZFont:font lineBreakMode:UILineBreakModeWordWrap alignment:align];
+            [FontLabelStringDrawingHelper drawInRect:str rect:CGRectMake(0, startH, dim.width, dim.height) withZFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentLeft];
         }
+
         
+
         UIGraphicsPopContext();
         
         CGContextRelease(context);

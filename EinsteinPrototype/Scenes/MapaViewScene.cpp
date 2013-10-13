@@ -77,6 +77,7 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
     pathfinder->setScale(1.0f);
     pathfinder->start(_wayPoint, _targetWayPoint);
     pathfinder->m_CCFinishDelegate = this;
+    
     this->addChild(pathfinder,0,Global::TAG_Child_Layer);
     setTouchEnabled(true);
 	

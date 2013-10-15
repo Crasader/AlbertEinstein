@@ -119,6 +119,7 @@ Pathfinder::~Pathfinder(){
 
 void Pathfinder::start(int startID, int endID){
 	std::cout<<__PRETTY_FUNCTION__<<"\n";
+    m_CCFinishDelegate = this;
 	//startID = 6;
     
     //endID = 40; //Transfer
@@ -348,12 +349,25 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
 	//icon->setPosition(ccp(arrayPoints.front().getPointX()*10, arrayPoints.front().getPointY()*10));
 	//this->addChild(icon);
 std::cout<<"MAP LOADED: \n";
-    if (m_CCFinishDelegate) {
-         m_CCFinishDelegate->ccFinishJob();
-    }
-   
+    try {
+        if (m_CCFinishDelegate != NULL) {
+             m_CCFinishDelegate->ccFinishJob();
+            
+        }
+
+    } catch(std::exception& e) {
+		std::cout<<"Exception at "<<__LINE__<<" "<<__FILE__<<"\n";
+	}
+	
+    
 	
 }
+void Pathfinder::ccFinishJob()
+{
+    std::cout<<"calling ccFinishJob on Pathfinder to solve null delegata issue: \n";
+    
+}
+
 
 void Pathfinder::goToNextMap(CCObject* obj = NULL)
 {

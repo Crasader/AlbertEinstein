@@ -29,9 +29,11 @@ private:
     bool enableCheckin;
     bool isChangeToRoute;
     bool is4SquareLoginCalled;
+     bool isFavoritoChecked = false;
     
-    
-    
+    void favoriteButtonPressed(CCObject *sender);
+    void addFavoriteButton();
+    void reloadFavoriteButton();
 public:
 
     WayPointViewScene(HomeMenuState category, int wayPoint, StateMachine stateMachinePreviousPage);

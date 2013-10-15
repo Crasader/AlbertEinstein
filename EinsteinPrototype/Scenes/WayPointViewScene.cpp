@@ -34,6 +34,11 @@ WayPointViewScene::WayPointViewScene(HomeMenuState category, int wayPoint,StateM
     is4SquareLoginCalled =  false;
 }
 
+
+
+
+
+
 WayPointViewScene::WayPointViewScene(int wayPoint,StateMachine _stateMachinePreviousPage)
 {
     //Variavel que diz se exibe ou não facebook/4square
@@ -44,6 +49,7 @@ WayPointViewScene::WayPointViewScene(int wayPoint,StateMachine _stateMachinePrev
     
     //Carrega o menu ( botoes inferiores (inicio,mapas,favoritos, procurar)
     InitView();
+   
     
     //Carrega informacoes de waypoint ( titulo, nome, descrição e etc)
     LoadWayPoint();
@@ -74,9 +80,64 @@ void WayPointViewScene::ReloadWayPointView()
     
 }
 
+void WayPointViewScene::addFavoriteButton()
+{
+
+RotasFileIO* pRotas = new RotasFileIO();
+// estava verificando o ponto de partida nos favoritos e por isso nunca vinha marcado.
+// this->isFavoritoChecked = pRotas->Exists(wayPoint);
+this->isFavoritoChecked = pRotas->Exists(this->wayPoint);
+CCMenu* menu3 = CCMenu::create();
+
+char* chFavoritos = "favoritos_Mapa_btn.png";
+
+if( isFavoritoChecked)
+chFavoritos = "favoritos_Mapa_press.png";
+
+createMenuItem(menu3, 112233, chFavoritos, chFavoritos,0, 0, menu_selector(WayPointViewScene::favoriteButtonPressed), this);
+menu3->setPosition(ccp(250,400));
+menu3->setAnchorPoint(ccp(0,0));
+this->addChild(menu3,3,1002);
+
+}
+void WayPointViewScene::favoriteButtonPressed(CCObject *sender)
+{
+    RotasFileIO* pRotas = new RotasFileIO();
+    isFavoritoChecked =!isFavoritoChecked;
+    if( isFavoritoChecked)
+    {
+        RotaRow row;
+        row.wayPoint = this->wayPoint;
+        row.favorite = 0;
+        sprintf(row.description, " %s",LoadWayPointName(this->wayPoint));
+        pRotas->SaveRota(row);
+    }
+    else
+        pRotas->DeleteRota(this->wayPoint);
+    reloadFavoriteButton();
+}
+
+void WayPointViewScene::reloadFavoriteButton()
+{
+    char* chFavoritos = "favoritos_Mapa_btn.png";
+    
+    if( isFavoritoChecked)
+        chFavoritos = "favoritos_Mapa_press.png";
+    
+    CCMenu* menu3 = CCMenu::create();
+    createMenuItem(menu3, 112233, chFavoritos, chFavoritos,0, 0, menu_selector(WayPointViewScene::favoriteButtonPressed), this);
+    menu3->setPosition(ccp(250,400));
+    menu3->setAnchorPoint(ccp(0,0));
+    
+    CCDirector::sharedDirector()->getRunningScene()->getChildByTag(Global::TAG_Parent_Layer)->removeChildByTag(1002, true);
+    CCDirector::sharedDirector()->getRunningScene()->getChildByTag(Global::TAG_Parent_Layer)->addChild(menu3,3,1002);
+}
+
 /* Cria os botoes de Rota e Horario*/
 void WayPointViewScene::LoadMenu()
 {
+    addFavoriteButton();
+    
     CCNode* node = this->getChildByTag(250);
     CCSprite *btnRotaSelected = CCSprite::create("btnShowRota_H.png"); // Botao pressionado
     CCSprite *btnRotaUnSelected = CCSprite::create("btnShowRota.png"); // Botao sem ser pressionado
@@ -224,6 +285,7 @@ void WayPointViewScene::InitView()
         default:
             return;
     }
+    
     initFixedMenu();
     CCLayerColor *node = CCLayerColor::create(ccc4(0,0,0,0));
     this->addChild(node,0, 250);

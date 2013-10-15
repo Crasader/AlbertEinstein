@@ -492,7 +492,7 @@ void IFixedMenu::BuildBuildingState()
     BuildBuildingStateWithLastPoint(false);
 }
 
-//Carregas os waypoints favoritos que foram  salvos pelo usuario
+//Carrega os waypoints favoritos que foram  salvos pelo usuario
 void IFixedMenu::BuildFavorites(bool removeWayPoint, int waypointToRemove)
 {
     cleanUp();

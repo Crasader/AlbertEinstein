@@ -69,7 +69,13 @@ std::vector<ASTile> AStar::findBestPath(std::vector< std::vector<ASTile> >tiles,
 	//CCLOG("pX, %d", end.getPointX());
 	//CCLOG("pY, %d", end.getPointY());
 	//LUCAS
-	this->finalTile = this->arrayTiles.at(end.getPointX()).at(end.getPointY());
+    try {
+        this->finalTile = this->arrayTiles.at(end.getPointX()).at(end.getPointY());
+    } catch(std::exception& e) {
+		std::cout<<"Exception at "<<__LINE__<<" "<<__FILE__<<"\n";
+		//this->finalTile = "";
+	}
+	
 	
     this->startAStar();
 	if(smoothed){

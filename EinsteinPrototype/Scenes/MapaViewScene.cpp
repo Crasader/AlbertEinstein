@@ -37,7 +37,9 @@ void MapViewScene::setUp()
     if(getCategory(targetWayPoint) != NONE)
       {
           RotasFileIO* pRotas = new RotasFileIO();
-          this->isFavoritoChecked = pRotas->Exists(wayPoint);
+         // estava verificando o ponto de partida nos favoritos e por isso nunca vinha marcado.
+          // this->isFavoritoChecked = pRotas->Exists(wayPoint);
+          this->isFavoritoChecked = pRotas->Exists(targetWayPoint);
           CCMenu* menu3 = CCMenu::create();
     
           char* chFavoritos = "favoritos_Mapa_btn.png";
@@ -152,9 +154,11 @@ void MapViewScene::btnTopButton(CCObject *sender)
         pRotas->SaveRota(row);
     }
     else
-        pRotas->DeleteRota(wayPoint);
+        pRotas->DeleteRota(targetWayPoint);
     setUpButtonTop();
 }
+
+
 
 void MapViewScene::OnBack()
 {
@@ -172,7 +176,8 @@ void MapViewScene::draw()
 	
 	CCString *info;
 	try {
-		int buildingActual = pathfinder->getMapBuildings().at(pathfinder->getActualMapIndex());
+        int actualIdx =pathfinder->getActualMapIndex();
+		int buildingActual = pathfinder->getMapBuildings().at(actualIdx);
 		int buildingNext = pathfinder->getMapBuildings().at(pathfinder->getActualMapIndex() + 1);
 		int floorNext = pathfinder->getMapFloors().at(pathfinder->getActualMapIndex() + 1);
 		int floorNumber = floorNext <= 0 ? floorNext * -1 + 1 : floorNext;

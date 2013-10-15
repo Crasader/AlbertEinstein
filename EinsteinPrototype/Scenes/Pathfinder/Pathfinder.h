@@ -54,7 +54,7 @@ typedef enum{
 	LINE_STEP
 } LineType;
 
-class Pathfinder : public CCNode{
+class Pathfinder : public CCNode, public CCFinishJobDelegate{
     
 public:
     Pathfinder();
@@ -98,7 +98,7 @@ public:
 	
 	std::string descriptionStep;
 	CCArray *getArrayIcons();
-	
+    void ccFinishJob();
 	int getStepsCount();
 	int getStepActual();
 	

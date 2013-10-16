@@ -37,7 +37,9 @@ Pathfinder::Pathfinder(){
     
     this->arrayMapNames = CCArray::create();
     this->arrayMapNames->retain();
-    
+
+    this->arrayMapStepCount = std::vector<int>();
+
 	this->mapBuildings = std::vector<int>();
 	this->mapFloors = std::vector<int>();
 	
@@ -87,7 +89,7 @@ Pathfinder::~Pathfinder(){
     this->arrayMapNames->removeAllObjects();
     this->arrayMapNames->release();
 	this->arrayMapNames = NULL;
-	
+
 	this->plistWaypoints->removeAllObjects();
 	this->plistWaypoints->release();
 	this->plistWaypoints = NULL;
@@ -142,6 +144,7 @@ void Pathfinder::start(int startID, int endID){
 	this->valueI = 0;
 	this->stepsCount = 0;
 	try {
+    this->arrayMapStepCount.clear();
 	this->calculateTotalSteps();
 	} catch(std::exception& e) {
 		std::cout<<"Exception at "<<__LINE__<<" "<<__FILE__<<"\n";
@@ -325,7 +328,7 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
 	
 		CCSprite *spriteDefault = CCSprite::create("bt_proxMapa.png");
 		CCSprite *spriteSelected = CCSprite::create("bt_proxMapa.png");
-
+        isGoingToNextMap = true;
 		CCMenuItemSprite *item = CCMenuItemSprite::create(spriteDefault, spriteSelected, this, menu_selector(Pathfinder::goToNextMap));
 		
 		CCMenu* next = CCMenu::create();
@@ -371,7 +374,27 @@ void Pathfinder::ccFinishJob()
 
 void Pathfinder::goToNextMap(CCObject* obj = NULL)
 {
-	this->step(-this->actualStep,false);
+    int total = 0;
+    for (int i = 0; i <= this->actualMapIndex;i++) {
+        total += this->arrayMapStepCount.at(i);
+    }
+    
+    int jump = (total + this->stepActual)+1;
+    jump = jump*-1;
+//    int stepsForThisMap = this->arrayMapStepCount.at(this->actualMapIndex);
+//    
+//    int jump = stepsForThisMap - this->stepActual ;
+    
+   // if (this->isGoingToNextMap) {
+   //     jump  = this->totalStepsUntil(this->arrayMapNames->count()) - fabsf( this->stepActual);
+   // }
+   // else
+   // {
+   //     jump  = this->stepActual - this->totalStepsUntil(this->actualMapIndex);
+   // }
+  //  this->isGoingToNextMap = false;
+   // jump = fabsf(jump)+2;
+	this->step(jump,false);
 }
 
 void Pathfinder::loadIcons(){
@@ -663,6 +686,96 @@ void Pathfinder::showStepLine(bool firstTime){
 		
 	}
 }
+
+int Pathfinder::totalStepsUntil(int lasMapIndex){
+    std::cout<<__PRETTY_FUNCTION__<<"\n";
+	AStar astar;
+	std::vector<ASTile> arrayPath;
+	std::vector< std::vector<ASTile> > arrayTiles;
+	int tmpTotal = 0;
+    
+	for(int i = 0; i < this->arrayMapNames->count(); i++){
+        if(i <= lasMapIndex){
+            const char *mName = ((CCString *)this->arrayMapNames->objectAtIndex(i))->getCString();
+            std::cout<<"MNAME: "<<mName<<"\n";
+            CCTMXTiledMap *mTiled = CCTMXTiledMap::create(mName);
+            CCTMXLayer *layerWall = mTiled->layerNamed("wall");
+            
+            int w = mTiled->getMapSize().width;
+            int h = mTiled->getMapSize().height;
+            int j = 0;
+            
+            for(j = 0; j < w; j++){
+                std::vector<ASTile> array;
+                int yPoint = 0;
+                for(int k = h -1; k >= 0; k--){
+                    ASTile tile;
+                    tile.setPointX(j);
+                    tile.setPointY(yPoint);
+                    
+                    yPoint++;
+                    
+                    int gID = layerWall->tileGIDAt(ccp(j, k));
+                    if(gID > 0){
+                        CCDictionary *tileProperties = mTiled->propertiesForGID(gID);
+                        if(tileProperties){
+                            if(tileProperties->valueForKey("wall")->intValue() == 1){
+                                tile.setPassable(false);
+                            }
+                        }
+                    }
+                    array.push_back(tile);
+                }
+                arrayTiles.push_back(array);
+            }
+            
+            Floor *actualFloor = (Floor *)this->arrayMaps->objectAtIndex(i );
+            CCTMXObjectGroup *waypoints = mTiled->objectGroupNamed("waypoint");
+            
+            ASTile begin;
+            ASTile end;
+            
+            for(j = 0; j < waypoints->getObjects()->count(); j++){
+                CCDictionary *object = (CCDictionary *)waypoints->getObjects()->objectAtIndex(j);
+                int objX = object->valueForKey("x")->intValue() / mTiled->getTileSize().width;
+                int objY = object->valueForKey("y")->intValue() / mTiled->getTileSize().height;
+                
+                CCLOG("ID: %d", object->valueForKey("id")->intValue());
+                CCLOG("startID %d", actualFloor->getStartID());
+                CCLOG("endID: %d", actualFloor->getEndID());
+                
+                std::cout<<object->valueForKey("id")->intValue()<<" ";
+                
+                if(object->valueForKey("id")->intValue() == actualFloor->getStartID()){
+                    
+                    begin = arrayTiles.at(objX).at(objY);
+                    begin.setPassable(true);
+                }
+                
+                if(object->valueForKey("id")->intValue() == actualFloor->getEndID()){
+                    end = arrayTiles.at(objX).at(objY);
+                    end.setPassable(true);
+                }
+            }
+            
+            //std::cout<<" - "<<mName<<" "<< actualFloor->getStartID() << " " << actualFloor->getEndID() <<"\n";
+            arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+            
+            tmpTotal += arrayPath.size()+1;
+            
+            arrayPath.clear();
+            astar.clear();
+            arrayTiles.clear();
+            
+            //		CCActionInterval *interval1 = CCActionInterval::create(2.0f);
+            //		CCCallFuncN *callfunc1 = CCCallFuncN::create(this, callfuncN_selector(Pathfinder::nextStepCount));
+            //		CCFiniteTimeAction *sequence1 = CCSequence::create(interval1, callfunc1, NULL);
+            //		this->runAction(sequence1);
+		}
+	}
+    return tmpTotal;
+}
+
 
 void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 	std::cout<<this->actualStep<< " " << this->stepActual << " " << this->getTotalStep() << " " << this->stepsCount << "\n";
@@ -1347,7 +1460,10 @@ void Pathfinder::calculateTotalSteps(){
 	AStar astar;
 	std::vector<ASTile> arrayPath;
 	std::vector< std::vector<ASTile> > arrayTiles;
-	
+    
+   
+
+
 	//for(i; i < this->arrayMapNames->count(); i++){
 	if(this->valueI < this->arrayMapNames->count()){
 		const char *mName = ((CCString *)this->arrayMapNames->objectAtIndex(this->valueI))->getCString();
@@ -1416,7 +1532,7 @@ void Pathfinder::calculateTotalSteps(){
 		arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
 		
 		stepsCount += arrayPath.size();
-		
+		this->arrayMapStepCount.push_back(arrayPath.size()+1);
 		arrayPath.clear();
 		astar.clear();
 		arrayTiles.clear();

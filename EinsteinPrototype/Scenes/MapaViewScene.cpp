@@ -178,8 +178,8 @@ void MapViewScene::draw()
 	try {
         int actualIdx =pathfinder->getActualMapIndex();
 		int buildingActual = pathfinder->getMapBuildings().at(actualIdx);
-		int buildingNext = pathfinder->getMapBuildings().at(pathfinder->getActualMapIndex() + 1);
-		int floorNext = pathfinder->getMapFloors().at(pathfinder->getActualMapIndex() + 1);
+		int buildingNext = pathfinder->getMapBuildings().at(actualIdx+ 1);
+		int floorNext = pathfinder->getMapFloors().at(actualIdx + 1);
 		int floorNumber = floorNext <= 0 ? floorNext * -1 + 1 : floorNext;
 		
 		if(buildingActual == buildingNext)

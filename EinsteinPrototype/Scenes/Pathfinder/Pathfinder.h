@@ -94,6 +94,7 @@ public:
     int getTotalStep();
 	
 	void calculateTotalSteps();
+    int totalStepsUntil(int lasMapIndex);
 	void nextStepCount(CCNode *sender);
 	
 	std::string descriptionStep;
@@ -116,6 +117,7 @@ private:
     //CCArray *arrayTiles;
     CCArray *arrayMaps;
     CCArray *arrayMapNames;
+    std::vector<int> arrayMapStepCount;
 	std::vector<int> mapBuildings;
 	std::vector<int> mapFloors;
 	
@@ -125,10 +127,11 @@ private:
 	
 	CCArray *arrayLines;
     
-    int actualMapIndex;
+    int actualMapIndex = 0;
 	int actualStep;
 	float angle;
 	bool stepLock;
+    bool isGoingToNextMap = false;
     //CCTMXTiledMap *actualMap;
    
 	CCDictionary *plistWaypoints;

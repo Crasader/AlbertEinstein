@@ -810,9 +810,11 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 					
 					//ANGLE CALC HERE
 					float previousAngle = angle;
-					if(next.getPointY() > -1){
+                    float nextYPoint =next.getPointY();
+                    //aqui ele não estava calculando nos intervalos dos andares. talvez seja necessário mudar isto no futuro para pular um step quando voltar de um mapa.
+					//if(nextYPoint > -1){
 						angle = atan2f(nextPoint.x - actualPoint.x, nextPoint.y - actualPoint.y) * 180 / M_PI * -1;
-					}
+					//}
 					
 					float xAngle = roundf(angle / 90);
 					angle = xAngle * 90;

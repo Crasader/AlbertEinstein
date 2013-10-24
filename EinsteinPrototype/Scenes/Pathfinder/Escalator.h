@@ -25,11 +25,12 @@ public:
     
     PFObject *getWaypoint();
 	int getRefID();
-    
-private:
     static CCDictionary *arrayEscalators;
     PFObject *waypoint;
 	int refID;
+    
+private:
+    
     
 };
 

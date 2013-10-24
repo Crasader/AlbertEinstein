@@ -88,9 +88,16 @@ Waypoint *Waypoint::get(int ID){
 Elevator *Waypoint::getElevatorException(){
     return elevatorException;
 }
+Escalator *Waypoint::getEscalatorException(){
+    return escalatorException;
+}
 
 void Waypoint::setElevatorException(Elevator *elevatorException){
     this->elevatorException = elevatorException;
+}
+
+void Waypoint::setEscalatorException(Escalator *escalatorException){
+    this->escalatorException = escalatorException;
 }
 
 bool Waypoint::getIsTransferRight(){

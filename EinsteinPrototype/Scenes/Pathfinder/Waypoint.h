@@ -10,6 +10,7 @@
 #define EinsteinPrototype_Waypoint_h
 
 #include "Elevator.h"
+#include "Escalator.h"
 
 using namespace cocos2d;
 
@@ -28,7 +29,9 @@ public:
 	static void clearArray();
     
     void setElevatorException(Elevator *elevatorException);
+    void setEscalatorException(Escalator *escalatorException);
     Elevator *getElevatorException();
+    Escalator *getEscalatorException();
 	bool getIsTransferRight();
 	bool getIsTransferLeft();
     bool getIsElevator();
@@ -39,6 +42,7 @@ private:
     static CCDictionary *arrayWaypoints;
     
     Elevator *elevatorException;
+    Escalator *escalatorException;
 	bool isTransferRight;
 	bool isTransferLeft;
     bool isElevator;

@@ -10,6 +10,7 @@
 #define EinsteinPrototype_Building_h
 
 #include "Elevator.h"
+#include "Escalator.h"
 #include "Floor.h"
 #include <map>
 
@@ -27,20 +28,23 @@ public:
 	
     void addElevator(Elevator *elevator);
     void addFloor(Floor *floor);
+    void addEscalator(Escalator *escalator);
     Floor *findNearestTransferRightFloor(int actualFloorNumber);
     Floor *findNearestTransferLeftFloor(int actualFloorNumber);
     CCArray *getTransferFloors();
     Elevator *getDefaultElevator();
+    Escalator *getDefaultEscalator();
     Floor *getFloor(int floorNumber);
 	int getMaxFloor();
 	int getMinFloor();
-
+    CCArray *arrayElevators;
+    CCArray *arrayEscalators;
+    CCArray *arrayFloors;
 private:
 	static CCDictionary *arrayBuildings;
     static int numBuildings;
     
-    CCArray *arrayElevators;
-    CCArray *arrayFloors;
+    
     int maxFloor;
     int minFloor;
 };

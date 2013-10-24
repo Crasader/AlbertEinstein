@@ -25,10 +25,12 @@ public:
     void setFather(PFObject *father);
     PFObject *getFather();
     
-private:
     CCString *name;
     int ID;
     PFObject *father;
-};
+
+private:
+    
+    };
 
 #endif

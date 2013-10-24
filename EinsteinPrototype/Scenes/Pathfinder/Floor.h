@@ -47,7 +47,7 @@ private:
     bool transferLeft;
 	int startID;
 	int endID;
-	Escalator *escalator;
+	Escalator *escalator;//trabalha apenas com um escalator por andar
 	CCArray *arrayWaypoints;
     
 };

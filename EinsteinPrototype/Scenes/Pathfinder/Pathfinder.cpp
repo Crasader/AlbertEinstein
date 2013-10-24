@@ -1117,13 +1117,15 @@ void Pathfinder::findPath(int idBegin, int idEnd){
     while(actualFloor != finalFloor){
         if(actualBuilding == finalBuilding){
 			bool hasEscalator = false;
-			if(actualFloor->getEscalator() && finalFloor->getEscalator()){
+			if(actualFloor->getEscalator()){
+                	if(finalFloor->getEscalator()){
 				if(actualFloor->getEscalator()->getRefID() == finalFloor->getEscalator()->getRefID()){
 					actualFloor->setEndID(actualFloor->getEscalator()->getWaypoint()->getID());
 					actualFloor = finalFloor;
 					actualFloor->setStartID(actualFloor->getEscalator()->getWaypoint()->getID());
 					hasEscalator = true;
 				}
+                    }
 			}
 			
 			if(!hasEscalator){
@@ -1358,21 +1360,35 @@ void Pathfinder::init(){
 	//BUILDINGS
 	CCDictionary *buildings = (CCDictionary *)this->plistWaypoints->valueForKey("buildings");
 	CCDICT_FOREACH(buildings, element){
-		Building::create(CCString::create(element->getStrKey())->intValue(), (CCString *)element->getObject());
+        CCString * bKey = CCString::create(element->getStrKey());
+        CCString * bName = (CCString *)element->getObject();
+		Building::create(bKey->intValue(), bName);
+        Building * tmpBuiding = Building::get(bKey->intValue());
+        std::cout<<"XXX Criando Building with Key:"<<tmpBuiding->ID<<" and Name:"<<bName->m_sString<<")";
+
+        int floorsCount = tmpBuiding->arrayFloors->count();
+        int elevatorsCount = tmpBuiding->arrayElevators->count();
+        int escalatorsCount = tmpBuiding->arrayEscalators->count();
+         std::cout<<" floors:"<<floorsCount<<" elevators:"<<elevatorsCount<<" escalators:"<<escalatorsCount<<")\n";
+        
 	}
 	
 	//FLOORS
 	element = NULL;
 	CCDictionary *floors = (CCDictionary *)this->plistWaypoints->valueForKey("floors");
 	CCDICT_FOREACH(floors, element){
-		key = CCString::create(element->getStrKey());
-		iKey = key->intValue();
-		
-		CCDictionary *floor = (CCDictionary *)element->getObject();
-		Building::get(floor->valueForKey("buildingID")->intValue())->addFloor(Floor::create(iKey, (CCString *)floor->valueForKey("name"),
-																							floor->valueForKey("floorNumber")->intValue(), 
-																							floor->valueForKey("transferRight")->boolValue(), 
-																							floor->valueForKey("transferLeft")->boolValue()));
+        CCDictionary *floor = (CCDictionary *)element->getObject();
+		CCString * fkey = CCString::create(element->getStrKey());
+		CCString * fname = (CCString *)floor->valueForKey("name");
+		int fnumber = floor->valueForKey("floorNumber")->intValue();
+		bool fright = floor->valueForKey("transferRight")->boolValue();
+		bool fleft = floor->valueForKey("transferLeft")->boolValue();
+        int buildingID = floor->valueForKey("buildingID")->intValue();
+		Floor * newFloor = Floor::create(fkey->intValue(),fname , fnumber, fright,fleft);
+		Building * tmpBuiding = Building::get(buildingID);
+        
+		tmpBuiding->addFloor(newFloor);
+        std::cout<<"XXX Adicionando andarId:"<<newFloor->ID<<" de nome:"<<fname->m_sString<<" na building:"<<tmpBuiding->ID<<")\n";
 	}
 	
 	//WAYPOINTS
@@ -1397,17 +1413,42 @@ void Pathfinder::init(){
 																									   waypoint->valueForKey("transferLeft")->boolValue()));
 				break;
 			case 5://ELEVATOR, ESCALATOR, WC
-				if(!waypoint->valueForKey("elevator")->boolValue()){
-					Floor::get(waypoint->valueForKey("floorID")->intValue())->addWaypoint(Waypoint::create(iKey, (CCString *)waypoint->valueForKey("name"), 
-																										   waypoint->valueForKey("elevator")->boolValue(), 
-																										   waypoint->valueForKey("escalator")->boolValue(), 
-																										   waypoint->valueForKey("wc")->boolValue()));
-				}else{
-					Waypoint::create(iKey, (CCString *)waypoint->valueForKey("name"), 
-									 waypoint->valueForKey("elevator")->boolValue(), 
-									 waypoint->valueForKey("escalator")->boolValue(), 
-									 waypoint->valueForKey("wc")->boolValue());
-				}
+				//if(!waypoint->valueForKey("elevator")->boolValue() && !waypoint->valueForKey("escalator")->boolValue()){
+                try {
+                    if (waypoint != NULL) {
+                        CCString * tmpName = (CCString *)waypoint->valueForKey("name");
+                        bool tmpIsElevator = waypoint->valueForKey("elevator")->boolValue();
+                        bool tmpIsEscalator = waypoint->valueForKey("escalator")->boolValue();
+                        bool tmpIsWc = waypoint->valueForKey("wc")->boolValue();
+                        Waypoint * tmpWaypoint = Waypoint::create(iKey,tmpName,tmpIsElevator,tmpIsEscalator,tmpIsWc);
+                        int floorId = waypoint->valueForKey("floorID")->intValue();
+                        Floor * tmpFloor =  Floor::get(floorId);
+                        if (tmpFloor != NULL) {
+                             tmpFloor->addWaypoint(tmpWaypoint);
+                             std::cout<<"XXX adding waypoint:"<<tmpWaypoint->ID<<" and name:"<<tmpName->m_sString <<"  no Andar:"<<tmpFloor->ID<<" nome:"<<tmpFloor->name->m_sString<< "\n";
+                        }
+                        else
+                        {
+                            std::cout<<"   ERRO adding waypoint:"<<tmpWaypoint->ID<<" and name:"<<tmpName->m_sString <<"  Andar não informado: "<<floorId<< "\n";
+                            std::cout<<"\n";
+                        }
+                       
+
+                    }
+                    
+                    
+                } catch(std::exception& e) {
+                    std::cout<<"Exception at "<<__LINE__<<" "<<__FILE__<<"\n";
+                    
+                }
+                
+                
+                //}else{
+				//	Waypoint::create(iKey, (CCString *)waypoint->valueForKey("name"),
+				//					 waypoint->valueForKey("elevator")->boolValue(),
+				//					 waypoint->valueForKey("escalator")->boolValue(),
+				//					 waypoint->valueForKey("wc")->boolValue());
+				//}
 				break;
 			default:
 				break;
@@ -1422,7 +1463,15 @@ void Pathfinder::init(){
 		iKey = key->intValue();
 		
 		CCDictionary *elevator = (CCDictionary *)element->getObject();
-		Building::get(elevator->valueForKey("buildingID")->intValue())->addElevator(Elevator::create(iKey, (CCString *)elevator->valueForKey("name"), Waypoint::get(elevator->valueForKey("waypointID")->intValue())));
+        int buildingId = elevator->valueForKey("buildingID")->intValue();
+        CCString * elevatorName = (CCString *)elevator->valueForKey("name");
+        int elevatorWaypointID = elevator->valueForKey("waypointID")->intValue();
+        Elevator * tmpElevator = Elevator::create(iKey, elevatorName, Waypoint::get(elevatorWaypointID));
+        Building * tmpBuilding = Building::get(buildingId);
+        
+		tmpBuilding->addElevator(tmpElevator);
+        std::cout<<"XXX adding elevator:"<<tmpElevator->ID<<" and name:"<<tmpElevator->name->m_sString <<"  building: "<<buildingId<<" buildName:"<<tmpBuilding->name->m_sString <<"\n";
+        
 	}
 	
 	//ESCALATOR
@@ -1431,10 +1480,20 @@ void Pathfinder::init(){
 	CCDICT_FOREACH(escalators, element){
 		key = CCString::create(element->getStrKey());
 		iKey = key->intValue();
-		
-		CCDictionary *escalator = (CCDictionary *)element->getObject();
-		Floor::get(escalator->valueForKey("floorID")->intValue())->setEscalator(Escalator::create(iKey, (CCString *)escalator->valueForKey("name"), Waypoint::get(escalator->valueForKey("waypointID")->intValue()), 
-																																					escalator->valueForKey("refID")->intValue()));
+        
+        CCDictionary *escalator = (CCDictionary *)element->getObject();
+        int buildingId = escalator->valueForKey("buildingID")->intValue();
+        int floorId = escalator->valueForKey("floorID")->intValue();
+        CCString * escalatorName = (CCString *)escalator->valueForKey("name");
+        int escalatorWaypointID = escalator->valueForKey("waypointID")->intValue();
+        int escalatorRefID = escalator->valueForKey("refID")->intValue();
+        Escalator * tmpEscalator = Escalator::create(iKey, escalatorName, Waypoint::get(escalatorWaypointID),escalatorRefID);
+        Building * tmpBuilding = Building::get(buildingId);
+        
+		tmpBuilding->addEscalator(tmpEscalator);
+        Floor * tmpFloor = Floor::get(floorId);
+        tmpFloor->setEscalator(tmpEscalator);
+        
 	}
 	
 	//ALTERNATIVES
@@ -1511,20 +1570,20 @@ void Pathfinder::calculateTotalSteps(){
 			CCDictionary *object = (CCDictionary *)waypoints->getObjects()->objectAtIndex(j);
 			int objX = object->valueForKey("x")->intValue() / mTiled->getTileSize().width;
 			int objY = object->valueForKey("y")->intValue() / mTiled->getTileSize().height;
-			
-			CCLOG("ID: %d", object->valueForKey("id")->intValue());
-			CCLOG("startID %d", actualFloor->getStartID());
-			CCLOG("endID: %d", actualFloor->getEndID());
-			
+						
 			std::cout<<object->valueForKey("id")->intValue()<<" ";
-			
-			if(object->valueForKey("id")->intValue() == actualFloor->getStartID()){
-				
+			int theID = object->valueForKey("id")->intValue();
+            int startID = actualFloor->getStartID();
+            int endID = actualFloor->getEndID();
+           
+			CCLOG("ID:%d  startID:%d  endID:%d", theID,startID,endID);
+	        
+            if(theID == startID){
 				begin = arrayTiles.at(objX).at(objY);
 				begin.setPassable(true);
 			}
 			
-			if(object->valueForKey("id")->intValue() == actualFloor->getEndID()){
+			if(theID == endID){
 				end = arrayTiles.at(objX).at(objY);
 				end.setPassable(true);
 			}

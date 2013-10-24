@@ -14,6 +14,7 @@ int Building::numBuildings;
 Building::Building(int ID, CCString *name) : PFObject(ID, name){
     this->arrayElevators = CCArray::create();
     this->arrayFloors = CCArray::create();
+    this->arrayEscalators = CCArray::create();
     this->maxFloor = -9;
     this->minFloor = 9;
     
@@ -46,7 +47,10 @@ void Building::addElevator(Elevator *elevator){
     this->arrayElevators->addObject(elevator);
     elevator->setFather(this);
 }
-
+void Building::addEscalator(Escalator * escalator){
+    this->arrayEscalators->addObject(escalator);
+    escalator->setFather(this);
+}
 void Building::addFloor(Floor *floor){
     this->arrayFloors->addObject(floor);
     floor->setFather(this);
@@ -56,6 +60,10 @@ void Building::addFloor(Floor *floor){
         floor->addWaypoint((Waypoint *)elevator->getWaypoint());
     }
     
+    for(int i = 0; i < this->arrayEscalators->count(); i++){
+        Escalator *escalator = (Escalator *)this->arrayElevators->objectAtIndex(i);
+        floor->addWaypoint((Waypoint *)escalator->getWaypoint());
+    }
     
     if(minFloor > floor->getFloorNumber()){
         minFloor = floor->getFloorNumber();
@@ -129,6 +137,17 @@ Elevator *Building::getDefaultElevator(){
     
     return NULL;
 }
+
+Escalator *Building::getDefaultEscalator(){
+    if(this->arrayEscalators){
+        if(this->arrayEscalators->count() > 0){
+            return (Escalator *)this->arrayEscalators->objectAtIndex(0);
+        }
+    }
+    
+    return NULL;
+}
+
 
 Floor *Building::getFloor(int floorNumber){
     for(int i = 0; i < this->arrayFloors->count(); i++){

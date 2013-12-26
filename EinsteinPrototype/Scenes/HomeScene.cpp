@@ -7,6 +7,8 @@
 //
 
 #include "HomeScene.h"
+#import "CCEGLView.h"
+
  
 HomeScene::HomeScene()
 {
@@ -19,11 +21,19 @@ void HomeScene::InitHome()
     IFixedMenu::initFixedMenu(INICIO);
     CCMenu* options = CCMenu::create();
     
-	CCSprite* logo = CCSprite::create("bg_new.png");
-	logo->setAnchorPoint(ccp(0, 0));
+    
+    
+	CCSprite* logo ;
+	   
+	CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+    char * imgName = "bg_ios7.png";
+    if (winsize.height > 480) {
+        imgName = "bg_ios7_4inch.png";
+    }
+    logo = CCSprite::create(imgName);
+    logo->setAnchorPoint(ccp(0, 0));
 	logo->setPosition(ccp(0, 0));
     
-	CCSize winsize = CCDirector::sharedDirector()->getWinSize();
     
     //Cria os menus que ficam no meio da tela ( como chegar, banheiros, especialidades e etc) 
     createMenuItem(options, COMO_CHEGAR, "comochegar_new.png", "comochegar_new_hover.png", 20, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);

@@ -64,6 +64,9 @@ EAGLView *__glView;
     [__glView addGestureRecognizer:pinch];
     [pinch release];
 
+    
+    
+    
     // Use RootViewController manage EAGLView
     viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     viewController.wantsFullScreenLayout = YES;

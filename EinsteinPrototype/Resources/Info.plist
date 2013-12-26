@@ -55,6 +55,8 @@
 		<string>Lucida Grande.ttf</string>
 		<string>LucidaGrandeBold.ttf</string>
 	</array>
+	<key>UILaunchImageFile</key>
+	<string>Default</string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>

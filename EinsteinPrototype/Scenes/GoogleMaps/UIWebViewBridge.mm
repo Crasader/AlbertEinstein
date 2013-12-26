@@ -8,6 +8,7 @@
 #import "UIWebViewBridge.h"
 #import "EAGLView.h"
 
+
 @implementation UIWebViewBridge
 -(id)init
 {
@@ -141,8 +142,20 @@
 {
     mLayerWebView = iLayerWebView;
 
-    mView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320 , 375)];
-    mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 350)];
+    
+    mView = [[UIView alloc] initWithFrame:CGRectMake(0, 70, 320 , 362)];
+    mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 362)];
+    int winsize = [[EAGLView sharedEGLView] getHeight];
+    if (winsize > 480) {
+        mView = [[UIView alloc] initWithFrame:CGRectMake(0, 70, 320 , 450)];
+        mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 450)];
+    }
+    //[mView setBackgroundColor:[UIColor redColor]];
+    //[mView setContentMode:UIViewContentModeBottom];
+    
+
+
+   
     mWebView.delegate = self;
     [self LoadRequest];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -201,7 +214,7 @@
 
     NSLog(@"  %@", [[request URL] absoluteString] );
  
-    mView.center = CGPointMake(160, 258);
+    //mView.center = CGPointMake(160, 258);
     NSURL *nURL = [request URL];
     NSString* someString = [nURL absoluteString];
     NSRange isRange = [someString rangeOfString:@"einstein.br" options:NSCaseInsensitiveSearch];

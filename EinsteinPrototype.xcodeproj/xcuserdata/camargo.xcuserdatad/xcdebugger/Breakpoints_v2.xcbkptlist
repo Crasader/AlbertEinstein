@@ -447,36 +447,6 @@
             endingLineNumber = "159"
             landmarkName = "TraceRouteScene::CreateButtons(RotaState newState)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TraceRouteScene::CreateButtons(RotaState)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-                  timestampString = "409754874.178672"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "1088">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TraceRouteScene::CreateButtons(RotaState)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-                  timestampString = "409754876.480886"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "1080">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -493,50 +463,6 @@
             endingLineNumber = "132"
             landmarkName = "MapViewScene::setUpButtonTop()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MapViewScene::setUpButtonTop()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
-                  timestampString = "409754876.481397"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "132"
-                  endingLineNumber = "132"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MapViewScene::setUpButtonTop()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
-                  timestampString = "409754876.481894"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "132"
-                  endingLineNumber = "132"
-                  offsetFromSymbolStart = "622">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MapViewScene::setUpButtonTop()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
-                  timestampString = "409754876.482301"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "132"
-                  endingLineNumber = "132"
-                  offsetFromSymbolStart = "676">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -881,94 +807,6 @@
             endingLineNumber = "59"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/HomeScene.cpp"
-            timestampString = "409754828.263144"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "HomeScene::InitHome()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeScene::InitHome()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HomeScene.cpp"
-                  timestampString = "409754876.528987"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeScene::InitHome()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HomeScene.cpp"
-                  timestampString = "409754874.186298"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "1832">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeScene::InitHome()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HomeScene.cpp"
-                  timestampString = "409754874.186682"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "2058">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeScene::InitHome()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HomeScene.cpp"
-                  timestampString = "409754876.529532"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "1830">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeScene::InitHome()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HomeScene.cpp"
-                  timestampString = "409754876.529819"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "2060">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

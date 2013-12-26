@@ -55,6 +55,47 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewDidLoad{
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+        // iOS 7
+        [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
+    } else {
+        // iOS 6
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    }
+
+    [super viewDidLoad];
+}
+
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+-(void)viewWillAppear:(BOOL)animated {
+    
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+        // Load resources for iOS 6.1 or earlier
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+        
+    } else {
+        // Load resources for iOS 7 or later
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+        
+        [self setNeedsStatusBarAppearanceUpdate];
+    }
+    
+    
+}
+
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleDefault;
+}
+
+
 
 - (void)dealloc {
     [super dealloc];

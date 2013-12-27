@@ -106,6 +106,7 @@ Pathfinder::~Pathfinder(){
 	//this->arrayPoints->release();
 	//this->arrayPoints = NULL;
 	
+    //todo
 	Building::clearArray();
 	Elevator::clearArray();
 	Floor::clearArray();

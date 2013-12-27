@@ -78,19 +78,12 @@ void HowToGoScene::OnBack()
 void HowToGoScene::setUpMenu()
 {
     size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;
-    size.height = CCDirector::sharedDirector()->getWinSize().height;
     this->removeChildByTag(555, true);
     this->removeChildByTag(556, true);
     if(  machine.isCategoryChild)
     {
         //Monta um titulo acima do listview com o nome do Pai selecionado
-        if (size.height >480) {
-            size.height = 379;//4inch
-        }
-        else
-        {
-            size.height= 299;//3.5inch
-        }
+      
 
         size.height= 299;
         CCSprite* spriteBackButton = CCSprite::create("Background_Estacionamento_botoes.png");
@@ -110,13 +103,8 @@ void HowToGoScene::setUpMenu()
     }
     else
     {
-        if (size.height >480) {
-            size.height = 444;//4inch
-        }
-        else
-        {
-        size.height= 364;//3.5inch
-        }
+                size.height= 364;//3.5inch
+        
     }
     IFixedMenu::initListView(size, this);
     pList->BackgroundID = 0;

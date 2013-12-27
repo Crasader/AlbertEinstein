@@ -46,10 +46,13 @@ int Escalator::getRefID(){
 }
 
 void Escalator::clearArray(){
-	if(arrayEscalators){
-		arrayEscalators->removeAllObjects();
-		arrayEscalators = NULL;
-	}
+//	if(arrayEscalators){
+//		arrayEscalators->removeAllObjects();
+//        //CC_SAFE_RELEASE_NULL(arrayEscalators);
+//	}
+    
+    arrayEscalators->release();
+	arrayEscalators = NULL;
 }
 
 

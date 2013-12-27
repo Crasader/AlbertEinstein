@@ -352,11 +352,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
-            timestampString = "409777881.026911"
+            timestampString = "409861891.399547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "HowToGoScene::CCListView_numberOfCells(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
          </BreakpointContent>
@@ -368,11 +368,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
-            timestampString = "409777881.026911"
+            timestampString = "409861891.399547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "HowToGoScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
          </BreakpointContent>
@@ -384,11 +384,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "403625734.381855"
+            timestampString = "409863265.577869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1680"
-            endingLineNumber = "1680">
+            startingLineNumber = "1681"
+            endingLineNumber = "1681">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -424,59 +424,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "403395422.792276"
+            timestampString = "409861891.399547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "506"
+            endingLineNumber = "506"
             landmarkName = "IFixedMenu::BuildFavorites(bool removeWayPoint, int waypointToRemove)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-            timestampString = "403395518.179822"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "TraceRouteScene::CreateButtons(RotaState newState)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TraceRouteScene::CreateButtons(RotaState)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-                  timestampString = "409856052.883611"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "1088">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TraceRouteScene::CreateButtons(RotaState)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-                  timestampString = "409856056.155164"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "1080">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -501,7 +455,7 @@
                   symbolName = "MapViewScene::setUpButtonTop()"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
-                  timestampString = "409856056.156932"
+                  timestampString = "409863659.424575"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -515,7 +469,7 @@
                   symbolName = "MapViewScene::setUpButtonTop()"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
-                  timestampString = "409856056.157269"
+                  timestampString = "409863659.424893"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -529,7 +483,7 @@
                   symbolName = "MapViewScene::setUpButtonTop()"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
-                  timestampString = "409856056.157571"
+                  timestampString = "409863659.425345"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -594,11 +548,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "403625734.381855"
+            timestampString = "409863265.577869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1098"
-            endingLineNumber = "1098"
+            startingLineNumber = "1099"
+            endingLineNumber = "1099"
             landmarkName = "Pathfinder::findPath(int idBegin, int idEnd)"
             landmarkType = "5">
             <Locations>
@@ -640,11 +594,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "403625734.381855"
+            timestampString = "409863265.577869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1336"
-            endingLineNumber = "1336"
+            startingLineNumber = "1337"
+            endingLineNumber = "1337"
             landmarkName = "Pathfinder::findWC(int idBegin)"
             landmarkType = "5">
          </BreakpointContent>
@@ -718,11 +672,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "403622453.941818"
+            timestampString = "409863265.577869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "Pathfinder::start(int startID, int endID)"
             landmarkType = "5">
             <Locations>
@@ -778,13 +732,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "403625734.381855"
+            timestampString = "409863265.577869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1193"
-            endingLineNumber = "1193"
-            landmarkName = "Pathfinder::findWC(int idBegin)"
-            landmarkType = "5">
+            startingLineNumber = "1194"
+            endingLineNumber = "1194">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -794,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "403625734.381855"
+            timestampString = "409863265.577869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "762"
-            endingLineNumber = "762"
+            startingLineNumber = "763"
+            endingLineNumber = "763"
             landmarkName = "Pathfinder::totalStepsUntil(int lasMapIndex)"
             landmarkType = "5">
          </BreakpointContent>
@@ -810,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "403625734.381855"
+            timestampString = "409863265.577869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "766"
-            endingLineNumber = "766"
+            startingLineNumber = "767"
+            endingLineNumber = "767"
             landmarkName = "Pathfinder::totalStepsUntil(int lasMapIndex)"
             landmarkType = "5">
          </BreakpointContent>
@@ -826,11 +778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "403625734.381855"
+            timestampString = "409863265.577869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "Pathfinder::goToNextMap(CCObject* obj = NULL)"
             landmarkType = "5">
          </BreakpointContent>
@@ -920,43 +872,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
-            timestampString = "409777881.026911"
+            timestampString = "409861891.399547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "HowToGoScene::setUpMenu()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HowToGoScene::setUpMenu()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HowToGoScene.cpp"
-                  timestampString = "409856052.891142"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "362">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HowToGoScene::setUpMenu()"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HowToGoScene.cpp"
-                  timestampString = "409856056.179567"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "358">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -966,11 +888,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
-            timestampString = "409778089.215235"
+            timestampString = "409861891.399547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "HowToGoScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
          </BreakpointContent>
@@ -982,12 +904,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "409853303.778134"
+            timestampString = "409861891.399547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1016"
-            endingLineNumber = "1016"
+            startingLineNumber = "1021"
+            endingLineNumber = "1021"
             landmarkName = "Global::contains( std::string str ,std::string str2)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
+            timestampString = "409857476.608097"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "TraceRouteScene::TraceRouteScene(int _wayPointID, EstacionamentoState _stateEstacionamento ,StateMachine _statePreviousPage)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

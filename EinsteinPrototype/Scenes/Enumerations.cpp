@@ -102,6 +102,11 @@ void IFixedMenu::initListView(cocos2d::CCSize size, cocos2d::extension::CCListVi
 	std::cout<<__PRETTY_FUNCTION__<<"\n";
      pList = cocos2d::extension::CCListView::create(cocos2d::extension::CCListViewModeVertical);
      pList->setOpacity(0);
+     float heigth = CCDirector::sharedDirector()->getWinSize().height;
+    if (heigth >480) {
+        size.height = size.height+80;//4inch
+    }
+   
      pList->setContentSize(size);
      pList->setDelegate(parent);
      pList->setSeparatorStyle(cocos2d::extension::CCListViewCellSeparatorStyleSingleLine);

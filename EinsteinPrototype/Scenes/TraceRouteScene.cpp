@@ -113,26 +113,39 @@ void TraceRouteScene::Init()
 {
     setUpTopImage(Global::TOP_SRC_IMAGE_ComoChegar);
     ChangeTitle(wayPoint);
- 
+   
+    
+
     CCSprite* spriteBackButton = CCSprite::create("Background_Estacionamento_botoes.png");
     spriteBackButton->setAnchorPoint(ccp(0, 0));
-    spriteBackButton->setPosition(ccp(0, 331));
+     float altura = CCDirector::sharedDirector()->getWinSize().height;
+    if (altura>480) {
+        spriteBackButton->setPosition(ccp(0, 420));
+     
+    }
+    else
+    {
+       spriteBackButton->setPosition(ccp(0, 331));
+       
+    }
+    insertLabel(ccc3(72, 72, 72), ccp(60, 60),12378999,0, true, "Selecione o ponto aonde você está:", spriteBackButton, 12);
     this->addChild(spriteBackButton, 0,99);
-    CreateButtons(ROTA_AZ);
-    insertLabel(ccc3(72, 72, 72), ccp(60, 385),12378999,0, true, "Selecione o ponto aonde você está:", this, 12);
+    
+    CreateButtons(ROTA_AZ,this);
+    
     
 }
 
 
 //Ajusta os botoes deixa o selecionado e o resto habilitado é recriado ao clicar nos itens
 //Semelhante a TABVIEWS
-void TraceRouteScene::CreateButtons(RotaState newState)
+void TraceRouteScene::CreateButtons(RotaState newState,CCNode *node)
 {
     this->stateRota = newState;
     memset(currentText,' ',sizeof(currentText));
  
-    if(this->getChildByTag(11)!=NULL)
-        this->removeChildByTag(11, true);
+    if(node->getChildByTag(11)!=NULL)
+        node->removeChildByTag(11, true);
 
     CCMenu* menuEntradaSaida = CCMenu::create();
     insertedBuildingKey = 0;
@@ -141,33 +154,44 @@ void TraceRouteScene::CreateButtons(RotaState newState)
 			state = TARGET_BUILDING;
 			BuildFloorState(-1);
             BuildBuildingStateWithLastPoint(true);
-            createMenuItem(menuEntradaSaida, ROTA_AZ, "az_press.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
-            createMenuItem(menuEntradaSaida, ROTA_POR_ANDAR, "porandar_btn.png", "porandar_press.png", 85,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
-            createMenuItem(menuEntradaSaida, ROTA_FAVORITOS, "favoritos_btn.png", "favoritos_press.png", 177,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
+            createMenuItem(menuEntradaSaida, ROTA_AZ, "az_press.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
+            createMenuItem(menuEntradaSaida, ROTA_POR_ANDAR, "porandar_btn.png", "porandar_press.png", 85,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
+            createMenuItem(menuEntradaSaida, ROTA_FAVORITOS, "favoritos_btn.png", "favoritos_press.png", 177,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
             break;
             
 		case ROTA_POR_ANDAR:
             state = TARGET_FLOOR;
             BuildFloorState(-1);
-            createMenuItem(menuEntradaSaida, ROTA_AZ, "az_btn.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
-            createMenuItem(menuEntradaSaida, ROTA_POR_ANDAR, "porandar_press.png", "porandar_press.png", 85,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
-            createMenuItem(menuEntradaSaida, ROTA_FAVORITOS, "favoritos_btn.png", "favoritos_press.png", 177,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
+            createMenuItem(menuEntradaSaida, ROTA_AZ, "az_btn.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
+            createMenuItem(menuEntradaSaida, ROTA_POR_ANDAR, "porandar_press.png", "porandar_press.png", 85,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
+            createMenuItem(menuEntradaSaida, ROTA_FAVORITOS, "favoritos_btn.png", "favoritos_press.png", 177,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
             break;
             
 		case ROTA_FAVORITOS:
             state = TARGET_WAYPOINT;
             BuildFavorites(this->wayPoint,true);
-            createMenuItem(menuEntradaSaida, ROTA_AZ, "az_btn.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
-            createMenuItem(menuEntradaSaida, ROTA_POR_ANDAR, "porandar_btn.png", "porandar_press.png", 85,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
-            createMenuItem(menuEntradaSaida, ROTA_FAVORITOS, "favoritos_press.png", "favoritos_press.png", 177,0, menu_selector( TraceRouteScene::btnEntradaSaida),this);
+            createMenuItem(menuEntradaSaida, ROTA_AZ, "az_btn.png", "az_press.png", 2,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
+            createMenuItem(menuEntradaSaida, ROTA_POR_ANDAR, "porandar_btn.png", "porandar_press.png", 85,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
+            createMenuItem(menuEntradaSaida, ROTA_FAVORITOS, "favoritos_press.png", "favoritos_press.png", 177,0, menu_selector( TraceRouteScene::btnEntradaSaida),node);
             break;
             
 		default:
             break;
     }
     clearHeader();
-    menuEntradaSaida->setPosition(ccp(27,347));
-    this->addChild(menuEntradaSaida,0,11);
+    float altura = CCDirector::sharedDirector()->getWinSize().height;
+    if (altura>480) {
+        menuEntradaSaida->setPosition(ccp(27,440));
+        
+    }
+    else
+    {
+        menuEntradaSaida->setPosition(ccp(27,360));
+        
+    }
+
+    
+    node->addChild(menuEntradaSaida,0,11);
 }
 
 
@@ -232,7 +256,18 @@ void TraceRouteScene::clearHeader()
 
     CCLabelTTF *labelTitle;
     labelTitle = CCLabelTTF::create(currentText, "Lucida Grande", 12);
-    labelTitle->setPosition(ccp(20, 305));
+    float altura = CCDirector::sharedDirector()->getWinSize().height;
+    if (altura>480) {
+            labelTitle->setPosition(ccp(20, 425));
+        
+    }
+    else
+    {
+            labelTitle->setPosition(ccp(20, 305));//todo
+        
+    }
+
+
     labelTitle->setAnchorPoint(ccp(0,0));
     labelTitle->setColor(ccc3(126, 126, 126));
     this->addChild(labelTitle,0,298);
@@ -279,7 +314,18 @@ void TraceRouteScene::UpdateHeader()
                 break;
         }
     }
-    insertLabel(ccc3(126, 126, 126), ccp(20, 305),298,0, false, currentText, this, 12);
+    float altura = CCDirector::sharedDirector()->getWinSize().height;
+    if (altura>480) {
+         insertLabel(ccc3(126, 126, 126), ccp(20, 425),298,0, false, currentText, this, 12);
+        
+    }
+    else
+    {
+         insertLabel(ccc3(126, 126, 126), ccp(20, 305),298,0, false, currentText, this, 12);
+        
+    }
+
+   
 }
 
 
@@ -337,7 +383,7 @@ void TraceRouteScene::CCListView_didScrollToRow(cocos2d::extension::CCListView *
 void TraceRouteScene::btnEntradaSaida(CCObject *sender)
 {
     CCNode* node = (CCNode*)sender;
-    CreateButtons((RotaState)node->getTag());
+    CreateButtons((RotaState)node->getTag(),this);//todo
 }
 
 TraceRouteScene::~TraceRouteScene()

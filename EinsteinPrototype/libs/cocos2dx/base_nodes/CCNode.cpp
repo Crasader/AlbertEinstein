@@ -623,9 +623,10 @@ void CCNode::detachChild(CCNode *child, bool doCleanup)
     }
 
     // set parent nil at the end
-    child->setParent(NULL);
+    //  child->setParent(NULL);
 
     m_pChildren->removeObject(child);
+  
 }
 
 

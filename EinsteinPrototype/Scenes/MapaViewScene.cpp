@@ -162,7 +162,7 @@ void MapViewScene::btnTopButton(CCObject *sender)
 
 void MapViewScene::OnBack()
 {
-    this->removeChildByTag(Global::TAG_Child_Layer, true);
+  this->removeChildByTag(Global::TAG_Child_Layer, true);
   
     returnToHome();
 }

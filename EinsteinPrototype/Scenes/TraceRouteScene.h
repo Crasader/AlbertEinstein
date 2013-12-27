@@ -66,7 +66,7 @@ public:
     
     
     void LoadListView();
-    void CreateButtons(RotaState newState);
+    void CreateButtons(RotaState newState,CCNode *node);
     
     void btnEntradaSaida(CCObject *sender);
     //void insertItemListView( int tagValue, const char* datatext);

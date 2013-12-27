@@ -126,6 +126,7 @@ public:
     void BuildCategoryWayPointState(int bKey);
 	void BuildWayPointByBuilding(int bKey);
     void insertLabel(cocos2d::ccColor3B color, cocos2d::CCPoint position,  bool bold,  const char* datatext, CCNode* parent, int size);
+    void insertText(cocos2d::ccColor3B color, cocos2d::CCPoint position, cocos2d::CCSize frameSize,  bool bold,  const char* datatext, CCNode* parent,const char* fontName, int size);
     void insertLabel(cocos2d::ccColor3B color, cocos2d::CCPoint position, int tagValue,int zOrder, bool bold,  const char* datatext, CCNode* parent, int size);
     
     

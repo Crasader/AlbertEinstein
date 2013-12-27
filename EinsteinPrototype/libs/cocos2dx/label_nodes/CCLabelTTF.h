@@ -59,7 +59,7 @@ public:
      @deprecated: This interface will be deprecated sooner or later.
      @since v1.0
      */
-    CC_DEPRECATED_ATTRIBUTE static CCLabelTTF * labelWithString(const char *string, const CCSize& dimensions, CCTextAlignment hAlignment, 
+    CC_DEPRECATED_ATTRIBUTE static CCLabelTTF * labelWithString(const char *string, const CCSize& dimensions, CCTextAlignment hAlignment,
                                         const char *fontName, float fontSize);
     
     /** creates a CCLabel from a fontname, alignment, dimension in points and font size in points
@@ -76,6 +76,8 @@ public:
      */
     static CCLabelTTF * create(const char *string, const CCSize& dimensions, CCTextAlignment hAlignment, 
                                         const char *fontName, float fontSize);
+    static CCLabelTTF * criar(const char *string, const CCSize& dimensions, CCTextAlignment hAlignment,
+                               const char *fontName, float fontSize);
     
     /** creates a CCLabel from a fontname, alignment, dimension in points and font size in points*/
     static CCLabelTTF * create(const char *string, const CCSize& dimensions, CCTextAlignment hAlignment, 

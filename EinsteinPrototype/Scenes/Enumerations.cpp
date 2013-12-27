@@ -750,6 +750,22 @@ void IFixedMenu::insertLabel(ccColor3B color, CCPoint position,  bool bold,  con
 }
 
 
+void IFixedMenu::insertText(ccColor3B color, CCPoint position, CCSize frameSize,  bool bold,  const char* datatext, CCNode* parent, const char* fontName, int size)
+{
+    CCLabelTTF *labelTitle;
+    
+  //  if( bold)
+        labelTitle = CCLabelTTF::criar(datatext, frameSize, kCCTextAlignmentLeft, fontName, size);
+   // else
+   //     labelTitle = CCLabelTTF::create(datatext, "Lucida Grande", size);
+    
+    labelTitle->setPosition(position);
+    labelTitle->setAnchorPoint(ccp(0,0));
+    labelTitle->setColor(color);
+    parent->addChild(labelTitle);
+}
+
+
 //Procura um item baseado em uma keyword ou nao. keyword em branco ira trazer todos os itens
 void IFixedMenu::SearchItem( const char* keyword)
 {

@@ -8,7 +8,7 @@
 
 #include "WayPointViewScene.h"
 #include "MinhasRotasScenes.h"
-
+#include "CCLabelTTF.h"
 using namespace std;
 
 WayPointViewScene::WayPointViewScene(HomeMenuState category, int wayPoint,StateMachine _stateMachinePreviousPage)
@@ -95,7 +95,15 @@ if( isFavoritoChecked)
 chFavoritos = "favoritos_Mapa_press.png";
 
 createMenuItem(menu3, 112233, chFavoritos, chFavoritos,0, 0, menu_selector(WayPointViewScene::favoriteButtonPressed), this);
-menu3->setPosition(ccp(250,400));
+ float altura = CCDirector::sharedDirector()->getWinSize().height;
+    if (altura>480) {
+        menu3->setPosition(ccp(250,480));
+    }
+    else
+    {
+        menu3->setPosition(ccp(250,400));
+    }
+
 menu3->setAnchorPoint(ccp(0,0));
 this->addChild(menu3,3,1002);
 
@@ -126,7 +134,14 @@ void WayPointViewScene::reloadFavoriteButton()
     
     CCMenu* menu3 = CCMenu::create();
     createMenuItem(menu3, 112233, chFavoritos, chFavoritos,0, 0, menu_selector(WayPointViewScene::favoriteButtonPressed), this);
-    menu3->setPosition(ccp(250,400));
+    float altura = CCDirector::sharedDirector()->getWinSize().height;
+    if (altura>480) {
+        menu3->setPosition(ccp(250,480));
+    }
+    else
+    {
+        menu3->setPosition(ccp(250,400));
+    }
     menu3->setAnchorPoint(ccp(0,0));
     
     CCDirector::sharedDirector()->getRunningScene()->getChildByTag(Global::TAG_Parent_Layer)->removeChildByTag(1002, true);
@@ -155,7 +170,16 @@ void WayPointViewScene::LoadMenu()
     CCMenu* options = CCMenu::create();
     options->addChild(itembtnRota,1,wayPoint);
     options->addChild(itembtnHorario,1,wayPoint);
-    options->setPosition(ccp(238, 173) );
+    float altura = CCDirector::sharedDirector()->getWinSize().height;
+    if (altura>480) {
+        options->setPosition(ccp(238, 253) );
+    }
+    else
+    {
+       options->setPosition(ccp(238, 173) );
+    }
+
+    
     node->addChild(options);
 }
 
@@ -202,7 +226,16 @@ void WayPointViewScene::LoadWayPoint()
     //Carrega uma sobra enconstada no canto inferior da pagina
     CCSprite *sprtFundoEstabelecimento = CCSprite::create("SombraMagica.png");
     sprtFundoEstabelecimento->setAnchorPoint(ccp(0,0));
-    sprtFundoEstabelecimento->setPosition(ccp(72, 200));
+    float altura = CCDirector::sharedDirector()->getWinSize().height;
+    if (altura>480) {
+         sprtFundoEstabelecimento->setPosition(ccp(72, 280));
+    }
+    else
+    {
+        sprtFundoEstabelecimento->setPosition(ccp(72, 200));
+    }
+
+   
     node->addChild(sprtFundoEstabelecimento);
 
     CCSprite *sprtEstabelecimento = CCSprite::create(s);
@@ -210,44 +243,80 @@ void WayPointViewScene::LoadWayPoint()
         sprtEstabelecimento = CCSprite::create("ModeloWayPointFoto.png");
 
     sprtEstabelecimento->setAnchorPoint(ccp(0,0));
-    sprtEstabelecimento->setPosition(ccp(0,217));
+    if (altura>480) {
+         sprtEstabelecimento->setPosition(ccp(0,297));
+    }
+    else
+    {
+        sprtEstabelecimento->setPosition(ccp(0,217));
+    }
+
+   
     node->addChild(sprtEstabelecimento);
 
     //Monta o nome do waypoint baseado na formatacao definida o arquivo de waypoint pList.
-    vector<std::string> vectNames = LoadWayPointNameToArray(this->wayPoint);
-    for(int i =0; i < vectNames.size();i++)
-        insertLabel(ccc3(72, 72, 72), ccp(30, 180- i*24), true, vectNames[i].c_str(), node, 16);
-  
+//    vector<std::string> vectNames = LoadWayPointNameToArray(this->wayPoint);
+//    for(int i =0; i < vectNames.size();i++)
+//        insertLabel(ccc3(72, 72, 72), ccp(30, 180- i*24), true, vectNames[i].c_str(), node, 16);//todo
+//  
     vector<std::string> vectDescription;//
     vectDescription.push_back("Lorem ipsum dolor sit amet, consectetur adipis-");
     vectDescription.push_back("cing elit. Aliquam in turpis eget velit interdum, ");
     
-    if( enableCheckin  )
-    {	
-        /**************************************************************************************************/
-        CCPoint point = ccp(30, 176-vectNames.size()*15);
-        insertLabel(ccc3(72, 72, 72), ccp(30, 165-vectNames.size()*15), false, "Fazer Check in :", node, 10);
-        /**************************************************************************************************/
-        //Monta os botoes de facebook e 4square
-        CCMenu* options = CCMenu::create();
-        createMenuItem(options, 1, "FacebookButton.png", "FacebookButton_H.png", 35, 0, menu_selector(WayPointViewScene::btnCheckin), this);
-        createMenuItem(options, 3, "FourSquareButton.png", "FourSquareButton_H.png", 0, 0, menu_selector(WayPointViewScene::btnCheckin), this);
-        /**************************************************************************************************/
-        point = CCPointMake(30,point.y-45);
-        options->setPosition(point);
-        node->addChild(options);
-        /**************************************************************************************************/
-        for(int i =0; i < vectDescription.size();i++)
-            insertLabel(ccc3(72, 72, 72), ccp(30, point.y - 24 - i*20), false, vectDescription[i].c_str(), node, 12);
-        /**************************************************************************************************/
+    vectDescription.push_back("vulputate  ac in diam In lacinia , magnadictum, ");
+    vectDescription.push_back("euismod gravida justo.");
+//    for(int i =0; i < vectDescription.size();i++)
+//    {            insertLabel(ccc3(72, 72, 72), ccp(30, 176*15 - 24 - i*20), false, vectDescription[i].c_str(), node, 12);//todo
+//
+//    }
+    
+    
+   // CCSize tamanho_texto = CCSizeMake(0, 0);
+   // CCLabelTTF::create("", tamanho_texto, 0, "Thonburi", 20);
+    if (altura>480) {
+       insertText(ccc3(72, 72, 72), ccp(30, 60),CCSizeMake(270, 180), true, "O texto apresentado nesta área representa as principais caracteristicas do local visitado. Este texto não pode ser muito grande visto que não existe rolagem nesta região e em telas de 3.5 polegadas o texto seria cortado.", node,"Thonburi", 16);
     }
     else
     {
-        vectDescription.push_back("vulputate  ac in diam In lacinia , magnadictum, ");
-        vectDescription.push_back("euismod gravida justo.");
-        for(int i =0; i < vectDescription.size();i++)
-            insertLabel(ccc3(72, 72, 72), ccp(30, 176-vectNames.size()*15 - 24 - i*20), false, vectDescription[i].c_str(), node, 12);
+        insertText(ccc3(72, 72, 72), ccp(30, 60),CCSizeMake(270, 100), true, "O texto apresentado nesta área representa as principais caracteristicas do local visitado. Este texto não pode ser muito grande visto que não existe rolagem nesta região e em telas de 3.5 polegadas o texto seria cortado.", node,"Thonburi", 16);
     }
+    
+
+    
+  if( enableCheckin  )
+   {
+//        /**************************************************************************************************/
+       CCPoint point;
+       if (altura>480) {
+            point = ccp(30, 260);
+       }
+       else
+       {
+            point = ccp(30, 180);
+       }
+       
+//        insertLabel(ccc3(72, 72, 72), ccp(30, 165-vectNames.size()*15), false, "Fazer Check in :", node, 10);
+//        /**************************************************************************************************/
+//        //Monta os botoes de facebook e 4square
+        CCMenu* options = CCMenu::create();
+        createMenuItem(options, 1, "FacebookButton.png", "FacebookButton_H.png", 40, 0, menu_selector(WayPointViewScene::btnCheckin), this);
+        createMenuItem(options, 3, "FourSquareButton.png", "FourSquareButton_H.png", 0, 0, menu_selector(WayPointViewScene::btnCheckin), this);
+        /**************************************************************************************************/
+       // point = CCPointMake(30,point.y-45);
+        options->setPosition(point);//todo
+       node->addChild(options);
+//        /**************************************************************************************************/
+//        for(int i =0; i < vectDescription.size();i++)
+//            insertLabel(ccc3(72, 72, 72), ccp(30, point.y - 24 - i*20), false, vectDescription[i].c_str(), node, 12);
+//        /**************************************************************************************************/
+    }
+//    else
+//    {
+//        vectDescription.push_back("vulputate  ac in diam In lacinia , magnadictum, ");
+//        vectDescription.push_back("euismod gravida justo.");
+//        for(int i =0; i < vectDescription.size();i++)
+//            insertLabel(ccc3(72, 72, 72), ccp(30, 176-vectNames.size()*15 - 24 - i*20), false, vectDescription[i].c_str(), node, 12);//todo
+//    }
 }
 
 //Exibe a tela do facebook ou FourSquare

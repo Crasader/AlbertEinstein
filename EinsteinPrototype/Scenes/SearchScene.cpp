@@ -73,7 +73,17 @@ SearchScene::SearchScene()
       TitleImg->addChild(__pKeyboardNotificationLayer );
 
       TitleImg->setAnchorPoint(ccp(0, 0));
-      TitleImg->setPosition(ccp(10, 360));
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+
+    if (winsize.height > 480) {
+         TitleImg->setPosition(ccp(10, 440));
+    }
+    else
+    {
+         TitleImg->setPosition(ccp(10, 360));
+    }
+
+    
       
       _txtBusca->setColor(ccc3(0, 0, 0));
       _txtBusca->setDelegate(this);
@@ -102,7 +112,16 @@ SearchScene::SearchScene()
       
       CCMenu* mnBusca = CCMenu::create();
       createMenuItem(mnBusca, 302, "Busca_Button.png", "Busca_Button_H.png", 0, 0, menu_selector(SearchScene::btnBusca), this);
-      mnBusca->setPosition(ccp(250, 365));
+    
+    if (winsize.height > 480) {
+       mnBusca->setPosition(ccp(250, 445));
+    }
+    else
+    {
+       mnBusca->setPosition(ccp(250, 365));
+    }
+
+    
       this->addChild(mnBusca,0);
       btnBusca(0);
 }
@@ -128,7 +147,16 @@ void SearchScene::btnBusca(CCObject *sender)
     currentData = ((CCTextFieldTTF*)__pKeyboardNotificationLayer->__pTrackNode)->getContentText();
 
     CCSize size =  CCDirector::sharedDirector()->getWinSize();
-    size.height= 0.66*size.height-20;
+    if (size.height > 480) {
+        size.height= 300;
+    }
+    else
+    {
+       size.height= 200;
+    }
+    
+
+    
     //size.width = 0.75*size.width;
      size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;
     

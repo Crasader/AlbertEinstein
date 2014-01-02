@@ -48,7 +48,17 @@ void MapViewScene::setUp()
               chFavoritos = "favoritos_Mapa_press.png";
           
           createMenuItem(menu3, 112233, chFavoritos, chFavoritos,0, 0, menu_selector(MapViewScene::btnTopButton), this);
-          menu3->setPosition(ccp(250,423));
+          CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+          
+          if (winsize.height > 480) {
+              menu3->setPosition(ccp(250,503));
+          }
+          else
+          {
+               menu3->setPosition(ccp(250,418));
+          }
+
+         
           menu3->setAnchorPoint(ccp(0,0));
           this->addChild(menu3,3,1002);
 
@@ -68,11 +78,13 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
     targetWayPoint = _targetWayPoint;
 
 	//black screen
-	CCSprite *blackScreen = CCSprite::create("backInBlack.png");
-	blackScreen->setScaleX(CCDirector::sharedDirector()->getWinSize().width / blackScreen->boundingBox().size.width);
-	blackScreen->setScaleY(CCDirector::sharedDirector()->getWinSize().height / blackScreen->boundingBox().size.height);
-	blackScreen->setAnchorPoint(ccp(0,0));
-	this->addChild(blackScreen);
+	//CCSprite *blackScreen = CCSprite::create("backInBlack.png");
+	//blackScreen->setScaleX(CCDirector::sharedDirector()->getWinSize().width / blackScreen->boundingBox().size.width);
+	//blackScreen->setScaleY(CCDirector::sharedDirector()->getWinSize().height / blackScreen->boundingBox().size.height);
+    //blackScreen->setPosition(ccp(0, 0));
+   // blackScreen->setContentSize(CCSizeMake(100, 100));
+	//blackScreen->setAnchorPoint(ccp(0,0));
+	//this->addChild(blackScreen);
     
 	Pathfinder *pathfinder = Pathfinder::create();
     pathfinder->setAnchorPoint(ccp(0, 0));
@@ -89,7 +101,17 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
    
     CCMenu* menu2 = CCMenu::create();
     createMenuItem(menu2, 123, "Seta1.png", "Seta2.png",0, 0, menu_selector(IFixedMenu::btnTop), this);
-    menu2->setPosition(ccp(10,440));
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+    
+    if (winsize.height > 480) {
+       menu2->setPosition(ccp(10,520));
+    }
+    else
+    {
+        menu2->setPosition(ccp(10,435));
+    }
+
+    
     menu2->setAnchorPoint(ccp(0,0));
     this->addChild(menu2,3,1000);
     this->destination = strdup(LoadWayPointName(_targetWayPoint));
@@ -134,7 +156,16 @@ void MapViewScene::setUpButtonTop()
     
     CCMenu* menu3 = CCMenu::create();
     createMenuItem(menu3, 112233, chFavoritos, chFavoritos,0, 0, menu_selector(MapViewScene::btnTopButton), this);
-    menu3->setPosition(ccp(250,423));
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+    
+    if (winsize.height > 480) {
+         menu3->setPosition(ccp(250,503));
+    }
+    else
+    {
+        menu3->setPosition(ccp(250,418));
+    }
+   
     menu3->setAnchorPoint(ccp(0,0));
  
     CCDirector::sharedDirector()->getRunningScene()->getChildByTag(Global::TAG_Parent_Layer)->removeChildByTag(1002, true);
@@ -169,6 +200,10 @@ void MapViewScene::OnBack()
 
 void MapViewScene::draw()
 {
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+    
+    
+
     CCLabelTTF *labelTitle;
     std::string cS;
     
@@ -232,7 +267,14 @@ void MapViewScene::draw()
 		cS = "";
 	
     labelTitle = CCLabelTTF::create(cS.c_str(), CCSizeMake(302, 100),  kCCTextAlignmentLeft, "Lucida Grande", 16);
-    labelTitle->setPosition(ccp(15, 370));
+    if (winsize.height > 480) {
+        labelTitle->setPosition(ccp(15, 450));
+    }
+    else
+    {
+        labelTitle->setPosition(ccp(15, 370));
+    }
+    
     labelTitle->setAnchorPoint(ccp(0,0.5));
     labelTitle->setColor(ccc3(0, 0, 0));
     
@@ -249,7 +291,15 @@ void MapViewScene::draw()
         sprintf(buffer," Aguarde Carregando ");
 
     CCLabelTTF *l = CCLabelTTF::create(buffer,"LucidaGrandeBold", 13);
-    l->setPosition(ccp(80,455));
+    if (winsize.height > 480) {
+         l->setPosition(ccp(80,535));
+    }
+    else
+    {
+         l->setPosition(ccp(80,450));
+    }
+
+   
     l->setAnchorPoint(ccp(0,0.5));
     l->setColor(ccc3(255, 255, 255));
     

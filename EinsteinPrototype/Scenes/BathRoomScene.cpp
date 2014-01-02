@@ -22,7 +22,17 @@ BathRoomScene::BathRoomScene()
 void BathRoomScene::setUpMenu()
 {
     CCSize size = CCDirector::sharedDirector()->getWinSize();
-    size.height= 0.60*size.height-20;
+  
+    
+    if (size.height > 480) {
+        size.height= 280;
+    }
+    else{
+        size.height= 200;
+    }
+
+    
+    
     size.width = 0.90*size.width;
     
     initListView(size, this);

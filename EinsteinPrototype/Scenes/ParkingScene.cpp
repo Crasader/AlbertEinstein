@@ -42,7 +42,15 @@ ParkingScene::ParkingScene(EstacionamentoState state)
 void ParkingScene::setUpMenu()
 {
     CCSize size = CCDirector::sharedDirector()->getWinSize();
-    size.height= 0.50*size.height;
+    if (size.height > 480) {
+         size.height= 295;
+    }
+    else
+    {
+         size.height= 200;
+    }
+
+   
     size.width = 0.90*size.width;
     
     IFixedMenu::initListView(size, this);
@@ -57,7 +65,15 @@ void ParkingScene::Init()
     CCSprite* spriteBackButton = CCSprite::create("Background_Estacionamento_botoes.png");
     spriteBackButton->setAnchorPoint(ccp(0, 0));
 	spriteBackButton->setOpacity(2000);
-    spriteBackButton->setPosition(ccp(0, 350));
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+
+    if (winsize.height > 480) {
+        spriteBackButton->setPosition(ccp(0, 430));
+    }
+    else
+    {
+        spriteBackButton->setPosition(ccp(0, 350));
+    }
     
     this->addChild(spriteBackButton);
     
@@ -83,8 +99,15 @@ void ParkingScene::CreateButtons()
 
     if(this->getChildByTag(12)!=NULL)
         removeChildByTag(12, true);
-
-    menuEntradaSaida->setPosition(ccp(73,365));
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+    if (winsize.height > 480) {
+        menuEntradaSaida->setPosition(ccp(73,445));
+    }
+    else
+    {
+        menuEntradaSaida->setPosition(ccp(73,365));
+    }
+    
     this->addChild(menuEntradaSaida,0,2);
 }
 
@@ -93,10 +116,28 @@ void ParkingScene::LoadListView()
     plistMenuCurrent.clear();
     plistTagMenuCurrent.clear();
     char* namesprite = NULL;
-    CCPoint position = ccp(25, 314 );
+      CCPoint position;
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+    if (winsize.height > 480) {
+        position = ccp(25, 411 );
+    }
+    else
+    {
+        position = ccp(25, 314 );
+    }
+
+  
     if(state == EST_ENTRADA )
     {
-        position = ccp(30, 318);
+        if (winsize.height > 480) {
+            position = ccp(30, 415);
+        }
+        else
+        {
+            position = ccp(30, 318);
+        }
+        
+        
         namesprite = "VizualizePontosEntrada.png";
         insertItemListView( 19 ,"Bloco A1");
         insertItemListView( 51 ,"Bloco B");
@@ -104,6 +145,7 @@ void ParkingScene::LoadListView()
     }
     else
     {
+        
         namesprite = "SelecioneEntrada_Estacionamento.png";
         insertItemListView( 19 ,"Bloco A");
         insertItemListView( 51 ,"Bloco A1");

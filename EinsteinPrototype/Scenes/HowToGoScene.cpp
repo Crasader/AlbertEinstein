@@ -89,12 +89,31 @@ void HowToGoScene::setUpMenu()
         CCSprite* spriteBackButton = CCSprite::create("Background_Estacionamento_botoes.png");
         spriteBackButton->setAnchorPoint(ccp(0, 0));
         spriteBackButton->setOpacity(2000);
-        spriteBackButton->setPosition(ccp(0, 350));
+        CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+       
+        if (winsize.height > 480) {
+           spriteBackButton->setPosition(ccp(0, 430));
+        }
+        else
+        {
+            spriteBackButton->setPosition(ccp(0, 350));
+        }
+
+        
         
         CCLabelTTF *labelTitleDescription;
         labelTitleDescription = CCLabelTTF::create(LoadWayPointName(lastIdInserted), "Lucida Grande", 16);
         labelTitleDescription->setHorizontalAlignment(kCCTextAlignmentLeft);
-        labelTitleDescription->setPosition(ccp(80, 370));
+        if (winsize.height > 480) {
+            labelTitleDescription->setPosition(ccp(80, 450));
+        }
+        else
+        {
+            labelTitleDescription->setPosition(ccp(80, 370));
+        }
+        
+
+        
         labelTitleDescription->setAnchorPoint(ccp(0,0));
         labelTitleDescription->setColor(ccc3(72, 72, 72));
         

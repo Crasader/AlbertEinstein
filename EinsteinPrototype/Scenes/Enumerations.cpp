@@ -372,8 +372,8 @@ void IFixedMenu::ChangeTitle(HomeMenuState menu)
         case SERVICOS:
             sprite = CCSprite::create("tit_servicos.png");
             break;
-        case ESPECIALIDADES_MEDICAS:
-            sprite = CCSprite::create("tit_especialidadesmedicas.png");
+        case LUGARES:
+            sprite = CCSprite::create("tit_lugares.png");
             break;
         case MINHAS_ROTAS:
             sprite = CCSprite::create("tit_tracarrota.png");
@@ -569,7 +569,7 @@ HomeMenuState IFixedMenu::getCategory(int _waypointID)
               if( lstSection[i].categoryID == 222)
                   return SERVICOS;
               else  if( lstSection[i].categoryID  == 111)
-                  return ESPECIALIDADES_MEDICAS;
+                  return LUGARES;
               else
                   return getCategory(lstSection[i].categoryID);
           }

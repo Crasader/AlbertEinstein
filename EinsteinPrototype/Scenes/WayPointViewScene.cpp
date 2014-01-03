@@ -339,7 +339,7 @@ void WayPointViewScene::btnCheckin(CCObject *sender)
 void WayPointViewScene::InitView()
 {
     switch (actualCategory) {
-        case ESPECIALIDADES_MEDICAS:
+        case LUGARES:
         setUpTopImage(Global::TOP_SRC_IMAGE_Especialidade);
             break;
         case BANHEIROS:

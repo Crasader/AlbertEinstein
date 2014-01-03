@@ -18,7 +18,7 @@ void TraceRouteScene::OnBackPreviousPage()
 {
     if(this->statePreviousPage.lastState == TARGET_SEARCH)
         changeScene( new SearchScene());
-    else if((actualCategory == SERVICOS)||(actualCategory == ESPECIALIDADES_MEDICAS) || (this->statePreviousPage.lastState == TARGET_FAVORITOS))
+    else if((actualCategory == SERVICOS)||(actualCategory == LUGARES) || (this->statePreviousPage.lastState == TARGET_FAVORITOS))
         changeScene( new WayPointViewScene(statePreviousPage.actual_category, this->wayPoint, statePreviousPage));
     else  if(actualCategory == BANHEIROS)
         changeScene( new BathRoomScene());

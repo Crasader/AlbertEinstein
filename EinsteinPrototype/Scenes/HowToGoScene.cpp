@@ -1,7 +1,7 @@
 // Essa classe é usada pela maioria das telas, serve pra exibir paginas HTML (Como Chegar)
 // Servicos e as Especialidades medicas compartilham o mesmo codigo mas com codigos de pesquisa diferentes ver BuildCategoryWayPointState metodo
 // 222 - Servicos
-// 111 - Especialidades medicas
+// 111 - Especialidades medicas/LUGARES
 //  Created by Marco Rossi on 2/6/13.
 //  Copyright (c) 2013 Farofa Studios. All rights reserved.
 
@@ -30,10 +30,10 @@ HowToGoScene::HowToGoScene(StateMachine _machine)
 //Monta os waypoints de especialidades ou servicos
 void HowToGoScene::BuildCategoryState()
 {
-    if( actualCategory == ESPECIALIDADES_MEDICAS)
+    if( actualCategory == LUGARES)
     {
         lastIdInserted = 111;
-        ChangeTitle(ESPECIALIDADES_MEDICAS);
+        ChangeTitle(LUGARES);
         BuildCategoryWayPointState(111);
     }
     else if( actualCategory == SERVICOS)
@@ -66,7 +66,7 @@ void HowToGoScene::OnBack()
         if( lastIdInserted ==  222)
             ChangeTitle(SERVICOS);
         else if( lastIdInserted ==  111)
-            ChangeTitle(ESPECIALIDADES_MEDICAS);
+            ChangeTitle(LUGARES);
         else
             ChangeTitle(machine.title);
         BuildCategoryWayPointState(lastIdInserted);
@@ -80,23 +80,45 @@ void HowToGoScene::setUpMenu()
     size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;
     this->removeChildByTag(555, true);
     this->removeChildByTag(556, true);
+    this->removeChildByTag(557, true);
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+    
+    
+    CCSprite* spriteSubTit = CCSprite::create("subtit_unidademorumbi.png");
+    spriteSubTit->setAnchorPoint(ccp(0, 0));
+    //spriteSubTit->setOpacity(2000);
+    
+    if (winsize.height > 480) {
+           spriteSubTit->setPosition(ccp(0, 470));
+    }
+    else
+    {
+        spriteSubTit->setPosition(ccp(0, 390));
+    }
+    
+
+  
+    //spriteSubTit->setScale(2);
+    
     if(  machine.isCategoryChild)
     {
         //Monta um titulo acima do listview com o nome do Pai selecionado
       
 
-        size.height= 299;
-        CCSprite* spriteBackButton = CCSprite::create("Background_Estacionamento_botoes.png");
+      
+        CCSprite* spriteBackButton = CCSprite::create("Background_subtitle_slim.png");
         spriteBackButton->setAnchorPoint(ccp(0, 0));
         spriteBackButton->setOpacity(2000);
-        CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+       
        
         if (winsize.height > 480) {
-           spriteBackButton->setPosition(ccp(0, 430));
+              size.height= 315;
+           spriteBackButton->setPosition(ccp(0, 445));
         }
         else
         {
-            spriteBackButton->setPosition(ccp(0, 350));
+              size.height= 235;
+            spriteBackButton->setPosition(ccp(0, 370));
         }
 
         
@@ -119,12 +141,23 @@ void HowToGoScene::setUpMenu()
         
         this->addChild(spriteBackButton, 0, 555);
         this->addChild(labelTitleDescription,0, 556);
+        
     }
     else
     {
-                size.height= 364;//3.5inch
+        if (winsize.height > 480) {
+            size.height= 340;//3.5inch
+
+        }
+        else
+        {
+            size.height= 264;//3.5inch
+
+        }
+
         
     }
+    this->addChild(spriteSubTit,0, 557);
     IFixedMenu::initListView(size, this);
     pList->BackgroundID = 0;
 }
@@ -222,7 +255,7 @@ void HowToGoScene::initListView(HomeMenuState category)
             this->addChild(new LayerWebView());
             break;
 
-        case ESPECIALIDADES_MEDICAS:
+        case LUGARES:
             state = TARGET_CATEGORY;
             this->size=setUpTopImage(Global::TOP_SRC_IMAGE_Especialidade);
             setUpImageTop();

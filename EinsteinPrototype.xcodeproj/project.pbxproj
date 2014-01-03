@@ -660,6 +660,9 @@
 		A5F1A0D3170E055000932CF8 /* ok_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F1A0D1170E055000932CF8 /* ok_btn.png */; };
 		A5F1A0D4170E055000932CF8 /* ok_press.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F1A0D2170E055000932CF8 /* ok_press.png */; };
 		AC4AF9F81876E38D00B4F344 /* ModeloWayPointFoto.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AF9F71876E38D00B4F344 /* ModeloWayPointFoto.png */; };
+		AC4AF9FA1876EA9900B4F344 /* tit_lugares.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AF9F91876EA9900B4F344 /* tit_lugares.png */; };
+		AC4AFA02187714DF00B4F344 /* subtit_unidademorumbi.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA01187714DF00B4F344 /* subtit_unidademorumbi.png */; };
+		AC4AFA041877166900B4F344 /* Background_subtitle_slim.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA031877166900B4F344 /* Background_subtitle_slim.png */; };
 		ACC8C1E0186BBB690071854F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1DF186BBB690071854F /* Default-568h@2x.png */; };
 		ACC8C1E3186C54430071854F /* bg_ios7_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */; };
 		ACC8C1E4186C54430071854F /* bg_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1E2186C54430071854F /* bg_ios7.png */; };
@@ -1569,6 +1572,9 @@
 		A5F1A0D1170E055000932CF8 /* ok_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok_btn.png; sourceTree = "<group>"; };
 		A5F1A0D2170E055000932CF8 /* ok_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok_press.png; sourceTree = "<group>"; };
 		AC4AF9F71876E38D00B4F344 /* ModeloWayPointFoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ModeloWayPointFoto.png; sourceTree = "<group>"; };
+		AC4AF9F91876EA9900B4F344 /* tit_lugares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tit_lugares.png; sourceTree = "<group>"; };
+		AC4AFA01187714DF00B4F344 /* subtit_unidademorumbi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtit_unidademorumbi.png; sourceTree = "<group>"; };
+		AC4AFA031877166900B4F344 /* Background_subtitle_slim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_subtitle_slim.png; sourceTree = "<group>"; };
 		ACC8C1DF186BBB690071854F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7_4inch.png; sourceTree = "<group>"; };
 		ACC8C1E2186C54430071854F /* bg_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7.png; sourceTree = "<group>"; };
@@ -1649,6 +1655,7 @@
 				787B9CA2170A116D00A57D25 /* az_press.png */,
 				787B9CA4170A116D00A57D25 /* Background.png */,
 				A5A5316F16D2C74E005C20C0 /* Background_Estacionamento_botoes.png */,
+				AC4AFA031877166900B4F344 /* Background_subtitle_slim.png */,
 				787B9CA3170A116D00A57D25 /* Background_Estacionamento_botoes1.png */,
 				787A19AE16FB5905003C860F /* BackgroundButtonsMap.png */,
 				787A19B016FB5905003C860F /* BackMap.png */,
@@ -1780,10 +1787,12 @@
 				5DE3404216CEA91400C108ED /* ServicosTop.png */,
 				787A19BC16FB5905003C860F /* Seta1.png */,
 				787A19BD16FB5905003C860F /* Seta2.png */,
+				AC4AFA01187714DF00B4F344 /* subtit_unidademorumbi.png */,
 				A57F443416D54BF300B48AF1 /* TextBox_Fundo.png */,
 				787B9CCA170A116D00A57D25 /* tit_banheiros.png */,
 				787B9CCB170A116D00A57D25 /* tit_comochegar.png */,
 				787B9CCC170A116D00A57D25 /* tit_especialidadesmedicas.png */,
+				AC4AF9F91876EA9900B4F344 /* tit_lugares.png */,
 				787B9CCD170A116D00A57D25 /* tit_Estacionamento.png */,
 				787B9CCE170A116D00A57D25 /* tit_informacoes.png */,
 				787B9CCF170A116D00A57D25 /* tit_servicos.png */,
@@ -3237,6 +3246,7 @@
 				78C9366916E9164C00E3D57B /* iconeInicio.png in Resources */,
 				78C9366A16E9164C00E3D57B /* iconeJardim.png in Resources */,
 				78C9366B16E9164C00E3D57B /* iconeMaternidade.png in Resources */,
+				AC4AF9FA1876EA9900B4F344 /* tit_lugares.png in Resources */,
 				78C9366C16E9164C00E3D57B /* iconeObraDeArte.png in Resources */,
 				78C9366D16E9164C00E3D57B /* iconePediatria.png in Resources */,
 				78C9366E16E9164C00E3D57B /* iconePlanta.png in Resources */,
@@ -3342,6 +3352,7 @@
 				7878A01816F246D50011E681 /* ligacaoSombra.png in Resources */,
 				7878A01916F246D50011E681 /* linhaSombra.png in Resources */,
 				7878A01A16F246D50011E681 /* seta.png in Resources */,
+				AC4AFA02187714DF00B4F344 /* subtit_unidademorumbi.png in Resources */,
 				7878A01B16F246D50011E681 /* setaSombra.png in Resources */,
 				78F9D19C16F7B6700016BB21 /* backInBlack.png in Resources */,
 				787E3A0D16F8CBCC00DD3FC3 /* A1-01Ss.png in Resources */,
@@ -3456,6 +3467,7 @@
 				A5B882F7171CA0B10067DF63 /* 35.png in Resources */,
 				A5B882F8171CA0B10067DF63 /* 37.png in Resources */,
 				A5B882F9171CA0B10067DF63 /* 38.png in Resources */,
+				AC4AFA041877166900B4F344 /* Background_subtitle_slim.png in Resources */,
 				A5B882FA171CA0B10067DF63 /* 39.png in Resources */,
 				A5B882FB171CA0B10067DF63 /* 40.png in Resources */,
 				A5B882FC171CA0B10067DF63 /* 41.png in Resources */,

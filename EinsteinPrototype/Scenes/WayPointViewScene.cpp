@@ -255,17 +255,17 @@ void WayPointViewScene::LoadWayPoint()
     node->addChild(sprtEstabelecimento);
 
     //Monta o nome do waypoint baseado na formatacao definida o arquivo de waypoint pList.
-//    vector<std::string> vectNames = LoadWayPointNameToArray(this->wayPoint);
+  // vector<std::string> vectNames = LoadWayPointNameToArray(this->wayPoint);
 //    for(int i =0; i < vectNames.size();i++)
 //        insertLabel(ccc3(72, 72, 72), ccp(30, 180- i*24), true, vectNames[i].c_str(), node, 16);//todo
 //  
-    vector<std::string> vectDescription;//
-    vectDescription.push_back("Lorem ipsum dolor sit amet, consectetur adipis-");
-    vectDescription.push_back("cing elit. Aliquam in turpis eget velit interdum, ");
-    
-    vectDescription.push_back("vulputate  ac in diam In lacinia , magnadictum, ");
-    vectDescription.push_back("euismod gravida justo.");
-//    for(int i =0; i < vectDescription.size();i++)
+//    vector<std::string> vectDescription;//
+//    vectDescription.push_back("Lorem ipsum dolor sit amet, consectetur adipis-");
+//    vectDescription.push_back("cing elit. Aliquam in turpis eget velit interdum, ");
+//    
+//    vectDescription.push_back("vulputate  ac in diam In lacinia , magnadictum, ");
+//    vectDescription.push_back("euismod gravida justo.");
+////    for(int i =0; i < vectDescription.size();i++)
 //    {            insertLabel(ccc3(72, 72, 72), ccp(30, 176*15 - 24 - i*20), false, vectDescription[i].c_str(), node, 12);//todo
 //
 //    }
@@ -281,6 +281,15 @@ void WayPointViewScene::LoadWayPoint()
         insertText(ccc3(72, 72, 72), ccp(30, 60),CCSizeMake(270, 100), true, "O texto apresentado nesta área representa as principais caracteristicas do local visitado. Este texto não pode ser muito grande visto que não existe rolagem nesta região e em telas de 3.5 polegadas o texto seria cortado.", node,"Thonburi", 16);
     }
     
+//   CCLabelTTF *labelTitle;
+//    labelTitle = CCLabelTTF::create(LoadWayPointName(this->wayPoint), "Lucida Grande", 16);
+//    labelTitle->setPosition(ccp(30, 120));
+//    labelTitle->setAnchorPoint(ccp(0,0));
+//    labelTitle->setColor(ccc3(0, 0, 0));
+//   node->addChild(labelTitle,5,651);
+//    std::string title =LoadWayPointName(this->wayPoint);
+//    insertLabel(ccc3(72, 72, 72), ccp(30, 180), true,title.c_str() , node, 16);
+
 
     
   if( enableCheckin  )

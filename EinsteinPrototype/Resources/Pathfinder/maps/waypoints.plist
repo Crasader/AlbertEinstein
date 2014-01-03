@@ -705,9 +705,13 @@
 			<string>222</string>
 			<key>hasChild</key>
 			<string>s</string>
+			<key>isFeatured</key>
+			<string>n</string>
 		</dict>
 		<key>107</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Café Viena</string>
 			<key>categoryID</key>
@@ -717,6 +721,8 @@
 		</dict>
 		<key>85</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Café Viena</string>
 			<key>categoryID</key>
@@ -726,6 +732,8 @@
 		</dict>
 		<key>12</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Cafeteria V. Café</string>
 			<key>categoryID</key>
@@ -735,6 +743,8 @@
 		</dict>
 		<key>37</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Restaurante Viena</string>
 			<key>categoryID</key>
@@ -744,6 +754,8 @@
 		</dict>
 		<key>60</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Kopenhagen</string>
 			<key>categoryID</key>
@@ -753,6 +765,8 @@
 		</dict>
 		<key>108</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Restaurante Kasher Viena</string>
 			<key>categoryID</key>
@@ -762,6 +776,8 @@
 		</dict>
 		<key>992</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Cabeleireiro</string>
 			<key>categoryID</key>
@@ -771,6 +787,8 @@
 		</dict>
 		<key>63</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Jacques Janine</string>
 			<key>categoryID</key>
@@ -780,6 +798,8 @@
 		</dict>
 		<key>993</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Box Convênios</string>
 			<key>categoryID</key>
@@ -789,6 +809,8 @@
 		</dict>
 		<key>43</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Amil / Sulamerica / Omint / Bradesco / QualiCorp</string>
 			<key>categoryID</key>
@@ -798,6 +820,8 @@
 		</dict>
 		<key>61</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>s</string>
 			<key>name</key>
 			<string>Espaço Gama</string>
 			<key>categoryID</key>
@@ -807,6 +831,8 @@
 		</dict>
 		<key>62</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Med Service</string>
 			<key>categoryID</key>
@@ -816,6 +842,8 @@
 		</dict>
 		<key>59</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Loja de Conveniências</string>
 			<key>categoryID</key>
@@ -825,6 +853,8 @@
 		</dict>
 		<key>96</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Velório</string>
 			<key>categoryID</key>
@@ -834,6 +864,8 @@
 		</dict>
 		<key>13</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Drogaria Soares</string>
 			<key>categoryID</key>
@@ -843,6 +875,8 @@
 		</dict>
 		<key>994</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Banco/Caixa Eletrônicos</string>
 			<key>categoryID</key>
@@ -852,6 +886,8 @@
 		</dict>
 		<key>65</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Caixas Eletrônicos</string>
 			<key>categoryID</key>
@@ -861,6 +897,8 @@
 		</dict>
 		<key>15</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Agência do Banco Safra</string>
 			<key>categoryID</key>
@@ -870,6 +908,8 @@
 		</dict>
 		<key>76</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>UTI Neo Natal</string>
 			<key>categoryID</key>
@@ -879,6 +919,8 @@
 		</dict>
 		<key>22</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Centro Cirúrgico</string>
 			<key>categoryID</key>
@@ -888,6 +930,8 @@
 		</dict>
 		<key>332</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Maternidade</string>
 			<key>categoryID</key>
@@ -897,6 +941,8 @@
 		</dict>
 		<key>73</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Maternidade 9º Andar</string>
 			<key>categoryID</key>
@@ -906,6 +952,8 @@
 		</dict>
 		<key>74</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Maternidade</string>
 			<key>categoryID</key>
@@ -915,6 +963,8 @@
 		</dict>
 		<key>75</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Maternidade 7º Andar</string>
 			<key>categoryID</key>
@@ -924,6 +974,8 @@
 		</dict>
 		<key>80</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Centro Cirúrgico Avançado</string>
 			<key>categoryID</key>
@@ -933,6 +985,8 @@
 		</dict>
 		<key>82</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Pré Parto</string>
 			<key>categoryID</key>
@@ -942,6 +996,8 @@
 		</dict>
 		<key>81</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Centro Cirúrgico Obstétrico</string>
 			<key>categoryID</key>
@@ -951,6 +1007,8 @@
 		</dict>
 		<key>86</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Centro de Reabilitação</string>
 			<key>categoryID</key>
@@ -960,6 +1018,8 @@
 		</dict>
 		<key>92</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Clínica de Especialidades Pediátricas</string>
 			<key>categoryID</key>
@@ -969,6 +1029,8 @@
 		</dict>
 		<key>45</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>s</string>
 			<key>name</key>
 			<string>Centro de Simulação Realística</string>
 			<key>categoryID</key>
@@ -978,6 +1040,8 @@
 		</dict>
 		<key>995</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Oncologia</string>
 			<key>categoryID</key>
@@ -987,6 +1051,8 @@
 		</dict>
 		<key>46</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Oncologia Ambulatorial Pediátrica</string>
 			<key>categoryID</key>
@@ -996,6 +1062,8 @@
 		</dict>
 		<key>47</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Oncologia Ambulatorial Adulto</string>
 			<key>categoryID</key>
@@ -1005,6 +1073,8 @@
 		</dict>
 		<key>49</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Recepção do Centro Integrado de Oncologia e Hematologia</string>
 			<key>categoryID</key>
@@ -1014,6 +1084,8 @@
 		</dict>
 		<key>50</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>s</string>
 			<key>name</key>
 			<string>Radioterapia</string>
 			<key>categoryID</key>
@@ -1023,6 +1095,8 @@
 		</dict>
 		<key>53</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Radiologia Intervencionista</string>
 			<key>categoryID</key>
@@ -1032,6 +1106,8 @@
 		</dict>
 		<key>55</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Leitos de pronto de atendimento (pré-internação fast)</string>
 			<key>categoryID</key>
@@ -1041,6 +1117,8 @@
 		</dict>
 		<key>57</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Medicina Nuclear</string>
 			<key>categoryID</key>
@@ -1050,6 +1128,8 @@
 		</dict>
 		<key>58</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Ressonância Magnética</string>
 			<key>categoryID</key>
@@ -1059,6 +1139,8 @@
 		</dict>
 		<key>90</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Laboratório do Movimento</string>
 			<key>categoryID</key>
@@ -1068,6 +1150,8 @@
 		</dict>
 		<key>17</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Central de Exames</string>
 			<key>categoryID</key>
@@ -1077,6 +1161,8 @@
 		</dict>
 		<key>18</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Coleta Laboratorial</string>
 			<key>categoryID</key>
@@ -1086,6 +1172,8 @@
 		</dict>
 		<key>20</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Centro Cirúrgico Oftalmológico</string>
 			<key>categoryID</key>
@@ -1095,6 +1183,8 @@
 		</dict>
 		<key>21</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>s</string>
 			<key>name</key>
 			<string>Centro de Endoscopia</string>
 			<key>categoryID</key>
@@ -1104,6 +1194,8 @@
 		</dict>
 		<key>23</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>UTI Pediátrica</string>
 			<key>categoryID</key>
@@ -1113,6 +1205,8 @@
 		</dict>
 		<key>29</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Unidade de Semi Intensiva</string>
 			<key>categoryID</key>
@@ -1122,6 +1216,8 @@
 		</dict>
 		<key>31</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>UTI Adulto</string>
 			<key>categoryID</key>
@@ -1131,6 +1227,8 @@
 		</dict>
 		<key>996</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Consultórios</string>
 			<key>categoryID</key>
@@ -1140,6 +1238,8 @@
 		</dict>
 		<key>1</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Consultórios (508 a 522)</string>
 			<key>categoryID</key>
@@ -1149,6 +1249,8 @@
 		</dict>
 		<key>3</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Consultórios (401 a 423)</string>
 			<key>categoryID</key>
@@ -1158,6 +1260,8 @@
 		</dict>
 		<key>4</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Consultórios (301 a 323)</string>
 			<key>categoryID</key>
@@ -1167,6 +1271,8 @@
 		</dict>
 		<key>5</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Consultórios (201 a 223)</string>
 			<key>categoryID</key>
@@ -1176,6 +1282,8 @@
 		</dict>
 		<key>6</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Consultórios (101 a 123)</string>
 			<key>categoryID</key>
@@ -1185,6 +1293,8 @@
 		</dict>
 		<key>8</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Central de Imunização</string>
 			<key>categoryID</key>
@@ -1194,6 +1304,8 @@
 		</dict>
 		<key>330</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Feminino</string>
 			<key>categoryID</key>
@@ -1203,6 +1315,8 @@
 		</dict>
 		<key>331</key>
 		<dict>
+			<key>isFeatured</key>
+			<string>n</string>
 			<key>name</key>
 			<string>Masculino </string>
 			<key>categoryID</key>

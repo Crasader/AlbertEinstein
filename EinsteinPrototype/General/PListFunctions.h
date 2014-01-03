@@ -19,6 +19,7 @@ struct ServiceSection
     const char* name;
     int categoryID;
     const char* hasChild;
+    const char* isFeatured;
 };
 
 

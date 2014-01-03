@@ -24,11 +24,14 @@ std::vector<ServiceSection> PListFunctions::readServicesSection()
         NSDictionary* oArrChilds = [dataFromPlist valueForKey:aKey];
         section.key = [aKey intValue];
         section.hasChild = false;
+        section.isFeatured = false;
         for(NSString *aKey2 in oArrChilds)
         {
             NSString* value = [oArrChilds valueForKey:aKey2];
             if( [aKey2 isEqualToString:@"hasChild"])
                 section.hasChild  = [value UTF8String];
+            else  if( [aKey2 isEqualToString:@"isFeatured"])
+                section.isFeatured  = [value UTF8String];
             else if( [aKey2 isEqualToString:@"categoryID"])
                 section.categoryID = (int)[value intValue];
             else  if( [aKey2 isEqualToString:@"name"])

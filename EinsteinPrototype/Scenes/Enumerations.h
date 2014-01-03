@@ -54,9 +54,11 @@ struct PairKey
 {
     public:
     bool hasChild;
+    bool featured;
     int key;
     int keyParent;
     const char* text;
+    const char* img;
 };
 
 /*
@@ -143,6 +145,7 @@ public:
     void insertItemListView( int tagValue, const char* datatext);
     void insertItemListView( int tagValue, const char* isChild, const char* datatext);
     void insertItemListView( int tagValue, const char* isChild, const char* datatext, int keyParent);
+    void insertItemListView( int tagValue, const char* isChild, const char* datatext, int keyParent,const char* featured);
     virtual void OnBack();
     virtual void BuildBuildingState();
     virtual void BuildFavorites(bool removeWayPoint, int waypointToRemove);

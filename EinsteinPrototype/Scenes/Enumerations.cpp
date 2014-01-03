@@ -81,6 +81,14 @@ struct compareByNum
 		return strnatcmp(a.c_str(), b.c_str()) < 0;
 	}
 };
+
+struct compareByBool
+{
+	bool operator()(const std::string& a, const std::string& b)
+	{
+       return  strnatcmp(b.c_str(), a.c_str()) < 0;
+	}
+};
  
 
 //adiciona um item a um menu
@@ -152,7 +160,15 @@ void IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, co
     
     CCLabelTTF *labelCount;
     labelCount = CCLabelTTF::create(currentData.text, "Lucida Grande", 15);
-    labelCount->setPosition(ccp(10+space,(cell->getContentSize().height * 0)+ cell->getContentSize().height / 2));
+    if( plistMenuCurrent[data->nRow].featured)
+    {
+    labelCount->setPosition(ccp(25+space,(cell->getContentSize().height * 0)+ cell->getContentSize().height / 2));
+    }
+    else
+    {
+        labelCount->setPosition(ccp(10+space,(cell->getContentSize().height * 0)+ cell->getContentSize().height / 2));
+        
+    }
     labelCount->setAnchorPoint(ccp(0,0.5));
     labelCount->setColor(ccc3(72, 72, 72));
     
@@ -181,6 +197,17 @@ void IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, co
             i->setPosition(ccp(270,20));
             cell->addChild(i, 0,404020);
         }
+        if( plistMenuCurrent[data->nRow].featured)
+        {
+            //Seta indicando que há filhos para esse item
+            CCSprite* icon=    CCSprite::create(plistMenuCurrent[data->nRow].img);
+            icon->setAnchorPoint(ccp(0,0));
+            icon->setScale(0.6);
+            icon->setPosition(ccp(0,26));
+            cell->addChild(icon, 0,404021);
+        }
+
+        
     }
     //Sprite da linha separador dos itens
     if( data->nRow == this->plistMenuCurrent.size()-1)
@@ -578,55 +605,98 @@ HomeMenuState IFixedMenu::getCategory(int _waypointID)
     return NONE;
 }
 
+class Place{
+
+public:
+    Place(std::string aname){
+        name = aname;
+    }
+    
+    std::string name;
+    std::string isChild;
+    std::string isFeatured;
+    int category;
+    int itemID;
+};
+
+struct SortPlaces {
+    bool operator() (const Place& lhs, const Place& rhs) const
+    {
+        if (lhs.isFeatured != rhs.isFeatured)
+        {
+            return  strnatcmp(rhs.isFeatured.c_str(), lhs.isFeatured.c_str()) < 0;
+        }
+        else
+        {
+            return lhs.name < rhs.name;
+        }
+        
+    }
+    
+};
+
 //Carrega waypoints filhos de uma parentKeyID
 void IFixedMenu::BuildCategoryWayPointState(int bKey)
 {
     cleanUp();
   
-    std::vector<std::string> waypointStr;
-	std::vector<std::string> waypointNormalOrder;
-	std::vector<std::string> parentStr;
-	std::vector<int> wID;
-	std::vector<int> category;
+    vector<Place> waypoints;
+//	std::vector<std::string> waypointNormalOrder;
+//	std::vector<std::string> parentStr;
+//	std::vector<std::string> featured;
+//	std::vector<int> wID;
+//	std::vector<int> category;
+
     vector<ServiceSection> lstSection = PListFunctions::readServicesSection();
     for(int i = 0; i < lstSection.size();i++)
     {
         if(lstSection[i].categoryID == bKey)
         {
-            
-			wID.push_back(lstSection[i].key);
-			waypointStr.push_back(lstSection[i].name);
-			waypointNormalOrder.push_back(lstSection[i].name);
-			
-			parentStr.push_back(lstSection[i].hasChild);
-			category.push_back(lstSection[i].categoryID);
+            Place place =Place(lstSection[i].name);
+            place.category =lstSection[i].categoryID;
+            place.isChild = lstSection[i].hasChild;
+            place.isFeatured = lstSection[i].isFeatured;
+			waypoints.push_back(place);
+
             /*
             insertItemListView(lstSection[i].key,lstSection[i].hasChild,(lstSection[i].name),lstSection[i].categoryID);
              */
         }
     }
  
+  //  std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
+
     
- 	std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
-	for(int i = 0; i < waypointStr.size(); i++){
-		std::string itemName = waypointStr.at(i);
-		int itemID;
-		int itemCat;
-		std::string itemParentName;
-		
-		for(int j = 0; j < waypointNormalOrder.size(); j++){
-			std::string bNameNormalOrder = waypointNormalOrder.at(j);
-			if(!itemName.compare(bNameNormalOrder)){
-				itemID = wID.at(j);
-				itemCat = category.at(j);
-				itemParentName = parentStr.at(j);
-				
-				insertItemListView(itemID,itemParentName.c_str(),itemName.c_str(),itemCat);
-				break;
-			}
-		}
-	}
-  
+    
+// 	std::sort(featured.begin(), featured.end(),compareByBool());
+//	for(int i = 0; i < featured.size(); i++){
+//		std::string itemName = waypointStr.at(i);
+//		int itemID;
+//		int itemCat;
+//		//std::string itemFeat;
+//		std::string itemParentName;
+//		//mysort
+//		for(int j = 0; j < waypointNormalOrder.size(); j++){
+//			std::string bNameNormalOrder = waypointNormalOrder.at(j);
+//           // std::string anotherFeat = featured.at(j);
+//			if(!itemName.compare(bNameNormalOrder)){
+//				itemID = wID.at(j);
+//				itemCat = category.at(j);
+//				itemParentName = parentStr.at(j);
+//				//itemFeat = featured.at(j);
+//				insertItemListView(itemID,itemParentName.c_str(),itemName.c_str(),itemCat);
+//				break;
+//			}
+//            
+//		}
+//	}
+    std::sort(waypoints.begin(), waypoints.end(), SortPlaces());
+    for(int i = 0; i < waypoints.size(); i++){
+        Place place = waypoints.at(i);
+        insertItemListView(place.itemID,place.isChild.c_str(),place.name.c_str(),place.category,place.isFeatured.c_str());
+        
+    }
+    
     setUpMenu();
  
   
@@ -719,6 +789,23 @@ void IFixedMenu::insertItemListView( int tagValue, const char* isChild, const ch
     
     data.hasChild =(strcmp(isChild, "s") == 0);
     data.keyParent =keyParent;
+    plistMenuCurrent.push_back(data);
+}
+
+void IFixedMenu::insertItemListView( int tagValue, const char* isChild, const char* datatext, int keyParent, const char* featured)
+{
+    PairKey data ;
+    data.key = tagValue;
+    data.text = strdup(datatext);
+    
+    
+    data.hasChild =(strcmp(isChild, "s") == 0);
+    data.keyParent =keyParent;
+    data.img ="";
+    if (strcmp(featured, "s") == 0) {
+        data.featured = true;
+        data.img = "icon_featured.png";
+    }
     plistMenuCurrent.push_back(data);
 }
 
@@ -839,7 +926,7 @@ void IFixedMenu::SearchItem( const char* keyword)
 		for(int j = 0; j < waypointNormalOrder.size(); j++){
 			std::string bNameNormalOrder = waypointNormalOrder.at(j);
 			if(!itemName.compare(bNameNormalOrder)){
-				itemID = wID.at(j);
+				itemID = wID.at(j);//todo order
 				
 				insertItemListView(itemID,itemName.c_str());
 				break;

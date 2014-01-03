@@ -469,7 +469,7 @@ unsigned char* CCFileUtils::getFileData(const char* pszFileName, const char* psz
         std::string msg = "Get data from file(";
         msg.append(pszFileName).append(") failed!");
 
-        CCMessageBox(msg.c_str(), title.c_str());
+     //todo   CCMessageBox(msg.c_str(), title.c_str());
     }
     return pBuffer;
 }

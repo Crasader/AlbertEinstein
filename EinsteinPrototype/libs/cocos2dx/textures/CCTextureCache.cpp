@@ -440,6 +440,10 @@ CCTexture2D * CCTextureCache::addImage(const char * path)
                 CCImage image;                
                 unsigned long nSize = 0;
                 unsigned char* pBuffer = CCFileUtils::sharedFileUtils()->getFileData(fullpath.c_str(), "rb", &nSize);
+                if (pBuffer == NULL) {
+                    fullpath ="noimg.png";
+                      pBuffer = CCFileUtils::sharedFileUtils()->getFileData(fullpath.c_str(), "rb", &nSize);
+                }
                 CC_BREAK_IF(! image.initWithImageData((void*)pBuffer, nSize, eImageFormat));
                 CC_SAFE_DELETE_ARRAY(pBuffer);
 

@@ -550,7 +550,7 @@
 		A5A5316216D29F56005C20C0 /* btnRota.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A5316116D29F56005C20C0 /* btnRota.png */; };
 		A5A5316516D2AE79005C20C0 /* btnShowHorario.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A5316316D2AE79005C20C0 /* btnShowHorario.png */; };
 		A5A5316616D2AE79005C20C0 /* btnShowRota.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A5316416D2AE79005C20C0 /* btnShowRota.png */; };
-		A5A5316816D2AE85005C20C0 /* ModeloWayPointFoto.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A5316716D2AE85005C20C0 /* ModeloWayPointFoto.png */; };
+		A5A5316816D2AE85005C20C0 /* ModeloWayPointFoto_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A5316716D2AE85005C20C0 /* ModeloWayPointFoto_old.png */; };
 		A5A5316B16D2B9FD005C20C0 /* TraceRouteScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A5316916D2B9FD005C20C0 /* TraceRouteScene.cpp */; };
 		A5A5316E16D2BCF7005C20C0 /* ParkingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A5316C16D2BCF6005C20C0 /* ParkingScene.cpp */; };
 		A5A5317016D2C74E005C20C0 /* Background_Estacionamento_botoes.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A5316F16D2C74E005C20C0 /* Background_Estacionamento_botoes.png */; };
@@ -659,6 +659,7 @@
 		A5EE42D916DE959100E8E49B /* Masculino_Banheiro.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE42D816DE958900E8E49B /* Masculino_Banheiro.png */; };
 		A5F1A0D3170E055000932CF8 /* ok_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F1A0D1170E055000932CF8 /* ok_btn.png */; };
 		A5F1A0D4170E055000932CF8 /* ok_press.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F1A0D2170E055000932CF8 /* ok_press.png */; };
+		AC4AF9F81876E38D00B4F344 /* ModeloWayPointFoto.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AF9F71876E38D00B4F344 /* ModeloWayPointFoto.png */; };
 		ACC8C1E0186BBB690071854F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1DF186BBB690071854F /* Default-568h@2x.png */; };
 		ACC8C1E3186C54430071854F /* bg_ios7_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */; };
 		ACC8C1E4186C54430071854F /* bg_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1E2186C54430071854F /* bg_ios7.png */; };
@@ -1450,7 +1451,7 @@
 		A5A5316116D29F56005C20C0 /* btnRota.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnRota.png; sourceTree = "<group>"; };
 		A5A5316316D2AE79005C20C0 /* btnShowHorario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnShowHorario.png; sourceTree = "<group>"; };
 		A5A5316416D2AE79005C20C0 /* btnShowRota.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnShowRota.png; sourceTree = "<group>"; };
-		A5A5316716D2AE85005C20C0 /* ModeloWayPointFoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ModeloWayPointFoto.png; sourceTree = "<group>"; };
+		A5A5316716D2AE85005C20C0 /* ModeloWayPointFoto_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ModeloWayPointFoto_old.png; sourceTree = "<group>"; };
 		A5A5316916D2B9FD005C20C0 /* TraceRouteScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TraceRouteScene.cpp; sourceTree = "<group>"; };
 		A5A5316A16D2B9FD005C20C0 /* TraceRouteScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceRouteScene.h; sourceTree = "<group>"; };
 		A5A5316C16D2BCF6005C20C0 /* ParkingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParkingScene.cpp; sourceTree = "<group>"; };
@@ -1567,6 +1568,7 @@
 		A5EE42D816DE958900E8E49B /* Masculino_Banheiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Masculino_Banheiro.png; sourceTree = "<group>"; };
 		A5F1A0D1170E055000932CF8 /* ok_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok_btn.png; sourceTree = "<group>"; };
 		A5F1A0D2170E055000932CF8 /* ok_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok_press.png; sourceTree = "<group>"; };
+		AC4AF9F71876E38D00B4F344 /* ModeloWayPointFoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ModeloWayPointFoto.png; sourceTree = "<group>"; };
 		ACC8C1DF186BBB690071854F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7_4inch.png; sourceTree = "<group>"; };
 		ACC8C1E2186C54430071854F /* bg_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7.png; sourceTree = "<group>"; };
@@ -1757,7 +1759,8 @@
 				5DE3406016CEC7FA00C108ED /* MinhasRotas_Top.png */,
 				A5A5315916D27736005C20C0 /* Modal_Alert.png */,
 				A57F441F16D3CE1400B48AF1 /* Modelo_Estacionamento.png */,
-				A5A5316716D2AE85005C20C0 /* ModeloWayPointFoto.png */,
+				AC4AF9F71876E38D00B4F344 /* ModeloWayPointFoto.png */,
+				A5A5316716D2AE85005C20C0 /* ModeloWayPointFoto_old.png */,
 				787B9CC2170A116D00A57D25 /* porandar_btn.png */,
 				787B9CC3170A116D00A57D25 /* porandar_press.png */,
 				5DE3404616CEAAB400C108ED /* Procurar_Top.png */,
@@ -3132,7 +3135,7 @@
 				A5A5316216D29F56005C20C0 /* btnRota.png in Resources */,
 				A5A5316516D2AE79005C20C0 /* btnShowHorario.png in Resources */,
 				A5A5316616D2AE79005C20C0 /* btnShowRota.png in Resources */,
-				A5A5316816D2AE85005C20C0 /* ModeloWayPointFoto.png in Resources */,
+				A5A5316816D2AE85005C20C0 /* ModeloWayPointFoto_old.png in Resources */,
 				A5A5317016D2C74E005C20C0 /* Background_Estacionamento_botoes.png in Resources */,
 				A587DE9016D3B2560005AC82 /* Button_Entrada_Estacionamento_S.png in Resources */,
 				A587DE9116D3B2560005AC82 /* Button_Entrada_Estacionamento_U.png in Resources */,
@@ -3161,6 +3164,7 @@
 				A5EE42BE16DE46FB00E8E49B /* homeMapas_h.png in Resources */,
 				A5EE42C016DE4C0800E8E49B /* homeInicio_h.png in Resources */,
 				A5EE42C216DE4DA200E8E49B /* Busca_Button_H.png in Resources */,
+				AC4AF9F81876E38D00B4F344 /* ModeloWayPointFoto.png in Resources */,
 				A5EE42C416DE4F7800E8E49B /* FacebookButton_H.png in Resources */,
 				A5EE42C616DE50F400E8E49B /* FourSquareButton_H.png in Resources */,
 				A5EE42C816DE528500E8E49B /* btnShowRota_H.png in Resources */,

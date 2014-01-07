@@ -234,6 +234,7 @@ void Building3DLayer::loadDefaultState()
 void Building3DLayer::move(float x, float y)
 {
 	if(!active) return;
+   
 	kmMat4 copy, trans;
 	
 	y *= -1;
@@ -304,7 +305,9 @@ void Building3DLayer::zoom(float sc)
 
 void Building3DLayer::pick(int x, int y)
 {
-	if(!active) return;
+     return;
+	//if(!active) return;
+    
 	int ix, iy;
 
 	ix = x;
@@ -389,7 +392,7 @@ void Building3DLayer::pick(int x, int y)
 					
 					bool e = false;
 					active = false;
-					BlockListScene::createLayerChild(blockID,&e,&active);
+                    BlockListScene::createLayerChild(blockID,&e,&active);
 					
 				}
 			}

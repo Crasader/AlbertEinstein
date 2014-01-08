@@ -11,6 +11,7 @@
 #include "LayerWebView.h"
 #include "MinhasRotasScenes.h"
 #include "GLES.h"
+#include "MapMenu.h"
 
 HowToGoScene::HowToGoScene(HomeMenuState category)
 {
@@ -241,6 +242,7 @@ void HowToGoScene::setUpImageTop()
 //Tambem inicializa servicos ou especialidades
 void HowToGoScene::initListView(HomeMenuState category)
 {
+
     lastIdInserted = 0;
 	
     actualCategory = category;
@@ -266,11 +268,18 @@ void HowToGoScene::initListView(HomeMenuState category)
         case MAPAS:
             this->size=setUpTopImage(Global::TOP_SRC_IMAGE_Mapas);
             setUpImageTop();
-            this->addChild(Building3DLayer::create(),0,Global::TAG_Child_Layer);
-            initFixedMenu(MAPAS);
-            addButtonTop(MAPAS);
+            this->addChild(new MapMenu());
+             addButtonTop(MAPAS);
             return;
             break;
+//                    case MAPAS:
+//                       this->size=setUpTopImage(Global::TOP_SRC_IMAGE_Mapas);
+//                        setUpImageTop();
+//                        this->addChild(Building3DLayer::create(),0,Global::TAG_Child_Layer);
+//                        initFixedMenu(MAPAS);
+//                        addButtonTop(MAPAS);
+//                        return;
+//                       break;
 
         case INFORMACOES:
             size= setUpTopImage(Global::TOP_SRC_IMAGE_ComoChegar);

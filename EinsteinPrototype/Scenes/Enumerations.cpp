@@ -197,14 +197,25 @@ void IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, co
             i->setPosition(ccp(270,20));
             cell->addChild(i, 0,404020);
         }
+        if (data->cell != NULL)
+        {
         if( plistMenuCurrent[data->nRow].featured)
         {
             //Seta indicando que há filhos para esse item
-            CCSprite* icon=    CCSprite::create(plistMenuCurrent[data->nRow].img);
-            icon->setAnchorPoint(ccp(0,0));
-            icon->setScale(0.6);
-            icon->setPosition(ccp(0,26));
-            cell->addChild(icon, 0,404021);
+            const char *pszFileName = plistMenuCurrent[data->nRow].img;
+            
+            // CCString* pRet = new CCString(pszFileName);
+            std::string pathKey = pszFileName;
+            if (pszFileName != NULL)
+            {
+                CCSprite* icon=    CCSprite::create(pszFileName);
+                icon->setAnchorPoint(ccp(0,0));
+                icon->setScale(0.6);
+                icon->setPosition(ccp(0,26));
+                cell->addChild(icon, 0,404021);
+            }
+            
+        }
         }
 
         
@@ -279,8 +290,16 @@ CCSize IFixedMenu::setUpTopImage(const char *spritename)
     CCSprite* TitleImg = CCSprite::create(spritename);
     TitleImg->setAnchorPoint(ccp(0, 0));
     TitleImg->setPosition(ccp(0, CCDirector::sharedDirector()->getWinSize().height - TitleImg->boundingBox().size.height-20));
+    
+    CCSprite* statusImg = CCSprite::create("bg_status.png");
+    statusImg->setAnchorPoint(ccp(0, 0));
+    statusImg->setScale(2);
+    statusImg->setPosition(ccp(0, CCDirector::sharedDirector()->getWinSize().height -20));
+    
 
     this->addChild(c,0,3);
+    this->addChild(statusImg,1,3);
+    
     this->addChild(TitleImg,1,2);
     CCSize size =  CCDirector::sharedDirector()->getWinSize();
     size.height =size.height - TitleImg->boundingBox().size.height;
@@ -802,6 +821,7 @@ void IFixedMenu::insertItemListView( int tagValue, const char* isChild, const ch
     data.hasChild =(strcmp(isChild, "s") == 0);
     data.keyParent =keyParent;
     data.img ="";
+    data.featured = false;
     if (strcmp(featured, "s") == 0) {
         data.featured = true;
         data.img = "icon_featured.png";

@@ -101,6 +101,7 @@ void BlockListScene::OnBack()
 
 void BlockListScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)
 {
+   //removido o toque no prédio
     setDefaultListView(listView, data, 0);
 }
 

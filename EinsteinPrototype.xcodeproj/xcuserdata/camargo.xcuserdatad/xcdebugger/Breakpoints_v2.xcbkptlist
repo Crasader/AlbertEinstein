@@ -256,11 +256,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/General/PListFunctions.mm"
-            timestampString = "410459934.623801"
+            timestampString = "410811254.012306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "PListFunctions::readKeyWordSection( )"
             landmarkType = "5">
          </BreakpointContent>
@@ -352,11 +352,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
-            timestampString = "410457967.482964"
+            timestampString = "410726032.981164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "HowToGoScene::CCListView_numberOfCells(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
          </BreakpointContent>
@@ -368,11 +368,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
-            timestampString = "410457967.482964"
+            timestampString = "410726032.981164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "HowToGoScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
          </BreakpointContent>
@@ -424,11 +424,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "410470506.289992"
+            timestampString = "410814483.423835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "533"
-            endingLineNumber = "533"
+            startingLineNumber = "551"
+            endingLineNumber = "551"
             landmarkName = "IFixedMenu::BuildFavorites(bool removeWayPoint, int waypointToRemove)"
             landmarkType = "5">
          </BreakpointContent>
@@ -752,11 +752,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
-            timestampString = "410457967.482964"
+            timestampString = "410726032.981164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "HowToGoScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
          </BreakpointContent>
@@ -832,22 +832,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/BlockListScene.cpp"
-            timestampString = "410374657.758369"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "BlockListScene::setUpMenu()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/BlockListScene.cpp"
             timestampString = "410375321.6427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -879,22 +863,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/BlockListScene.cpp"
-            timestampString = "410375903.679301"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "BlockListScene::BlockListScene(int blockID, bool* active)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/BathRoomScene.cpp"
             timestampString = "410375928.896568"
             startingColumnNumber = "9223372036854775807"
@@ -912,11 +880,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "410470506.289992"
+            timestampString = "410814483.423835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "928"
-            endingLineNumber = "928"
+            startingLineNumber = "947"
+            endingLineNumber = "947"
             landmarkName = "IFixedMenu::SearchItem( const char* keyword)"
             landmarkType = "5">
          </BreakpointContent>
@@ -928,59 +896,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "410470506.289992"
+            timestampString = "410814483.423835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "974"
-            endingLineNumber = "974"
-            landmarkName = "IFixedMenu::BuildWayPointState( int floorKey, bool removeWayPoint, int waypointToRemove)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "410470506.289992"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "502"
-            endingLineNumber = "502"
+            startingLineNumber = "520"
+            endingLineNumber = "520"
             landmarkName = "IFixedMenu::BuildBuildingStateWithLastPoint(bool include)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IFixedMenu::BuildBuildingStateWithLastPoint(bool)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "410472414.682772"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "502"
-                  endingLineNumber = "502"
-                  offsetFromSymbolStart = "978">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IFixedMenu::BuildBuildingStateWithLastPoint(bool)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "410472414.683066"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "502"
-                  endingLineNumber = "502"
-                  offsetFromSymbolStart = "1605">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -990,43 +912,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "410470506.289992"
+            timestampString = "410814483.423835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "571"
-            endingLineNumber = "571"
+            startingLineNumber = "589"
+            endingLineNumber = "589"
             landmarkName = "IFixedMenu::BuildFloorState(int buildingKey)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IFixedMenu::BuildFloorState(int)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "410472414.683402"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "571"
-                  endingLineNumber = "571"
-                  offsetFromSymbolStart = "1135">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IFixedMenu::BuildFloorState(int)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "410472414.683775"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "571"
-                  endingLineNumber = "571"
-                  offsetFromSymbolStart = "1762">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1036,43 +928,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "410470506.289992"
+            timestampString = "410812044.129061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "734"
-            endingLineNumber = "734"
-            landmarkName = "IFixedMenu::BuildWayPointByBuilding(int bKey)"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data, float space)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IFixedMenu::BuildWayPointByBuilding(int)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "410472414.684103"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "734"
-                  endingLineNumber = "734"
-                  offsetFromSymbolStart = "1558">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IFixedMenu::BuildWayPointByBuilding(int)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "410472414.6844"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "734"
-                  endingLineNumber = "734"
-                  offsetFromSymbolStart = "2387">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
+            timestampString = "410812250.786892"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data, float space)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

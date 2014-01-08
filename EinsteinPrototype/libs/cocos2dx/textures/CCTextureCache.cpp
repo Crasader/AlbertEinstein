@@ -43,7 +43,8 @@ THE SOFTWARE.
 #include <list>
 #include <pthread.h>
 #include <semaphore.h>
-
+#include <fstream>
+#include <iostream>
 using namespace std;
 
 NS_CC_BEGIN
@@ -399,7 +400,12 @@ CCTexture2D * CCTextureCache::addImage(const char * path)
     //pthread_mutex_lock(m_pDictLock);
 
     // remove possible -HD suffix to prevent caching the same image twice (issue #1040)
+    //std::cout<<path;
     std::string pathKey = path;
+    if (pathKey.size() <= 0)
+    {
+        return NULL;
+    }
     ccResolutionType resolution = kCCResolutionUnknown;
     CCFileUtils::sharedFileUtils()->removeSuffixFromFile(pathKey);
 

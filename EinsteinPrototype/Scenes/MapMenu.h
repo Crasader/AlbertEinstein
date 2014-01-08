@@ -9,6 +9,29 @@
 #ifndef EinsteinPrototype_MapMenu_h
 #define EinsteinPrototype_MapMenu_h
 
-
-
 #endif
+
+
+
+#include <iostream>
+#include "cocos2d.h"
+
+#include "Pathfinder.h"
+#include "Enumerations.h"
+#include "HowToGoScene.h"
+#include "ParkingScene.h"
+#include "SearchScene.h"
+#include "BathRoomScene.h"
+#include "TraceRouteScene.h"
+#include "MinhasRotasScenes.h"
+#include "LayerWebView.h"
+
+class MapMenu : public cocos2d::CCLayer{
+public:
+    MapMenu();
+    void addMenu();
+    void InitHome();
+    void openMap(CCObject* pSender);
+    void open3D(CCObject* pSender);
+    ~MapMenu();
+};

@@ -25,6 +25,7 @@ std::vector<ServiceSection> PListFunctions::readServicesSection()
         section.key = [aKey intValue];
         section.hasChild = false;
         section.isFeatured = false;
+         section.isFeatured = false;
         for(NSString *aKey2 in oArrChilds)
         {
             NSString* value = [oArrChilds valueForKey:aKey2];

@@ -77,6 +77,7 @@ typedef enum{
     BANHEIROS,
     COMO_CHEGAR,
     SERVICOS,
+    NOTICIAS,
     ESTACIOMENTOS,
     INFORMACOES,
 	PROCURAR,

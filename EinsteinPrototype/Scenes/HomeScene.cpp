@@ -36,11 +36,13 @@ void HomeScene::InitHome()
     
     
     //Cria os menus que ficam no meio da tela ( como chegar, banheiros, especialidades e etc) 
-    createMenuItem(options, COMO_CHEGAR, "comochegar_new.png", "comochegar_new_hover.png", 20, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
+   // createMenuItem(options, COMO_CHEGAR, "comochegar_new.png", "comochegar_new_hover.png", 20, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
     
-	createMenuItem(options, LUGARES, "especialidades_new.png", "especialidade_new_hover.png",winsize.width/2 - 35, winsize.height - 126, menu_selector(HomeScene::FixedMenuCallBack), this);
+	createMenuItem(options, LUGARES, "especialidades_new.png", "especialidade_new_hover.png", 20, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
     
-	createMenuItem(options, SERVICOS, "servicos_new.png", "servicos_new_hover.png",winsize.width - 20 - 70, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
+	createMenuItem(options, SERVICOS, "servicos_new.png", "servicos_new_hover.png",winsize.width/2 - 35, winsize.height - 126, menu_selector(HomeScene::FixedMenuCallBack), this);
+  
+   createMenuItem(options, NOTICIAS, "icon_news.png", "icon_news.png",winsize.width - 20 - 70, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
 	
 	createMenuItem(options, BANHEIROS, "sanitarios_new.png", "sanitarios_new_hover.png", 20, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
     

@@ -672,6 +672,7 @@
 		AC4AFA1D187C91AC00B4F344 /* button_3dView_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA19187C91AC00B4F344 /* button_3dView_on.png */; };
 		AC4AFA1E187C91AC00B4F344 /* button_comochegar_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA1A187C91AC00B4F344 /* button_comochegar_on.png */; };
 		AC4AFA1F187C91AC00B4F344 /* button_comochegar.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA1B187C91AC00B4F344 /* button_comochegar.png */; };
+		AC4AFA21187D844600B4F344 /* icon_news.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA20187D844600B4F344 /* icon_news.png */; };
 		ACC8C1E0186BBB690071854F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1DF186BBB690071854F /* Default-568h@2x.png */; };
 		ACC8C1E3186C54430071854F /* bg_ios7_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */; };
 		ACC8C1E4186C54430071854F /* bg_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1E2186C54430071854F /* bg_ios7.png */; };
@@ -1594,6 +1595,7 @@
 		AC4AFA19187C91AC00B4F344 /* button_3dView_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3dView_on.png; sourceTree = "<group>"; };
 		AC4AFA1A187C91AC00B4F344 /* button_comochegar_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar_on.png; sourceTree = "<group>"; };
 		AC4AFA1B187C91AC00B4F344 /* button_comochegar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar.png; sourceTree = "<group>"; };
+		AC4AFA20187D844600B4F344 /* icon_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_news.png; sourceTree = "<group>"; };
 		ACC8C1DF186BBB690071854F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7_4inch.png; sourceTree = "<group>"; };
 		ACC8C1E2186C54430071854F /* bg_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7.png; sourceTree = "<group>"; };
@@ -1782,6 +1784,7 @@
 				5DE3401B16CE751700C108ED /* Informacoes.png */,
 				5DE3401A16CE751700C108ED /* Informacoes_H.png */,
 				AC4AFA051877442A00B4F344 /* icon_featured.png */,
+				AC4AFA20187D844600B4F344 /* icon_news.png */,
 				5DE3405E16CEBAF500C108ED /* Line.png */,
 				A55E053E170B72D6008576B8 /* local_branco.png */,
 				A55E053F170B72D7008576B8 /* local_preto.png */,
@@ -3299,6 +3302,7 @@
 				78C9367E16E9164C00E3D57B /* A-04Ss.png in Resources */,
 				78C9367F16E9164C00E3D57B /* A-05Pv.png in Resources */,
 				78C9368016E9164C00E3D57B /* A-06Pv.png in Resources */,
+				AC4AFA21187D844600B4F344 /* icon_news.png in Resources */,
 				78C9368116E9164C00E3D57B /* A-07Pv.png in Resources */,
 				78C9368216E9164C00E3D57B /* A-08Pv.png in Resources */,
 				78C9368316E9164C00E3D57B /* A-09Pv.png in Resources */,

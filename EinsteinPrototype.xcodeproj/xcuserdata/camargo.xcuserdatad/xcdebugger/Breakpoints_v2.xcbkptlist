@@ -447,6 +447,78 @@
             endingLineNumber = "154"
             landmarkName = "MapViewScene::setUpButtonTop()"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MapViewScene::setUpButtonTop()"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
+                  timestampString = "410889819.48562"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MapViewScene::setUpButtonTop()"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
+                  timestampString = "410889816.502291"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "798">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MapViewScene::setUpButtonTop()"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
+                  timestampString = "410889816.50259"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "902">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MapViewScene::setUpButtonTop()"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
+                  timestampString = "410889819.485916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "802">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MapViewScene::setUpButtonTop()"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapaViewScene.cpp"
+                  timestampString = "410889819.48621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "906">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -855,6 +927,36 @@
             endingLineNumber = "29"
             landmarkName = "BathRoomScene::setUpMenu()"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BathRoomScene::setUpMenu()"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/BathRoomScene.cpp"
+                  timestampString = "410889816.520071"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "162">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BathRoomScene::setUpMenu()"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/BathRoomScene.cpp"
+                  timestampString = "410889819.491611"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "158">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -950,6 +1052,22 @@
             startingLineNumber = "200"
             endingLineNumber = "200"
             landmarkName = "IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data, float space)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/GoogleMaps/LayerWebView.mm"
+            timestampString = "410898167.477013"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "LayerWebView::setUpMenu()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

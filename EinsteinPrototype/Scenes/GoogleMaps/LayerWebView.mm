@@ -212,10 +212,22 @@ void LayerWebView::CCListView_didScrollToRow(cocos2d::extension::CCListView *lis
 
 void LayerWebView::setUpMenu()
 {
-    size.height= 0.79*CCDirector::sharedDirector()->getWinSize().height-20;
+
+    int y =0;
+    CCSize size = CCDirector::sharedDirector()->getWinSize();
+    
+    
+    if (size.height > 480) {
+       size.height= CCDirector::sharedDirector()->getWinSize().height-150;
+    }
+    else{
+       size.height= CCDirector::sharedDirector()->getWinSize().height-60;
+    }
+
+    
     size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;
     IFixedMenu::initListView(size, this);
-    pList->setPosition(ccp(20,50));
+    pList->setPosition(ccp(20,y));
 }
 
 //Libera a webview e esconde keyboards

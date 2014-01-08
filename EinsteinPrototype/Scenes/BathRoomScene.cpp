@@ -28,7 +28,7 @@ void BathRoomScene::setUpMenu()
         size.height= 280;
     }
     else{
-        size.height= 200;
+        size.height= 260;
     }
 
     

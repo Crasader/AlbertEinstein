@@ -43,11 +43,11 @@ void ParkingScene::setUpMenu()
 {
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     if (size.height > 480) {
-         size.height= 295;
+         size.height= 280;
     }
     else
     {
-         size.height= 200;
+         size.height= 260;
     }
 
    

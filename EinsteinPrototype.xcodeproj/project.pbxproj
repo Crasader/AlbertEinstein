@@ -673,9 +673,9 @@
 		AC4AFA1E187C91AC00B4F344 /* button_comochegar_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA1A187C91AC00B4F344 /* button_comochegar_on.png */; };
 		AC4AFA1F187C91AC00B4F344 /* button_comochegar.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA1B187C91AC00B4F344 /* button_comochegar.png */; };
 		AC4AFA21187D844600B4F344 /* icon_news.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA20187D844600B4F344 /* icon_news.png */; };
+		AC9239C2189ABA0D006EDD75 /* bg_ios7_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239C1189ABA0D006EDD75 /* bg_ios7_4inch.png */; };
+		AC9239C4189BDA89006EDD75 /* bg_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239C3189BDA89006EDD75 /* bg_ios7.png */; };
 		ACC8C1E0186BBB690071854F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1DF186BBB690071854F /* Default-568h@2x.png */; };
-		ACC8C1E3186C54430071854F /* bg_ios7_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */; };
-		ACC8C1E4186C54430071854F /* bg_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1E2186C54430071854F /* bg_ios7.png */; };
 		ACEF55B8180844E600CFBB7E /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B4180844E600CFBB7E /* AppController.mm */; };
 		ACEF55B9180844E600CFBB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B5180844E600CFBB7E /* main.m */; };
 		ACEF55BA180844E600CFBB7E /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B7180844E600CFBB7E /* RootViewController.mm */; };
@@ -1596,9 +1596,9 @@
 		AC4AFA1A187C91AC00B4F344 /* button_comochegar_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar_on.png; sourceTree = "<group>"; };
 		AC4AFA1B187C91AC00B4F344 /* button_comochegar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar.png; sourceTree = "<group>"; };
 		AC4AFA20187D844600B4F344 /* icon_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_news.png; sourceTree = "<group>"; };
+		AC9239C1189ABA0D006EDD75 /* bg_ios7_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7_4inch.png; sourceTree = "<group>"; };
+		AC9239C3189BDA89006EDD75 /* bg_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7.png; sourceTree = "<group>"; };
 		ACC8C1DF186BBB690071854F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
-		ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7_4inch.png; sourceTree = "<group>"; };
-		ACC8C1E2186C54430071854F /* bg_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7.png; sourceTree = "<group>"; };
 		ACEF55A0180743F900CFBB7E /* CCFinishDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFinishDelegate.h; sourceTree = "<group>"; };
 		ACEF55B3180844E600CFBB7E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		ACEF55B4180844E600CFBB7E /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
@@ -1725,8 +1725,8 @@
 				A5B63FAB16E4F3A1002B4F77 /* ButtonPorAndar_H.png */,
 				787A19B616FB5905003C860F /* buttonRotaMap.png */,
 				787A19B516FB5905003C860F /* buttonRotaMap_H.png */,
-				ACC8C1E1186C54430071854F /* bg_ios7_4inch.png */,
-				ACC8C1E2186C54430071854F /* bg_ios7.png */,
+				AC9239C1189ABA0D006EDD75 /* bg_ios7_4inch.png */,
+				AC9239C3189BDA89006EDD75 /* bg_ios7.png */,
 				A5EE42D216DE949E00E8E49B /* Cadeirante_Banheiro.png */,
 				A5EE42CD16DE605400E8E49B /* CheckinText.png */,
 				A57F443616D54E8100B48AF1 /* Close_TextBox.png */,
@@ -3160,7 +3160,6 @@
 				5DE3403416CE98F500C108ED /* homeMapas.png in Resources */,
 				5DE3403516CE98F500C108ED /* homeMinhasRotas.png in Resources */,
 				5DE3403716CE9D0000C108ED /* homeProcurar.png in Resources */,
-				ACC8C1E3186C54430071854F /* bg_ios7_4inch.png in Resources */,
 				5DE3403916CE9EBD00C108ED /* BemVindo.png in Resources */,
 				5DE3403D16CEA54000C108ED /* ComoChegarTop.png in Resources */,
 				5DE3403F16CEA72800C108ED /* Mapas_Top.png in Resources */,
@@ -3178,6 +3177,7 @@
 				A5A5316616D2AE79005C20C0 /* btnShowRota.png in Resources */,
 				A5A5316816D2AE85005C20C0 /* ModeloWayPointFoto_old.png in Resources */,
 				A5A5317016D2C74E005C20C0 /* Background_Estacionamento_botoes.png in Resources */,
+				AC9239C4189BDA89006EDD75 /* bg_ios7.png in Resources */,
 				A587DE9016D3B2560005AC82 /* Button_Entrada_Estacionamento_S.png in Resources */,
 				A587DE9116D3B2560005AC82 /* Button_Entrada_Estacionamento_U.png in Resources */,
 				A587DE9216D3B2560005AC82 /* Button_Saida_Estacionamento_S.png in Resources */,
@@ -3314,6 +3314,7 @@
 				78C9368916E9164C00E3D57B /* A1-03Pv.png in Resources */,
 				78C9368A16E9164C00E3D57B /* A1-04Pv.png in Resources */,
 				78C9368B16E9164C00E3D57B /* A1-05Pv.png in Resources */,
+				AC9239C2189ABA0D006EDD75 /* bg_ios7_4inch.png in Resources */,
 				78C9369016E9164C00E3D57B /* B-01Pv.png in Resources */,
 				78C9369116E9164C00E3D57B /* B-01Ss.png in Resources */,
 				AC4AFA1E187C91AC00B4F344 /* button_comochegar_on.png in Resources */,
@@ -3546,7 +3547,6 @@
 				A5B88319171CA0B10067DF63 /* 95.png in Resources */,
 				A5B8831A171CA0B10067DF63 /* 96.png in Resources */,
 				A59F02B017202AFD00FD2B5F /* Facebook.html in Resources */,
-				ACC8C1E4186C54430071854F /* bg_ios7.png in Resources */,
 				A59F02B117202AFD00FD2B5F /* foursquare.html in Resources */,
 				A5D669E117217D1B00DF2494 /* TesteLoading.html in Resources */,
 				7884B1171746B2E700EAAB79 /* Default@2x.png in Resources */,

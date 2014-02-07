@@ -12,6 +12,7 @@
 #include "MinhasRotasScenes.h"
 #include "GLES.h"
 #include "MapMenu.h"
+MapMenu * mapMenu;
 
 HowToGoScene::HowToGoScene(HomeMenuState category)
 {
@@ -72,6 +73,10 @@ void HowToGoScene::OnBack()
             ChangeTitle(machine.title);
         BuildCategoryWayPointState(lastIdInserted);
         stackCategory.pop();
+    }
+    
+    if (mapMenu != NULL) {
+        mapMenu->Remove();
     }
 }
 //Inicializa o ListView ( Itens da lista) e configura pra exibir um titulo quando o item selecionado possuir
@@ -268,7 +273,8 @@ void HowToGoScene::initListView(HomeMenuState category)
         case MAPAS:
             this->size=setUpTopImage(Global::TOP_SRC_IMAGE_Mapas);
             setUpImageTop();
-            this->addChild(new MapMenu());
+            mapMenu =new MapMenu();
+            this->addChild(mapMenu);
              addButtonTop(MAPAS);
             return;
             break;

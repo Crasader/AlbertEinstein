@@ -228,6 +228,12 @@ typedef enum
 
 
 
+typedef enum
+{
+    MAP_NORMAL,
+	MAP_3D
+} MapType;
+
 
 
 

@@ -26,6 +26,11 @@ LayerWebView::LayerWebView(SocialType _type,char* _IdCheckin)
             openBrowser(99,_IdCheckin);
 }
 
+void LayerWebView::TargetLayer(cocos2d::CCLayer _layer)
+{
+    layer = _layer;
+}
+
 
 
 bool LayerWebView::checkInFacebook(const char* VenueID)
@@ -158,6 +163,7 @@ LayerWebView::LayerWebView()
     init();
 }
 
+
 void LayerWebView::openBrowser(int tag)
 {
     cocos2d::CCSpriteFrameCache* sprite_cache = cocos2d::CCSpriteFrameCache::sharedSpriteFrameCache();
@@ -166,6 +172,7 @@ void LayerWebView::openBrowser(int tag)
     gUIWebViewBridge = [[UIWebViewBridge alloc] init];
     [gUIWebViewBridge setUnitID: tag];
     [gUIWebViewBridge setStartLayerWebView : this];
+  
 }
 
 void LayerWebView::openBrowser(int tag, const char* IdCheckin)
@@ -218,14 +225,13 @@ void LayerWebView::setUpMenu()
     
     
     if (size.height > 480) {
-       size.height= CCDirector::sharedDirector()->getWinSize().height-150;
+       size.height= CCDirector::sharedDirector()->getWinSize().height-220-y;
     }
     else{
-       size.height= CCDirector::sharedDirector()->getWinSize().height-60;
+       size.height= CCDirector::sharedDirector()->getWinSize().height-130-y;
     }
 
     
-    size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;
     IFixedMenu::initListView(size, this);
     pList->setPosition(ccp(20,y));
 }

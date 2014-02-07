@@ -27,10 +27,13 @@
 #include "LayerWebView.h"
 
 class MapMenu : public cocos2d::CCLayer{
+    MapType type;
+    
 public:
     MapMenu();
     void addMenu();
     void InitHome();
+    void Remove();
     void openMap(CCObject* pSender);
     void open3D(CCObject* pSender);
     ~MapMenu();

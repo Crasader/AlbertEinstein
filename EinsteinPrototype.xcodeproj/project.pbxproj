@@ -668,13 +668,17 @@
 		AC4AFA0E187B327500B4F344 /* bg_maps.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA0A187B327500B4F344 /* bg_maps.png */; };
 		AC4AFA11187B327500B4F344 /* bg_maps_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA0D187B327500B4F344 /* bg_maps_4inch.png */; };
 		AC4AFA13187C876400B4F344 /* bg_status.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA12187C876400B4F344 /* bg_status.png */; };
-		AC4AFA1C187C91AC00B4F344 /* button_3dView.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA18187C91AC00B4F344 /* button_3dView.png */; };
-		AC4AFA1D187C91AC00B4F344 /* button_3dView_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA19187C91AC00B4F344 /* button_3dView_on.png */; };
-		AC4AFA1E187C91AC00B4F344 /* button_comochegar_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA1A187C91AC00B4F344 /* button_comochegar_on.png */; };
-		AC4AFA1F187C91AC00B4F344 /* button_comochegar.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA1B187C91AC00B4F344 /* button_comochegar.png */; };
+		AC4AFA1C187C91AC00B4F344 /* button_3dView_old.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA18187C91AC00B4F344 /* button_3dView_old.png */; };
+		AC4AFA1D187C91AC00B4F344 /* button_3dView_on_old.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA19187C91AC00B4F344 /* button_3dView_on_old.png */; };
+		AC4AFA1E187C91AC00B4F344 /* button_comochegar_on_old.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA1A187C91AC00B4F344 /* button_comochegar_on_old.png */; };
+		AC4AFA1F187C91AC00B4F344 /* button_comochegar_old.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA1B187C91AC00B4F344 /* button_comochegar_old.png */; };
 		AC4AFA21187D844600B4F344 /* icon_news.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA20187D844600B4F344 /* icon_news.png */; };
 		AC9239C2189ABA0D006EDD75 /* bg_ios7_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239C1189ABA0D006EDD75 /* bg_ios7_4inch.png */; };
 		AC9239C4189BDA89006EDD75 /* bg_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239C3189BDA89006EDD75 /* bg_ios7.png */; };
+		AC9239CE18A31B27006EDD75 /* button_comochegar_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239CD18A31B27006EDD75 /* button_comochegar_pressed.png */; };
+		AC9239D118A31B3C006EDD75 /* button_3d_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239CF18A31B3C006EDD75 /* button_3d_on.png */; };
+		AC9239D218A31B3C006EDD75 /* button_3d_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239D018A31B3C006EDD75 /* button_3d_pressed.png */; };
+		AC9239D418A31B49006EDD75 /* button_comochegar_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239D318A31B49006EDD75 /* button_comochegar_on.png */; };
 		ACC8C1E0186BBB690071854F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1DF186BBB690071854F /* Default-568h@2x.png */; };
 		ACEF55B8180844E600CFBB7E /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B4180844E600CFBB7E /* AppController.mm */; };
 		ACEF55B9180844E600CFBB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B5180844E600CFBB7E /* main.m */; };
@@ -1591,13 +1595,17 @@
 		AC4AFA0A187B327500B4F344 /* bg_maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_maps.png; sourceTree = "<group>"; };
 		AC4AFA0D187B327500B4F344 /* bg_maps_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_maps_4inch.png; sourceTree = "<group>"; };
 		AC4AFA12187C876400B4F344 /* bg_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_status.png; sourceTree = "<group>"; };
-		AC4AFA18187C91AC00B4F344 /* button_3dView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3dView.png; sourceTree = "<group>"; };
-		AC4AFA19187C91AC00B4F344 /* button_3dView_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3dView_on.png; sourceTree = "<group>"; };
-		AC4AFA1A187C91AC00B4F344 /* button_comochegar_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar_on.png; sourceTree = "<group>"; };
-		AC4AFA1B187C91AC00B4F344 /* button_comochegar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar.png; sourceTree = "<group>"; };
+		AC4AFA18187C91AC00B4F344 /* button_3dView_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3dView_old.png; sourceTree = "<group>"; };
+		AC4AFA19187C91AC00B4F344 /* button_3dView_on_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3dView_on_old.png; sourceTree = "<group>"; };
+		AC4AFA1A187C91AC00B4F344 /* button_comochegar_on_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar_on_old.png; sourceTree = "<group>"; };
+		AC4AFA1B187C91AC00B4F344 /* button_comochegar_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar_old.png; sourceTree = "<group>"; };
 		AC4AFA20187D844600B4F344 /* icon_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_news.png; sourceTree = "<group>"; };
 		AC9239C1189ABA0D006EDD75 /* bg_ios7_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7_4inch.png; sourceTree = "<group>"; };
 		AC9239C3189BDA89006EDD75 /* bg_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_ios7.png; sourceTree = "<group>"; };
+		AC9239CD18A31B27006EDD75 /* button_comochegar_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar_pressed.png; sourceTree = "<group>"; };
+		AC9239CF18A31B3C006EDD75 /* button_3d_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3d_on.png; sourceTree = "<group>"; };
+		AC9239D018A31B3C006EDD75 /* button_3d_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3d_pressed.png; sourceTree = "<group>"; };
+		AC9239D318A31B49006EDD75 /* button_comochegar_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar_on.png; sourceTree = "<group>"; };
 		ACC8C1DF186BBB690071854F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		ACEF55A0180743F900CFBB7E /* CCFinishDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFinishDelegate.h; sourceTree = "<group>"; };
 		ACEF55B3180844E600CFBB7E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -1677,10 +1685,14 @@
 				AC4AFA0A187B327500B4F344 /* bg_maps.png */,
 				AC4AFA12187C876400B4F344 /* bg_status.png */,
 				AC4AFA0D187B327500B4F344 /* bg_maps_4inch.png */,
-				AC4AFA18187C91AC00B4F344 /* button_3dView.png */,
-				AC4AFA19187C91AC00B4F344 /* button_3dView_on.png */,
-				AC4AFA1A187C91AC00B4F344 /* button_comochegar_on.png */,
-				AC4AFA1B187C91AC00B4F344 /* button_comochegar.png */,
+				AC9239CF18A31B3C006EDD75 /* button_3d_on.png */,
+				AC9239D018A31B3C006EDD75 /* button_3d_pressed.png */,
+				AC9239CD18A31B27006EDD75 /* button_comochegar_pressed.png */,
+				AC9239D318A31B49006EDD75 /* button_comochegar_on.png */,
+				AC4AFA18187C91AC00B4F344 /* button_3dView_old.png */,
+				AC4AFA19187C91AC00B4F344 /* button_3dView_on_old.png */,
+				AC4AFA1A187C91AC00B4F344 /* button_comochegar_on_old.png */,
+				AC4AFA1B187C91AC00B4F344 /* button_comochegar_old.png */,
 				787B9CA4170A116D00A57D25 /* Background.png */,
 				A5A5316F16D2C74E005C20C0 /* Background_Estacionamento_botoes.png */,
 				AC4AFA031877166900B4F344 /* Background_subtitle_slim.png */,
@@ -3206,6 +3218,7 @@
 				A5EE42C016DE4C0800E8E49B /* homeInicio_h.png in Resources */,
 				A5EE42C216DE4DA200E8E49B /* Busca_Button_H.png in Resources */,
 				AC4AF9F81876E38D00B4F344 /* ModeloWayPointFoto.png in Resources */,
+				AC9239D118A31B3C006EDD75 /* button_3d_on.png in Resources */,
 				A5EE42C416DE4F7800E8E49B /* FacebookButton_H.png in Resources */,
 				A5EE42C616DE50F400E8E49B /* FourSquareButton_H.png in Resources */,
 				A5EE42C816DE528500E8E49B /* btnShowRota_H.png in Resources */,
@@ -3317,7 +3330,7 @@
 				AC9239C2189ABA0D006EDD75 /* bg_ios7_4inch.png in Resources */,
 				78C9369016E9164C00E3D57B /* B-01Pv.png in Resources */,
 				78C9369116E9164C00E3D57B /* B-01Ss.png in Resources */,
-				AC4AFA1E187C91AC00B4F344 /* button_comochegar_on.png in Resources */,
+				AC4AFA1E187C91AC00B4F344 /* button_comochegar_on_old.png in Resources */,
 				78C9369216E9164C00E3D57B /* B-02Pv.png in Resources */,
 				ACC8C1E0186BBB690071854F /* Default-568h@2x.png in Resources */,
 				78C9369316E9164C00E3D57B /* B-03Pv.png in Resources */,
@@ -3333,12 +3346,13 @@
 				78C9369D16E9164C00E3D57B /* building_1_floor_i3.tmx in Resources */,
 				78C9369E16E9164C00E3D57B /* building_1_floor_i4.tmx in Resources */,
 				78C9369F16E9164C00E3D57B /* building_2_floor_1.tmx in Resources */,
-				AC4AFA1F187C91AC00B4F344 /* button_comochegar.png in Resources */,
+				AC4AFA1F187C91AC00B4F344 /* button_comochegar_old.png in Resources */,
 				AC4AFA11187B327500B4F344 /* bg_maps_4inch.png in Resources */,
 				78C936A016E9164C00E3D57B /* building_2_floor_10.tmx in Resources */,
 				78C936A116E9164C00E3D57B /* building_2_floor_11.tmx in Resources */,
 				78C936A216E9164C00E3D57B /* building_2_floor_12.tmx in Resources */,
-				AC4AFA1D187C91AC00B4F344 /* button_3dView_on.png in Resources */,
+				AC4AFA1D187C91AC00B4F344 /* button_3dView_on_old.png in Resources */,
+				AC9239CE18A31B27006EDD75 /* button_comochegar_pressed.png in Resources */,
 				78C936A316E9164C00E3D57B /* building_2_floor_2.tmx in Resources */,
 				78C936A416E9164C00E3D57B /* building_2_floor_3.tmx in Resources */,
 				78C936A516E9164C00E3D57B /* building_2_floor_4.tmx in Resources */,
@@ -3473,7 +3487,7 @@
 				A55E053D170B5B6E008576B8 /* favoritos_press.png in Resources */,
 				A55E0540170B72D7008576B8 /* local_branco.png in Resources */,
 				A55E0541170B72D7008576B8 /* local_preto.png in Resources */,
-				AC4AFA1C187C91AC00B4F344 /* button_3dView.png in Resources */,
+				AC4AFA1C187C91AC00B4F344 /* button_3dView_old.png in Resources */,
 				A55E0546170B7639008576B8 /* femea_branco.png in Resources */,
 				A55E0547170B7639008576B8 /* femea_preto.png in Resources */,
 				A55E0548170B7639008576B8 /* macho_branco.png in Resources */,
@@ -3551,6 +3565,7 @@
 				A5D669E117217D1B00DF2494 /* TesteLoading.html in Resources */,
 				7884B1171746B2E700EAAB79 /* Default@2x.png in Resources */,
 				7884B1181746B2E700EAAB79 /* Icon-72@2x.png in Resources */,
+				AC9239D218A31B3C006EDD75 /* button_3d_pressed.png in Resources */,
 				7884B1191746B2E700EAAB79 /* Icon-Small-50@2x.png in Resources */,
 				8A894A72177B2B8400971A22 /* Building3D in Resources */,
 				8A894A74177B479F00971A22 /* model04.b in Resources */,
@@ -3570,6 +3585,7 @@
 				8A96B39E17A069A100042CC5 /* servicos_new_hover.png in Resources */,
 				8A96B39F17A069A100042CC5 /* especialidade_new_hover.png in Resources */,
 				8A96B3A017A069A100042CC5 /* comochegar_new_hover.png in Resources */,
+				AC9239D418A31B49006EDD75 /* button_comochegar_on.png in Resources */,
 				8A86067C17B404B1006260DE /* bt_proxMapa.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -133,6 +133,7 @@ void MapViewScene::ccFinishJob()
 {
     std::cout<<"MAP FINISH LOADED AND RETURN: \n";
     this->setUpNavigationButtons();
+    this->CreateButtons();
     
 }
 void MapViewScene::setUpNavigationButtons()
@@ -198,8 +199,42 @@ void MapViewScene::OnBack()
     returnToHome();
 }
 
+void MapViewScene::CreateButtons()
+{
+    if(this->getChildByTag(11)!=NULL)
+        this->removeChildByTag(11, true);
+    
+//    CCMenu* menuEntradaSaida = CCMenu::create();
+//    if(type == MAP_NORMAL )
+//    {
+//        createMenuItem(menuEntradaSaida, EST_SAIDA, "Saida_btn.png", "Saida_press.png", 0,0, menu_selector( ParkingScene::btnEntradaSaida),this);
+//        createMenuItem(menuEntradaSaida, EST_ENTRADA, "Entrada_Press.png", "Entrada_Press.png", 83,0, menu_selector( ParkingScene::btnEntradaSaida),this);
+//    }
+//    else
+//    {
+//        createMenuItem(menuEntradaSaida, EST_SAIDA, "Saida_press.png", "Saida_press.png", 0,0, menu_selector( ParkingScene::btnEntradaSaida),this);
+//        createMenuItem(menuEntradaSaida, EST_ENTRADA, "Entrada_btn.png", "Entrada_Press.png", 83,0, menu_selector( ParkingScene::btnEntradaSaida),this);
+//    }
+//    
+//    if(this->getChildByTag(12)!=NULL)
+//        removeChildByTag(12, true);
+//    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+//    if (winsize.height > 480) {
+//        menuEntradaSaida->setPosition(ccp(73,445));
+//    }
+//    else
+//    {
+//        menuEntradaSaida->setPosition(ccp(73,365));
+//    }
+//    
+//    this->addChild(menuEntradaSaida,0,2);
+}
+
 void MapViewScene::draw()
 {
+    
+    
+    
     CCSize winsize = CCDirector::sharedDirector()->getWinSize();
     
     
@@ -306,6 +341,7 @@ void MapViewScene::draw()
     if(this->getChildByTag(9090) != NULL)
         this->removeChildByTag(9090, true);
     this->addChild(l,3,9090);
+    
 }
 
 

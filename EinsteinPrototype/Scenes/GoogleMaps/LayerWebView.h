@@ -18,12 +18,14 @@
 
 class LayerWebView : public IFixedMenu, public cocos2d::extension::CCListViewDelegate
 {
+    
 private:
 
 	int mWebViewLoadCounter;
     cocos2d::CCSize size;
     
     SocialType type;
+    cocos2d::CCLayer layer;
     
     
     static const char* FacebookToken ;
@@ -44,6 +46,7 @@ public:
     static const char* getSocialNetworkToken(SocialType type);
     
     LayerWebView();
+    void TargetLayer(cocos2d::CCLayer _layer);
     LayerWebView(int waypoint);
     
     LayerWebView(SocialType _type,char* _IdCheckin);

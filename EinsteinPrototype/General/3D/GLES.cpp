@@ -159,7 +159,8 @@ bool Building3DLayer::init()
 	createBuffer("model04.b");
 	
 	CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-	kmMat4PerspectiveProjection(&_projection, 60.f, (float)winSize.width/winSize.height, 1.f, 10000.f);
+    
+	kmMat4PerspectiveProjection(&_projection, 60.f, (float)winSize.width/(winSize.height), 1.f, 10000.f);
 	
 	loadDefaultState();
 	

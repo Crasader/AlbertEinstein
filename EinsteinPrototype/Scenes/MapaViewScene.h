@@ -25,7 +25,7 @@ private:
     const char * destination;
     
     StateMachine statePrevious;
-
+    EstacionamentoState type;
 
 public:
 
@@ -46,6 +46,7 @@ public:
     
     virtual void OnBack();
     virtual void draw();
+    void CreateButtons();
     void btnTopButton(CCObject *sender);
 	CCPoint touchLocation;
 	bool touched;

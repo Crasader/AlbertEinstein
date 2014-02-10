@@ -35,6 +35,7 @@
 #include "shaders/ccGLStateCache.h"
 #include "shaders/CCGLProgram.h"
 #include "kazmath/kazmath.h"
+#include <iostream>
 
 NS_CC_BEGIN
 

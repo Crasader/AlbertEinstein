@@ -38,6 +38,7 @@ THE SOFTWARE.
 #include "shaders/CCGLProgram.h"
 // externals
 #include "kazmath/GL/matrix.h"
+#include <stdio.h>
 
 
 #if CC_NODE_RENDER_SUBPIXEL
@@ -729,6 +730,7 @@ void CCNode::visit()
             pNode = (CCNode*) arrayData->arr[i];
             if (pNode)
             {
+                //todo std::cout<<" tag:"<<pNode->getTag()<<")\n";
                 pNode->visit();
             }
         }        

@@ -77,12 +77,12 @@ void IFixedMenu::initFixedMenu(){
 
 //Ajusta os botoes deixa um selecionado desabilitado e o resto habilitado é recriado ao clicar nos itens
 //´E o painel com os botões mapas, inicio, procurar na parte inferior da tela
-void IFixedMenu::initFixedMenu(HomeMenuState newState)
+void IFixedMenu::initFixedMenu(HomeMenuState newState, CCLayer * target)
 {
     CCMenu* oFixedMenu = CCMenu::create();
     oFixedMenu->setAnchorPoint(ccp(0, 0));
 	oFixedMenu->setPosition(ccp(0, 0));
-
+    
     switch(newState)
     {
         case INICIO:
@@ -119,7 +119,11 @@ void IFixedMenu::initFixedMenu(HomeMenuState newState)
             throw "";
             break;
     }
-    this->addChild(oFixedMenu,2,0);
+    target->addChild(oFixedMenu,999,0);
+}
+void IFixedMenu::initFixedMenu(HomeMenuState newState)
+{
+    initFixedMenu(newState, this);
 }
 
 //  Created by Marco Rossi on 2/6/13.

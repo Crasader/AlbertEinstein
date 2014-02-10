@@ -221,7 +221,8 @@ void HowToGoScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView *
         
 
         sprintf(stateMachinePreviousPage.title, "%s",machine.title);
-        targetWayPoint = plistMenuCurrent[data->nRow].key;
+        int tmpRow = data->nRow;
+        targetWayPoint = plistMenuCurrent[tmpRow].key;
         changeScene(new WayPointViewScene(actualCategory,targetWayPoint,stateMachinePreviousPage));
     }
     else if(state ==  TARGET_BUILDING)

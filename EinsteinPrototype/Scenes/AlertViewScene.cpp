@@ -85,6 +85,7 @@ void AlertViewScene::showMessageRota(CCNode* sender, SEL_MenuHandler callbackFun
 }
 
 
+
 void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callbackFunction  ,int wayPoint)
 {
     if( AlertViewScene::isActive ==  true)
@@ -168,6 +169,106 @@ void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callback
 
     parent->addChild(node,10,Global::TAG_Alert_Layer);
 }
+
+
+
+void AlertViewScene::showMessageParkingOption(CCNode* sender, SEL_MenuHandler entering,SEL_MenuHandler outing,SEL_MenuHandler quiting)
+{
+    
+    if( AlertViewScene::isActive ==  true)
+        return;
+    AlertViewScene::isActive = true;
+    
+    CCSprite *sprBackground = CCSprite::create("bg_parking_4inch.png");
+    sprBackground->setAnchorPoint(ccp(0,0));
+    //sprBackground->setScale(1);
+    sprBackground->setPosition(ccp(0,0));
+    
+    
+    //Backgroud Alert
+    CCSprite *sprBackground2 = CCSprite::create("popup.png");
+    sprBackground2->setAnchorPoint(ccp(0,0));
+    //sprBackground2->setScale(1);
+    sprBackground2->setPosition(ccp(25,200));
+    
+    //Layer - Container with all elements of Alert
+    CCLayerColor *node = CCLayerColor::create(ccc4(0,0,0,50));
+  //  node->setContentSize(CCDirector::sharedDirector()->getWinSize());
+    //node->addChild(sprBackground,1);
+    node->addChild(sprBackground2,22);
+    //node->setOpacity(200);
+    node->setAnchorPoint(ccp(0,0));
+    node->setPosition(ccp(0,0));
+
+    //Close Button of frame
+    CCSprite *btnClose = CCSprite::create("fechar_btn.png");
+    CCSprite *btnClosePress = CCSprite::create("fechar_press.png");
+    
+    CCSprite *Icone = CCSprite::create("icon_car.png");
+    Icone->setPosition(ccp(45,325));
+    node->addChild(Icone,23);
+    
+    CCMenuItemSprite *itembtnClose = CCMenuItemSprite::create(btnClose, btnClosePress, node, quiting);
+	itembtnClose->setAnchorPoint(ccp(0, 0));
+	itembtnClose->setPosition(ccp(280,380));
+    
+    
+    
+    //Button Rota para o local
+    CCSprite *imgEntering = CCSprite::create("button_entering.png");
+    CCSprite *imgEnteringPress = CCSprite::create("button_entering_press.png");
+    
+    
+    CCMenuItemSprite *btnEntering = CCMenuItemSprite::create( imgEnteringPress,imgEntering, node,entering);
+	btnEntering->setAnchorPoint(ccp(0, 0));
+	btnEntering->setPosition(ccp(70,250));
+    
+    CCSprite *imgOuting = CCSprite::create("button_outing.png");
+    CCSprite *imgOutingPress = CCSprite::create("button_outing_press.png");
+    
+    CCMenuItemSprite *btnOuting = CCMenuItemSprite::create( imgOutingPress,imgOuting, node,outing);
+	btnOuting->setAnchorPoint(ccp(0, 0));
+	btnOuting->setPosition(ccp(170,250));
+
+    
+    CCMenu* options = CCMenu::create();
+    options->addChild(itembtnClose,0,44);
+    options->addChild(btnEntering,15,84);
+    options->addChild(btnOuting,16,84);
+    options->setPosition(ccp(0, 0));
+    node->addChild(options,24,Global::TAG_Child_Layer);
+    
+    
+    //Title of Alert
+    CCLabelTTF *labelTitle;
+    labelTitle = CCLabelTTF::create("Você está:", "LucidaGrandeBold", 16);
+    labelTitle->setPosition(ccp(35, 360));
+    labelTitle->setAnchorPoint(ccp(0,0));
+    labelTitle->setColor(ccc3(55, 55, 55));
+    node->addChild(labelTitle,25);
+    
+    
+    
+    //Description of Alert
+    CCLabelTTF *labelDescription;
+    labelDescription = CCLabelTTF::create("       Você está saindo ou entrando?", "Lucida Grande", 12);
+    labelDescription->setPosition(ccp(40, 320));
+    labelDescription->setAnchorPoint(ccp(0,0));
+    labelDescription->setColor(ccc3(55, 55, 55));
+    node->addChild(labelDescription,26);
+//
+// 
+//
+//    
+//   // ((CCLayerColor*)sender)->setOpacity(30);
+//    CCDirector::sharedDirector()->getRunningScene()->addChild(node,10,Global::TAG_Alert_Layer);
+
+
+        sender->addChild(node, 30, Global::TAG_Alert_Layer);
+    
+  
+}
+
 /******************************************************************************************
  *                                                                                        *
  ******************************************************************************************/

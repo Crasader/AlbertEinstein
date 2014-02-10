@@ -165,6 +165,24 @@
 
 }
 
+-(void) setStartLayerWebView2 : (LayerWebView*) iLayerWebView
+{
+    mLayerWebView = iLayerWebView;
+
+    int winsize = [[EAGLView sharedEGLView] getHeight];
+        mView = [[UIView alloc] initWithFrame:CGRectMake(0, 70, 320 , winsize-70)];
+        mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, winsize-70)];
+
+    mWebView.delegate = self;
+    [self LoadRequest];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    [mView addSubview:mWebView];
+    
+}
+
+
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     if ([[[request URL] absoluteString] rangeOfString:@"maps.google.com.br/help/maps/helloworld/mobile/iphone"].location != NSNotFound)

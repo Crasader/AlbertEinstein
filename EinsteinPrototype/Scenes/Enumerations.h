@@ -125,6 +125,7 @@ public:
     void cleanUp();
     void returnToHome();
     void changeScene(CCLayer *Node);
+    void initListView(cocos2d::CCSize size, cocos2d::extension::CCListViewDelegate* parent ,CCLayer *layerParent);
     void initListView(cocos2d::CCSize size, cocos2d::extension::CCListViewDelegate* parent );
     void BuildCategoryWayPointState(int bKey);
 	void BuildWayPointByBuilding(int bKey);
@@ -156,6 +157,7 @@ public:
     virtual void setUpMenu(){};
     void initFixedMenu();
     void initFixedMenu(HomeMenuState newState);
+    void initFixedMenu(HomeMenuState newState, cocos2d::CCLayer * target);
     void FixedMenuCallBack(CCObject *sender);
     void createMenuItem(cocos2d::CCMenu* menuParent, int tag, char* spriteFileName,char* spriteFileNameSelected, float posX, float posY,cocos2d::SEL_MenuHandler menuCallback, CCNode* parent);
     void createMenuItemLabel(cocos2d::extension::CCListViewCell* cell, int tag, const  char* Text,const cocos2d::ccColor3B& color3, float posX, float posY,cocos2d::SEL_MenuHandler menuCallback, CCNode* parent);

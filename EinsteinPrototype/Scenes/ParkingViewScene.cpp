@@ -28,7 +28,7 @@ ParkingViewScene::ParkingViewScene(EstacionamentoState _state, int _wayPointID)
     setUpTopImage(Global::TOP_SRC_IMAGE_Estacionamentos);
     ChangeTitle(ESTACIOMENTOS);
     this->addButtonTop();
-    initFixedMenu();
+    //initFixedMenu();
     this->wayPointID = _wayPointID;
     this->state=_state;
     if( state == EST_SAIDA)

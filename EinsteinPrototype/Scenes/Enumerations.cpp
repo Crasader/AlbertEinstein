@@ -30,7 +30,7 @@ const char* Global::TOP_SRC_IMAGE_Servicos  ="Header_Blue.png";
 const char* Global::TOP_SRC_IMAGE_Informacoes  ="Header_Blue.png";
 
 int Global::ULTIMO_PONTO_CHEGADA_WAYPOINT = 0;
-int Global:: TAG_Parent_Layer = 300;
+int Global::TAG_Parent_Layer = 300;
 int Global::TAG_Child_Layer = 200;
 int Global::TAG_Child_WayPoint =400;
 int Global::TAG_Alert_Layer = 220;
@@ -105,7 +105,7 @@ void IFixedMenu::createMenuItem(CCMenu* menuParent, int tag,char* spriteFileName
 
 
 //Inicializa/re-cria o listview
-void IFixedMenu::initListView(cocos2d::CCSize size, cocos2d::extension::CCListViewDelegate* parent)
+void IFixedMenu::initListView(cocos2d::CCSize size, cocos2d::extension::CCListViewDelegate* parent,CCLayer* layerParent)
 {
 	std::cout<<__PRETTY_FUNCTION__<<"\n";
      pList = cocos2d::extension::CCListView::create(cocos2d::extension::CCListViewModeVertical);
@@ -119,13 +119,19 @@ void IFixedMenu::initListView(cocos2d::CCSize size, cocos2d::extension::CCListVi
      pList->setDelegate(parent);
      pList->setSeparatorStyle(cocos2d::extension::CCListViewCellSeparatorStyleSingleLine);
      
-     if(this->getChildByTag(Global::TAG_Child_Layer)!=NULL)
-     this->removeChildByTag(Global::TAG_Child_Layer, true);
+     if(layerParent->getChildByTag(Global::TAG_Child_Layer)!=NULL)
+         layerParent->removeChildByTag(Global::TAG_Child_Layer, true);
      
      pList->setAnchorPoint(ccp(0,0));
      pList->setPosition(ccp(20,50));
-     this->addChild(pList,0,Global::TAG_Child_Layer);
+    layerParent->addChild(pList,501,Global::TAG_Child_Layer);
 }
+
+void IFixedMenu::initListView(cocos2d::CCSize size, cocos2d::extension::CCListViewDelegate* parent)
+{
+    this->initListView(size, parent,this);
+}
+
 
 //Esconde a barra de statu de bateria
 IFixedMenu::IFixedMenu()
@@ -636,6 +642,7 @@ public:
     std::string isFeatured;
     int category;
     int itemID;
+    int key;
 };
 
 struct SortPlaces {
@@ -674,6 +681,8 @@ void IFixedMenu::BuildCategoryWayPointState(int bKey)
             Place place =Place(lstSection[i].name);
             place.category =lstSection[i].categoryID;
             place.isChild = lstSection[i].hasChild;
+            place.key = lstSection[i].key;
+            place.itemID =lstSection[i].key;
             place.isFeatured = lstSection[i].isFeatured;
 			waypoints.push_back(place);
 
@@ -783,6 +792,7 @@ void IFixedMenu::insertItemListView( int tagValue, const char* datatext)
     data.text = strdup(datatext);
     data.hasChild =  false;
     data.keyParent = 0;
+    
     plistMenuCurrent.push_back(data);
 }
 

@@ -26,7 +26,7 @@ private:
     static void showMessageRota(cocos2d::CCNode* sender, cocos2d::SEL_MenuHandler callbackFunction  , int wayPoint);
     static void showMessageParking
     (cocos2d::CCNode* sender, cocos2d::SEL_MenuHandler callbackFunction  , int wayPoint);
-    
+     static void showMessageParkingOption(cocos2d::CCNode* parent, cocos2d::SEL_MenuHandler entering,cocos2d::SEL_MenuHandler outing,cocos2d::SEL_MenuHandler quiting);
     
     void btnCloseAlert(cocos2d::CCObject *sender);
 

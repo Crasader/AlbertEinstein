@@ -11,7 +11,7 @@
 
 
 #include <iostream>
-
+#include "cocos2d.h"
 #include "Enumerations.h"
 #include "AlertViewScene.h"
 #include "ParkingViewScene.h"
@@ -24,13 +24,16 @@ public:
     ParkingScene();
     ParkingScene(EstacionamentoState state);
 
-    void Init();
+    void Start();
+    void ShowMenu();
     void setUpMenu();
-    
+    void addButtonTop();
     void OnBack();
     void LoadListView();
-    void CreateButtons();
-    
+    void insertItemListView( int tagValue, const char* datatext);
+    void btnResponseEntering(CCObject *sender);
+    void btnResponseOuting(CCObject *sender);
+    void btnResponseQuiting(CCObject *sender);
     void btnEntradaSaida(CCObject *sender);
        virtual void CCListView_numberOfCells(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data);
     virtual void CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data);

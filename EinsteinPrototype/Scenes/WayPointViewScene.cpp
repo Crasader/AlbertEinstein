@@ -384,6 +384,7 @@ void WayPointViewScene::btnHorarioCallBack(CCObject *sender)
 {
     //Exibe uma alerta sobre horarios de funcionamento
     AlertViewScene::showMessageRota((CCNode*)sender,  menu_selector(WayPointViewScene::btnResponseRota), ((CCNode*)sender)->getTag());
+   // AlertViewScene::showMessageParkingOption((CCNode*)sender,  menu_selector(WayPointViewScene::btnResponseRota), menu_selector(WayPointViewScene::btnResponseRota));
 }
 
 void WayPointViewScene::btnRotaCallBack(CCObject *sender){

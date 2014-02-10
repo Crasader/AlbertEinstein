@@ -36,6 +36,7 @@
 - (bool) isKeyBoardInDisplay;
 -(void) CleanUp;
 -(void) setStartLayerWebView : (LayerWebView*) iLayerWebView ;
+-(void) setStartLayerWebView2 : (LayerWebView*) iLayerWebView;
 -(void) backClicked:(id)sender;
 - (void)removeBar;
 @end

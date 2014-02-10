@@ -384,11 +384,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "409863265.577869"
+            timestampString = "413728289.146025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1681"
-            endingLineNumber = "1681">
+            startingLineNumber = "1689"
+            endingLineNumber = "1689">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -399,22 +399,6 @@
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/General/AStar/AStar.cpp"
-            timestampString = "403393906.474352"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "AStar::findBestPath(std::vector&lt; std::vector&lt;ASTile&gt; &gt;tiles, ASTile begin, ASTile end, bool smoothed)"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -705,38 +689,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "409864420.838151"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "Pathfinder::start(int startID, int endID)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/MapaViewScene.cpp"
-            timestampString = "410361945.019862"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/BlockListScene.cpp"
             timestampString = "410375321.6427"
             startingColumnNumber = "9223372036854775807"
@@ -882,28 +834,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/ParkingScene.cpp"
-            timestampString = "413694329.835381"
+            timestampString = "413696251.24026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "253"
             endingLineNumber = "253"
             landmarkName = "ParkingScene::btnEntradaSaida(CCObject *sender)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/MapaViewScene.cpp"
-            timestampString = "413299484.384162"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "MapViewScene::setUp()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1074,92 +1010,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-            timestampString = "413433052.093368"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
-            landmarkName = "TraceRouteScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-            timestampString = "413433074.004531"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "337"
-            endingLineNumber = "337"
-            landmarkName = "TraceRouteScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
             timestampString = "413433251.893259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
             endingLineNumber = "79"
             landmarkName = "TraceRouteScene::TraceRouteScene(int _wayPointID, EstacionamentoState _stateEstacionamento ,StateMachine _statePreviousPage)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-            timestampString = "413433260.397543"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "TraceRouteScene::TraceRouteScene(int wayPointID,StateMachine _statePreviousPage)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-            timestampString = "413433269.542673"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "TraceRouteScene::Init()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/WayPointViewScene.cpp"
-            timestampString = "413433402.215782"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
-            landmarkName = "WayPointViewScene::draw()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1240,38 +1096,6 @@
             startingLineNumber = "734"
             endingLineNumber = "734"
             landmarkName = "CCNode::visit()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/libs/cocos2dx/extensions/CCListView/CCListView.cpp"
-            timestampString = "413683051.159282"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1952"
-            endingLineNumber = "1952"
-            landmarkName = "CCListView::visit(void)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/HomeScene.cpp"
-            timestampString = "413694239.791225"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "IFixedMenu::initFixedMenu(HomeMenuState newState, CCLayer * target)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

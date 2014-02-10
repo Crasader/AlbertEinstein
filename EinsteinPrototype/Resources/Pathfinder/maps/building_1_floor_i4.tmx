@@ -16,7 +16,7 @@
  <tileset firstgid="145" name="A1-Inter4" tilewidth="10" tileheight="10">
   <image source="A1-04Ss.png" width="1748" height="800"/>
  </tileset>
- <layer name="floor" width="28" height="29" visible="0">
+ <layer name="floor" width="28" height="29">
   <data encoding="base64" compression="zlib">
    eJwN0NViEAQAAMBJo3QuYYwFMRZ0KpKKtEgqkoqkIt3dJZJKIw1KozRKd3cqjdIojfdwP3CBaQMCgggmhFDCyEFOwslFBLmJJIpoYshDXvKRn1gKEEc8CSRSkELsZBe72cNe9rGfAxzkEIc5wlGOcZwTnOQUpznDWc5xngtc5BKXuUKndAEBnelCV7rRnR70pBe96UNf+tGfAQxkEIMZwlCGMZwRjGQUoxnDWCLSeyKSKKKJIQ95yUd+YilAHPEkkEhBClGYIhSlGMUpQUlKUZoyHOYIRznGcU5wklOc5gxnOcd5LnCRS1zmCn/yF1e5xnVucJNb3OYOfTJ4oh/9GcBABjGYIQxlGMMZwUhGMZoxjGUc3zGe75nARCYxmSlMJTajJ+KIJ4FEClKIwhShKMUoTglKUorSlOFd3qMs71OO8lSgIpWozFnOcZ4LXOQSl7nCn/zFVa5xnRvc5Ba3ucPf/MNd7nGfBzzkEY95wrBMnhjBSEYxmjGMZRzfMZ7vmcBEJjGZKUzlB35kGtOZwUxmMZs5zKVoZk8UpwQlKUVpyvAu71GW9ylHeSpQkUpU5gM+pAofUZVqVKcGNanFVa5xnRvc5Ba3ucPf/MNd7nGfBzzkEY95wr/8x1Oe8ZwXvOQVr3nD+CyemMBEJjGZKUzlB35kGtOZwUxmMZs5zOUn5jGfBSxkEYtZwlKWUTarJ8pRngpUpBKV+YAPqcJHVKUa1alBTWpRm4+pwyfUpR71aUBDGnGXe9znAQ95xGOe8C//8ZRnPOcFL3nFa94QkC0g4C2SkJRkJCcFKUlFaqYxnRnMZBazmcNcfmIe81nAQhaxmCUsZRk/8wvLWcFKVrGaNaxlHVWye6Iq1ahODWpSi9p8TB0+oS71qE8DGtKIT/mMxnxOE5rSjOa0oCVPecZzXvCSV7zmDQGBnkhCUpKRnBSkJBWpeZt3SENa0pGeDGQkE5mZzwIWsojFLGEpy/iZX1jOClayitWsYS3r+JXfWM8GNrKJzWxhK9uoE+SJutSjPg1oSCM+5TMa8zlNaEozmtOClnzBl7TiK1rThra0oz0dSBLsiWQkJwUpSUVq3uYd0pCWdKQnAxnJRGaykJVsZCeQIIIJIZQwlrOClaxiNWtYyzp+5TfWs4GNbGIzW9jKNn7nD7azg53sYjd72Ms+God4oglNaUZzWtCSL/iSVnxFa9rQlna0pwNf8w0d+ZZOdKYLXelGd9KEeiId6clARjKRmSxkJRvZCSSIYEIIJYwc5CScXESQm0iiiCaG9WxgI5vYzBa2so3f+YPt7GAnu9jNHvayj/0c4CCHOMwRjnKM45ygVZgnWtOGtrSjPR34mm/oyLd0ojNd6Eo3utODnvSiN33oSz/6M4CBZMvhiUCCCCaEUMLIQU7CyUUEuYkkimhiyENe8pGfWAoQRzwJJLKdHexkF7vZw172sZ8DHOQQhznCUY5xnBOc5BSnOcNZznGeC1zkEh1zeqITnelCV7rRnR70pBe96UNf+tGfAQxkEIMZwlCGMZwRjGQUowkP90QEuYkkimhiyENe8pGfWAoQRzwJJFKQQhSmCEUpRnFKUJJS/A8IF9II
   </data>
@@ -57,8 +57,18 @@
     <property name="id" value="22"/>
    </properties>
   </object>
+  <object name="elevador" type="icon" x="190" y="90" width="40" height="40">
+   <properties>
+    <property name="id" value="1"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="199" y="104" width="20" height="20">
+   <properties>
+    <property name="id" value="1000"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup name="icon" width="28" height="29" visible="0">
+ <objectgroup name="icon" width="28" height="29">
   <object name="elevador" type="icon" x="230" y="90" width="40" height="40">
    <properties>
     <property name="id" value="2"/>

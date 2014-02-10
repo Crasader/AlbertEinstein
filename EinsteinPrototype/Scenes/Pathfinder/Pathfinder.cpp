@@ -1523,8 +1523,6 @@ void Pathfinder::calculateTotalSteps(){
 	std::vector<ASTile> arrayPath;
 	std::vector< std::vector<ASTile> > arrayTiles;
     
-   
-
 
 	//for(i; i < this->arrayMapNames->count(); i++){
 	if(this->valueI < this->arrayMapNames->count()){
@@ -1591,9 +1589,19 @@ void Pathfinder::calculateTotalSteps(){
 		}
 		
 		std::cout<<" - "<<mName<<" "<< actualFloor->getStartID() << " " << actualFloor->getEndID() <<"\n";
-		arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+        if (end.getPointX() == -1) {
+            std::cout<<"ponto final nao encontrado: "<<__LINE__<<" "<<__FILE__<<"\n";
+            arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+            stepsCount += arrayPath.size();
+        }
+        else
+        {
+            arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+            stepsCount += arrayPath.size();
+        }
+	
+        
 		
-		stepsCount += arrayPath.size();
 		this->arrayMapStepCount.push_back(arrayPath.size()+1);
 		arrayPath.clear();
 		astar.clear();

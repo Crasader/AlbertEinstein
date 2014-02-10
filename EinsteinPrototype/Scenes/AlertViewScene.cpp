@@ -192,7 +192,7 @@ void AlertViewScene::showMessageParkingOption(CCNode* sender, SEL_MenuHandler en
     sprBackground2->setPosition(ccp(25,200));
     
     //Layer - Container with all elements of Alert
-    CCLayerColor *node = CCLayerColor::create(ccc4(0,0,0,50));
+    CCLayerColor *node = CCLayerColor::create(ccc4(0,0,0,200));
   //  node->setContentSize(CCDirector::sharedDirector()->getWinSize());
     //node->addChild(sprBackground,1);
     node->addChild(sprBackground2,22);

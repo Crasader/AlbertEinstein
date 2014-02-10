@@ -2879,6 +2879,32 @@
 			<key>wc</key>
 			<false/>
 		</dict>
+		<key>1010</key>
+		<dict>
+			<key>name</key>
+			<string>Escadas ?</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<true/>
+			<key>wc</key>
+			<false/>
+		</dict>
+		<key>1011</key>
+		<dict>
+			<key>name</key>
+			<string>Escadas ?</string>
+			<key>floorID</key>
+			<real>0</real>
+			<key>elevator</key>
+			<false/>
+			<key>escalator</key>
+			<true/>
+			<key>wc</key>
+			<false/>
+		</dict>
 		<key>2000</key>
 		<dict>
 			<key>name</key>
@@ -3745,6 +3771,32 @@
 			<string>29</string>
 			<key>refID</key>
 			<string>1</string>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>name</key>
+			<string>Escadas -</string>
+			<key>waypointID</key>
+			<string>1010</string>
+			<key>buildingID</key>
+			<string>1</string>
+			<key>floorID</key>
+			<string>7</string>
+			<key>refID</key>
+			<string>2</string>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>name</key>
+			<string>Escadas -</string>
+			<key>waypointID</key>
+			<string>1011</string>
+			<key>buildingID</key>
+			<string>1</string>
+			<key>floorID</key>
+			<string>8</string>
+			<key>refID</key>
+			<string>2</string>
 		</dict>
 	</dict>
 	<key>alternatives</key>

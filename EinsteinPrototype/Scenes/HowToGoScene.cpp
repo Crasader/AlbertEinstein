@@ -93,14 +93,11 @@ void HowToGoScene::setUpMenu()
     CCSprite* spriteSubTit = CCSprite::create("subtit_unidademorumbi.png");
     spriteSubTit->setAnchorPoint(ccp(0, 0));
     //spriteSubTit->setOpacity(2000);
+    spriteSubTit->setPosition(ccp(0, winsize.height-70));
+   
+
     
-    if (winsize.height > 480) {
-           spriteSubTit->setPosition(ccp(0, 470));
-    }
-    else
-    {
-        spriteSubTit->setPosition(ccp(0, 390));
-    }
+   
     
 
   
@@ -117,28 +114,16 @@ void HowToGoScene::setUpMenu()
         spriteBackButton->setOpacity(2000);
        
        
-        if (winsize.height > 480) {
-              size.height= 315;
-           spriteBackButton->setPosition(ccp(0, 445));
-        }
-        else
-        {
-              size.height= 235;
-            spriteBackButton->setPosition(ccp(0, 370));
-        }
-
+      
+        spriteBackButton->setPosition(ccp(0, winsize.height-70));
         
         
         CCLabelTTF *labelTitleDescription;
         labelTitleDescription = CCLabelTTF::create(LoadWayPointName(lastIdInserted), "Lucida Grande", 16);
         labelTitleDescription->setHorizontalAlignment(kCCTextAlignmentLeft);
-        if (winsize.height > 480) {
-            labelTitleDescription->setPosition(ccp(80, 450));
-        }
-        else
-        {
-            labelTitleDescription->setPosition(ccp(80, 370));
-        }
+      
+            labelTitleDescription->setPosition(ccp(80, winsize.height-70));
+        
         
 
         
@@ -148,20 +133,18 @@ void HowToGoScene::setUpMenu()
         this->addChild(spriteBackButton, 0, 555);
         this->addChild(labelTitleDescription,0, 556);
         
+          size.height= winsize.height-120;
+        if (winsize.height >480) {
+            size.height= winsize.height-200;//3.5inch;
+        }
     }
     else
     {
-        if (winsize.height > 480) {
-            size.height= 340;//3.5inch
-
+       
+       size.height= winsize.height-120;//3.5inch
+        if (winsize.height >480) {
+           size.height= winsize.height-200;//3.5inch;
         }
-        else
-        {
-            size.height= 264;//3.5inch
-
-        }
-
-        
     }
     this->addChild(spriteSubTit,0, 557);
     IFixedMenu::initListView(size, this);

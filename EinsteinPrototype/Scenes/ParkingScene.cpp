@@ -148,7 +148,7 @@ void ParkingScene::addButtonTop()
     
     CCMenu* menu = CCMenu::create();
     createMenuItem(menu, 123, "Seta1.png", "Seta2.png",0, 0, menu_selector(ParkingScene::btnResponseQuiting), me );
-    menu->setPosition(ccp(10,510));
+    menu->setPosition(ccp(10,size.height+10));
     menu->setAnchorPoint(ccp(0,0));
     mainNode->addChild(menu,15);
    // mainNode->addChild(c,2,1000);
@@ -191,7 +191,7 @@ void ParkingScene::LoadListView()
     CCPoint position;
     CCSize winsize = CCDirector::sharedDirector()->getWinSize();
     CCSize theSize = winsize;
-    position = ccp(25, winsize.height- 150 );
+    position = ccp(25, winsize.height-150 );
     
     if(state == EST_ENTRADA )
     {

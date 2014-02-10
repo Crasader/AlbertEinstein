@@ -57,14 +57,29 @@
     <property name="id" value="63"/>
    </properties>
   </object>
-  <object name="waypoint" type="waypoint" x="80" y="168" width="20" height="20">
+  <object name="waypoint" type="waypoint" x="71" y="216" width="20" height="20">
    <properties>
     <property name="id" value="1008"/>
    </properties>
   </object>
-  <object name="waypoint" type="waypoint" x="87" y="138" width="20" height="20">
+  <object name="waypoint" type="waypoint" x="92" y="216" width="20" height="20">
    <properties>
     <property name="id" value="1009"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="69" y="132" width="20" height="20">
+   <properties>
+    <property name="id" value="1012"/>
+   </properties>
+  </object>
+  <object name="escada rolante" type="icon" x="69" y="132" width="40" height="40">
+   <properties>
+    <property name="id" value="6"/>
+   </properties>
+  </object>
+  <object name="waypoint" type="waypoint" x="89" y="131" width="20" height="20">
+   <properties>
+    <property name="id" value="1013"/>
    </properties>
   </object>
  </objectgroup>

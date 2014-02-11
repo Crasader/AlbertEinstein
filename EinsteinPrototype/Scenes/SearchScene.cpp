@@ -148,14 +148,13 @@ void SearchScene::btnBusca(CCObject *sender)
 
     CCSize size =  CCDirector::sharedDirector()->getWinSize();
     if (size.height > 480) {
-        size.height= 300;
+         size.height = size.height -260;
     }
     else
     {
-       size.height= 200;
+        size.height = size.height -170;
     }
     
-
     
     //size.width = 0.75*size.width;
      size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;

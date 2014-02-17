@@ -6,6 +6,8 @@
 	<dict>
 		<key>20</key>
 		<dict>
+			<key>desc</key>
+			<string>Neste espaço são realizados procedimentos para correção dos erros refrativos como miopia, hipermetropia e astigmatismo, entre outros.</string>
 			<key>name</key>
 			<array>
 				<string>Centro Cirúrgico</string>
@@ -14,6 +16,8 @@
 		</dict>
 		<key>90</key>
 		<dict>
+			<key>desc</key>
+			<string>O LEME é um laboratório com equipamentos de última geração que ajuda na decisão sobre o melhor tratamento para pacientes com problemas complexos de marcha</string>
 			<key>name</key>
 			<array>
 				<string>Laboratorio do</string>
@@ -22,6 +26,8 @@
 		</dict>
 		<key>49</key>
 		<dict>
+			<key>desc</key>
+			<string>Referência no tratamento e pesquisa em câncer, nosso Centro de Oncologia e Hematologia conta com profissionais capacitados e atendimento humanizado.</string>
 			<key>name</key>
 			<array>
 				<string>Recepção do Centro  </string>
@@ -31,6 +37,8 @@
 		</dict>
 		<key>80</key>
 		<dict>
+			<key>desc</key>
+			<string>Com equipamentos de ponta e robôs cirurgiões, espaço funciona 24 horas e suporta todos os tipos de procedimentos, incluindo situações de emergência e cirurgias de alta complexidade.</string>
 			<key>name</key>
 			<array>
 				<string>Centro Cirúrgico</string>
@@ -39,6 +47,8 @@
 		</dict>
 		<key>108</key>
 		<dict>
+			<key>desc</key>
+			<string>Restaurante no estilo self service em que todos os alimentos à venda são preparados de acordo com os preceitos da &quot;kashrut&quot;, a dieta judaica.</string>
 			<key>name</key>
 			<array>
 				<string>Restaurante Kasher</string>
@@ -47,6 +57,8 @@
 		</dict>
 		<key>92</key>
 		<dict>
+			<key>desc</key>
+			<string>Unidade Ambulatorial da Pediatria do Einstein, especialmente criada para oferecer assistência médica integrada e especializada para crianças e adolescentes.</string>
 			<key>name</key>
 			<array>
 				<string>Clínica de Especialidades</string>
@@ -55,6 +67,8 @@
 		</dict>
 		<key>81</key>
 		<dict>
+			<key>desc</key>
+			<string>O Centro Obstétrico do Einstein é um dos mais bem equipados e referência no país, podendo ser realizadas cirurgias obstétricas de qualquer nível de complexidade.</string>
 			<key>name</key>
 			<array>
 				<string>Centro Cirúrgico</string>
@@ -63,6 +77,8 @@
 		</dict>
 		<key>45</key>
 		<dict>
+			<key>desc</key>
+			<string>A simulação realística é um método de treinamento inovador. Com tecnologia de ponta e robôs de última geração, reproduz um hospital virtual para preparar profissionais da área da saúde. </string>
 			<key>name</key>
 			<array>
 				<string>Centro de Simulação</string>
@@ -71,6 +87,8 @@
 		</dict>
 		<key>55</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaços destinados ao atendimento de pacientes sem agendamento prévio, incluindo desde emergências e urgências médicas.</string>
 			<key>name</key>
 			<array>
 				<string>Leitos de pronto</string>
@@ -79,6 +97,8 @@
 		</dict>
 		<key>29</key>
 		<dict>
+			<key>desc</key>
+			<string>A Unidade Semi-Intensiva comporta pacientes com casos de menor gravidade ou pacientes que já ultrapassaram a fase mais aguda da doença e que não necessitam de tratamento intensivo ou vigilância ininterrupta</string>
 			<key>name</key>
 			<array>
 				<string>Unidade de Semi </string>
@@ -87,6 +107,8 @@
 		</dict>
 		<key>46</key>
 		<dict>
+			<key>desc</key>
+			<string>Da prevenção ao tratamento de diversos tipos de câncer, a Oncologia Pediátrica Einstein reúne  recursos tecnológicos e serviços especializados com a excelência Einstein.</string>
 			<key>name</key>
 			<array>
 				<string>Oncologia Ambulatorial </string>
@@ -95,6 +117,8 @@
 		</dict>
 		<key>43</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço confortável especialmente reservado para o atendimento dos clientes dos convênios Amil, Sul América, Omint, Bradesco e QualiCorp.</string>
 			<key>name</key>
 			<array>
 				<string>Convênios/Amil/Omint</string>
@@ -106,6 +130,8 @@
 	<dict>
 		<key>52</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaçosos, claros e arejados, têm persiana automática, cofre digital, TV a cabo e conexão wi-fi. Acompanhantes podem solicitar as refeições no Viena para serem servidas no quarto.</string>
 			<key>name</key>
 			<array>
 				<string>Apartamentos</string>
@@ -114,6 +140,8 @@
 		</dict>
 		<key>96</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Velorio</string>
@@ -121,6 +149,8 @@
 		</dict>
 		<key>15</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço exclusivo e dedicado ao atendimento de clientes do Banco Safra</string>
 			<key>name</key>
 			<array>
 				<string>Agencia do Banco Safra</string>
@@ -128,6 +158,8 @@
 		</dict>
 		<key>13</key>
 		<dict>
+			<key>desc</key>
+			<string>Medicamentos, produtos de beleza, higiene, cuidados pessoais e toda comodidade para pacientes acompanhantes e familiares que estão em nosso hospital.</string>
 			<key>name</key>
 			<array>
 				<string>Drogaria Soares</string>
@@ -136,6 +168,8 @@
 		</dict>
 		<key>11</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Entrega de veículos</string>
@@ -146,6 +180,8 @@
 		</dict>
 		<key>89</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>estacionamento</string>
@@ -154,6 +190,8 @@
 		</dict>
 		<key>19</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>estacionamento</string>
@@ -162,6 +200,8 @@
 		</dict>
 		<key>20</key>
 		<dict>
+			<key>desc</key>
+			<string>No Centro Oftalmológico são realizados os procedimentos para correção dos erros refrativos como: miopia, hipermetropia e astigmatismo. </string>
 			<key>name</key>
 			<array>
 				<string>Centro Cirurgico Oftalmologico</string>
@@ -169,6 +209,8 @@
 		</dict>
 		<key>110</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço especial de atendimento para os pacientes do Plano de Saúde Bradesco. Conveniência e conforto para atender às suas necessidades. </string>
 			<key>name</key>
 			<array>
 				<string>PAB Bradesco</string>
@@ -176,6 +218,8 @@
 		</dict>
 		<key>86</key>
 		<dict>
+			<key>desc</key>
+			<string>Estrutura completa e uma equipe multidisciplinar para diferentes tratamentos de reabilitação – motora, auditiva, cardiaca, neurológica, ortopédica, pediátrica, pulmonar e visual</string>
 			<key>name</key>
 			<array>
 				<string>Centro de Reabilitação</string>
@@ -188,6 +232,8 @@
 		</dict>
 		<key>1</key>
 		<dict>
+			<key>desc</key>
+			<string>Nossos consultórios são espaços especialmente planejados para oferecer ao paciente uma estrutura completa de atendimento de baixa e alta complexidade.</string>
 			<key>name</key>
 			<array>
 				<string>Consultorios (508 a 522)</string>
@@ -195,6 +241,8 @@
 		</dict>
 		<key>3</key>
 		<dict>
+			<key>desc</key>
+			<string>Nossos consultórios são espaços especialmente planejados para oferecer ao paciente dos nossos serviços de cardiologia uma estrutura completa de atendimento de baixa e alta complexidade</string>
 			<key>name</key>
 			<array>
 				<string>Consultorios (401 a 423)</string>
@@ -203,6 +251,8 @@
 		</dict>
 		<key>4</key>
 		<dict>
+			<key>desc</key>
+			<string>Nossos consultórios são espaços especialmente planejados para oferecer ao paciente uma estrutura completa de atendimento de baixa e alta complexidade</string>
 			<key>name</key>
 			<array>
 				<string>Consultorios (301 a 323)</string>
@@ -211,6 +261,8 @@
 		</dict>
 		<key>5</key>
 		<dict>
+			<key>desc</key>
+			<string>Nossos consultórios são espaços especialmente planejados para oferecer ao paciente uma estrutura completa de atendimento de baixa e alta complexidade</string>
 			<key>name</key>
 			<array>
 				<string>Consultorios (201 a 223)</string>
@@ -219,6 +271,8 @@
 		</dict>
 		<key>6</key>
 		<dict>
+			<key>desc</key>
+			<string>Nossos consultórios são espaços especialmente planejados para oferecer ao paciente uma estrutura completa de atendimento de baixa e alta complexidade</string>
 			<key>name</key>
 			<array>
 				<string>Consultorios (101 a 123)</string>
@@ -226,6 +280,8 @@
 		</dict>
 		<key>7</key>
 		<dict>
+			<key>desc</key>
+			<string>Área de interligação entre os blocos E, D e A.  </string>
 			<key>name</key>
 			<array>
 				<string>Acesso a passarela para o bloco A</string>
@@ -234,6 +290,8 @@
 		</dict>
 		<key>21</key>
 		<dict>
+			<key>desc</key>
+			<string>Uma unidade dedicada à realização de procedimentos de endoscopia. Tecnologia e profissionais capacitados para um diagnóstico preciso.</string>
 			<key>name</key>
 			<array>
 				<string>Centro de Endoscopia</string>
@@ -244,6 +302,8 @@
 		</dict>
 		<key>95</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço dedicado ao atendimento dos colaboradores Einstein.</string>
 			<key>name</key>
 			<array>
 				<string>Centro de Saude Ocupacional</string>
@@ -252,6 +312,8 @@
 		</dict>
 		<key>77</key>
 		<dict>
+			<key>desc</key>
+			<string>Nosso banco de leite oferece a possibilidade de armazenar e fornecer o leite materno ao bebê se ele apresentar dificuldades com a amamentação natural ou necessite de cuidados especiais.</string>
 			<key>name</key>
 			<array>
 				<string>Banco de leite</string>
@@ -261,6 +323,8 @@
 		</dict>
 		<key>79</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço exclusivo de atendimento e relacionamento para os médicos do Corpo Clínico do Hospital Israelita Albert Einstein</string>
 			<key>name</key>
 			<array>
 				<string>Diretoria Clinica</string>
@@ -268,6 +332,8 @@
 		</dict>
 		<key>83</key>
 		<dict>
+			<key>desc</key>
+			<string>Área que dá acesso à sala de laudos dos exames de imagem como ressonância, tomografia, raio-x, entre outros.</string>
 			<key>name</key>
 			<array>
 				<string>Recepção Imagem Paciente Internado</string>
@@ -276,6 +342,8 @@
 		</dict>
 		<key>84</key>
 		<dict>
+			<key>desc</key>
+			<string>Esta recepção dá acesso ao Bloco D da Maternidade, Bloco E Administrativo e Centro de Reabilitação.</string>
 			<key>name</key>
 			<array>
 				<string>Recepcao Atrium 3</string>
@@ -285,6 +353,8 @@
 		</dict>
 		<key>91</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaços especialmente planejados para oferecer aos nossos pequenos pacientes maior conforto e comodidade. </string>
 			<key>name</key>
 			<array>
 				<string>Consultorios Pediatricos</string>
@@ -293,6 +363,8 @@
 		</dict>
 		<key>8</key>
 		<dict>
+			<key>desc</key>
+			<string>Nosso centro conta com atendimento e uma ampla variedade de vacinas para crianças, adolescentes, adultos e idosos.</string>
 			<key>name</key>
 			<array>
 				<string>Central de Imunizacao</string>
@@ -303,6 +375,8 @@
 		</dict>
 		<key>48</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>IIEP (Instituto Israelita de Ensino e Pesquisa)</string>
@@ -318,6 +392,8 @@
 		</dict>
 		<key>54</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Pré-Internação</string>
@@ -326,6 +402,8 @@
 		</dict>
 		<key>67</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Departamento de Voluntariado</string>
@@ -334,6 +412,8 @@
 		</dict>
 		<key>72</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Centro de Dialise / Hemodialise</string>
@@ -342,6 +422,8 @@
 		</dict>
 		<key>16</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Central de exames</string>
@@ -354,6 +436,8 @@
 		</dict>
 		<key>40</key>
 		<dict>
+			<key>desc</key>
+			<string>Esta recepção dá acesso ao Bloco A, onde estão leitos de internação, UTI, CTI e UTI Pediátrica, além de acesso ao Bloco A1, cuja estrutura comporta nossa unidade de realização de exames, consultórios médicos e alguns centros especializados. </string>
 			<key>name</key>
 			<array>
 				<string>Recepcao Atrium 1</string>
@@ -364,6 +448,8 @@
 		</dict>
 		<key>9</key>
 		<dict>
+			<key>desc</key>
+			<string>O Day Clinic  é uma área destinada à internação por curto espaço de tempo, no qual o paciente recebe alta no mesmo dia em que foi realizado o procedimento cirúrgico</string>
 			<key>name</key>
 			<array>
 				<string>Apartamentos Day Clinic</string>
@@ -372,6 +458,8 @@
 		</dict>
 		<key>10</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Recepção</string>
@@ -380,6 +468,8 @@
 		</dict>
 		<key>14</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Escultura</string>
@@ -388,6 +478,8 @@
 		</dict>
 		<key>35</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Auto Serviço Kasher</string>
@@ -396,6 +488,8 @@
 		</dict>
 		<key>44</key>
 		<dict>
+			<key>desc</key>
+			<string>Área exclusiva para a realização de treinamentos, cursos, fóruns e outros eventos da área de Ensino Einstein.</string>
 			<key>name</key>
 			<array>
 				<string>CESAS</string>
@@ -405,6 +499,8 @@
 		</dict>
 		<key>78</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço de convivência exclusivo para o Corpo Clínico do Einstein que conta com restaurantes e áreas de descompressão.</string>
 			<key>name</key>
 			<array>
 				<string>Espaço Corpo Clínico</string>
@@ -413,6 +509,8 @@
 		</dict>
 		<key>87</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Sinagoga</string>
@@ -420,6 +518,8 @@
 		</dict>
 		<key>88</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço com capacidade para 180 pessoas, e uma área total de 230 m2 e pé-direito de 4 m, atende eventos de diversas categorias como simpósios, workshops, convenções, homenagens, entre outros</string>
 			<key>name</key>
 			<array>
 				<string>Auditório Kleinberger</string>
@@ -430,6 +530,8 @@
 		</dict>
 		<key>93</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Centro Administrativo</string>
@@ -437,6 +539,8 @@
 		</dict>
 		<key>94</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Recursos Humanos</string>
@@ -445,6 +549,8 @@
 		</dict>
 		<key>80</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Centro Cirurgico Ambulatorial</string>
@@ -454,6 +560,8 @@
 		</dict>
 		<key>22</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Centro Cirurgico Ambulatorial</string>
@@ -464,6 +572,8 @@
 		</dict>
 		<key>12</key>
 		<dict>
+			<key>desc</key>
+			<string>Um café gourmet que oferece sanduíches sofisticados (frio e quente),sopas, saladas, salgados, quiches, comida árabe, sushi, drinks quentes e gelados de café, além de bebidas não alcoólicas e doces.</string>
 			<key>name</key>
 			<array>
 				<string>Cafeteria V. Cafe</string>
@@ -473,6 +583,8 @@
 		</dict>
 		<key>23</key>
 		<dict>
+			<key>desc</key>
+			<string>Nossa CTI oferece condições para que os pais permaneçam junto à criança, de forma a assegurar o suporte emocional necessário à sua plena recuperação.</string>
 			<key>name</key>
 			<array>
 				<string>CTI Pediatrica</string>
@@ -483,6 +595,8 @@
 		</dict>
 		<key>62</key>
 		<dict>
+			<key>desc</key>
+			<string>Comércio de artigos médicos e ortopédicos e confecção de órteses e próteses. Mais uma facilidade do Einstein para você. Horário de funcionamento: segunda à sexta das 9 às 19h e sábado das 10 às 15h. Telefone: (11) 2151-2967 (ou ramal interno 72967)	</string>
 			<key>name</key>
 			<array>
 				<string>Med Service</string>
@@ -492,6 +606,8 @@
 		</dict>
 		<key>59</key>
 		<dict>
+			<key>desc</key>
+			<string>Flores e artigos para presentear, além de revistas, jornais, produtos de higiene, pijamas, chinelos e outros itens necessários durante a estadia no hospital.</string>
 			<key>name</key>
 			<array>
 				<string>Loja de Conveniencias</string>
@@ -503,6 +619,8 @@
 		</dict>
 		<key>25</key>
 		<dict>
+			<key>desc</key>
+			<string>     Apartamentos Geriatria  Quartos Geriatria Internacao GeriatriaProjetados para oferecer conforto e acolhimento, os quartos possuem barras de segurança em toda a sua extensão, piso capaz de amortecer o impacto em caso de quedas e banheiro e camas adaptados.</string>
 			<key>name</key>
 			<array>
 				<string>Internação Clínica Médica e Cirúrgica</string>
@@ -512,6 +630,8 @@
 		</dict>
 		<key>26</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaçosos, claros e arejados, têm persiana automática, cofre digital, TV a cabo e conexão wi-fi. Acompanhantes podem solicitar as refeições no Viena para serem servidas no quarto. </string>
 			<key>name</key>
 			<array>
 				<string>Apartamentos</string>
@@ -523,6 +643,8 @@
 		</dict>
 		<key>27</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaçosos, claros e arejados, têm persiana automática, cofre digital, TV a cabo e conexão wi-fi. Acompanhantes podem solicitar as refeições no Viena para serem servidas no quarto. </string>
 			<key>name</key>
 			<array>
 				<string>Apartamentos</string>
@@ -531,6 +653,8 @@
 		</dict>
 		<key>65</key>
 		<dict>
+			<key>desc</key>
+			<string>Neste espaço você encontra caixas dos bancos Itaú, Bradesco e Safra para realizar retirada de dinheiro e fazer pagamentos sem precisar sair do hospital.</string>
 			<key>name</key>
 			<array>
 				<string>Caixas Eletrônicos</string>
@@ -541,6 +665,8 @@
 		</dict>
 		<key>46</key>
 		<dict>
+			<key>desc</key>
+			<string>Um ambiente acolhedor e alegre para receber as crianças durante os procedimentos de radioterapia e quimioterapia. Brinquedos e videogame para entreter durante a espera.</string>
 			<key>name</key>
 			<array>
 				<string>Oncologia Ambulatorial Pediátrica</string>
@@ -549,6 +675,8 @@
 		</dict>
 		<key>47</key>
 		<dict>
+			<key>desc</key>
+			<string>Da prevenção ao tratamento de diversos tipos de câncer, o centro reúne recursos tecnológicos e serviços especializados com a excelência Einstein.</string>
 			<key>name</key>
 			<array>
 				<string>Ambulatório de Oncologia Adulto</string>
@@ -558,6 +686,8 @@
 		</dict>
 		<key>49</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Recepcao do Centro Integrado de Oncologia e Hematologia</string>
@@ -566,6 +696,8 @@
 		</dict>
 		<key>50</key>
 		<dict>
+			<key>desc</key>
+			<string>Consultórios planejados para oferecer ao paciente uma estrutura completa para atendimentos de baixa e alta complexidade.</string>
 			<key>name</key>
 			<array>
 				<string>Consultórios de Oncologia e Radioterapia</string>
@@ -575,6 +707,8 @@
 		</dict>
 		<key>63</key>
 		<dict>
+			<key>desc</key>
+			<string>Tratamentos capilares, faciais e corporais. Serviços de maquiagem, manicure, pedicure, podologia, depilação e venda de produtos. Também atende nos apartamentos.Horário: Segunda a sexta das 8 às 20h, sábado das 8 às 19h e feriados das 10 às 16h. Telefone: (11) 2151-2203 (ou ramal interno 72203)</string>
 			<key>name</key>
 			<array>
 				<string>Jacques Janine</string>
@@ -585,6 +719,8 @@
 		</dict>
 		<key>90</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Laboratorio do Movimento</string>
@@ -593,6 +729,8 @@
 		</dict>
 		<key>82</key>
 		<dict>
+			<key>desc</key>
+			<string>Salas amplas e privativas com banheiro exclusivo e televisão para que a mamãe e o acompanhante aguardem o momento do nascimento do bebê.</string>
 			<key>name</key>
 			<array>
 				<string>Pre Parto</string>
@@ -602,6 +740,8 @@
 		</dict>
 		<key>2</key>
 		<dict>
+			<key>desc</key>
+			<string>Agende seus exames clínicos e de imagem em nossa central ou pelo telefone 2151-1233. </string>
 			<key>name</key>
 			<array>
 				<string>Conforto Médico</string>
@@ -611,6 +751,8 @@
 		</dict>
 		<key>81</key>
 		<dict>
+			<key>desc</key>
+			<string>Um dos mais bem equipados e referência no país, podendo ser realizadas cirurgias obstétricas de qualquer nível de complexidade. </string>
 			<key>name</key>
 			<array>
 				<string>Centro Cirurgico Obstetrico</string>
@@ -618,6 +760,8 @@
 		</dict>
 		<key>58</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>name</key>
 			<array>
 				<string>Ressonancia Magnetica</string>
@@ -627,6 +771,8 @@
 		</dict>
 		<key>56</key>
 		<dict>
+			<key>desc</key>
+			<string>Uma estrutura completa e equipe de retaguarda de todas especialidades para atender casos de urgência e emergência durante 24 horas de forma ágil e segura</string>
 			<key>name</key>
 			<array>
 				<string>Recepcao da Unidade de Primeiro Atendimento</string>
@@ -638,6 +784,8 @@
 		</dict>
 		<key>33</key>
 		<dict>
+			<key>desc</key>
+			<string>O Centro de Intervenção Cardiovascular funciona 24 horas por dia, com equipes especializadas na realização de cateterismos e angioplastia coronária de urgência para tratamento de infarto agudo do miocárdio.</string>
 			<key>name</key>
 			<array>
 				<string>Intervenção Cardiovascular</string>
@@ -647,6 +795,8 @@
 		</dict>
 		<key>39</key>
 		<dict>
+			<key>desc</key>
+			<string>Suporte ao paciente e familiar, com informações sobre convênios e procedimentos, pagamentos, financiamentos, orçamentos, suporte para remoção médica e apoio a pacientes estrangeiros. </string>
 			<key>name</key>
 			<array>
 				<string>Centro de Atendimento Comercial</string>
@@ -656,6 +806,8 @@
 		</dict>
 		<key>32</key>
 		<dict>
+			<key>desc</key>
+			<string>Doar sangue é doar vida. Visite nosso Banco de Sangue e ajude muitas pessoas que precisam da sua boa ação para sobreviver. </string>
 			<key>name</key>
 			<array>
 				<string>Banco de Sangue</string>
@@ -664,6 +816,8 @@
 		</dict>
 		<key>30</key>
 		<dict>
+			<key>desc</key>
+			<string>A unidade oferece 14 leitos destinados a pacientes que passaram por transplante de medula óssea, todos com filtro HEPA, garantindo a purificação do ar e a proteção contra transmissão de fungos e bactérias.</string>
 			<key>name</key>
 			<array>
 				<string>Internação Oncologia e TMO</string>
@@ -672,6 +826,8 @@
 		</dict>
 		<key>34</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaçosos, claros e arejados, oferecem segurança, conforto e acolhimento aos pacientes em tratamento neurológico. Equipados com persiana automática, cofre digital, TV a cabo e conexão wi-fi. </string>
 			<key>name</key>
 			<array>
 				<string>Internação Clínica Médica e Cirúrgica e Semi-Intensiva Neurológica</string>
@@ -681,6 +837,8 @@
 		</dict>
 		<key>109</key>
 		<dict>
+			<key>desc</key>
+			<string>Com capacidade para 500 pessoas, oferece infraestrutura completa com conforto e sofisticação para a realização de eventos corporativos, congressos, simpósios, jornadas, lançamentos, palestras, apresentações e exposições. 	</string>
 			<key>name</key>
 			<array>
 				<string>Auditorio Moise Safra</string>
@@ -688,6 +846,8 @@
 		</dict>
 		<key>38</key>
 		<dict>
+			<key>desc</key>
+			<string>Uma equipe à disposição do paciente estrangeiro, com suporte para contato e relacionamento com embaixadas e consulados, e atendimento para convênios internacionais. 							</string>
 			<key>name</key>
 			<array>
 				<string>Atendimento ao Paciente internacional</string>
@@ -699,6 +859,8 @@
 	<dict>
 		<key>991</key>
 		<dict>
+			<key>desc</key>
+			<string>Buffet de saladas e pratos quentes, incluindo risotos, massas e grelhados. Pratos à la carte e sanduíches. No período da noite também oferece rodízio de pizzas.</string>
 			<key>name</key>
 			<string>Restaurantes/Café</string>
 			<key>categoryID</key>
@@ -710,6 +872,8 @@
 		</dict>
 		<key>107</key>
 		<dict>
+			<key>desc</key>
+			<string>Opção ideal para um café rápido, os quiosques do Viena Café oferecem os tradicionais doces e salgados Viena, Dentre eles os saborosos pães de queijo e a famosa Coxa Creme. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -721,6 +885,8 @@
 		</dict>
 		<key>85</key>
 		<dict>
+			<key>desc</key>
+			<string>Opção ideal para um café rápido, os quiosques do Viena Café oferecem os tradicionais doces e salgados Viena, Dentre eles os saborosos pães de queijo e a famosa Coxa Creme. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -732,6 +898,8 @@
 		</dict>
 		<key>12</key>
 		<dict>
+			<key>desc</key>
+			<string>Um café gourmet que oferece sanduíches sofisticados (frio e quente),sopas, saladas, salgados, quiches, comida árabe, sushi, drinks quentes e gelados de café, além de bebidas não alcoólicas e doces.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -743,6 +911,8 @@
 		</dict>
 		<key>37</key>
 		<dict>
+			<key>desc</key>
+			<string>Buffet de saladas e pratos quentes, incluindo risotos, massas e grelhados. pratos à la carte e sanduíches. No período da noite também oferece rodízio de pizzas.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -754,6 +924,8 @@
 		</dict>
 		<key>60</key>
 		<dict>
+			<key>desc</key>
+			<string>Loja de chocolates, balas, confeitos finos, bebidas geladas, sorvetes, cafés e seus derivados.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -765,6 +937,8 @@
 		</dict>
 		<key>108</key>
 		<dict>
+			<key>desc</key>
+			<string>Restaurante no estilo self service em que todos os alimentos à venda são preparados de acordo com os preceitos da &quot;kashrut&quot;, a dieta judaica.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -776,6 +950,8 @@
 		</dict>
 		<key>992</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -787,6 +963,8 @@
 		</dict>
 		<key>63</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -798,6 +976,8 @@
 		</dict>
 		<key>993</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço reservado para clientes dos convênios Amil, Sul América, Omint, Bradesco e QualiCorp. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -809,6 +989,8 @@
 		</dict>
 		<key>43</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -820,6 +1002,8 @@
 		</dict>
 		<key>61</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>s</string>
 			<key>name</key>
@@ -831,6 +1015,8 @@
 		</dict>
 		<key>62</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -842,6 +1028,8 @@
 		</dict>
 		<key>59</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -853,6 +1041,8 @@
 		</dict>
 		<key>96</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -864,6 +1054,8 @@
 		</dict>
 		<key>13</key>
 		<dict>
+			<key>desc</key>
+			<string>Medicamentos, produtos de beleza, higiene e cuidados pessoais para pacientes dos consultórios, internados, acompanhantes e familiares				</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -875,6 +1067,8 @@
 		</dict>
 		<key>994</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -886,6 +1080,8 @@
 		</dict>
 		<key>65</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -897,6 +1093,8 @@
 		</dict>
 		<key>15</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaço dedicado ao atendimento de clientes do Banco Safra. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -908,6 +1106,8 @@
 		</dict>
 		<key>76</key>
 		<dict>
+			<key>desc</key>
+			<string>Primeira no Brasil a receber a certificação de qualidade pela Joint Commission International, possui toda infraestrutura e uma equipe preparada para o atendimento de recém-nascidos de alto risco ou que necessitam de cuidados especiais.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -919,6 +1119,8 @@
 		</dict>
 		<key>22</key>
 		<dict>
+			<key>desc</key>
+			<string>Uma estrutura ampla e moderna e segura para a realização de procedimentos de pequeno, médio e grande porte, inclusive em situações de emergência, permitindo de cirurgias de alta complexidade, garantindo qualidade e segurança ao paciente.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -930,6 +1132,8 @@
 		</dict>
 		<key>332</key>
 		<dict>
+			<key>desc</key>
+			<string>Apartamentos climatizados equipados com cama hospitalar, um sofá-cama para acompanhante, frigobar, banheiro confortável, cadeira de amamentação, espaço para o berço do bebê, além de TV a cabo, internet wi-fi e cofre digital.  </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -941,6 +1145,8 @@
 		</dict>
 		<key>73</key>
 		<dict>
+			<key>desc</key>
+			<string>Apartamentos climatizados equipados com cama hospitalar, um sofá-cama para acompanhante, frigobar, banheiro confortável, cadeira de amamentação, espaço para o berço do bebê, além de TV a cabo, internet wi-fi e cofre digital.  </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -952,6 +1158,8 @@
 		</dict>
 		<key>74</key>
 		<dict>
+			<key>desc</key>
+			<string>Apartamentos climatizados equipados com cama hospitalar, um sofá-cama para acompanhante, frigobar, banheiro confortável, cadeira de amamentação, espaço para o berço do bebê, além de TV a cabo, internet wi-fi e cofre digital.  </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -963,6 +1171,8 @@
 		</dict>
 		<key>75</key>
 		<dict>
+			<key>desc</key>
+			<string>Apartamentos climatizados equipados com cama hospitalar, um sofá-cama para acompanhante, frigobar, banheiro confortável, cadeira de amamentação, espaço para o berço do bebê, além de TV a cabo, internet wi-fi e cofre digital.  </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -974,6 +1184,8 @@
 		</dict>
 		<key>80</key>
 		<dict>
+			<key>desc</key>
+			<string>Com equipamentos de ponta e robôs cirurgiões, espaço funciona 24 horas e suporta todos os tipos de procedimentos, incluindo situações de emergência e cirurgias de alta complexidade.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -985,6 +1197,8 @@
 		</dict>
 		<key>82</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -996,6 +1210,8 @@
 		</dict>
 		<key>81</key>
 		<dict>
+			<key>desc</key>
+			<string>O Centro Obstétrico do Einstein é um dos mais bem equipados e referência no país, podendo ser realizadas cirurgias obstétricas de qualquer nível de complexidade.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1007,6 +1223,8 @@
 		</dict>
 		<key>86</key>
 		<dict>
+			<key>desc</key>
+			<string>Estrutura completa e uma equipe multidisciplinar para diferentes tratamentos de reabilitação – motora, auditiva, cardiaca, neurológica, ortopédica, pediátrica, pulmonar e visual. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1018,6 +1236,8 @@
 		</dict>
 		<key>92</key>
 		<dict>
+			<key>desc</key>
+			<string>Uma unidade criada especialmente para oferecer assistência médica integrada e especializada para crianças e adolescentes com doenças crônicas, complexas ou de difícil controle, sempre com o suporte do medico pediatra da criança. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1029,6 +1249,8 @@
 		</dict>
 		<key>45</key>
 		<dict>
+			<key>desc</key>
+			<string>A simulação realística é um método de treinamento inovador. Com tecnologia de ponta e robôs de última geração, reproduz um hospital virtual para preparar profissionais da área da saúde</string>
 			<key>isFeatured</key>
 			<string>s</string>
 			<key>name</key>
@@ -1040,6 +1262,8 @@
 		</dict>
 		<key>995</key>
 		<dict>
+			<key>desc</key>
+			<string>Um dos centros mais avançados em diagnóstico e tratamento do câncer da América Latina. Alta tecnologia e uma equipe multiprofissional a serviço do paciente com câncer, excelência em técnicas de diagnóstico, tratamento e reabilitação. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1051,6 +1275,8 @@
 		</dict>
 		<key>46</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1062,6 +1288,8 @@
 		</dict>
 		<key>47</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1073,6 +1301,8 @@
 		</dict>
 		<key>49</key>
 		<dict>
+			<key>desc</key>
+			<string>Referência no tratamento e pesquisa em câncer, nosso Centro de Oncologia e Hematologia conta com profissionais capacitados e atendimento humanizado.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1084,6 +1314,8 @@
 		</dict>
 		<key>50</key>
 		<dict>
+			<key>desc</key>
+			<string>A unidade de Radioterapia dispõe de consultórios médicos, uma sala cirúrgica, três aceleradores lineares e um simulador e um atendimento especializado por uma equipe multidisciplinar composta por cinco médicos, físicos, biomédicos e técnicos de radioterapia. 	</string>
 			<key>isFeatured</key>
 			<string>s</string>
 			<key>name</key>
@@ -1095,6 +1327,8 @@
 		</dict>
 		<key>53</key>
 		<dict>
+			<key>desc</key>
+			<string>Procedimentos como embolizações, angioplastias e quimioembolizações com o objetivo de tratar doenças graves de forma menos invasiva do que uma cirurgia convencional. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1106,6 +1340,8 @@
 		</dict>
 		<key>55</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1117,6 +1353,8 @@
 		</dict>
 		<key>57</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1128,6 +1366,8 @@
 		</dict>
 		<key>58</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1139,10 +1379,12 @@
 		</dict>
 		<key>90</key>
 		<dict>
+			<key>desc</key>
+			<string>O LEME é um laboratório com equipamentos de última geração que ajuda na decisão sobre o melhor tratamento para pacientes com problemas complexos de marcha.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
-			<string>Laboratório do Movimento</string>
+			<string>Laboratório do Movimento - LEME</string>
 			<key>categoryID</key>
 			<string>111</string>
 			<key>hasChild</key>
@@ -1150,6 +1392,8 @@
 		</dict>
 		<key>17</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1161,6 +1405,8 @@
 		</dict>
 		<key>18</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1172,6 +1418,8 @@
 		</dict>
 		<key>20</key>
 		<dict>
+			<key>desc</key>
+			<string>No Centro Oftalmológico são realizados os procedimentos para correção dos erros refrativos como: miopia, hipermetropia e astigmatismo. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1183,6 +1431,8 @@
 		</dict>
 		<key>21</key>
 		<dict>
+			<key>desc</key>
+			<string>Uma unidade dedicada à realização de procedimentos de endoscopia. Tecnologia e profissionais capacitados para um diagnóstico preciso. 	</string>
 			<key>isFeatured</key>
 			<string>s</string>
 			<key>name</key>
@@ -1194,6 +1444,8 @@
 		</dict>
 		<key>23</key>
 		<dict>
+			<key>desc</key>
+			<string>Uma estrutura completa e moderna para o tratamento de doenças de alta complexidade. Na UTI Pediátrica os pais permaneçem junto à criança, assegurando o suporte emocional necessário à recuperação e reduzindo os traumas comuns a esse tipo de procedimento</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1205,6 +1457,8 @@
 		</dict>
 		<key>29</key>
 		<dict>
+			<key>desc</key>
+			<string>A Unidade Semi-Intensiva comporta pacientes com casos de menor gravidade ou pacientes que já ultrapassaram a fase mais aguda da doença e que não necessitam de tratamento intensivo ou vigilância ininterrupta.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1216,6 +1470,8 @@
 		</dict>
 		<key>31</key>
 		<dict>
+			<key>desc</key>
+			<string>Um ambiente humanizado e seguro, são 40 leitos com infraestrutura completa e equipe multidisciplinar para tratamentos de alta complexidade, além de um sistema completo de vigilância integral para orientar o tratamento e detectar de imediato complicações indesejadas.</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1227,6 +1483,8 @@
 		</dict>
 		<key>996</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaços planejados para oferecer ao paciente uma estrutura completa para atendimentos de baixa e alta complexidade.	</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1238,6 +1496,8 @@
 		</dict>
 		<key>1</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaços planejados para oferecer ao paciente uma estrutura completa para atendimentos de baixa e alta complexidade. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1249,6 +1509,8 @@
 		</dict>
 		<key>3</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaços planejados para oferecer ao paciente uma estrutura completa para atendimentos de baixa e alta complexidade.	</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1260,6 +1522,8 @@
 		</dict>
 		<key>4</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaços planejados para oferecer ao paciente uma estrutura completa para atendimentos de baixa e alta complexidade. 	</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1271,6 +1535,8 @@
 		</dict>
 		<key>5</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaços planejados para oferecer ao paciente uma estrutura completa para atendimentos de baixa e alta complexidade. </string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1282,6 +1548,8 @@
 		</dict>
 		<key>6</key>
 		<dict>
+			<key>desc</key>
+			<string>Espaços planejados para oferecer ao paciente uma estrutura completa para atendimentos de baixa e alta complexidade. 		</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1293,6 +1561,8 @@
 		</dict>
 		<key>8</key>
 		<dict>
+			<key>desc</key>
+			<string>A imunização auxilia na prevenção de diversas doenças, em todas fases da vida. Nosso centro disponibiliza as principais vacinas para crianças, adolescentes, adultos e idosos.	</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1304,6 +1574,8 @@
 		</dict>
 		<key>330</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1315,6 +1587,8 @@
 		</dict>
 		<key>331</key>
 		<dict>
+			<key>desc</key>
+			<string>...</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>

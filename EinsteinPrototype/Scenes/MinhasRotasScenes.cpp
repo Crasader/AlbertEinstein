@@ -20,11 +20,19 @@ MinhasRotasScene::MinhasRotasScene()
 void MinhasRotasScene::setUpMenu()
 {
     CCSize size = CCDirector::sharedDirector()->getWinSize();
-    size.height= 0.79*CCDirector::sharedDirector()->getWinSize().height;
+    if (size.height > 480) {
+        size.height= 373;
+    }
+    else{
+        size.height= 285;
+    }
+
+    
+   // size.height= 0.79*CCDirector::sharedDirector()->getWinSize().height;
     size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;
     initListView(size, this);
         pList->BackgroundID = 2;
-    pList->setPosition(ccp(20,29));
+    pList->setPosition(ccp(20,45));
 }
 
 void MinhasRotasScene::LoadListView()

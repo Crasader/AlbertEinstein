@@ -677,7 +677,7 @@
                   symbolName = "MapMenu::addMenu()"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapMenu.cpp"
-                  timestampString = "416523515.154644"
+                  timestampString = "416753668.7025"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "98"
@@ -691,7 +691,7 @@
                   symbolName = "MapMenu::addMenu()"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MapMenu.cpp"
-                  timestampString = "416523517.339129"
+                  timestampString = "416753670.87819"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "98"
@@ -1002,6 +1002,22 @@
             startingLineNumber = "166"
             endingLineNumber = "166"
             landmarkName = "IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data, float space)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/MinhasRotasScenes.cpp"
+            timestampString = "416753860.491571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "MinhasRotasScene::setUpMenu()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

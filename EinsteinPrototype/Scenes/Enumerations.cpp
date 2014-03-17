@@ -163,12 +163,13 @@ void IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, co
     cell->setOpacity(0);
     cell->setContentSize(CCSizeMake(594, 60));
     cell->setSelectionColor(ccc4(82,204, 204, 255));
+    data->cell = cell;
     
     CCLabelTTF *labelCount;
     labelCount = CCLabelTTF::create(currentData.text, "Lucida Grande", 15);
     if( plistMenuCurrent[data->nRow].featured)
     {
-    labelCount->setPosition(ccp(25+space,(cell->getContentSize().height * 0)+ cell->getContentSize().height / 2));
+    labelCount->setPosition(ccp(30+space,(cell->getContentSize().height * 0)+ cell->getContentSize().height / 2));
     }
     else
     {
@@ -208,18 +209,21 @@ void IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, co
         if( plistMenuCurrent[data->nRow].featured)
         {
             //Seta indicando que há filhos para esse item
-            const char *pszFileName = plistMenuCurrent[data->nRow].img;
-            
-            // CCString* pRet = new CCString(pszFileName);
-            std::string pathKey = pszFileName;
-            if (pszFileName != NULL)
-            {
-                CCSprite* icon=    CCSprite::create(pszFileName);
-                icon->setAnchorPoint(ccp(0,0));
-                icon->setScale(0.6);
-                icon->setPosition(ccp(0,26));
-                cell->addChild(icon, 0,404021);
+            const char *pszFileName = NULL;
+            pszFileName = plistMenuCurrent[data->nRow].img;
+            if (pszFileName != NULL) {
+                std::string pathKey = pszFileName;
+                if (pszFileName != NULL)
+                {
+                    CCSprite* icon=    CCSprite::create(pszFileName);
+                    icon->setAnchorPoint(ccp(0,0));
+                    icon->setScale(0.6);
+                    icon->setPosition(ccp(0,26));
+                    cell->addChild(icon, 0,404021);
+                }
+
             }
+            // CCString* pRet = new CCString(pszFileName);
             
         }
         }
@@ -692,32 +696,7 @@ void IFixedMenu::BuildCategoryWayPointState(int bKey)
         }
     }
  
-  //  std::sort(waypointStr.begin(), waypointStr.end(),compareByNum());
 
-    
-    
-// 	std::sort(featured.begin(), featured.end(),compareByBool());
-//	for(int i = 0; i < featured.size(); i++){
-//		std::string itemName = waypointStr.at(i);
-//		int itemID;
-//		int itemCat;
-//		//std::string itemFeat;
-//		std::string itemParentName;
-//		//mysort
-//		for(int j = 0; j < waypointNormalOrder.size(); j++){
-//			std::string bNameNormalOrder = waypointNormalOrder.at(j);
-//           // std::string anotherFeat = featured.at(j);
-//			if(!itemName.compare(bNameNormalOrder)){
-//				itemID = wID.at(j);
-//				itemCat = category.at(j);
-//				itemParentName = parentStr.at(j);
-//				//itemFeat = featured.at(j);
-//				insertItemListView(itemID,itemParentName.c_str(),itemName.c_str(),itemCat);
-//				break;
-//			}
-//            
-//		}
-//	}
     std::sort(waypoints.begin(), waypoints.end(), SortPlaces());
     for(int i = 0; i < waypoints.size(); i++){
         Place place = waypoints.at(i);
@@ -793,6 +772,8 @@ void IFixedMenu::insertItemListView( int tagValue, const char* datatext)
     data.hasChild =  false;
     data.keyParent = 0;
     
+    data.img =NULL;
+    data.featured = false;
     plistMenuCurrent.push_back(data);
 }
 
@@ -804,6 +785,8 @@ void IFixedMenu::insertItemListView( int tagValue, const char* isChild, const ch
     data.key = tagValue;
     data.text = strdup(datatext);
     data.hasChild =(strcmp(isChild, "s") == 0);
+    data.img =NULL;
+    data.featured = false;
     plistMenuCurrent.push_back(data);
 }
 
@@ -818,6 +801,8 @@ void IFixedMenu::insertItemListView( int tagValue, const char* isChild, const ch
     
     data.hasChild =(strcmp(isChild, "s") == 0);
     data.keyParent =keyParent;
+    data.img =NULL;
+    data.featured = false;
     plistMenuCurrent.push_back(data);
 }
 
@@ -834,7 +819,7 @@ void IFixedMenu::insertItemListView( int tagValue, const char* isChild, const ch
     data.featured = false;
     if (strcmp(featured, "s") == 0) {
         data.featured = true;
-        data.img = "icon_featured.png";
+        data.img = "icon_featured2.png";
     }
     plistMenuCurrent.push_back(data);
 }

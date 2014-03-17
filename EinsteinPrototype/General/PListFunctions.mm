@@ -192,10 +192,24 @@ std::vector<KeyWordSection> PListFunctions::readKeyWordSection( )
             NSDictionary* oArrChilds = [dataFromPlist valueForKey:aKey];
             for(NSString *aKey2 in oArrChilds)
             {
-                NSArray* value = [oArrChilds valueForKey:aKey2];
-                for(NSString* i in value)
-                    keyWord.keywords.push_back([i UTF8String]);
+                id value = [oArrChilds valueForKey:aKey2];
+                if ([value isKindOfClass:[NSArray class]])
+                {
+                    NSArray * dvalue = value;
+                    for(NSString* i in dvalue)
+                    {
+                        keyWord.keywords.push_back([i UTF8String]);
+                    }
+                }
+                //desc
+//                else
+//                {
+//                    NSString * dvalue = value;
+//                    keyWord.keywords.push_back([dvalue UTF8String]);
+//            }
             }
+
+    
         lstVector.push_back(keyWord);
     }
    return lstVector;

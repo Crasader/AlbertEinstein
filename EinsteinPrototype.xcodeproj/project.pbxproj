@@ -666,6 +666,8 @@
 		AC0A0C7D18A7250000FA8B62 /* button_entering_press.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0A0C7B18A7250000FA8B62 /* button_entering_press.png */; };
 		AC0A0C7E18A7250000FA8B62 /* button_outing_press.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0A0C7C18A7250000FA8B62 /* button_outing_press.png */; };
 		AC0A0C8018A7FA4F00FA8B62 /* bg_parking_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0A0C7F18A7FA4F00FA8B62 /* bg_parking_4inch.png */; };
+		AC394A6718D9C997001076EA /* IOSHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC394A6618D9C997001076EA /* IOSHelper.mm */; };
+		AC394A6A18DA06E4001076EA /* NativeInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC394A6918DA06E4001076EA /* NativeInterface.cpp */; };
 		AC4AF9F81876E38D00B4F344 /* ModeloWayPointFoto.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AF9F71876E38D00B4F344 /* ModeloWayPointFoto.png */; };
 		AC4AF9FA1876EA9900B4F344 /* tit_lugares.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AF9F91876EA9900B4F344 /* tit_lugares.png */; };
 		AC4AFA02187714DF00B4F344 /* subtit_unidademorumbi.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AFA01187714DF00B4F344 /* subtit_unidademorumbi.png */; };
@@ -1599,6 +1601,10 @@
 		AC0A0C7B18A7250000FA8B62 /* button_entering_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_entering_press.png; sourceTree = "<group>"; };
 		AC0A0C7C18A7250000FA8B62 /* button_outing_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_outing_press.png; sourceTree = "<group>"; };
 		AC0A0C7F18A7FA4F00FA8B62 /* bg_parking_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_parking_4inch.png; sourceTree = "<group>"; };
+		AC394A6518D9C932001076EA /* IOSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSHelper.h; sourceTree = "<group>"; };
+		AC394A6618D9C997001076EA /* IOSHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IOSHelper.mm; sourceTree = "<group>"; };
+		AC394A6818DA06C9001076EA /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
+		AC394A6918DA06E4001076EA /* NativeInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeInterface.cpp; sourceTree = "<group>"; };
 		AC4AF9F71876E38D00B4F344 /* ModeloWayPointFoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ModeloWayPointFoto.png; sourceTree = "<group>"; };
 		AC4AF9F91876EA9900B4F344 /* tit_lugares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tit_lugares.png; sourceTree = "<group>"; };
 		AC4AFA01187714DF00B4F344 /* subtit_unidademorumbi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtit_unidademorumbi.png; sourceTree = "<group>"; };
@@ -3095,9 +3101,21 @@
 			path = curl;
 			sourceTree = "<group>";
 		};
+		AC394A6418D9C905001076EA /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				AC394A6518D9C932001076EA /* IOSHelper.h */,
+				AC394A6618D9C997001076EA /* IOSHelper.mm */,
+				AC394A6818DA06C9001076EA /* NativeInterface.h */,
+				AC394A6918DA06E4001076EA /* NativeInterface.cpp */,
+			);
+			name = helper;
+			sourceTree = "<group>";
+		};
 		ACEF55B2180844E600CFBB7E /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				AC394A6418D9C905001076EA /* helper */,
 				ACEF55B3180844E600CFBB7E /* AppController.h */,
 				ACEF55B4180844E600CFBB7E /* AppController.mm */,
 				ACEF55B5180844E600CFBB7E /* main.m */,
@@ -3666,6 +3684,7 @@
 				7881605315DBE99A00D64777 /* CCString.cpp in Sources */,
 				7881605615DBE99A00D64777 /* CCZone.cpp in Sources */,
 				7881605915DBE99A00D64777 /* cocos2d.cpp in Sources */,
+				AC394A6718D9C997001076EA /* IOSHelper.mm in Sources */,
 				7881605C15DBE99A00D64777 /* CCGrabber.cpp in Sources */,
 				7881605F15DBE99A00D64777 /* CCGrid.cpp in Sources */,
 				7881606415DBE99A00D64777 /* CCBFileLoader.cpp in Sources */,
@@ -3815,6 +3834,7 @@
 				5D7FB43D16C566480017B36E /* Enumerations.cpp in Sources */,
 				5D7FB44316C585AC0017B36E /* WayPointViewScene.cpp in Sources */,
 				5DE3401016CD28AD00C108ED /* AlertViewScene.cpp in Sources */,
+				AC394A6A18DA06E4001076EA /* NativeInterface.cpp in Sources */,
 				5DE3405716CEB04100C108ED /* Building.cpp in Sources */,
 				5DE3405816CEB04100C108ED /* Elevator.cpp in Sources */,
 				5DE3405916CEB04100C108ED /* Escalator.cpp in Sources */,

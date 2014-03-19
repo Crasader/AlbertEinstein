@@ -13,6 +13,9 @@
 #include "enumerations.h"
 #include "CCTextFieldTTF.h"
 #include "TraceRouteScene.h"
+
+
+
 class SearchScene : public IFixedMenu, public cocos2d::CCTextFieldDelegate, public cocos2d::extension::CCListViewDelegate 
 {
 private:
@@ -24,8 +27,10 @@ private:
     std::string  currentData ;
     
 public:
+    
     SearchScene();
     ~SearchScene();
+    void pesquisar();
     void btnCleanTextBox(CCObject *sender);
     virtual bool onDraw(cocos2d::CCTextFieldTTF * pSender);
     virtual bool onTextFieldInsertText(cocos2d::CCTextFieldTTF * sender, const char * text, int nLen);
@@ -36,7 +41,9 @@ public:
     virtual void CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data);
     virtual void CCListView_didClickCellAtRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data);
     virtual void CCListView_didScrollToRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data);
+  
     void  btnBusca(CCObject *sender);
+    void btnOkCallBack(CCObject *sender);
     
     void OnBack();
    };

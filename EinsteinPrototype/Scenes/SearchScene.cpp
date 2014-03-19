@@ -7,6 +7,9 @@
 
 #include "SearchScene.h"
 #include "LayerWebView.h"
+#include "NativeInterface.h"
+
+
 
 using namespace cocos2d;
 
@@ -123,7 +126,8 @@ SearchScene::SearchScene()
 
     
       this->addChild(mnBusca,0);
-      btnBusca(0);
+    _txtBusca->attachWithIME();
+      //pesquisar();
 }
 
 bool SearchScene::onDraw(CCTextFieldTTF * pSender)
@@ -142,13 +146,28 @@ bool SearchScene::onDraw(CCTextFieldTTF * pSender)
     return false;
 }
 
+
 void SearchScene::btnBusca(CCObject *sender)
 {
     currentData = ((CCTextFieldTTF*)__pKeyboardNotificationLayer->__pTrackNode)->getContentText();
+    
+    if (currentData.size() < 3) {
+        NativeInterface::nativeMessage("Desculpe","Você precisa incluir ao menos 3 letras na pesquisa!");
+        return;
+    }
+    pesquisar();
+
+}
+
+void SearchScene::pesquisar()
+
+{
+    currentData = ((CCTextFieldTTF*)__pKeyboardNotificationLayer->__pTrackNode)->getContentText();
+    
 
     CCSize size =  CCDirector::sharedDirector()->getWinSize();
     if (size.height > 480) {
-         size.height = size.height -260;
+        size.height = size.height -260;
     }
     else
     {
@@ -157,7 +176,7 @@ void SearchScene::btnBusca(CCObject *sender)
     
     
     //size.width = 0.75*size.width;
-     size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;
+    size.width = 0.90*CCDirector::sharedDirector()->getWinSize().width;
     
     
     if(this->getChildByTag(Global::TAG_Child_Layer)!=NULL)
@@ -167,7 +186,12 @@ void SearchScene::btnBusca(CCObject *sender)
     }
     
     SearchItem(((CCTextFieldTTF*)__pKeyboardNotificationLayer->__pTrackNode)->getContentText());
-   
+    if (this->plistMenuCurrent.size()>30) {
+        // AlertViewScene::showMessageSearch(this,menu_selector(SearchScene::btnOkCallBack));
+        // AlertViewScene::showMessageSearch(this, NULL);
+        NativeInterface::nativeMessage("Desculpe","A busca retornou muitos resultados tente incluir uma palavra maior!");
+        return;
+    }
     //Reinicializa os items (ListView ) com novos dados
     this->initListView(size, this);
     
@@ -177,12 +201,32 @@ void SearchScene::btnBusca(CCObject *sender)
 
 void SearchScene::CCListView_numberOfCells(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)
 {
+    if (this->plistMenuCurrent.size()>30) {
+       // AlertViewScene::showMessageSearch(this,menu_selector(SearchScene::btnOkCallBack));
+       // AlertViewScene::showMessageSearch(this, NULL);
+      //  NativeInterface::nativeMessage("Desculpe","A busca retornou muitos resultados tente incluir uma palavra maior!");
+        data->nNumberOfRows = 0;
+    }
+    else
+    {
+    
     data->nNumberOfRows = this->plistMenuCurrent.size();
+    }
+}
+
+
+void SearchScene::btnOkCallBack(CCObject *sender){
+    
+    //Chamada para redirectionar usario para tela de rota
+    //Um bug nao permite trocar a cena diretamente de um ccmenu, por isso fai criado a varia isChangeToRoute pra controlar isso
+   
+  
 }
 
 void SearchScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)
 {
     //Monta a linha com o padrao default
+     CCLOG("cocos2d: goingto:%d",data->nRow);
     setDefaultListView(listView,data,0);
 }
 
@@ -199,7 +243,7 @@ void SearchScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView *l
 
 void SearchScene::CCListView_didScrollToRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)
 {
-    
+      CCLOGINFO("cocos2d: scrolling");
 }
 
 SearchScene::~SearchScene()

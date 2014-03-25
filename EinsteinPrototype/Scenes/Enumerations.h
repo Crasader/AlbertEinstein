@@ -163,6 +163,7 @@ public:
     void createMenuItemLabel(cocos2d::extension::CCListViewCell* cell, int tag, const  char* Text,const cocos2d::ccColor3B& color3, float posX, float posY,cocos2d::SEL_MenuHandler menuCallback, CCNode* parent);
     void ChangeTitle(const char* title);
     void ChangeTitle(int waypointID);
+    float getBestSizeFotTitle(const char *title, int lastSize);
  
     void ChangeTitle(HomeMenuState menu);
     void addButtonTop();

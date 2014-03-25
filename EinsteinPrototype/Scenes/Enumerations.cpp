@@ -380,25 +380,59 @@ void IFixedMenu::createMenuItemLabel(cocos2d::extension::CCListViewCell* cell, i
 }
 
  
+float IFixedMenu::getBestSizeFotTitle(const char *title, int lastSize)
+{
+    
+    CCLabelTTF *labelTitle;
+    labelTitle = CCLabelTTF::create(title, "LucidaGrandeBold", lastSize);
+    CCRect t = labelTitle->getTextureRect();
+    if (t.size.width < 160) {
+        return lastSize;
+    }
+    else
+    {
+        if (lastSize > 11) {
+            return getBestSizeFotTitle(title, lastSize-1);
+        }
+        else
+        {
+            return 10;
+        }
+        
+    }
+}
 
 //Altera o titulo no topo até 24 caracteres
 void IFixedMenu::ChangeTitle(int _waypointID)
 {
     std::string name =  LoadWayPointName(_waypointID);
-
-    if( name.length() > 22)
+    
+    int fontsize = getBestSizeFotTitle(name.c_str(), 15);
+    if (fontsize<= 10) {
         ChangeTitle((name.substr(0,20)+ "...").c_str());
+    }
     else
+    {
         ChangeTitle(name.c_str());
+    }
+    
+//    if( name.length() > 22)
+//        ChangeTitle((name.substr(0,20)+ "...").c_str());
+//    else
+  //     ChangeTitle(name.c_str());
 }
 
 
 //Altera o titulo no topo
 void IFixedMenu::ChangeTitle(const char *title)
 {
+    int fontsize = getBestSizeFotTitle(title, 15);
+    
      CCLabelTTF *labelTitle;
-     labelTitle = CCLabelTTF::create(title, "LucidaGrandeBold", 15);
-     labelTitle->setPosition(ccp(80,45));
+     labelTitle = CCLabelTTF::create(title, "LucidaGrandeBold", fontsize);
+     CCRect t = labelTitle->getTextureRect();
+    int leftPos = 80 + (160 - t.size.width)/2;
+     labelTitle->setPosition(ccp(leftPos,45));
      labelTitle->setAnchorPoint(ccp(0,0.5));
      labelTitle->setColor(ccc3(255, 255, 255));
     

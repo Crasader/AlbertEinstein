@@ -88,6 +88,13 @@ void AlertViewScene::showMessageRota(CCNode* sender, SEL_MenuHandler callbackFun
 
 void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callbackFunction  ,int wayPoint)
 {
+    int basePosition = 50;
+    
+    float heigth = CCDirector::sharedDirector()->getWinSize().height;
+    if (heigth >480) {
+        basePosition = 100;//4inch
+    }
+    
     if( AlertViewScene::isActive ==  true)
         return;
     
@@ -104,7 +111,7 @@ void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callback
     CCSprite *sprBackground = CCSprite::create("popup.png");
     sprBackground->setAnchorPoint(ccp(0,0));
     sprBackground->setScale(1);
-    sprBackground->setPosition(ccp(25,100));
+    sprBackground->setPosition(ccp( 25,basePosition+100));
     node->addChild(sprBackground);
 
     //Close Button of frame
@@ -112,12 +119,12 @@ void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callback
     CCSprite *btnClosePress = CCSprite::create("fechar_press.png");
 
     CCSprite *Icone = CCSprite::create("icone_estacionamento.png");
-    Icone->setPosition(ccp(45,225));
+    Icone->setPosition(ccp(45,basePosition+225));
     node->addChild(Icone);
     
     CCMenuItemSprite *itembtnClose = CCMenuItemSprite::create(btnClose, btnClosePress, node, callbackFunction);
 	itembtnClose->setAnchorPoint(ccp(0, 0));
-	itembtnClose->setPosition(ccp(280,303));
+	itembtnClose->setPosition(ccp(280,basePosition+303));
     
     //Button Rota para o local
     CCSprite *btnSelect = CCSprite::create("ok_btn.png");
@@ -125,7 +132,7 @@ void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callback
     
     CCMenuItemSprite *itembtnRota = CCMenuItemSprite::create( btnSelect,btnUnselect, node,callbackFunction);
 	itembtnRota->setAnchorPoint(ccp(0, 0));
-	itembtnRota->setPosition(ccp(115,150));
+	itembtnRota->setPosition(ccp(115,basePosition+150));
     //Button Rota para o local
     CCMenu* options = CCMenu::create();
     options->addChild(itembtnClose,0,44);
@@ -136,7 +143,7 @@ void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callback
     //Title of Alert
     CCLabelTTF *labelTitle;
     labelTitle = CCLabelTTF::create("Alerta", "LucidaGrandeBold", 16);
-    labelTitle->setPosition(ccp(35, 260));
+    labelTitle->setPosition(ccp(35, basePosition+260));
     labelTitle->setAnchorPoint(ccp(0,0));
     labelTitle->setColor(ccc3(55, 55, 55));
     node->addChild(labelTitle);
@@ -145,7 +152,7 @@ void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callback
     //sub-Title of Alert
     CCLabelTTF *labelSubTitle;
     labelSubTitle = CCLabelTTF::create("Atenção", "LucidaGrandeBold", 11);
-    labelSubTitle->setPosition(ccp(60, 225));
+    labelSubTitle->setPosition(ccp(60, basePosition+225));
     labelSubTitle->setAnchorPoint(ccp(0,0));
     labelSubTitle->setColor(ccc3(55, 55, 55));
     node->addChild(labelSubTitle);
@@ -153,7 +160,7 @@ void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callback
     //Description of Alert
     CCLabelTTF *labelDescription;
     labelDescription = CCLabelTTF::create("       Ao entrar por este bloco você só poderá retirar", "Lucida Grande", 10);
-    labelDescription->setPosition(ccp(40, 210));
+    labelDescription->setPosition(ccp(40, basePosition+210));
     labelDescription->setAnchorPoint(ccp(0,0));
     labelDescription->setColor(ccc3(55, 55, 55));
     node->addChild(labelDescription);
@@ -161,7 +168,7 @@ void AlertViewScene::showMessageParking(CCNode* parent, SEL_MenuHandler callback
     //Description of Alert
     CCLabelTTF *labelDescription2;
     labelDescription2 = CCLabelTTF::create("seu veículo neste mesmo bloco.", "Lucida Grande", 10);
-    labelDescription2->setPosition(ccp(35, 200));
+    labelDescription2->setPosition(ccp(35, basePosition+200));
     labelDescription2->setAnchorPoint(ccp(0,0));
     labelDescription2->setColor(ccc3(55, 55, 55));
     node->addChild(labelDescription2);

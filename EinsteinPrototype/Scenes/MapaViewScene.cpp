@@ -32,6 +32,7 @@ void MapViewScene::setUp()
     spriteBackButton->setPosition(ccp(0, 0));
     c->setContentSize(spriteBackButton->getContentSize());
     c->addChild(spriteBackButton);
+    c->setPosition(ccp(0, 0));
     this->addChild(c,0,120);
 
     if(getCategory(targetWayPoint) != NONE)
@@ -51,11 +52,11 @@ void MapViewScene::setUp()
           CCSize winsize = CCDirector::sharedDirector()->getWinSize();
           
           if (winsize.height > 480) {
-              menu3->setPosition(ccp(250,503));
+              menu3->setPosition(ccp(250,490));
           }
           else
           {
-               menu3->setPosition(ccp(250,418));
+               menu3->setPosition(ccp(250,400));
           }
 
          
@@ -78,13 +79,13 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
     targetWayPoint = _targetWayPoint;
 
 	//black screen
-	//CCSprite *blackScreen = CCSprite::create("backInBlack.png");
-	//blackScreen->setScaleX(CCDirector::sharedDirector()->getWinSize().width / blackScreen->boundingBox().size.width);
-	//blackScreen->setScaleY(CCDirector::sharedDirector()->getWinSize().height / blackScreen->boundingBox().size.height);
-    //blackScreen->setPosition(ccp(0, 0));
-   // blackScreen->setContentSize(CCSizeMake(100, 100));
-	//blackScreen->setAnchorPoint(ccp(0,0));
-	//this->addChild(blackScreen);
+	CCSprite *blackScreen = CCSprite::create("backInBlack.png");
+	blackScreen->setScaleX(CCDirector::sharedDirector()->getWinSize().width / blackScreen->boundingBox().size.width);
+	blackScreen->setScaleY(CCDirector::sharedDirector()->getWinSize().height / blackScreen->boundingBox().size.height);
+    blackScreen->setPosition(ccp(0, 0));
+    blackScreen->setContentSize(CCSizeMake(100, 100));
+	blackScreen->setAnchorPoint(ccp(0,0));
+	this->addChild(blackScreen);
     
 	Pathfinder *pathfinder = Pathfinder::create();
     pathfinder->setAnchorPoint(ccp(0, 0));
@@ -104,11 +105,11 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
     CCSize winsize = CCDirector::sharedDirector()->getWinSize();
     
     if (winsize.height > 480) {
-       menu2->setPosition(ccp(10,520));
+       menu2->setPosition(ccp(10,508));
     }
     else
     {
-        menu2->setPosition(ccp(10,435));
+        menu2->setPosition(ccp(10,418));
     }
 
     
@@ -122,7 +123,7 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
 
     CCLabelTTF *labelTitle2;
     labelTitle2 = CCLabelTTF::create(cS.c_str(), CCSizeMake(300, 55),  kCCTextAlignmentLeft, "Lucida Grande", 11);
-    labelTitle2->setPosition(ccp(154, 3));
+    labelTitle2->setPosition(ccp(160, 3));
     labelTitle2->setAnchorPoint(ccp(0,0.5));
     labelTitle2->setColor(ccc3(255, 255, 255));
     this->addChild(labelTitle2,3,999999);
@@ -160,11 +161,11 @@ void MapViewScene::setUpButtonTop()
     CCSize winsize = CCDirector::sharedDirector()->getWinSize();
     
     if (winsize.height > 480) {
-         menu3->setPosition(ccp(250,503));
+         menu3->setPosition(ccp(250,490));
     }
     else
     {
-        menu3->setPosition(ccp(250,418));
+        menu3->setPosition(ccp(250,400));
     }
    
     menu3->setAnchorPoint(ccp(0,0));
@@ -303,11 +304,11 @@ void MapViewScene::draw()
 	
     labelTitle = CCLabelTTF::create(cS.c_str(), CCSizeMake(302, 100),  kCCTextAlignmentLeft, "Lucida Grande", 16);
     if (winsize.height > 480) {
-        labelTitle->setPosition(ccp(15, 450));
+        labelTitle->setPosition(ccp(15, 445));
     }
     else
     {
-        labelTitle->setPosition(ccp(15, 370));
+        labelTitle->setPosition(ccp(15, 345));
     }
     
     labelTitle->setAnchorPoint(ccp(0,0.5));
@@ -319,19 +320,25 @@ void MapViewScene::draw()
     this->addChild(labelTitle,3,80);
     
     char buffer [50];
-    
+    int pos = 0;
     if( pathfinder->getTotalStep() > 0)
+    {
         sprintf(buffer,"Passo %d de %d", abs(pathfinder->getStepActual()),pathfinder->getStepsCount());
-    else
-        sprintf(buffer," Aguarde Carregando ");
-
-    CCLabelTTF *l = CCLabelTTF::create(buffer,"LucidaGrandeBold", 13);
-    if (winsize.height > 480) {
-         l->setPosition(ccp(80,535));
+        pos = 110;
     }
     else
     {
-         l->setPosition(ccp(80,450));
+        sprintf(buffer," Aguarde Carregando ");
+        pos = 80;
+    }
+
+    CCLabelTTF *l = CCLabelTTF::create(buffer,"LucidaGrandeBold", 13);
+    if (winsize.height > 480) {
+         l->setPosition(ccp(pos,523));
+    }
+    else
+    {
+         l->setPosition(ccp(pos ,433));
     }
 
    

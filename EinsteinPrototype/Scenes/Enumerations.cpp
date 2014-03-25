@@ -386,7 +386,7 @@ void IFixedMenu::ChangeTitle(int _waypointID)
 {
     std::string name =  LoadWayPointName(_waypointID);
 
-    if( name.length() > 24)
+    if( name.length() > 22)
         ChangeTitle((name.substr(0,20)+ "...").c_str());
     else
         ChangeTitle(name.c_str());
@@ -398,7 +398,7 @@ void IFixedMenu::ChangeTitle(const char *title)
 {
      CCLabelTTF *labelTitle;
      labelTitle = CCLabelTTF::create(title, "LucidaGrandeBold", 15);
-     labelTitle->setPosition(ccp(100,45));
+     labelTitle->setPosition(ccp(80,45));
      labelTitle->setAnchorPoint(ccp(0,0.5));
      labelTitle->setColor(ccc3(255, 255, 255));
     

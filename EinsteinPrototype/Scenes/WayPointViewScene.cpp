@@ -97,7 +97,7 @@ chFavoritos = "favoritos_Mapa_press.png";
 createMenuItem(menu3, 112233, chFavoritos, chFavoritos,0, 0, menu_selector(WayPointViewScene::favoriteButtonPressed), this);
  float altura = CCDirector::sharedDirector()->getWinSize().height;
     if (altura>480) {
-        menu3->setPosition(ccp(250,480));
+        menu3->setPosition(ccp(250,490));
     }
     else
     {
@@ -136,7 +136,7 @@ void WayPointViewScene::reloadFavoriteButton()
     createMenuItem(menu3, 112233, chFavoritos, chFavoritos,0, 0, menu_selector(WayPointViewScene::favoriteButtonPressed), this);
     float altura = CCDirector::sharedDirector()->getWinSize().height;
     if (altura>480) {
-        menu3->setPosition(ccp(250,480));
+        menu3->setPosition(ccp(250,490));
     }
     else
     {
@@ -269,7 +269,6 @@ void WayPointViewScene::LoadWayPoint()
 //    {            insertLabel(ccc3(72, 72, 72), ccp(30, 176*15 - 24 - i*20), false, vectDescription[i].c_str(), node, 12);//todo
 //
 //    }
-    
     
    // CCSize tamanho_texto = CCSizeMake(0, 0);
    // CCLabelTTF::create("", tamanho_texto, 0, "Thonburi", 20);

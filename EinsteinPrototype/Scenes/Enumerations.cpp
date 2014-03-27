@@ -491,6 +491,11 @@ std::vector<std::string>  IFixedMenu::LoadWayPointNameToArray(int _wayPointID)
     return PListFunctions::readWayPointNameFormatado(_wayPointID);
 }
 
+std::vector<std::string>  IFixedMenu::LoadWayPointDescriptionToArray(int _wayPointID)
+{
+    return PListFunctions::readWayPointDescriptionFormatado(_wayPointID);
+}
+
  void IFixedMenu::releaseData()
 {
     

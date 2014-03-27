@@ -52,6 +52,7 @@ struct WayPoint
     int key;
     int floorID;
     const char* name;
+    const char* desc;
     bool isWC;
     bool isElevator ;
     bool isEscalator;
@@ -66,8 +67,9 @@ struct WayPoint
         static std::vector<BuildingSection> readBuildingSection();
         static std::vector<FloorSection> readFloorSection();
         static std::vector<WayPoint> readWayPointSection();
-        static std::vector<std::string> readWayPointNameFormatado(int key);
-        static std::vector<KeyWordSection> readKeyWordSection();
+    static std::vector<std::string> readWayPointNameFormatado(int key);
+    static std::vector<std::string> readWayPointDescriptionFormatado(int key);
+    static std::vector<KeyWordSection> readKeyWordSection();
 };
 
 #endif /* defined(__EinsteinPrototype__PListFunctions__) */

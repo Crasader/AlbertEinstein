@@ -127,6 +127,8 @@ std::vector<WayPoint>  PListFunctions::readWayPointSection()
                 way.name  = [value UTF8String];
             else if( [aKey2 isEqualToString:@"floorID"])
                 way.floorID = (int)[value intValue];
+            else if( [aKey2 isEqualToString:@"desc"])
+                way.desc = [value UTF8String];
             else if( [aKey2 isEqualToString:@"wc"])
                 way.isWC = (int)[value boolValue];
             else if( [aKey2 isEqualToString:@"elevator"])
@@ -157,13 +159,19 @@ std::vector<std::string> PListFunctions::readWayPointNameFormatado(int key)
         if( [aKey intValue] == key)
         {
             NSDictionary* oArrChilds = [dataFromPlist valueForKey:aKey];
-            for(NSString *aKey2 in oArrChilds)
-            {
-                NSArray* value = [oArrChilds valueForKey:aKey2];
-                for(NSString* i in value)
-                    lstVector.push_back([i UTF8String]);
-            }
-            return lstVector;
+           
+                id value = [oArrChilds valueForKey:@"name"];
+                if ([value isKindOfClass:NSArray.class]) {
+                    NSArray* value = [oArrChilds valueForKey:@"name"];
+                    for(NSString* i in value)
+                        lstVector.push_back([i UTF8String]);
+                }
+                else
+                {
+                    lstVector.push_back([value UTF8String]);
+                }
+
+                return lstVector;
         }
     }
 
@@ -176,6 +184,94 @@ std::vector<std::string> PListFunctions::readWayPointNameFormatado(int key)
     return lstVector;
 }
 
+
+std::vector<std::string> PListFunctions::readWayPointDescriptionFormatado(int key)
+{
+    NSString *pathOfFile = [[NSBundle mainBundle]pathForResource:@"waypoints" ofType:@"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:pathOfFile];
+    NSArray *dataFromPlist = [dict valueForKey:@"WaypointNomeFormatado"];
+    
+    std::vector<std::string> lstVector;
+    for(NSString *aKey in dataFromPlist)
+    {
+        if( [aKey intValue] == key)
+        {
+            NSDictionary* oArrChilds = [dataFromPlist valueForKey:aKey];
+ 
+                id value = [oArrChilds valueForKey:@"desc"];
+                if ([value isKindOfClass:NSArray.class]) {
+                    NSArray* value = [oArrChilds valueForKey:@"desc"];
+                    for(NSString* i in value)
+                        lstVector.push_back([i UTF8String]);
+                }
+                else
+                {
+                    lstVector.push_back([value UTF8String]);
+                }
+
+            
+                            return lstVector;
+        }
+    }
+    
+    dataFromPlist = [dict valueForKey:@"keywords"];
+    for(NSString *aKey in dataFromPlist)
+    {
+        if( [aKey intValue] == key)
+        {
+            NSDictionary* oArrChilds = [dataFromPlist valueForKey:aKey];
+            
+            
+            id value = [oArrChilds valueForKey:@"desc"];
+            if ([value isKindOfClass:NSArray.class]) {
+                NSArray* value = [oArrChilds valueForKey:@"desc"];
+                for(NSString* i in value)
+                    lstVector.push_back([i UTF8String]);
+            }
+            else
+            {
+                lstVector.push_back([value UTF8String]);
+            }
+            
+        
+        return lstVector;
+        }
+    }
+    dataFromPlist = [dict valueForKey:@"services"];
+    for(NSString *aKey in dataFromPlist)
+    {
+        if( [aKey intValue] == key)
+        {
+            NSDictionary* oArrChilds = [dataFromPlist valueForKey:aKey];
+            
+            
+            id value = [oArrChilds valueForKey:@"desc"];
+            if ([value isKindOfClass:NSArray.class]) {
+                NSArray* value = [oArrChilds valueForKey:@"desc"];
+                for(NSString* i in value)
+                    lstVector.push_back([i UTF8String]);
+            }
+            else
+            {
+                lstVector.push_back([value UTF8String]);
+            }
+            
+       
+        return lstVector;
+             }
+    }
+
+
+    
+//    std::vector<WayPoint> lstGeral = readWayPointSection();
+//    for(int i = 0;i < lstGeral.size(); i++)
+//    {
+//        if( lstGeral[i].key == key)
+//            lstVector.push_back(lstGeral[i].name);
+//    }
+    
+    return lstVector;
+}
 /** Retorna todas as keywords cadastradas no PList **/
 std::vector<KeyWordSection> PListFunctions::readKeyWordSection( )
 {

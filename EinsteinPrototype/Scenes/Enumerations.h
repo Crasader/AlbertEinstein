@@ -135,6 +135,7 @@ public:
     
     
     static std::vector<std::string>  LoadWayPointNameToArray(int wayPointID);
+    static std::vector<std::string>  LoadWayPointDescriptionToArray(int wayPointID);
 
     
     static const  char*  LoadWayPointName(int wayPointID);

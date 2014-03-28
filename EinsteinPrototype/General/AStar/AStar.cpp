@@ -66,8 +66,8 @@ std::vector<ASTile> AStar::findBestPath(std::vector< std::vector<ASTile> >tiles,
 	
     this->startTile = this->arrayTiles.at(begin.getPointX()).at(begin.getPointY());
 	
-	//CCLOG("pX, %d", end.getPointX());
-	//CCLOG("pY, %d", end.getPointY());
+	CCLOG("pX, %d", end.getPointX());
+	CCLOG("pY, %d", end.getPointY());
 	//LUCAS
     try {
         this->finalTile = this->arrayTiles.at(end.getPointX()).at(end.getPointY());
@@ -231,6 +231,9 @@ void AStar::startChildren(ASTile* actualTile){
 						tile->setFatherPointY(actualTile->getPointY());
                         tile->setValueG(gValue);
                         tile->setCalcG(this->calculateG(this->getFather(tile->getFatherPointX(), tile->getFatherPointY()), tile->getValueG()));
+                        if (actualTile== NULL || tile == NULL) {
+                            CCLOG("erro");
+                        }
                         tile->setCalcH(this->calculateH(tile));
                         tile->setCalcF(tile->getCalcG() + tile->getCalcH());
 						this->openList.push_back(tile);
@@ -294,7 +297,13 @@ int AStar::calculateG(ASTile* fatherTile, int gValue){
 }
 
 int AStar::calculateH(ASTile* tile){
-    return ((abs(this->finalTile->getPointX() - tile->getPointX()) + abs(this->finalTile->getPointY() - tile->getPointY())) * 10);
+    if (finalTile == NULL) {
+        finalTile = finalTile;
+    }
+         return ((abs(this->finalTile->getPointX() - tile->getPointX()) + abs(this->finalTile->getPointY() - tile->getPointY())) * 10);
+    //}
+
+      //  return 0;
 }
 
 void AStar::chooseMinorFromOpenList(){

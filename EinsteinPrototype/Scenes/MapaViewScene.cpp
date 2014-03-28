@@ -13,6 +13,7 @@
 
 #include <stdexcept>
 
+bool loaded = 0;
 void MapViewScene::releaseData()
 {
     delete destination;
@@ -132,6 +133,7 @@ MapViewScene::MapViewScene(int _wayPoint,int _targetWayPoint)
 }
 void MapViewScene::ccFinishJob()
 {
+    loaded = 1;
     std::cout<<"MAP FINISH LOADED AND RETURN: \n";
     this->setUpNavigationButtons();
     this->CreateButtons();
@@ -248,9 +250,26 @@ void MapViewScene::draw()
 	CCString *info;
 	try {
         int actualIdx =pathfinder->getActualMapIndex();
-		int buildingActual = pathfinder->getMapBuildings().at(actualIdx);
-		int buildingNext = pathfinder->getMapBuildings().at(actualIdx+ 1);
-		int floorNext = pathfinder->getMapFloors().at(actualIdx + 1);
+  		int buildingActual = pathfinder->getMapBuildings().at(actualIdx);
+        int buildingNext;
+        if (pathfinder->getMapBuildings().size()>actualIdx+1) {
+             buildingNext = pathfinder->getMapBuildings().at(actualIdx+ 1);
+        }
+        else
+        {
+            buildingNext = pathfinder->getMapBuildings().at(actualIdx);
+        }
+        
+        int floorNext;
+        
+        if (pathfinder->getMapBuildings().size()>actualIdx+1) {
+            floorNext = pathfinder->getMapFloors().at(actualIdx + 1);
+        }
+        else
+        {
+            floorNext = pathfinder->getMapFloors().at(actualIdx);
+        }
+        
 		int floorNumber = floorNext <= 0 ? floorNext * -1 + 1 : floorNext;
 		
 		if(buildingActual == buildingNext)
@@ -301,7 +320,9 @@ void MapViewScene::draw()
 	
 	if(!(pathfinder->getTotalStep() > 0))
 		cS = "";
-	
+	if (!loaded) {
+        cS="Carregando...";
+    }
     labelTitle = CCLabelTTF::create(cS.c_str(), CCSizeMake(302, 100),  kCCTextAlignmentLeft, "Lucida Grande", 16);
     if (winsize.height > 480) {
         labelTitle->setPosition(ccp(15, 445));
@@ -321,7 +342,9 @@ void MapViewScene::draw()
     
     char buffer [50];
     int pos = 0;
-    if( pathfinder->getTotalStep() > 0)
+    
+    
+    if( (pathfinder->getTotalStep() > 0) && (pathfinder->getTotalStep() < 9999) && (abs(pathfinder->getStepsCount()) >0)&& (abs(pathfinder->getStepsCount()) <9999)&& (abs(pathfinder->getStepActual()) >0)&& (abs(pathfinder->getStepActual()) <9999))
     {
         sprintf(buffer,"Passo %d de %d", abs(pathfinder->getStepActual()),pathfinder->getStepsCount());
         pos = 110;

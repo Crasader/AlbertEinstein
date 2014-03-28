@@ -290,8 +290,8 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
 	Floor *actualFloor = (Floor *)this->arrayMaps->objectAtIndex(this->actualMapIndex);
 	CCTMXObjectGroup *waypoints = actualMap->objectGroupNamed("waypoint");
 	
-	ASTile begin;
-	ASTile end;
+	ASTile * begin = NULL;
+	ASTile * end = NULL;
 	
 	for(i = 0; i < waypoints->getObjects()->count(); i++){
 		CCDictionary *object = (CCDictionary *)waypoints->getObjects()->objectAtIndex(i);
@@ -299,19 +299,28 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
 		int objY = object->valueForKey("y")->intValue() / actualMap->getTileSize().height;
 		
 		if(object->valueForKey("id")->intValue() == actualFloor->getStartID()){
-			begin = arrayTiles.at(objX).at(objY);
-			begin.setPassable(true);
+			begin = &arrayTiles.at(objX).at(objY);
+			begin->setPassable(true);
 		}
 		
 		if(object->valueForKey("id")->intValue() == actualFloor->getEndID()){
-			end = arrayTiles.at(objX).at(objY);
-			end.setPassable(true);
+			end = &arrayTiles.at(objX).at(objY);
+			end->setPassable(true);
 		}
+        
 	}
-	
+    
+    if (begin == NULL) {
+       begin = &arrayTiles.at(0).at(0);
+    }
+    if (end == NULL) {
+        end = &arrayTiles.at(0).at(0);
+    }
+
+   	
 	//EXECUTE A*
 	AStar astar;
-	std::vector<ASTile> arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+	std::vector<ASTile> arrayPath = astar.findBestPath(arrayTiles, *begin, *end, true);
 	
 	this->arrayPoints = std::vector<ASTile>();
 	
@@ -321,7 +330,7 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
 		arrayPoints.push_back(path);
 	}
 	
-	arrayPoints.push_back(begin);
+	arrayPoints.push_back(*begin);
 	//this->aStar->clear();
 	
 	std::cout<<"MAP COUNT AND INDEX: "<<this->arrayMaps->count()<<" "<<this->actualMapIndex<<"\n";

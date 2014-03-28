@@ -742,8 +742,8 @@ int Pathfinder::totalStepsUntil(int lasMapIndex){
             Floor *actualFloor = (Floor *)this->arrayMaps->objectAtIndex(i );
             CCTMXObjectGroup *waypoints = mTiled->objectGroupNamed("waypoint");
             
-            ASTile begin;
-            ASTile end;
+            ASTile * begin = NULL;
+            ASTile * end = NULL;
             
             for(j = 0; j < waypoints->getObjects()->count(); j++){
                 CCDictionary *object = (CCDictionary *)waypoints->getObjects()->objectAtIndex(j);
@@ -758,18 +758,23 @@ int Pathfinder::totalStepsUntil(int lasMapIndex){
                 
                 if(object->valueForKey("id")->intValue() == actualFloor->getStartID()){
                     
-                    begin = arrayTiles.at(objX).at(objY);
-                    begin.setPassable(true);
+                    begin = &arrayTiles.at(objX).at(objY);
+                    begin->setPassable(true);
                 }
                 
                 if(object->valueForKey("id")->intValue() == actualFloor->getEndID()){
-                    end = arrayTiles.at(objX).at(objY);
-                    end.setPassable(true);
+                    end = &arrayTiles.at(objX).at(objY);
+                    end->setPassable(true);
                 }
             }
-            
+            if (begin == NULL) {
+                begin = &arrayTiles.at(0).at(0);
+            }
+            if (end == NULL) {
+                end = &arrayTiles.at(0).at(0);
+            }
             //std::cout<<" - "<<mName<<" "<< actualFloor->getStartID() << " " << actualFloor->getEndID() <<"\n";
-            arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+            arrayPath = astar.findBestPath(arrayTiles, *begin, *end, true);
             
             tmpTotal += arrayPath.size()+1;
             
@@ -1571,8 +1576,8 @@ void Pathfinder::calculateTotalSteps(){
 		Floor *actualFloor = (Floor *)this->arrayMaps->objectAtIndex(this->valueI);
 		CCTMXObjectGroup *waypoints = mTiled->objectGroupNamed("waypoint");
 		
-		ASTile begin;
-		ASTile end;
+		ASTile * begin = NULL;
+        ASTile * end = NULL;
 		
 		for(j = 0; j < waypoints->getObjects()->count(); j++){
 			CCDictionary *object = (CCDictionary *)waypoints->getObjects()->objectAtIndex(j);
@@ -1587,25 +1592,31 @@ void Pathfinder::calculateTotalSteps(){
 			CCLOG("ID:%d  startID:%d  endID:%d", theID,startID,endID);
 	        
             if(theID == startID){
-				begin = arrayTiles.at(objX).at(objY);
-				begin.setPassable(true);
+				begin = &arrayTiles.at(objX).at(objY);
+				begin->setPassable(true);
 			}
 			
 			if(theID == endID){
-				end = arrayTiles.at(objX).at(objY);
-				end.setPassable(true);
+				end = &arrayTiles.at(objX).at(objY);
+				end->setPassable(true);
 			}
 		}
+        if (begin == NULL) {
+            begin = &arrayTiles.at(0).at(0);
+        }
+        if (end == NULL) {
+            end = &arrayTiles.at(0).at(0);
+        }
 		
 		std::cout<<" - "<<mName<<" "<< actualFloor->getStartID() << " " << actualFloor->getEndID() <<"\n";
-        if (end.getPointX() == -1) {
+        if (end->getPointX() == -1) {
             std::cout<<"ponto final nao encontrado: "<<__LINE__<<" "<<__FILE__<<"\n";
-            arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+            arrayPath = astar.findBestPath(arrayTiles, *begin, *end, true);
             stepsCount += arrayPath.size();
         }
         else
         {
-            arrayPath = astar.findBestPath(arrayTiles, begin, end, true);
+            arrayPath = astar.findBestPath(arrayTiles, *begin, *end, true);
             stepsCount += arrayPath.size();
         }
 	

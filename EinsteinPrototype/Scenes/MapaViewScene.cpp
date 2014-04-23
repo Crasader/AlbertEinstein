@@ -306,30 +306,38 @@ void MapViewScene::draw()
 		info = CCString::createWithFormat(" %s",destination);
 	}
 	
-	
+	std::string tmpinfo = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep;
+    
     if( strcmp(((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() , "Você chegou ao seu destino") ==0)
         cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string("\n") + destination ;
     else
 	{
 		if(((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.find("Siga para") != std::string::npos ||
 			((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.find("Pegue o elevador") != std::string::npos)
-			cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string(" em direcao a ") + destination;
+			cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string(" em direção a ") + destination;
 		else
-			cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string(" em direcao a") + info->getCString();
+			cS = ((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->descriptionStep.c_str() +std::string(" em direção a") + info->getCString();
 	}
 	
+    int p1 =abs(((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->getStepActual());
+    int p2 =abs(((Pathfinder*)this->getChildByTag(Global::TAG_Child_Layer) )->getStepsCount());
+    if( p1 == p2){
+        cS  = "Você chegou ao seu destino" +std::string("\n") + destination ;
+    }
+
+    
 	if(!(pathfinder->getTotalStep() > 0))
 		cS = "";
 	if (!loaded) {
-        cS="Carregando...";
+        cS="";//Carregando...
     }
     labelTitle = CCLabelTTF::create(cS.c_str(), CCSizeMake(302, 100),  kCCTextAlignmentLeft, "Lucida Grande", 16);
     if (winsize.height > 480) {
-        labelTitle->setPosition(ccp(15, 445));
+        labelTitle->setPosition(ccp(15, 430));
     }
     else
     {
-        labelTitle->setPosition(ccp(15, 345));
+        labelTitle->setPosition(ccp(15, 330));
     }
     
     labelTitle->setAnchorPoint(ccp(0,0.5));

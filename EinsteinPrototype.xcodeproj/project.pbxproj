@@ -3937,6 +3937,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Maycon Roberto De Souza (VUE45SR68Y)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3954,6 +3955,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = EinsteinMaps;
+				PROVISIONING_PROFILE = "277AA178-2862-4F2B-AEA4-CFF7E0CC4FD0";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -3967,6 +3969,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Maycon Roberto De Souza (VUE45SR68Y)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3983,6 +3986,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = EinsteinMaps;
+				PROVISIONING_PROFILE = "277AA178-2862-4F2B-AEA4-CFF7E0CC4FD0";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";

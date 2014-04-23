@@ -118,7 +118,9 @@
 		<key>43</key>
 		<dict>
 			<key>desc</key>
-			<string>Espaço confortável especialmente reservado para o atendimento dos clientes dos convênios Amil, Sul América, Omint, Bradesco e QualiCorp.</string>
+			<string>Espaço confortável especialmente reservado para o atendimento dos clientes dos convênios Amil, Sul América, Omint, Bradesco e QualiCorp.
+
+</string>
 			<key>name</key>
 			<array>
 				<string>Convênios/Amil/Omint</string>
@@ -519,7 +521,9 @@
 		<key>88</key>
 		<dict>
 			<key>desc</key>
-			<string>Espaço com capacidade para 180 pessoas, e uma área total de 230 m2 e pé-direito de 4 m, atende eventos de diversas categorias como simpósios, workshops, convenções, homenagens, entre outros</string>
+			<string>Espaço com capacidade para 180 pessoas, e uma área total de 230 m2 e pé-direito de 4 m, atende 
+eventos de diversas categorias como simpósios, workshops, convenções, homenagens, entre outros
+</string>
 			<key>name</key>
 			<array>
 				<string>Auditório Kleinberger</string>
@@ -596,7 +600,9 @@
 		<key>62</key>
 		<dict>
 			<key>desc</key>
-			<string>Comércio de artigos médicos e ortopédicos e confecção de órteses e próteses. Mais uma facilidade do Einstein para você. Horário de funcionamento: segunda à sexta das 9 às 19h e sábado das 10 às 15h. Telefone: (11) 2151-2967 (ou ramal interno 72967)	</string>
+			<string>Comércio de artigos médicos e ortopédicos e confecção de órteses e próteses. Mais uma facilidade do Einstein para você. 
+Horário de funcionamento: segunda à sexta das 9 às 19h e sábado das 10 às 15h. Telefone: (11) 2151-2967 (ou ramal interno 72967)	
+</string>
 			<key>name</key>
 			<array>
 				<string>Med Service</string>
@@ -620,7 +626,9 @@
 		<key>25</key>
 		<dict>
 			<key>desc</key>
-			<string>     Apartamentos Geriatria  Quartos Geriatria Internacao GeriatriaProjetados para oferecer conforto e acolhimento, os quartos possuem barras de segurança em toda a sua extensão, piso capaz de amortecer o impacto em caso de quedas e banheiro e camas adaptados.</string>
+			<string>     Apartamentos Geriatria  Quartos Geriatria Internacao Geriatria
+Projetados para oferecer conforto e acolhimento, os quartos possuem barras de segurança em toda a sua extensão, piso capaz de amortecer o impacto em caso de quedas e banheiro e camas adaptados.
+</string>
 			<key>name</key>
 			<array>
 				<string>Internação Clínica Médica e Cirúrgica</string>
@@ -708,7 +716,10 @@
 		<key>63</key>
 		<dict>
 			<key>desc</key>
-			<string>Tratamentos capilares, faciais e corporais. Serviços de maquiagem, manicure, pedicure, podologia, depilação e venda de produtos. Também atende nos apartamentos.Horário: Segunda a sexta das 8 às 20h, sábado das 8 às 19h e feriados das 10 às 16h. Telefone: (11) 2151-2203 (ou ramal interno 72203)</string>
+			<string>Tratamentos capilares, faciais e corporais. Serviços de maquiagem, manicure, pedicure, podologia, depilação e venda de produtos. Também atende nos apartamentos.
+Horário: Segunda a sexta das 8 às 20h, sábado das 8 às 19h e feriados das 10 às 16h. 
+Telefone: (11) 2151-2203 (ou ramal interno 72203)
+</string>
 			<key>name</key>
 			<array>
 				<string>Jacques Janine</string>
@@ -785,7 +796,9 @@
 		<key>33</key>
 		<dict>
 			<key>desc</key>
-			<string>O Centro de Intervenção Cardiovascular funciona 24 horas por dia, com equipes especializadas na realização de cateterismos e angioplastia coronária de urgência para tratamento de infarto agudo do miocárdio.</string>
+			<string>O Centro de Intervenção Cardiovascular funciona 24 horas por dia, com equipes especializadas na realização de cateterismos e angioplastia coronária de urgência para tratamento de infarto agudo do miocárdio.
+
+</string>
 			<key>name</key>
 			<array>
 				<string>Intervenção Cardiovascular</string>
@@ -796,7 +809,9 @@
 		<key>39</key>
 		<dict>
 			<key>desc</key>
-			<string>Suporte ao paciente e familiar, com informações sobre convênios e procedimentos, pagamentos, financiamentos, orçamentos, suporte para remoção médica e apoio a pacientes estrangeiros. </string>
+			<string>Suporte ao paciente e familiar, com informações sobre convênios e procedimentos, pagamentos, financiamentos, orçamentos, suporte para remoção médica e apoio a pacientes estrangeiros. 
+
+</string>
 			<key>name</key>
 			<array>
 				<string>Centro de Atendimento Comercial</string>
@@ -847,7 +862,9 @@
 		<key>38</key>
 		<dict>
 			<key>desc</key>
-			<string>Uma equipe à disposição do paciente estrangeiro, com suporte para contato e relacionamento com embaixadas e consulados, e atendimento para convênios internacionais. 							</string>
+			<string>Uma equipe à disposição do paciente estrangeiro, com suporte para contato e relacionamento com embaixadas e consulados, e atendimento para convênios internacionais. 			
+				
+</string>
 			<key>name</key>
 			<array>
 				<string>Atendimento ao Paciente internacional</string>
@@ -886,7 +903,9 @@
 		<key>85</key>
 		<dict>
 			<key>desc</key>
-			<string>Opção ideal para um café rápido, os quiosques do Viena Café oferecem os tradicionais doces e salgados Viena, Dentre eles os saborosos pães de queijo e a famosa Coxa Creme. </string>
+			<string>Opção ideal para um café rápido, os quiosques do Viena Café oferecem os tradicionais doces e salgados Viena, Dentre eles os saborosos pães de queijo e a famosa Coxa Creme. 
+
+</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1055,7 +1074,9 @@
 		<key>13</key>
 		<dict>
 			<key>desc</key>
-			<string>Medicamentos, produtos de beleza, higiene e cuidados pessoais para pacientes dos consultórios, internados, acompanhantes e familiares				</string>
+			<string>Medicamentos, produtos de beleza, higiene e cuidados pessoais para pacientes dos consultórios, internados, acompanhantes e familiares
+				
+</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>
@@ -1224,7 +1245,9 @@
 		<key>86</key>
 		<dict>
 			<key>desc</key>
-			<string>Estrutura completa e uma equipe multidisciplinar para diferentes tratamentos de reabilitação – motora, auditiva, cardiaca, neurológica, ortopédica, pediátrica, pulmonar e visual. </string>
+			<string>Estrutura completa e uma equipe multidisciplinar para diferentes tratamentos de reabilitação – motora, auditiva, cardiaca, neurológica, ortopédica, pediátrica, pulmonar e visual. 
+
+</string>
 			<key>isFeatured</key>
 			<string>n</string>
 			<key>name</key>

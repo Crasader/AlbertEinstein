@@ -310,6 +310,7 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
         
 	}
     
+    //todo nao descobri porque mas as veses o item nao esta na lista então pego o primeiro para evitar o travamento.
     if (begin == NULL) {
        begin = &arrayTiles.at(0).at(0);
     }
@@ -767,6 +768,7 @@ int Pathfinder::totalStepsUntil(int lasMapIndex){
                     end->setPassable(true);
                 }
             }
+               //todo nao descobri porque mas as veses o item nao esta na lista então pego o primeiro para evitar o travamento.
             if (begin == NULL) {
                 begin = &arrayTiles.at(0).at(0);
             }
@@ -833,13 +835,16 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 					
 					float xAngle = roundf(angle / 90);
 					angle = xAngle * 90;
-					
+                  
+                    
+                    
 					//int i = 0;
 					if(!firstTime){
 						this->showStepLine(false);
 						
 						//LOG DE DIRECAO
 						if((int)angle < (int)previousAngle){
+                           
 							if(nextValue == -1){
 								descriptionStep = "Vire a direita";
 								CCLog("VIRE A DIREITA");
@@ -847,7 +852,9 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 								descriptionStep = "Vire a esquerda";
 								CCLog("VIRE A ESQUERDA");
 							}
+                            
 						}else if((int)angle > (int)previousAngle){
+                            
 							if(nextValue == -1){
 								descriptionStep = "Vire a esquerda";
 								CCLog("VIRE A ESQUERDA");
@@ -876,6 +883,9 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 								}
 							}
 						}
+                        
+                    
+                        
 						
 						//CHANGE ANCHOR
 						ChangeAnchorPoint *change = ChangeAnchorPoint::createWithAnchorPoint(newPoint, true);
@@ -1032,6 +1042,12 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 			}
 		//}
 	}
+//    int p1 =abs(this->getStepActual());
+//    int p2 = abs(this->getStepsCount());
+//    if( p1 == p2){
+//        descriptionStep = "* Você chegou ao seu destino";
+//        CCLog("VOCÊ CHEGOU AO SEU DESTINO");
+//    }
 }
 
 CCString *Pathfinder::getNextMapInfo(){
@@ -1601,6 +1617,7 @@ void Pathfinder::calculateTotalSteps(){
 				end->setPassable(true);
 			}
 		}
+           //todo nao descobri porque mas as veses o item nao esta na lista então pego o primeiro para evitar o travamento.
         if (begin == NULL) {
             begin = &arrayTiles.at(0).at(0);
         }

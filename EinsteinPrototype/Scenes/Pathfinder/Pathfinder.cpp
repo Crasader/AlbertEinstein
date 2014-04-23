@@ -11,6 +11,8 @@
 #include "Floor.h"
 #include "Waypoint.h"
 #include "ChangeAnchorPoint.h"
+#include <cmath>
+
 
 Pathfinder::Pathfinder(){
 	
@@ -830,11 +832,17 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
                     float nextYPoint =next.getPointY();
                     //aqui ele não estava calculando nos intervalos dos andares. talvez seja necessário mudar isto no futuro para pular um step quando voltar de um mapa.
 					//if(nextYPoint > -1){
-						angle = atan2f(nextPoint.x - actualPoint.x, nextPoint.y - actualPoint.y) * 180 / M_PI * -1;
+                    double x = nextPoint.x - actualPoint.x;
+                    double y = nextPoint.y - actualPoint.y;
+                    double angleInRadians = std::atan2(y, x);
+                    double angleInDegrees = (angleInRadians / M_PI) * 180.0;
+                    
+//                    angle = atan2f(nextPoint.x - actualPoint.x, nextPoint.y - actualPoint.y) * 180 / M_PI * -1;
+                    angle = angleInDegrees-90;
 					//}
 					
-					float xAngle = roundf(angle / 90);
-					angle = xAngle * 90;
+//					float xAngle = roundf(angle / 90);
+//					angle = xAngle * 90;
                   
                     
                     
@@ -963,8 +971,8 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 						ChangeAnchorPoint *change = ChangeAnchorPoint::createWithAnchorPoint(newPoint, true);
 						this->runAction(change);
 						this->setPosition(ccp(winSize.width/2, winSize.height/2));
-						this->setRotation(nextValue == -1 ? angle : angle - 180);
-						//this->setRotation(angle);
+						//this->setRotation(nextValue == -1 ? angle : angle - 180);
+						this->setRotation(angle);
 						stepLock = false;
 						
 						//ROTATE ICONS

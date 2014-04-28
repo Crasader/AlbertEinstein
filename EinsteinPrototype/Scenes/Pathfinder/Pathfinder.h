@@ -126,6 +126,8 @@ private:
 	CCArray *arrayActualSteps;
 	
 	CCArray *arrayLines;
+    CCMenu* marcadorNext;
+    CCMenu* marcadorYou;
     
     int actualMapIndex = 0;
 	int actualStep;

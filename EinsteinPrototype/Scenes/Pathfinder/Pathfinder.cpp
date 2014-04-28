@@ -344,15 +344,17 @@ void Pathfinder::loadMap(CCString *mapName, bool isVisible){
         isGoingToNextMap = true;
 		CCMenuItemSprite *item = CCMenuItemSprite::create(spriteDefault, spriteSelected, this, menu_selector(Pathfinder::goToNextMap));
 		
-		CCMenu* next = CCMenu::create();
-		next->setAnchorPoint(ccp(0.5,0.5));
+		CCMenu* nextMap = CCMenu::create();
+		nextMap->setAnchorPoint(ccp(0.5,0.5));
 
 		item->setAnchorPoint(ccp(0, 0));
 		item->setPosition(ccp(0,0));
-		next->setPosition(ccp(arrayPoints.front().getPointX()*10, arrayPoints.front().getPointY()*10));
-		next->addChild(item, 0, 0);
-		item->setRotation(25);
-		this->addChild(next, 0, 151515);
+		nextMap->setPosition(ccp(arrayPoints.front().getPointX()*10, arrayPoints.front().getPointY()*10));
+		nextMap->addChild(item, 0, 0);
+		item->setRotation(0);
+		this->addChild(nextMap, 0, 151515);
+        nextMap->setRotation(0);
+        this->marcadorNext = nextMap;
 	
 	}
 	
@@ -529,15 +531,24 @@ void Pathfinder::drawLines(LineType lineType){
 	CCSprite *arrow;
 	if(lineType != LINE_STEP){
 		arrow = CCSprite::create(lineType == LINE_SHADOW ? "setaSombra.png" : "seta.png");
-		this->addChild(arrow);
+		this->addChild(arrow, 100);
 		arrow->setPosition(lastPoint);
 		//arrow->setScale(2);
 		this->arrayLines->addObject(arrow);
 		//arrow->setAnchorPoint(ccp(0, 0.5f));
 		
 		ASTile pointRefRotation = arrayPoints.at(1);
-		float angle = atan2f(point.getPointY() - pointRefRotation.getPointY(), point.getPointX() - pointRefRotation.getPointX());
-		arrow->setRotation(angle * 180 / M_PI * -1);
+        
+        double x = point.getPointX() - pointRefRotation.getPointX();
+        double y = point.getPointY() - pointRefRotation.getPointY();
+        double angleInRadians = std::atan2(y, x);
+        double angleInDegrees = (angleInRadians / M_PI) * 180.0;
+        
+        float angle = angleInDegrees-90;
+
+       // angle = 0;
+		//.float angle = atan2f(point.getPointY() - pointRefRotation.getPointY(), point.getPointX() - pointRefRotation.getPointX());
+		arrow->setRotation(angle);
 	}
 	
 	for(int i = 1; i < arrayPoints.size(); i++){
@@ -554,17 +565,31 @@ void Pathfinder::drawLines(LineType lineType){
 		CCSprite *arrowStep;
 		if(lineType == LINE_STEP){
 			arrowStep = CCSprite::create("seta.png");
-			this->addChild(arrowStep);
+			this->addChild(arrowStep,110);
 			arrowStep->setPosition(lastPoint);
 			//arrow->setScale(2);
 			arrowStep->setVisible(false);
 			this->arrayActualSteps->addObject(arrowStep);
 			//arrowStep->setAnchorPoint(ccp(0, 0.5f));
 			
-			ASTile pointRefRotation2 = arrayPoints.at(i - 1);
-			angle2 = atan2f(pointRefRotation2.getPointY() - path.getPointY(), pointRefRotation2.getPointX() - path.getPointX());
-			arrowStep->setRotation(angle2 * 180 / M_PI * -1);
-			
+			ASTile point1 = arrayPoints.at(i - 1);
+        	ASTile point2 = arrayPoints.at(i);
+            
+            
+        //    ASTile pointRefRotation = arrayPoints.at(0);
+
+            
+            double x = point1.getPointX() - point2.getPointX();
+            double y = point1.getPointY() - point2.getPointY();
+            double angleInRadians = std::atan2(y, x);
+            //double angleInDegrees = (angleInRadians / (M_PI *2)) * 360.0;
+            double angleInDegrees = (angleInRadians * 180 / M_PI * -1);
+            
+            float setaAngle = angleInDegrees+90;
+
+           // setaAngle = 0;
+			angle2 = setaAngle;
+			arrowStep->setRotation(angle2);
 		}
 		
 		int posYtoAngleCalc = ((actualMap->getMapSize().height - path.getPointY()) * actualMap->getTileSize().height + 6);
@@ -844,7 +869,7 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 //					float xAngle = roundf(angle / 90);
 //					angle = xAngle * 90;
                   
-                    
+                   // angle = 0;
                     
 					//int i = 0;
 					if(!firstTime){

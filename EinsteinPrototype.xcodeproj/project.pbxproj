@@ -688,6 +688,9 @@
 		AC9239D118A31B3C006EDD75 /* button_3d_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239CF18A31B3C006EDD75 /* button_3d_on.png */; };
 		AC9239D218A31B3C006EDD75 /* button_3d_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239D018A31B3C006EDD75 /* button_3d_pressed.png */; };
 		AC9239D418A31B49006EDD75 /* button_comochegar_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9239D318A31B49006EDD75 /* button_comochegar_on.png */; };
+		ACB57E07190950C6001C7C8B /* bt_proxMapa_old.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB57E06190950C6001C7C8B /* bt_proxMapa_old.png */; };
+		ACB57E09190951A5001C7C8B /* bt_voce.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB57E08190951A5001C7C8B /* bt_voce.png */; };
+		ACB57E0B1909692C001C7C8B /* setaSombra_old.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB57E0A1909692C001C7C8B /* setaSombra_old.png */; };
 		ACC8C1E0186BBB690071854F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC8C1DF186BBB690071854F /* Default-568h@2x.png */; };
 		ACEF55B8180844E600CFBB7E /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B4180844E600CFBB7E /* AppController.mm */; };
 		ACEF55B9180844E600CFBB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B5180844E600CFBB7E /* main.m */; };
@@ -1626,6 +1629,9 @@
 		AC9239CF18A31B3C006EDD75 /* button_3d_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3d_on.png; sourceTree = "<group>"; };
 		AC9239D018A31B3C006EDD75 /* button_3d_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_3d_pressed.png; sourceTree = "<group>"; };
 		AC9239D318A31B49006EDD75 /* button_comochegar_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_comochegar_on.png; sourceTree = "<group>"; };
+		ACB57E06190950C6001C7C8B /* bt_proxMapa_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_proxMapa_old.png; sourceTree = "<group>"; };
+		ACB57E08190951A5001C7C8B /* bt_voce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_voce.png; sourceTree = "<group>"; };
+		ACB57E0A1909692C001C7C8B /* setaSombra_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setaSombra_old.png; path = maps/setaSombra_old.png; sourceTree = "<group>"; };
 		ACC8C1DF186BBB690071854F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		ACEF55A0180743F900CFBB7E /* CCFinishDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFinishDelegate.h; sourceTree = "<group>"; };
 		ACEF55B3180844E600CFBB7E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -1661,6 +1667,8 @@
 			isa = PBXGroup;
 			children = (
 				8A86067B17B404B1006260DE /* bt_proxMapa.png */,
+				ACB57E06190950C6001C7C8B /* bt_proxMapa_old.png */,
+				ACB57E08190951A5001C7C8B /* bt_voce.png */,
 				8A96B38717A058D900042CC5 /* informacoes_new.png */,
 				8A96B38817A058D900042CC5 /* estacionamento_new.png */,
 				8A96B38917A058D900042CC5 /* sanitarios_new.png */,
@@ -2824,6 +2832,7 @@
 				7878A01616F246D50011E681 /* seta.png */,
 				787A199116FB49E5003C860F /* setaPasso.png */,
 				7878A01716F246D50011E681 /* setaSombra.png */,
+				ACB57E0A1909692C001C7C8B /* setaSombra_old.png */,
 			);
 			name = Pathfinder;
 			path = Resources/Pathfinder;
@@ -3248,6 +3257,7 @@
 				A57F443516D54BF500B48AF1 /* TextBox_Fundo.png in Resources */,
 				A57F443716D54E8200B48AF1 /* Close_TextBox.png in Resources */,
 				A57F443916D56BEC00B48AF1 /* Busca_Button.png in Resources */,
+				ACB57E0B1909692C001C7C8B /* setaSombra_old.png in Resources */,
 				A5B75C9F16D6AB1B0092A425 /* Button_AZ_Rota_U.png in Resources */,
 				A5B75CA116D6AB2B0092A425 /* Button_PorAndar_Rota_S.png in Resources */,
 				A5B75CA316D6AB870092A425 /* Button_Favoritos_Rota_U.png in Resources */,
@@ -3521,6 +3531,7 @@
 				787B9D0A170A116D00A57D25 /* voltarVerde_btn.png in Resources */,
 				787B9D0B170A116D00A57D25 /* voltarVerde_press.png in Resources */,
 				787B9D0C170A116D00A57D25 /* voltarVermelho_btn.png in Resources */,
+				ACB57E07190950C6001C7C8B /* bt_proxMapa_old.png in Resources */,
 				787B9D0D170A116D00A57D25 /* voltarVermelho_press.png in Resources */,
 				787B9D0F170A124000A57D25 /* selecao 2.png in Resources */,
 				A57BD617170B195A00C618B7 /* direita_Btn.png in Resources */,
@@ -3579,6 +3590,7 @@
 				A5B88300171CA0B10067DF63 /* 45.png in Resources */,
 				A5B88301171CA0B10067DF63 /* 48.png in Resources */,
 				A5B88302171CA0B10067DF63 /* 50.png in Resources */,
+				ACB57E09190951A5001C7C8B /* bt_voce.png in Resources */,
 				A5B88303171CA0B10067DF63 /* 54.png in Resources */,
 				A5B88304171CA0B10067DF63 /* 58.png in Resources */,
 				A5B88305171CA0B10067DF63 /* 59.png in Resources */,

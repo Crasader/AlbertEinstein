@@ -180,11 +180,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1254"
-            endingLineNumber = "1254"
+            startingLineNumber = "1285"
+            endingLineNumber = "1285"
             landmarkName = "Pathfinder::getTotalStep()"
             landmarkType = "5">
          </BreakpointContent>
@@ -212,11 +212,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1313"
-            endingLineNumber = "1313"
+            startingLineNumber = "1344"
+            endingLineNumber = "1344"
             landmarkName = "Pathfinder::findWC(int idBegin)"
             landmarkType = "5">
          </BreakpointContent>
@@ -276,11 +276,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1291"
-            endingLineNumber = "1291"
+            startingLineNumber = "1322"
+            endingLineNumber = "1322"
             landmarkName = "Pathfinder::findWC(int idBegin)"
             landmarkType = "5">
          </BreakpointContent>
@@ -292,11 +292,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "419979025.907339"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
             landmarkName = "Pathfinder::loadMap(CCString *mapName, bool isVisible)"
             landmarkType = "5">
          </BreakpointContent>
@@ -308,11 +308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "419979025.907339"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
             landmarkName = "Pathfinder::loadMap(CCString *mapName, bool isVisible)"
             landmarkType = "5">
          </BreakpointContent>
@@ -324,11 +324,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "419979025.907339"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "Pathfinder::loadMap(CCString *mapName, bool isVisible)"
             landmarkType = "5">
          </BreakpointContent>
@@ -340,11 +340,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1623"
-            endingLineNumber = "1623"
+            startingLineNumber = "1654"
+            endingLineNumber = "1654"
             landmarkName = "Pathfinder::calculateTotalSteps()"
             landmarkType = "5">
          </BreakpointContent>
@@ -418,11 +418,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "900"
-            endingLineNumber = "900"
+            startingLineNumber = "930"
+            endingLineNumber = "930"
             landmarkName = "Pathfinder::step(int nextValue, bool firstTime, bool animate)"
             landmarkType = "5">
          </BreakpointContent>
@@ -434,11 +434,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "881"
-            endingLineNumber = "881"
+            startingLineNumber = "911"
+            endingLineNumber = "911"
             landmarkName = "Pathfinder::step(int nextValue, bool firstTime, bool animate)"
             landmarkType = "5">
          </BreakpointContent>
@@ -450,11 +450,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1012"
-            endingLineNumber = "1012"
+            startingLineNumber = "1042"
+            endingLineNumber = "1042"
             landmarkName = "Pathfinder::step(int nextValue, bool firstTime, bool animate)"
             landmarkType = "5">
             <Locations>
@@ -496,11 +496,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "880"
-            endingLineNumber = "880"
+            startingLineNumber = "910"
+            endingLineNumber = "910"
             landmarkName = "Pathfinder::step(int nextValue, bool firstTime, bool animate)"
             landmarkType = "5">
          </BreakpointContent>
@@ -508,107 +508,45 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "895"
-            endingLineNumber = "895"
-            landmarkName = "Pathfinder::step(int nextValue, bool firstTime, bool animate)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1047"
-            endingLineNumber = "1047"
+            startingLineNumber = "1099"
+            endingLineNumber = "1099"
             landmarkName = "Pathfinder::step(int nextValue, bool firstTime, bool animate)"
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Pathfinder::step(int, bool, bool)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-                  timestampString = "420347893.297654"
+                  timestampString = "420387321.287779"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1047"
-                  endingLineNumber = "1047"
-                  offsetFromSymbolStart = "4618">
+                  startingLineNumber = "1082"
+                  endingLineNumber = "1082"
+                  offsetFromSymbolStart = "5494">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Pathfinder::step(int, bool, bool)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-                  timestampString = "420347895.670757"
+                  timestampString = "420387323.66249"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1047"
-                  endingLineNumber = "1047"
-                  offsetFromSymbolStart = "4610">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1068"
-            endingLineNumber = "1068"
-            landmarkName = "Pathfinder::step(int nextValue, bool firstTime, bool animate)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Pathfinder::step(int, bool, bool)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-                  timestampString = "420347893.298699"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1068"
-                  endingLineNumber = "1068"
-                  offsetFromSymbolStart = "5264">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Pathfinder::step(int, bool, bool)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-                  timestampString = "420347895.671063"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1068"
-                  endingLineNumber = "1068"
-                  offsetFromSymbolStart = "5256">
+                  startingLineNumber = "1082"
+                  endingLineNumber = "1082"
+                  offsetFromSymbolStart = "5486">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -620,11 +558,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "875"
-            endingLineNumber = "875"
+            startingLineNumber = "905"
+            endingLineNumber = "905"
             landmarkName = "Pathfinder::step(int nextValue, bool firstTime, bool animate)"
             landmarkType = "5">
          </BreakpointContent>
@@ -632,47 +570,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-            timestampString = "420347893.098813"
+            timestampString = "420388877.840094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "591"
-            endingLineNumber = "591"
+            startingLineNumber = "603"
+            endingLineNumber = "603"
             landmarkName = "Pathfinder::drawLines(LineType lineType)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Pathfinder::drawLines(LineType)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-                  timestampString = "420347893.300102"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "591"
-                  endingLineNumber = "591"
-                  offsetFromSymbolStart = "2190">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Pathfinder::drawLines(LineType)"
-                  moduleName = "EinsteinMaps"
-                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
-                  timestampString = "420347895.67136"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "591"
-                  endingLineNumber = "591"
-                  offsetFromSymbolStart = "2182">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/Pathfinder/Pathfinder.cpp"
+            timestampString = "420388691.60278"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "Pathfinder::start(int startID, int endID)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

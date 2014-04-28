@@ -165,12 +165,21 @@ void Pathfinder::start(int startID, int endID){
 	this->loading->runAnimation("anim",true, false);
 	this->loading->setAnchorPoint(ccp(0.5f, 0.5f));
 	this->loading->setPosition(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 - 30));
+    
+    youMarkup = CCSprite::create("bt_voce.png");
+    this->addChild(youMarkup,150);
+    youMarkup->setPosition(ccp(0, 0));
+    youMarkup->setVisible(false);
+    
 	//this->addChild(this->loading);
 	
 }
 
 void Pathfinder::releaseActualMap(){
 	std::cout<<__PRETTY_FUNCTION__<<"\n";
+    
+    youMarkup->setVisible(false);
+    
 	CCTMXTiledMap *actualMap = (CCTMXTiledMap *)this->getChildByTag(100);
 	CCSprite *actualMapImage = (CCSprite *)this->getChildByTag(999);
 
@@ -550,7 +559,9 @@ void Pathfinder::drawLines(LineType lineType){
 		//.float angle = atan2f(point.getPointY() - pointRefRotation.getPointY(), point.getPointX() - pointRefRotation.getPointX());
 		arrow->setRotation(angle);
 	}
-	
+	 
+   
+    
 	for(int i = 1; i < arrayPoints.size(); i++){
 		ASTile path = arrayPoints.at(i);
 		int posX = (path.getPointX() * actualMap->getTileSize().width + 6);
@@ -563,6 +574,7 @@ void Pathfinder::drawLines(LineType lineType){
 		
 		float angle2 = 0;
 		CCSprite *arrowStep;
+       
 		if(lineType == LINE_STEP){
 			arrowStep = CCSprite::create("seta.png");
 			this->addChild(arrowStep,110);
@@ -590,7 +602,8 @@ void Pathfinder::drawLines(LineType lineType){
            // setaAngle = 0;
 			angle2 = setaAngle;
 			arrowStep->setRotation(angle2);
-		}
+            
+            }
 		
 		int posYtoAngleCalc = ((actualMap->getMapSize().height - path.getPointY()) * actualMap->getTileSize().height + 6);
 		
@@ -864,6 +877,23 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
                     
 //                    angle = atan2f(nextPoint.x - actualPoint.x, nextPoint.y - actualPoint.y) * 180 / M_PI * -1;
                     angle = angleInDegrees-90;
+                    
+                    
+                    
+                    //TO-DO função unica para calculo dos angulos
+                    double x2 = nextPoint.x - actualPoint.x;
+                    double y2 = nextPoint.y - actualPoint.y;
+                    double angleInRadians2 = std::atan2(y2, x2);
+                    //double angleInDegrees = (angleInRadians / (M_PI *2)) * 360.0;
+                    double angleInDegrees2 = (angleInRadians2 * 180 / M_PI * -1);
+                    
+                    float voceAngle = angleInDegrees2+90;
+                    
+                    
+                    youMarkup->setPosition(ccp(actualPoint.x, actualPoint.y));
+                    youMarkup->setRotation(voceAngle);
+                    youMarkup->setVisible(true);
+
 					//}
 					
 //					float xAngle = roundf(angle / 90);
@@ -1046,6 +1076,7 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 							this->white->setPosition(converted);
 							this->setRotation(-angle);
 							this->white->setVisible(true);
+                            youMarkup->setVisible(false);
 						}
 					}else{
 						if(this->actualMapIndex > 0){

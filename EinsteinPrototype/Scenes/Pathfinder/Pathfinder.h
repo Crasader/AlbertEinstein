@@ -129,6 +129,9 @@ private:
     CCMenu* marcadorNext;
     CCMenu* marcadorYou;
     
+    CCSprite *youMarkup;
+    
+    
     int actualMapIndex = 0;
 	int actualStep;
 	float angle;

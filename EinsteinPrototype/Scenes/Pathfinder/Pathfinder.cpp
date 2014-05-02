@@ -23,7 +23,7 @@ Pathfinder::Pathfinder(){
 
 	
 	this->loading = new AnimatedSprite("loader_einstein1.png");
-	this->loading->addAnimation(AnimatedSprite::animationWithFile("loader_einstein", 145, 0.030f), "anim");
+	this->loading->addAnimation(AnimatedSprite::animationWithFile("loader_einstein", 24, 0.030f), "anim");//frame_count
 	
 	this->white = CCRenderTexture::create(1024, 1024, kCCTexture2DPixelFormat_RGBA4444);
 	this->white->clear(1, 1, 1, 0);
@@ -178,7 +178,9 @@ void Pathfinder::start(int startID, int endID){
 void Pathfinder::releaseActualMap(){
 	std::cout<<__PRETTY_FUNCTION__<<"\n";
     
-    youMarkup->setVisible(false);
+    if (youMarkup != NULL) {
+        youMarkup->setVisible(false);
+    }
     
 	CCTMXTiledMap *actualMap = (CCTMXTiledMap *)this->getChildByTag(100);
 	CCSprite *actualMapImage = (CCSprite *)this->getChildByTag(999);

@@ -80,6 +80,14 @@ void NewsScene::createListView(){
     sprHeader->setScale(1);
     sprHeader->setPosition(ccp(0, size.height -90));
     this->addChild(sprHeader);
+    CCSprite *sprTitle;
+    sprTitle = CCSprite::create("tit_comochegar.png");
+    
+    sprTitle->setAnchorPoint(ccp(0,0));
+    sprTitle->setScale(1);
+    sprTitle->setPosition(ccp(110, size.height -50));
+    this->addChild(sprTitle);
+
     
     CCMenu* menu = CCMenu::create();
     

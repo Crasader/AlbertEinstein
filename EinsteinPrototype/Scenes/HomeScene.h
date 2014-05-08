@@ -21,6 +21,7 @@
 #include "TraceRouteScene.h"
 #include "MinhasRotasScenes.h"
 #include "LayerWebView.h"
+#include "NewsScene.h"
  
 class HomeScene : public IFixedMenu{
 public:

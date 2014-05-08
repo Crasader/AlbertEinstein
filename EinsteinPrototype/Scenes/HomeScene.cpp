@@ -156,6 +156,9 @@ void IFixedMenu::FixedMenuCallBack(CCObject *sender)
             CCApplication::sharedApplication().hideBars(false);
             newNode =  new HomeScene();
             break;
+        case INFORMACOES://noticias
+            newNode = (CCLayer*)new NewsScene();
+            break;
         default:
             newNode = new HowToGoScene((HomeMenuState)((CCNode*)sender)->getTag());
             break;

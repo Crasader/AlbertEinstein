@@ -129,7 +129,7 @@ void CCListView::selectCellAtRow(unsigned int nRow)
         i->setScale(1.5f);
         i->setAnchorPoint(ccp(0,0));
         i->setPosition(ccp(0,0));
-        m_layerPanel->getChildByTag(nRow)->addChild(i, 1,101010);
+   //     m_layerPanel->getChildByTag(nRow)->addChild(i, 1,101010);
  
 
         if( m_layerPanel->getChildByTag(nRow)->getChildByTag(379)!= NULL)

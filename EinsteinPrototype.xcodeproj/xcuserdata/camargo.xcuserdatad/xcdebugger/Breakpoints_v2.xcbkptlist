@@ -622,11 +622,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/NewsScene.cpp"
-            timestampString = "421096497.367457"
+            timestampString = "421337349.597095"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "NewsScene::NewsScene()"
             landmarkType = "5">
          </BreakpointContent>
@@ -702,11 +702,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/NewsScene.cpp"
-            timestampString = "421207343.758497"
+            timestampString = "421337659.6642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "367"
-            endingLineNumber = "367"
+            startingLineNumber = "409"
+            endingLineNumber = "409"
             landmarkName = "NewsScene::onHttpRequestCompleted(cocos2d::CCObject *pSender, void *data)"
             landmarkType = "5">
             <Locations>
@@ -717,11 +717,11 @@
                   symbolName = "NewsScene::onHttpRequestCompleted(cocos2d::CCObject*, void*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/NewsScene.cpp"
-                  timestampString = "421207053.918203"
+                  timestampString = "421337868.089974"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "363"
-                  endingLineNumber = "363"
+                  startingLineNumber = "409"
+                  endingLineNumber = "409"
                   offsetFromSymbolStart = "630">
                </Location>
                <Location
@@ -731,11 +731,11 @@
                   symbolName = "NewsScene::onHttpRequestCompleted(cocos2d::CCObject*, void*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/NewsScene.cpp"
-                  timestampString = "421207053.918533"
+                  timestampString = "421337868.090265"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "363"
-                  endingLineNumber = "363"
+                  startingLineNumber = "409"
+                  endingLineNumber = "409"
                   offsetFromSymbolStart = "696">
                </Location>
                <Location
@@ -745,14 +745,30 @@
                   symbolName = "NewsScene::onHttpRequestCompleted(cocos2d::CCObject*, void*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/NewsScene.cpp"
-                  timestampString = "421207053.918818"
+                  timestampString = "421337868.090548"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "363"
-                  endingLineNumber = "363"
+                  startingLineNumber = "409"
+                  endingLineNumber = "409"
                   offsetFromSymbolStart = "764">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/NewsScene.cpp"
+            timestampString = "421337800.39414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolData *data)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

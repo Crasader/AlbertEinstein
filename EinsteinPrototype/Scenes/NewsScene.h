@@ -16,6 +16,7 @@
 #include "TraceRouteScene.h"
 #include "CCHttpRequest.h"
 #include "extensions/CCListView/CCListView.h"
+#include "AnimatedSprite.h"
 
 #include "gason.h"
 #include "News.h"
@@ -26,11 +27,12 @@ using namespace cocos2d::extension;
 
 
 class NewsScene : cocos2d::CCLayer , public cocos2d::extension::CCListView::CCKeypadDelegate, public cocos2d::extension::CCListViewDelegate{
+    
+
 private:
     
     std::string  currentData ;
-    CCListView * list;
-    CCArray *noticias;
+    
     
     void onHttpRequestCompleted(CCObject *pSender, void *data);
     void createListView();
@@ -46,6 +48,11 @@ private:
     void CCListView_didScrollToRow(CCListView *listView, CCListViewProtrolData *data);
 
 public:
+    
+    
+    CCListView * list;
+    CCArray *noticias;
+    AnimatedSprite *loading;
     
     NewsScene();
    // ~NewsScene();

@@ -14,16 +14,33 @@
 using namespace std;
 
 
-
+struct SimpleStructure
+{
+    NewsScene * owner;
+};
 using namespace cocos2d::extension;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
+
+void* ReloadFunction(void* arg)
+{
+    pthread_mutex_lock(&mutex);
+   SimpleStructure* args = (SimpleStructure*)arg;
+    // do something with args->data and args->otherData
+  //  delete args;
+    
+    args->owner->loading->removeFromParentAndCleanup(true);
+    args->owner->list->reload();
+    pthread_mutex_unlock(&mutex);
+    return NULL;
+}
 
 
 
 NewsScene::NewsScene()
 {
    
-    noticias = CCArray::create();
+    this->noticias = CCArray::create();
     
     cocos2d::extension::CCHttpRequest *requestor = cocos2d::extension::CCHttpRequest::sharedHttpRequest();
     
@@ -67,7 +84,7 @@ void NewsScene::createListView(){
     CCLayerColor * fundo =  CCLayerColor::create(ccc4(255, 255, 255, 255), size.width, size.height);
     fundo->setAnchorPoint(ccp(0,0));
     fundo->setPosition(ccp(0, 0));
-    this->addChild(fundo);
+    this->addChild(fundo,10);
 //    CCLayerColor * header =  CCLayerColor::create(ccc4(200, 200, 200, 255), size.width, 80);
 //    header->setAnchorPoint(ccp(0,0));
 //    header->setPosition(ccp(0, size.height -80));
@@ -79,14 +96,14 @@ void NewsScene::createListView(){
     sprHeader->setAnchorPoint(ccp(0,0));
     sprHeader->setScale(1);
     sprHeader->setPosition(ccp(0, size.height -90));
-    this->addChild(sprHeader);
+    this->addChild(sprHeader,100);
     CCSprite *sprTitle;
     sprTitle = CCSprite::create("tit_comochegar.png");
     
     sprTitle->setAnchorPoint(ccp(0,0));
     sprTitle->setScale(1);
     sprTitle->setPosition(ccp(110, size.height -50));
-    this->addChild(sprTitle);
+    this->addChild(sprTitle,101);
 
     
     CCMenu* menu = CCMenu::create();
@@ -99,7 +116,7 @@ void NewsScene::createListView(){
     menu->addChild(item, 0, 100);
     menu->setPosition(ccp(10,30));
     menu->setAnchorPoint(ccp(0,0));
-    this->addChild(menu,2,1000);
+    this->addChild(menu,102);
     
     
     
@@ -116,6 +133,16 @@ void NewsScene::createListView(){
     list->setSeparatorStyle(CCListViewCellSeparatorStyleNone);
     
     fundo->addChild(list);
+    this->loading = new AnimatedSprite("loader_einstein1.png");
+	this->loading->addAnimation(AnimatedSprite::animationWithFile("loader_einstein", 24, 0.030f), "anim");//frame_count
+    
+    this->addChild(this->loading,999);
+    this->loading->runAnimation("anim",true, true);
+	this->loading->setAnchorPoint(ccp(0.5f, 0.5f));
+	this->loading->setPosition(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 - 30));
+    this->loading->setVisible(true);
+
+    
 }
 
 void NewsScene::parseResult(char *retorno){
@@ -133,9 +160,16 @@ void NewsScene::parseResult(char *retorno){
     }else
     {
         fprintf(stderr, "success, status: %d\n", (int)status);
-        noticias = CCArray::create();
-        printReturn(value);
-        list->reload();
+        this->noticias = CCArray::create();
+         printReturn(value);
+        this->list->reload();
+        this->loading->removeFromParentAndCleanup(true);
+//
+//        pthread_t thread;
+//        SimpleStructure* args = new SimpleStructure();
+//        args->owner = this;
+//        pthread_create(&thread, NULL, &ReloadFunction, args);
+        
         
     }
     
@@ -234,7 +268,7 @@ void NewsScene::setValue(char* o)
     {
         tmpNews->notificacao_cadastro = o;
         
-        noticias->addObject(tmpNews);
+        this->noticias->addObject(tmpNews);
     }
     
 }
@@ -242,7 +276,7 @@ void NewsScene::setValue(char* o)
 
 void NewsScene::CCListView_numberOfCells(CCListView *listView, CCListViewProtrolData *data)
 {
-    int qtd =noticias->count();
+    int qtd =this->noticias->count();
 
     data->nNumberOfRows = qtd;
 }
@@ -251,7 +285,7 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
 {
     CCSize listItemSize = CCSize(list->getContentSize().width, 119);
     
-    News * item  = (News*)noticias->objectAtIndex(data->nRow);
+    News * item  = (News*)(this->noticias)->objectAtIndex(data->nRow);
     
     CCListViewCell *cell = CCListViewCell::node();
     cell->setOpacity(255);
@@ -260,10 +294,10 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
     data->cell = cell;
     
     CCSprite *sprBackground;
-    sprBackground = CCSprite::create("background_informacoes2.png");
+    sprBackground = CCSprite::create("background_informacoes.png");
     if(strcmp (item->url_link,"") == 0)
     {
-        sprBackground = CCSprite::create("background_informacoes.png");
+        sprBackground = CCSprite::create("background_informacoes2.png");
     }
  
     sprBackground->setAnchorPoint(ccp(0,0));

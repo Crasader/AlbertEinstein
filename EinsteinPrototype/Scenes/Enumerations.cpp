@@ -1012,16 +1012,35 @@ void IFixedMenu::BuildWayPointState( int floorKey, bool removeWayPoint, int wayp
                   {
                       if(waypointToRemove !=  lstvector[i].key)
                       {
-                          waypointStr.push_back( lstvector[i].name);
-                          waypointNormalOrder.push_back( lstvector[i].name);
-                          wID.push_back( lstvector[i].key);
+                         
+                        string str = string(lstvector[i].name);
+                        if (str.find("Transfer") != std::string::npos) {
+                                  std::cout << "found! transfer" << '\n';
+                        }
+                        else
+                        {
+                                  waypointStr.push_back( lstvector[i].name);
+                                  waypointNormalOrder.push_back( lstvector[i].name);
+                                  wID.push_back( lstvector[i].key);
+
+                        }
+                              
+                              
                       }
                   }
                   else
                   {
-                      waypointStr.push_back( lstvector[i].name);
-                      waypointNormalOrder.push_back( lstvector[i].name);
-                      wID.push_back( lstvector[i].key);
+                      string str = string(lstvector[i].name);
+                      if (str.find("Transfer") != std::string::npos) {
+                          std::cout << "found! transfer" << '\n';
+                      }
+                      else
+                      {
+                          waypointStr.push_back( lstvector[i].name);
+                          waypointNormalOrder.push_back( lstvector[i].name);
+                          wID.push_back( lstvector[i].key);
+                      }
+                      
                       
                   }
               }
@@ -1037,6 +1056,7 @@ void IFixedMenu::BuildWayPointState( int floorKey, bool removeWayPoint, int wayp
 			std::string bNameNormalOrder = waypointNormalOrder.at(j);
 			if(!itemName.compare(bNameNormalOrder)){
 				itemID = wID.at(j);
+              
                 insertItemListView(itemID,itemName.c_str());
                 
 				break;

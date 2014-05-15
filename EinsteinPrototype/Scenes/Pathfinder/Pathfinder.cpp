@@ -581,7 +581,13 @@ void Pathfinder::drawLines(LineType lineType){
 		ASTile path = arrayPoints.at(i);
 		int posX = (path.getPointX() * actualMap->getTileSize().width + 6);
 		int posY = (path.getPointY() * actualMap->getTileSize().height + 6);
-		
+//        if (posX <0) {
+//            posX = 0;
+//        }
+//        if (posY <0) {
+//            posY = 0;
+//        }
+        
 		if(lineType == LINE_SHADOW){
 			//posX -= 4;
 			//posY -= 4;
@@ -636,25 +642,21 @@ void Pathfinder::drawLines(LineType lineType){
 		float distance = ccpDistance(lastPoint, ccp(posX, posY));
 		if(i == 1){
 			distance -= 30;
+        
 			CCPoint endPoint;
 			endPoint.x = sinf(CC_DEGREES_TO_RADIANS(atan2f(posX - lastPointToAngleCalc.x , posYtoAngleCalc - lastPointToAngleCalc.y) * 180 / M_PI * -1)) * distance;
 			endPoint.y = cosf(CC_DEGREES_TO_RADIANS(atan2f(posX - lastPointToAngleCalc.x , posYtoAngleCalc - lastPointToAngleCalc.y) * 180 / M_PI * -1)) * distance;
-            if (posX <0) {
-                posX = 0;
-            }
-            if (posY <0) {
-                posY = 0;
-            }
-            float ex = endPoint.x;
-            if (ex < 0) {
-                ex = 0;
-            }
-            float ey = endPoint.y;
-            if (ey < 0) {
-                ey = 0;
-            }
-            endPoint = CCPoint(ex, ey);
-			arrow->setPosition(ccpAdd(ccp(posX, posY),endPoint));
+          
+//            float ex = endPoint.x;
+//            if (ex < 0) {
+//                ex = 0;
+//            }
+//            float ey = endPoint.y;
+//            if (ey < 0) {
+//                ey = 0;
+//            }
+//            endPoint = ccp(ex, ey);
+			//arrow->setPosition(ccpAdd(ccp(posX, posY),endPoint));
 			if(lineType == LINE_STEP){
 				arrowStep->setPosition(ccpAdd(ccp(posX, posY),  endPoint));
 			}

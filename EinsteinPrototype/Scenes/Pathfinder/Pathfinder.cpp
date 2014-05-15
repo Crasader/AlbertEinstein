@@ -639,9 +639,24 @@ void Pathfinder::drawLines(LineType lineType){
 			CCPoint endPoint;
 			endPoint.x = sinf(CC_DEGREES_TO_RADIANS(atan2f(posX - lastPointToAngleCalc.x , posYtoAngleCalc - lastPointToAngleCalc.y) * 180 / M_PI * -1)) * distance;
 			endPoint.y = cosf(CC_DEGREES_TO_RADIANS(atan2f(posX - lastPointToAngleCalc.x , posYtoAngleCalc - lastPointToAngleCalc.y) * 180 / M_PI * -1)) * distance;
-			arrow->setPosition(ccpAdd(ccp(posX, posY), endPoint));
+            if (posX <0) {
+                posX = 0;
+            }
+            if (posY <0) {
+                posY = 0;
+            }
+            float ex = endPoint.x;
+            if (ex < 0) {
+                ex = 0;
+            }
+            float ey = endPoint.y;
+            if (ey < 0) {
+                ey = 0;
+            }
+            endPoint = CCPoint(ex, ey);
+			arrow->setPosition(ccpAdd(ccp(posX, posY),endPoint));
 			if(lineType == LINE_STEP){
-				arrowStep->setPosition(ccpAdd(ccp(posX, posY), endPoint));
+				arrowStep->setPosition(ccpAdd(ccp(posX, posY),  endPoint));
 			}
 			
 		}

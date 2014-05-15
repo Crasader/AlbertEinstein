@@ -33,7 +33,7 @@ class NewsScene : cocos2d::CCLayer , public cocos2d::extension::CCListView::CCKe
 private:
     
     std::string  currentData ;
-    
+    CCArray *listNews;
     
     void onHttpRequestCompleted(CCObject *pSender, void *data);
     void createListView();

@@ -171,7 +171,7 @@ void LayerWebView::openBrowser(int tag)
     
     gUIWebViewBridge = [[UIWebViewBridge alloc] init];
     [gUIWebViewBridge setUnitID: tag];
-    [gUIWebViewBridge setStartLayerWebView2:this];
+    [gUIWebViewBridge setStartLayerWebView:this];
   
 }
 

@@ -144,14 +144,17 @@
 {
     mLayerWebView = iLayerWebView;
 
-    
-    mView = [[UIView alloc] initWithFrame:CGRectMake(0, 130, 320 , 352)];
-    mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 352)];
     int winsize = [[EAGLView sharedEGLView] getHeight];
-    if (winsize > 480) {
-        mView = [[UIView alloc] initWithFrame:CGRectMake(0, 140, 320 , 430)];
-        mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 430)];
-    }
+    mView = [[UIView alloc] initWithFrame:CGRectMake(0, 70, 320 , winsize-70)];
+    mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, winsize-70)];
+
+//    mView = [[UIView alloc] initWithFrame:CGRectMake(0, 130, 320 , 352)];
+//    mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 352)];
+//    int winsize = [[EAGLView sharedEGLView] getHeight];
+//    if (winsize > 480) {
+//        mView = [[UIView alloc] initWithFrame:CGRectMake(0, 140, 320 , 430)];
+//        mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 430)];
+//    }
     //[mView setBackgroundColor:[UIColor redColor]];
     //[mView setContentMode:UIViewContentModeBottom];
     

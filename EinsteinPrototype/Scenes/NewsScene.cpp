@@ -22,8 +22,8 @@ using namespace cocos2d::extension;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 
-static vector<News *> listNews;
-static CCArray *listNews2;
+//static vector<News *> this->this->listNews;
+bool alreadyLoaded = false;
 
 void* ReloadFunction(void* arg)
 {
@@ -43,8 +43,8 @@ void* ReloadFunction(void* arg)
 NewsScene::NewsScene()
 {
    
-    listNews2 = CCArray::create();
-    listNews2->retain();
+  //  this->listNews = CCArray::create();
+   // this->listNews->retain();
     
     cocos2d::extension::CCHttpRequest *requestor = cocos2d::extension::CCHttpRequest::sharedHttpRequest();
     
@@ -163,12 +163,13 @@ void NewsScene::parseResult(char *retorno){
     }else
     {
         fprintf(stderr, "success, status: %d\n", (int)status);
-        listNews2 = CCArray::create();
-        listNews2->retain();
-         printReturn(value);
+        this->listNews = CCArray::create();
+        this->listNews->retain();
+        printReturn(value);
+        alreadyLoaded = true;
         this->list->reload();
         this->loading->removeFromParentAndCleanup(true);
-//
+        
 //        pthread_t thread;
 //        SimpleStructure* args = new SimpleStructure();
 //        args->owner = this;
@@ -181,8 +182,8 @@ void NewsScene::parseResult(char *retorno){
     
     }
 
-//News * tmpNews;
-int listPos = 0;
+News * tmpNews;
+//int listPos = 0;
 char * lastKey;
 void NewsScene::printReturn(JsonValue o)
 {
@@ -203,8 +204,9 @@ void NewsScene::printReturn(JsonValue o)
         case JSON_TAG_ARRAY:
             for (auto i : o)
             {
-                News *news = new News();
-                listNews.push_back(news);
+             tmpNews = new News();
+                tmpNews ->retain();
+              //  this->listNews.push_back(news);
                // tmpNews = new News();
                printReturn(i->value);
             }
@@ -227,7 +229,7 @@ void NewsScene::printReturn(JsonValue o)
 
 void NewsScene::setValue(char* o)
 {
-    News * tmpNews = (News*)listNews.at(listPos);
+   
     if(strcmp (lastKey,"cod_notificacao") == 0)
     {
         tmpNews->cod_notificacao = o;
@@ -275,8 +277,8 @@ void NewsScene::setValue(char* o)
     if(strcmp (lastKey,"notificacao_cadastro") == 0)
     {
         tmpNews->notificacao_cadastro = o;
-        listPos++;
-        listNews2->addObject(tmpNews);
+        //listPos++;
+        this->listNews->addObject(tmpNews);
     }
     
 }
@@ -284,8 +286,11 @@ void NewsScene::setValue(char* o)
 
 void NewsScene::CCListView_numberOfCells(CCListView *listView, CCListViewProtrolData *data)
 {
-    int qtd =listNews.size();
-
+     int qtd = 0;
+    if (alreadyLoaded)
+    {
+        qtd =this->listNews -> count();
+    }
     data->nNumberOfRows = qtd;
 }
 
@@ -293,7 +298,7 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
 {
     CCSize listItemSize = CCSize(list->getContentSize().width, 119);
     
-    News * item  = (News*)listNews.at(data->nRow);
+    News * item  = (News*)this->listNews->objectAtIndex(data->nRow);
     
     CCListViewCell *cell = CCListViewCell::node();
     cell->setOpacity(255);
@@ -377,12 +382,12 @@ void NewsScene::CCListView_didClickCellAtRow(CCListView *listView, CCListViewPro
 //    BrowserScene * tmpBrowserScene = new BrowserScene();
 //    
 //    this->addChild((CCLayer*)tmpBrowserScene,500);
-   /* int pos = data->nRow;
-    int qtd =listNews.size();
-    News * item  = (News*)listNews2->objectAtIndex(pos);
+    int pos = data->nRow;
+  //  int qtd =this->listNews.size();
+    News * item  = (News*)this->listNews->objectAtIndex(pos);
     
     CCApplication::sharedApplication().openURL(item->url_link);
-    */
+    
 }
 
 void NewsScene::CCListView_didScrollToRow(CCListView *listView, CCListViewProtrolData *data)

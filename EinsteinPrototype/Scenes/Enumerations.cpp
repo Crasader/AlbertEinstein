@@ -436,12 +436,17 @@ void IFixedMenu::ChangeTitle(const char *title)
      labelTitle->setAnchorPoint(ccp(0,0.5));
      labelTitle->setColor(ccc3(255, 255, 255));
     
-    if(this->getChildByTag(2)->getChildByTag(345) != NULL)
+    try {
+        if(this->getChildByTag(2)->getChildByTag(345) != NULL)
         this->getChildByTag(2)->removeChildByTag(345, true);
-    
-    if( strcmp(title,"" ) !=0)
+        
+        if( strcmp(title,"" ) !=0)
         this->getChildByTag(2)->addChild(labelTitle,3,345);
-}
+
+    } catch(int e) {
+        //todo verificar exceção
+    }
+   }
 
 
 //Carrega uma imagem com o titulo da secao

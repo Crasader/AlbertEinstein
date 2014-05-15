@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 #import "LayerWebView.h"
+#import "BrowserLayer.h"
 #include "cocos2d.h"
 
 
@@ -37,6 +38,7 @@
 -(void) CleanUp;
 -(void) setStartLayerWebView : (LayerWebView*) iLayerWebView ;
 -(void) setStartLayerWebView2 : (LayerWebView*) iLayerWebView;
+-(void) setStartLayerWebViewWithURL : (BrowserLayer *)iLayerWebView andUrl:(char*) url;
 -(void) backClicked:(id)sender;
 - (void)removeBar;
 @end

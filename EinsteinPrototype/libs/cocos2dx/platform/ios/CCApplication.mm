@@ -81,6 +81,13 @@ void CCApplication::hideBars(bool enable)
     else
         [[UIApplication sharedApplication] setStatusBarHidden: NO];
 }
+void CCApplication::openURL(const char* pszUrl)
+{
+        NSString *msg = [NSString stringWithCString:pszUrl encoding:NSASCIIStringEncoding];
+        NSURL *nsUrl = [NSURL URLWithString:msg];
+        [[UIApplication sharedApplication] openURL:nsUrl];
+}
+
 void CCApplication::openURL(const char* pszUrl, const char* param,int tag)
 {
     //https://api.foursquare.com/v2/checkins/add checkin foursquare

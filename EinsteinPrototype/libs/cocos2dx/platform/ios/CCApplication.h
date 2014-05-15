@@ -45,6 +45,7 @@ public:
     void setAnimationInterval(double interval);
     
     void hideBars(bool enable);
+    void openURL(const char* pszUrl);
      void openURL(const char* pszUrl, const char* param, int tag);
     
     typedef enum

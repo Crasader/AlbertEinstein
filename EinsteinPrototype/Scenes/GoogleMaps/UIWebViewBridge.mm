@@ -73,6 +73,8 @@
     self->newKey = newKey;
 }
 
+
+
 //Carrega paginas HTMLS
 - (void) LoadRequest
 {
@@ -165,16 +167,15 @@
 
 }
 
--(void) setStartLayerWebView2 : (LayerWebView*) iLayerWebView
+-(void) setStartLayerWebViewWithURL : (BrowserLayer *)iLayerWebView andUrl:(char*) url
 {
-    mLayerWebView = iLayerWebView;
-
+  
     int winsize = [[EAGLView sharedEGLView] getHeight];
         mView = [[UIView alloc] initWithFrame:CGRectMake(0, 70, 320 , winsize-70)];
         mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, winsize-70)];
 
     mWebView.delegate = self;
-    [self LoadRequest];
+    [mWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]]];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardDidShowNotification object:nil];

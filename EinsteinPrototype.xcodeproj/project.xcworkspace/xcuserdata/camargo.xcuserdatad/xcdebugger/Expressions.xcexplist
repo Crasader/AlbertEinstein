@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "NewsScene::printReturn(JsonValue):NewsScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "NewsScene::setValue(char*):NewsScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "NewsScene:NewsScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "NewsScene::CCListView_didScrollToRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*):NewsScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "NewsScene::CCListView_didClickCellAtRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*):NewsScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "NewsScene::parseResult(char*):NewsScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "NewsScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*):NewsScene.cpp">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

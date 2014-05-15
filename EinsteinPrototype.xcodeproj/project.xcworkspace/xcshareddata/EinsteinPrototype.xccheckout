@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>10093581-0E4C-45C5-BB48-42C2C2055DAE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EinsteinPrototype</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B8908940-1C7C-46F5-AB59-41CF6C99DB39</key>
+		<string>https://github.com/rossimrc/AlbertEinstein.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EinsteinPrototype.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B8908940-1C7C-46F5-AB59-41CF6C99DB39</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rossimrc/AlbertEinstein.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B8908940-1C7C-46F5-AB59-41CF6C99DB39</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B8908940-1C7C-46F5-AB59-41CF6C99DB39</string>
+			<key>IDESourceControlWCCName</key>
+			<string>albert</string>
+		</dict>
+	</array>
+</dict>
+</plist>

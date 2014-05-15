@@ -73,7 +73,7 @@ Pathfinder::~Pathfinder(){
 	
 	//REMOVER MAP
 	this->releaseActualMap();
-	
+	youMarkup->setVisible(false);
 	//if(this->arrayTiles){
 		//this->arrayTiles->removeAllObjects();
 		//this->arrayTiles->release();
@@ -174,14 +174,27 @@ void Pathfinder::start(int startID, int endID){
 	//this->addChild(this->loading);
 	
 }
+typedef void (CCSprite::*setVisible)();
 
 void Pathfinder::releaseActualMap(){
 	std::cout<<__PRETTY_FUNCTION__<<"\n";
-    
-    if (youMarkup != NULL) {
-        youMarkup->setVisible(false);
-    }
-    
+   
+//    try {
+//           if (youMarkup != NULL) {
+//               CCSprite * spec_obj = dynamic_cast<CCSprite*>(youMarkup);
+//               if (spec_obj != NULL) {
+//                   spec_obj->setVisible(false);
+//
+//               }
+//               
+////        youMarkup->setVisible(false);
+//           }
+//    
+//    } catch(std::exception& e) {
+//    std::cout<<"Exception at "<<__LINE__<<" "<<__FILE__<<"\n";
+//    
+//    }
+
 	CCTMXTiledMap *actualMap = (CCTMXTiledMap *)this->getChildByTag(100);
 	CCSprite *actualMapImage = (CCSprite *)this->getChildByTag(999);
 
@@ -1055,7 +1068,9 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 					
 					if(nextValue < 0){
 						if(this->actualMapIndex < this->arrayMaps->count() - 1){
+                            
 							this->releaseActualMap();
+                            youMarkup->setVisible(false);
 							this->actualMapIndex++;
 							
 							//this->actualStep += (nextValue+1); << o next map muda esse
@@ -1083,6 +1098,7 @@ void Pathfinder::step(int nextValue, bool firstTime, bool animate){
 					}else{
 						if(this->actualMapIndex > 0){
 							this->releaseActualMap();
+                            youMarkup->setVisible(false);
 							this->actualMapIndex--;
 						
 							CCActionInterval *interval2 = CCActionInterval::create(3.0f);
@@ -1327,6 +1343,7 @@ void Pathfinder::findWC(int idBegin){
 		actualFloor->setEndID(wc->getID());
 		
 		this->releaseActualMap();
+       // youMarkup->setVisible(false);
 		this->actualMapIndex = 0;
 		this->loadMap(mapName, false);
 		//this->executeAStar(true);
@@ -1441,7 +1458,7 @@ void Pathfinder::findWC(int idBegin){
 		this->arrayMapNames->addObject(otherMapName);
 	}
 	
-	this->releaseActualMap();
+	//this->releaseActualMap();
 	if(wcFounded){
 		this->actualMapIndex = 0;
 		this->findPath(idBegin, nearestWC);

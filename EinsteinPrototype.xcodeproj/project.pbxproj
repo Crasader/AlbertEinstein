@@ -668,6 +668,8 @@
 		AC0A0C8018A7FA4F00FA8B62 /* bg_parking_4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0A0C7F18A7FA4F00FA8B62 /* bg_parking_4inch.png */; };
 		AC0D4DD0191B0F5A00984934 /* background_informacoes.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0D4DCE191B0F5A00984934 /* background_informacoes.png */; };
 		AC0D4DD1191B0F5A00984934 /* background_informacoes2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0D4DCF191B0F5A00984934 /* background_informacoes2.png */; };
+		AC34E7561921056200BFFF96 /* BrowserScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC34E7551921056200BFFF96 /* BrowserScene.cpp */; };
+		AC34E7591921108D00BFFF96 /* BrowserLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC34E7581921108D00BFFF96 /* BrowserLayer.mm */; };
 		AC394A6718D9C997001076EA /* IOSHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC394A6618D9C997001076EA /* IOSHelper.mm */; };
 		AC394A6A18DA06E4001076EA /* NativeInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC394A6918DA06E4001076EA /* NativeInterface.cpp */; };
 		AC4AF9F81876E38D00B4F344 /* ModeloWayPointFoto.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4AF9F71876E38D00B4F344 /* ModeloWayPointFoto.png */; };
@@ -1629,6 +1631,10 @@
 		AC0A0C7F18A7FA4F00FA8B62 /* bg_parking_4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_parking_4inch.png; sourceTree = "<group>"; };
 		AC0D4DCE191B0F5A00984934 /* background_informacoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_informacoes.png; sourceTree = "<group>"; };
 		AC0D4DCF191B0F5A00984934 /* background_informacoes2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_informacoes2.png; sourceTree = "<group>"; };
+		AC34E754192104DF00BFFF96 /* BrowserScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserScene.h; sourceTree = "<group>"; };
+		AC34E7551921056200BFFF96 /* BrowserScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BrowserScene.cpp; sourceTree = "<group>"; };
+		AC34E7571921108D00BFFF96 /* BrowserLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserLayer.h; sourceTree = "<group>"; };
+		AC34E7581921108D00BFFF96 /* BrowserLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BrowserLayer.mm; sourceTree = "<group>"; };
 		AC394A6518D9C932001076EA /* IOSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSHelper.h; sourceTree = "<group>"; };
 		AC394A6618D9C997001076EA /* IOSHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IOSHelper.mm; sourceTree = "<group>"; };
 		AC394A6818DA06C9001076EA /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
@@ -2037,6 +2043,10 @@
 				A5B75C9C16D692150092A425 /* BathRoomScene.h */,
 				5D7FB43C16C566480017B36E /* Enumerations.cpp */,
 				5DE088EB16C2D1D3000E8658 /* Enumerations.h */,
+				AC34E754192104DF00BFFF96 /* BrowserScene.h */,
+				AC34E7551921056200BFFF96 /* BrowserScene.cpp */,
+				AC34E7571921108D00BFFF96 /* BrowserLayer.h */,
+				AC34E7581921108D00BFFF96 /* BrowserLayer.mm */,
 				AC7996B41913507C00908BB6 /* NewsScene.h */,
 				AC7996B51913513C00908BB6 /* NewsScene.cpp */,
 				ACE325D61917288200CBCE20 /* News.h */,
@@ -3932,6 +3942,7 @@
 				7881614415DBE99C00D64777 /* CCParticleExamples.cpp in Sources */,
 				7881614715DBE99C00D64777 /* CCParticleSystem.cpp in Sources */,
 				7881614A15DBE99C00D64777 /* CCParticleSystemQuad.cpp in Sources */,
+				AC34E7561921056200BFFF96 /* BrowserScene.cpp in Sources */,
 				7881615115DBE99C00D64777 /* CCEGLViewProtocol.cpp in Sources */,
 				7881615815DBE99C00D64777 /* CCSAXParser.cpp in Sources */,
 				7881615E15DBE99C00D64777 /* AccelerometerDelegateWrapper.mm in Sources */,
@@ -4031,6 +4042,7 @@
 				A525BE5516E0D46600EF454A /* fileUtil.cpp in Sources */,
 				A525BE5716E0D46600EF454A /* glUtil.cpp in Sources */,
 				A525BE5816E0D46600EF454A /* mat.cpp in Sources */,
+				AC34E7591921108D00BFFF96 /* BrowserLayer.mm in Sources */,
 				787A19A716FB553E003C860F /* UIWebViewBridge.mm in Sources */,
 				787A19A816FB553E003C860F /* MapaViewScene.cpp in Sources */,
 				787A19A916FB553E003C860F /* MinhasRotasScenes.cpp in Sources */,

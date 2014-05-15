@@ -175,6 +175,13 @@ void LayerWebView::openBrowser(int tag)
   
 }
 
+void LayerWebView::openBrowserWithUrl(char* turl)
+{
+    
+    
+}
+
+
 void LayerWebView::openBrowser(int tag, const char* IdCheckin)
 {
     gUIWebViewBridge = [[UIWebViewBridge alloc] init];
@@ -254,10 +261,19 @@ LayerWebView::~LayerWebView()
     [gUIWebViewBridge release];
 }
 
+void LayerWebView::OnBack()
+{
+  
+    forceRelease();
+    //  changeScene(new HomeScene());
+    this->removeFromParentAndCleanup(true);
+}
+
 void LayerWebView::onBackbuttonClick()
 {
     forceRelease();
-    changeScene(new HomeScene());
+  //  changeScene(new HomeScene());
+    this->removeFromParentAndCleanup(true);
 }
 
 bool LayerWebView::init()

@@ -53,11 +53,13 @@ public:
     ~LayerWebView();
     bool init();
     void openBrowser(int tag);
+    void openBrowserWithUrl(char* turl);
     
     void openBrowser(int tag, const char* IdCheckin);
 
     void onBackbuttonClick();
     void setUpMenu();
+    virtual void OnBack();
     static void forceRelease();
     static bool isKeyBoardVisible();
     

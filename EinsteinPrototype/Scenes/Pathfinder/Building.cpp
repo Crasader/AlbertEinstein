@@ -150,11 +150,13 @@ Escalator *Building::getDefaultEscalator(){
 
 
 Floor *Building::getFloor(int floorNumber){
+    if (this->arrayFloors != NULL) {
     for(int i = 0; i < this->arrayFloors->count(); i++){
         Floor *floor = (Floor *)this->arrayFloors->objectAtIndex(i);
         if(floor->getFloorNumber() == floorNumber){
             return floor;
         }
+    }
     }
     
     return NULL;

@@ -17,6 +17,7 @@
 #include "CCHttpRequest.h"
 #include "extensions/CCListView/CCListView.h"
 #include "AnimatedSprite.h"
+#include "BrowserScene.h"
 
 #include "gason.h"
 #include "News.h"
@@ -51,7 +52,7 @@ public:
     
     
     CCListView * list;
-    CCArray *noticias;
+    
     AnimatedSprite *loading;
     
     NewsScene();

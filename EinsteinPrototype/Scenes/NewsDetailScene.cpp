@@ -122,11 +122,12 @@ void NewsDetailScene::initWithNews(News * varNews)
     CCSprite *spriteDefaulty = CCSprite::create("bt_saibamais.png");
     CCMenuItemSprite *item2 = CCMenuItemSprite::create(spriteDefaultx, spriteDefaulty, this,  menu_selector(NewsDetailScene::btnMore));
     item2->setAnchorPoint(ccp(0, 0));
-    menu2->setPosition(ccp(50, 50));
-    item2->addChild(item2, 0, 100);
-    item2->setPosition(ccp(10,30));
-    item2->setAnchorPoint(ccp(0,0));
-    fundo->addChild(menu2,1001);
+    item2->setPosition(ccp(200, size.height -90));
+    menu2->addChild(item2, 0, 100);
+    menu2->setPosition(ccp(10,30));
+    menu2->setAnchorPoint(ccp(0,0));
+    this->addChild(menu2,10002);
+
 
     
   

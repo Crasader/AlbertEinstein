@@ -7,30 +7,21 @@
 //
 
 #include "NewsScene.h"
-
 #include "HomeScene.h"
-
-
-using namespace std;
-
 
 struct SimpleStructure
 {
     NewsScene * owner;
 };
-using namespace cocos2d::extension;
+int listPos =0;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
-
-//static vector<News *> this->this->listNews;
 bool alreadyLoaded = false;
 
 void* ReloadFunction(void* arg)
 {
     pthread_mutex_lock(&mutex);
-   SimpleStructure* args = (SimpleStructure*)arg;
-    // do something with args->data and args->otherData
-  //  delete args;
+    SimpleStructure* args = (SimpleStructure*)arg;
     
     args->owner->loading->removeFromParentAndCleanup(true);
     args->owner->list->reload();
@@ -38,51 +29,31 @@ void* ReloadFunction(void* arg)
     return NULL;
 }
 
-
-
 NewsScene::NewsScene()
 {
-   
-  //  this->listNews = CCArray::create();
-   // this->listNews->retain();
+    CCHttpRequest *requestor = CCHttpRequest::sharedHttpRequest();
     
-    cocos2d::extension::CCHttpRequest *requestor = cocos2d::extension::CCHttpRequest::sharedHttpRequest();
-    
-    std::string url = "http://clientes.farofastudios.com.br/Einstein/admin/v2/json.php?data=03-04-2014";
-    std::string postData = "key=val";
-    
+    string url = "http://clientes.farofastudios.com.br/Einstein/admin/v2/json.php?data=03-04-2014";
+    string postData = "key=val";
     
     requestor->addGetTask(url, this, callfuncND_selector(NewsScene::onHttpRequestCompleted));
-   // requestor->addPostTask(url, postData, this, callfuncND_selector(NewsScene::onHttpRequestCompleted));
-    
-//    std::vector<std::string> downloads;
-//    downloads.push_back("http://www.baidu.com/index.html");
-//    requestor->addDownloadTask(downloads, this, callfuncND_selector(HelloWorld::onHttpRequestCompleted));
-    
-    
-    
- //   actualCategory = INFORMACOES;
-  //  initFixedMenu();
-  //  Init();
-  //  LoadListView();
-  //  addButtonTop();
     
     createListView();
-    
-    
 }
 
 void NewsScene::btnBack(CCObject* node)
 {
     this->removeFromParentAndCleanup(true);
+    listNews.clear();
     CCScene* newScene = CCScene::create();
     newScene->addChild(new HomeScene(),0,Global::TAG_Parent_Layer);
     CCDirector::sharedDirector()->getRunningScene()->removeChildByTag(Global::TAG_Parent_Layer, true);
     CCDirector::sharedDirector()->replaceScene(newScene);
 }
 
-void NewsScene::createListView(){
-   // CCSize size = CCSize(750, 400);
+void NewsScene::createListView()
+{
+//    CCSize size = CCSize(750, 400);
     CCSize size = CCDirector::sharedDirector()->getWinSize();
   
     CCLayerColor * fundo =  CCLayerColor::create(ccc4(255, 255, 255, 255), size.width, size.height);
@@ -102,13 +73,12 @@ void NewsScene::createListView(){
     sprHeader->setPosition(ccp(0, size.height -90));
     this->addChild(sprHeader,100);
     CCSprite *sprTitle;
-    sprTitle = CCSprite::create("tit_comochegar.png");
+    sprTitle = CCSprite::create("tit_informacoes.png");
     
     sprTitle->setAnchorPoint(ccp(0,0));
     sprTitle->setScale(1);
     sprTitle->setPosition(ccp(110, size.height -50));
     this->addChild(sprTitle,101);
-
     
     CCMenu* menu = CCMenu::create();
     
@@ -121,11 +91,6 @@ void NewsScene::createListView(){
     menu->setPosition(ccp(10,30));
     menu->setAnchorPoint(ccp(0,0));
     this->addChild(menu,102);
-    
-    
-    
-  
-  
     
     list = CCListView::create(CCListViewModeVertical);
     list = cocos2d::extension::CCListView::create(CCListViewModeVertical);
@@ -145,49 +110,39 @@ void NewsScene::createListView(){
 	this->loading->setAnchorPoint(ccp(0.5f, 0.5f));
 	this->loading->setPosition(ccp(CCDirector::sharedDirector()->getWinSize().width/2, CCDirector::sharedDirector()->getWinSize().height/2 - 30));
     this->loading->setVisible(true);
-
-    
 }
 
-void NewsScene::parseResult(char *retorno){
-    char *source = retorno; // or read file, whatever
-    // do not forget terminate source string with 0
+void NewsScene::parseResult(char *retorno)
+{
+    char *source = retorno;
     char *endptr;
     JsonValue value;
     JsonAllocator allocator;
     JsonParseStatus status = json_parse(source, &endptr, &value, allocator);
-    if (status != JSON_PARSE_OK)
-    {
+    
+    if (status != JSON_PARSE_OK) {
         fprintf(stderr, "error at %zd, status: %d\n", endptr - source, (int)status);
-        //exit(EXIT_FAILURE);
-    }else
-    {
+//        exit(EXIT_FAILURE);
+        
+    } else {
         fprintf(stderr, "success, status: %d\n", (int)status);
-        this->listNews = CCArray::create();
-        this->listNews->retain();
+        listPos =0;
         printReturn(value);
         alreadyLoaded = true;
         this->list->reload();
         this->loading->removeFromParentAndCleanup(true);
-        
 //        pthread_t thread;
 //        SimpleStructure* args = new SimpleStructure();
 //        args->owner = this;
 //        pthread_create(&thread, NULL, &ReloadFunction, args);
-        
-        
     }
-    
-  
-    
-    }
+}
 
-News * tmpNews;
-//int listPos = 0;
-char * lastKey;
+
+char *lastKey;
+
 void NewsScene::printReturn(JsonValue o)
 {
-   
     switch (o.getTag())
     {
         case JSON_TAG_NUMBER:
@@ -198,23 +153,24 @@ void NewsScene::printReturn(JsonValue o)
             printf("%s\n", o.toBool() ? "true" : "false");
             break;
         case JSON_TAG_STRING:
-            printf("\"%s\"\n", o.toString());
-            setValue(o.toString());
+        {
+            string theValue =o.toString();
+            setValue(theValue);
+        }
             break;
         case JSON_TAG_ARRAY:
             for (auto i : o)
             {
-             tmpNews = new News();
-                tmpNews ->retain();
-              //  this->listNews.push_back(news);
                // tmpNews = new News();
-               printReturn(i->value);
+                listNews.push_back(new News());
+                printReturn(i->value);
             }
+            
             break;
         case JSON_TAG_OBJECT:
             for (auto i : o)
             {
-                printf("%s = ", i->key );
+                printf("%s = ", i->key);
                 lastKey = i->key;
                 printReturn(i->value);
             }
@@ -223,73 +179,76 @@ void NewsScene::printReturn(JsonValue o)
             printf("null\n");
             break;
     }
-
 }
 
-
-void NewsScene::setValue(char* o)
+void NewsScene::setValue(string value)
 {
+    News *tmpNews;
    
+    tmpNews = listNews.at(listPos);
     if(strcmp (lastKey,"cod_notificacao") == 0)
     {
-        tmpNews->cod_notificacao = o;
+      //  string tmpstring = value;
+        tmpNews->cod_notificacao =value;
     }
     if(strcmp (lastKey,"codUsuario") == 0)
     {
-        tmpNews->codUsuario = o;
+        tmpNews->codUsuario = value;
     }
     if(strcmp (lastKey,"notiAtivo") == 0)
     {
-        tmpNews->notiAtivo = o;
+        tmpNews->notiAtivo = value;
     }
     if(strcmp (lastKey,"usuario") == 0)
     {
-        tmpNews->usuario = o;
+        tmpNews->usuario = value;
     }
     if(strcmp (lastKey,"titulo") == 0)
     {
-        tmpNews->titulo = o;
+        tmpNews->titulo = value;
     }
     if(strcmp (lastKey,"texto") == 0)
     {
-        tmpNews->texto = o;
+        tmpNews->texto = value;
     }
     if(strcmp (lastKey,"imagem") == 0)
     {
-        tmpNews->imagem = o;
+        tmpNews->imagem = value;
     }
     if(strcmp (lastKey,"url_link") == 0)
     {
-        tmpNews->url_link = o;
+        tmpNews->url_link = value;
+        
+        if (strncmp(tmpNews->url_link.c_str(), "http", strlen("http")) != 0) {
+            tmpNews->url_link = "http://" + tmpNews->url_link;
+        }
     }
     if(strcmp (lastKey,"nome") == 0)
     {
-        tmpNews->nome = o;
+        tmpNews->nome = value;
     }
     if(strcmp (lastKey,"email") == 0)
     {
-        tmpNews->email = o;
+        tmpNews->email = value;
     }
     if(strcmp (lastKey,"notificacao_validade") == 0)
     {
-        tmpNews->notificacao_validade = o;
+        tmpNews->notificacao_validade = value;
     }
     if(strcmp (lastKey,"notificacao_cadastro") == 0)
     {
-        tmpNews->notificacao_cadastro = o;
-        //listPos++;
-        this->listNews->addObject(tmpNews);
+        tmpNews->notificacao_cadastro = value;
+        listPos++;
+      //  this->listNews.push_back(tmpNews);
     }
-    
 }
-
 
 void NewsScene::CCListView_numberOfCells(CCListView *listView, CCListViewProtrolData *data)
 {
-     int qtd = 0;
+    int qtd = 0;
     if (alreadyLoaded)
     {
-        qtd =this->listNews -> count();
+        qtd =this->listNews.size();
     }
     data->nNumberOfRows = qtd;
 }
@@ -298,7 +257,7 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
 {
     CCSize listItemSize = CCSize(list->getContentSize().width, 119);
     
-    News * item  = (News*)this->listNews->objectAtIndex(data->nRow);
+    News *item = (News*) this->listNews.at(data->nRow);
     
     CCListViewCell *cell = CCListViewCell::node();
     cell->setOpacity(255);
@@ -308,7 +267,8 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
     
     CCSprite *sprBackground;
     sprBackground = CCSprite::create("background_informacoes.png");
-    if(strcmp (item->url_link,"") == 0)
+    
+    if(item->url_link.empty())
     {
         sprBackground = CCSprite::create("background_informacoes2.png");
     }
@@ -318,62 +278,48 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
     sprBackground->setPosition(ccp(0,0));
     cell->addChild(sprBackground);
     
-    
- 
-    
-    
     int margem = 25;
     int recuo = 15;
     int titleLines = 1;
     int textLines = 6;
     int titleFontSize =18;
     int textFontSize =12;
-    CCSprite * img = getImageFromURL(item->imagem);
+    CCSprite * img = getImageFromURL(item->imagem.c_str());
+    
     if (img != NULL) {
         img->setAnchorPoint(ccp(0,0));
         img->setScale(0.35);
         img->setPosition(ccp(10,margem));
         cell->addChild(img);
-        
         recuo = 130;
-        
-        
-        
     }
     
     
     CCLabelTTF * labelTitle;
     
-    //  if( bold)
-    labelTitle = CCLabelTTF::criar(item->titulo, CCSizeMake(cell->getContentSize().width-margem, titleFontSize*titleLines), kCCTextAlignmentLeft, "LucidaGrandeBold", titleFontSize);
-    // else
-    //     labelTitle = CCLabelTTF::create(datatext, "Lucida Grande", size);
+//    if(bold)
+    labelTitle = CCLabelTTF::criar(item->titulo.c_str(), CCSizeMake(cell->getContentSize().width-margem, titleFontSize*titleLines), kCCTextAlignmentLeft, "LucidaGrandeBold", titleFontSize);
+//    else
+//         labelTitle = CCLabelTTF::create(datatext, "Lucida Grande", size);
     
     labelTitle->setPosition(ccp(10, cell->getContentSize().height-titleFontSize*titleLines-3));
     labelTitle->setAnchorPoint(ccp(0,0));
     labelTitle->setColor(ccc3(80, 80, 80));
     cell->addChild(labelTitle);
     
-    CCLabelTTF * labelDesc;
+    CCLabelTTF *labelDesc;
 
-    labelDesc = CCLabelTTF::criar(item->texto, CCSizeMake(cell->getContentSize().width-recuo-margem, textFontSize*textLines), kCCTextAlignmentLeft, "Lucida Grande", textFontSize);
+    labelDesc = CCLabelTTF::criar(item->texto.c_str(), CCSizeMake(cell->getContentSize().width-recuo-margem, textFontSize*textLines), kCCTextAlignmentLeft, "Lucida Grande", textFontSize);
     
     labelDesc->setPosition(ccp(recuo, margem));
     labelDesc->setAnchorPoint(ccp(0,0));
     labelDesc->setColor(ccc3(100, 100, 100));
     cell->addChild(labelDesc);
-
     
-  //  CCSprite * img = getImageFromURL("http://clientes.farofastudios.com.br/Einstein/admin/v2/imagens/1396547632556.png");
-
-   
-
-//
+//    CCSprite *img = getImageFromURL("http://clientes.farofastudios.com.br/Einstein/admin/v2/imagens/1396547632556.png");
 //    labelDesc->setPosition(ccp(0, cell->getContentSize().height  - 20 ));
 //    labelDesc->setAnchorPoint(ccp(0,0));
 //    labelDesc->setColor(ccc3(255, 255, 255));
-//    
-//    
 //    cell->addChild(labelDesc);
 }
 
@@ -383,25 +329,29 @@ void NewsScene::CCListView_didClickCellAtRow(CCListView *listView, CCListViewPro
 //    
 //    this->addChild((CCLayer*)tmpBrowserScene,500);
     int pos = data->nRow;
-  //  int qtd =this->listNews.size();
-    News * item  = (News*)this->listNews->objectAtIndex(pos);
+    News * item  = (News*)this->listNews.at(pos);
+    //CCApplication::sharedApplication().openURL(item->url_link.c_str());
     
-    CCApplication::sharedApplication().openURL(item->url_link);
+    NewsDetailScene * tmpDetail = new  NewsDetailScene;
+    tmpDetail->initWithNews(item);
+    this->list->setTouchEnabled(false);
+    tmpDetail->baseLayer = this->list;
+    this->getParent()->addChild((CCLayer*)tmpDetail);
     
 }
 
 void NewsScene::CCListView_didScrollToRow(CCListView *listView, CCListViewProtrolData *data)
 {
-    
 }
+
 void NewsScene::onHttpRequestCompleted(cocos2d::CCObject *pSender, void *data)
 {
-    cocos2d::extension::HttpResponsePacket *response = (cocos2d::extension::HttpResponsePacket *)data;
+    HttpResponsePacket *response = (HttpResponsePacket *)data;
     
     if (response->request->reqType == cocos2d::extension::kHttpRequestGet) {
         if (response->succeed) {
             CCLog("Get Request Completed!");
-            //CCLog("Content: %s", response->responseData.c_str());
+//            CCLog("Content: %s", response->responseData.c_str());
             parseResult((char*)response->responseData.c_str());
         } else {
             CCLog("Get Error: %s", response->responseData.c_str());
@@ -427,8 +377,7 @@ void NewsScene::onHttpRequestCompleted(cocos2d::CCObject *pSender, void *data)
             CCLog("Download Error: %s", response->responseData.c_str());
         }
     }
-   }
-
+}
 
 struct BufferStruct
 {
@@ -459,9 +408,7 @@ static size_t WriteMemoryCallback
 
 size_t write_to_string(void *ptr, size_t size, size_t count, void *stream) {
     ((string*)stream)->append((char*)ptr, 0, size*count);
-    
-//      CCLog("%s", ((string*)stream)->c_str());
-    
+//    CCLog("%s", ((string*)stream)->c_str());
     return size*count;
 }
 
@@ -488,9 +435,7 @@ CCSprite *  NewsScene::getImageFromURL(const char* url)
         {
             fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
             return NULL;
-        }
-        else
-        {
+        } else {
 //            FILE * fp;
 //            fp = fopen( "loucura.png","w");
 //            if( fp )

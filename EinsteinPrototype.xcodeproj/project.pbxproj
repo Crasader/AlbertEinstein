@@ -659,6 +659,8 @@
 		A5EE42D916DE959100E8E49B /* Masculino_Banheiro.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE42D816DE958900E8E49B /* Masculino_Banheiro.png */; };
 		A5F1A0D3170E055000932CF8 /* ok_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F1A0D1170E055000932CF8 /* ok_btn.png */; };
 		A5F1A0D4170E055000932CF8 /* ok_press.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F1A0D2170E055000932CF8 /* ok_press.png */; };
+		AC0257421925444B00BC5D90 /* NewsDetailScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC0257411925444B00BC5D90 /* NewsDetailScene.cpp */; };
+		AC0257441925B64B00BC5D90 /* bt_saibamais.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0257431925B64B00BC5D90 /* bt_saibamais.png */; };
 		AC02E7FE18D38A0200BA9DE3 /* icon_featured2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC02E7FD18D38A0200BA9DE3 /* icon_featured2.png */; };
 		AC0A0C7718A7243200FA8B62 /* button_entering.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0A0C7518A7243200FA8B62 /* button_entering.png */; };
 		AC0A0C7818A7243200FA8B62 /* button_outing.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0A0C7618A7243200FA8B62 /* button_outing.png */; };
@@ -1622,6 +1624,9 @@
 		A5EE42D816DE958900E8E49B /* Masculino_Banheiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Masculino_Banheiro.png; sourceTree = "<group>"; };
 		A5F1A0D1170E055000932CF8 /* ok_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok_btn.png; sourceTree = "<group>"; };
 		A5F1A0D2170E055000932CF8 /* ok_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok_press.png; sourceTree = "<group>"; };
+		AC0257401925434600BC5D90 /* NewsDetailScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailScene.h; sourceTree = "<group>"; };
+		AC0257411925444B00BC5D90 /* NewsDetailScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NewsDetailScene.cpp; sourceTree = "<group>"; };
+		AC0257431925B64B00BC5D90 /* bt_saibamais.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_saibamais.png; sourceTree = "<group>"; };
 		AC02E7FD18D38A0200BA9DE3 /* icon_featured2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_featured2.png; sourceTree = "<group>"; };
 		AC0A0C7518A7243200FA8B62 /* button_entering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_entering.png; sourceTree = "<group>"; };
 		AC0A0C7618A7243200FA8B62 /* button_outing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_outing.png; sourceTree = "<group>"; };
@@ -1737,6 +1742,7 @@
 			isa = PBXGroup;
 			children = (
 				8A86067B17B404B1006260DE /* bt_proxMapa.png */,
+				AC0257431925B64B00BC5D90 /* bt_saibamais.png */,
 				ACB57E06190950C6001C7C8B /* bt_proxMapa_old.png */,
 				ACB57E08190951A5001C7C8B /* bt_voce.png */,
 				AC0D4DCE191B0F5A00984934 /* background_informacoes.png */,
@@ -2049,6 +2055,8 @@
 				AC34E7581921108D00BFFF96 /* BrowserLayer.mm */,
 				AC7996B41913507C00908BB6 /* NewsScene.h */,
 				AC7996B51913513C00908BB6 /* NewsScene.cpp */,
+				AC0257401925434600BC5D90 /* NewsDetailScene.h */,
+				AC0257411925444B00BC5D90 /* NewsDetailScene.cpp */,
 				ACE325D61917288200CBCE20 /* News.h */,
 				ACE325D7191728E400CBCE20 /* News.cpp */,
 				787A199A16FB553E003C860F /* GoogleMaps */,
@@ -2097,7 +2105,6 @@
 			children = (
 				8A894A7F177B7FAD00971A22 /* icone2.png */,
 				8A894A7D177B7FA800971A22 /* Untitled-1.png */,
-				A5D841DB16E65CBB00DCF486 /* Security.framework */,
 				78815FDD15DBE99A00D64777 /* EinsteinPrototype */,
 				78815FCC15DBE99900D64777 /* Frameworks */,
 				78815FCA15DBE99900D64777 /* Products */,
@@ -2115,6 +2122,7 @@
 		78815FCC15DBE99900D64777 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5D841DB16E65CBB00DCF486 /* Security.framework */,
 				78815FCD15DBE99900D64777 /* QuartzCore.framework */,
 				78815FCF15DBE99900D64777 /* OpenGLES.framework */,
 				78815FD115DBE99900D64777 /* OpenAL.framework */,
@@ -3317,6 +3325,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Farofa Studios";
+				TargetAttributes = {
+					78815FC815DBE99900D64777 = {
+						DevelopmentTeam = 6NPMG6FGTT;
+					};
+				};
 			};
 			buildConfigurationList = 78815FC315DBE99900D64777 /* Build configuration list for PBXProject "EinsteinPrototype" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3634,6 +3647,7 @@
 				787A19C116FB5905003C860F /* BackMap_H.png in Resources */,
 				787A19C216FB5905003C860F /* BackMap.png in Resources */,
 				787A19C316FB5905003C860F /* ButtonFavoritos_D_.png in Resources */,
+				AC0257441925B64B00BC5D90 /* bt_saibamais.png in Resources */,
 				ACE325C8191712ED00CBCE20 /* jansson.def in Resources */,
 				787A19C416FB5905003C860F /* buttonFavoritosMap_H.png in Resources */,
 				787A19C516FB5905003C860F /* buttonFavoritosMap.png in Resources */,
@@ -4048,6 +4062,7 @@
 				787A19A916FB553E003C860F /* MinhasRotasScenes.cpp in Sources */,
 				787A19AD16FB56F0003C860F /* RotasFileIO.cpp in Sources */,
 				A57CDF85170CAC5B000823A5 /* default.fsh in Sources */,
+				AC0257421925444B00BC5D90 /* NewsDetailScene.cpp in Sources */,
 				A5D669F21721870900DF2494 /* jquery.js in Sources */,
 				A5D669F31721870900DF2494 /* jquery.mobile-1.2.0.js in Sources */,
 				A5D669F41721870900DF2494 /* jquery.mobile-1.2.0.min.js in Sources */,
@@ -4129,7 +4144,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Maycon Roberto De Souza (VUE45SR68Y)";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4161,7 +4176,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Maycon Roberto De Souza (VUE45SR68Y)";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

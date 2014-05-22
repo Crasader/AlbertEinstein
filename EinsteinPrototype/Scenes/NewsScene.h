@@ -25,6 +25,9 @@ using namespace cocos2d;
 using namespace cocos2d::extension;
 using namespace std;
 
+
+
+
 class NewsScene : CCLayer , public CCListView::CCKeypadDelegate, public CCListViewDelegate {
     
 private:

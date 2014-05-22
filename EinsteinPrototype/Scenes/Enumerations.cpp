@@ -861,6 +861,7 @@ void IFixedMenu::insertItemListView( int tagValue, const char* isChild, const ch
     data.keyParent =keyParent;
     data.img ="";
     data.featured = false;
+    std::cout << "featured " << featured << std::endl;
     if (strcmp(featured, "s") == 0) {
         data.featured = true;
         data.img = "icon_featured2.png";

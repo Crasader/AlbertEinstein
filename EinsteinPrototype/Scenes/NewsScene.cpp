@@ -33,7 +33,39 @@ NewsScene::NewsScene()
 {
     CCHttpRequest *requestor = CCHttpRequest::sharedHttpRequest();
     
-    string url = "http://clientes.farofastudios.com.br/Einstein/admin/v2/json.php?data=03-04-2014";
+    
+    char tmpbuf[128];
+    
+    time_t ltime;
+    
+    struct tm *today;
+    
+    
+    
+    time( &ltime );
+    
+    today = localtime( &ltime );
+    
+    
+    
+    /* Use strftime to build a customized time string. */
+    
+    strftime( tmpbuf, 128,"Today is %A, day %d of %B in the year %Y.\n", today );
+ 
+    
+    std::stringstream ss;
+    ss << today->tm_mday<<"-" << today->tm_mon<<"-" << today->tm_year+1900;
+    
+    // Create a new dictionary
+    CCDictionary * myDictionary = new CCDictionary();
+    CCDictionary * myData = new CCDictionary();
+    
+    // Add the data you would like to store
+    
+    
+    string url;
+    
+    url = url +"http://clientes.farofastudios.com.br/Einstein/admin/v2/json.php?data=" + ss.str();
     string postData = "key=val";
     
     requestor->addGetTask(url, this, callfuncND_selector(NewsScene::onHttpRequestCompleted));

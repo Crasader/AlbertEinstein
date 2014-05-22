@@ -86,6 +86,36 @@
             endingLineNumber = "74"
             landmarkName = "BathRoomScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BathRoomScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/BathRoomScene.cpp"
+                  timestampString = "422476176.74246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "2">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to BathRoomScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/BathRoomScene.cpp"
+                  timestampString = "422476176.742936"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "6">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -134,22 +164,36 @@
             endingLineNumber = "54"
             landmarkName = "MinhasRotasScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/ParkingScene.cpp"
-            timestampString = "421807113.75282"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
-            landmarkName = "ParkingScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MinhasRotasScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MinhasRotasScenes.cpp"
+                  timestampString = "422476176.765459"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "2">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to MinhasRotasScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MinhasRotasScenes.cpp"
+                  timestampString = "422476176.765763"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "6">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -166,6 +210,36 @@
             endingLineNumber = "229"
             landmarkName = "SearchScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SearchScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/SearchScene.cpp"
+                  timestampString = "422476176.766081"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "2">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to SearchScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/SearchScene.cpp"
+                  timestampString = "422476176.766378"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "6">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -175,11 +249,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
-            timestampString = "421808405.084819"
+            timestampString = "422475115.51793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1040"
-            endingLineNumber = "1040"
+            startingLineNumber = "1041"
+            endingLineNumber = "1041"
             landmarkName = "IFixedMenu::BuildWayPointState( int floorKey, bool removeWayPoint, int waypointToRemove)"
             landmarkType = "5">
          </BreakpointContent>
@@ -249,17 +323,291 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
+            timestampString = "422473808.536219"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "848"
+            endingLineNumber = "848"
+            landmarkName = "IFixedMenu::insertItemListView( int tagValue, const char* isChild, const char* datatext, int keyParent)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
+            timestampString = "422473810.974817"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "832"
+            endingLineNumber = "832"
+            landmarkName = "IFixedMenu::insertItemListView( int tagValue, const char* isChild, const char* datatext)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
+            timestampString = "422473814.129558"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "819"
+            endingLineNumber = "819"
+            landmarkName = "IFixedMenu::insertItemListView( int tagValue, const char* datatext)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IFixedMenu::BuildFavorites(bool, int)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
+                  timestampString = "422476176.767622"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "819"
+                  endingLineNumber = "819"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IFixedMenu::insertItemListView(int, char const*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
+                  timestampString = "422476176.767918"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "819"
+                  endingLineNumber = "819"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IFixedMenu::BuildFloorState(int)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
+                  timestampString = "422476176.76821"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "819"
+                  endingLineNumber = "819"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IFixedMenu::SearchItem(char const*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
+                  timestampString = "422476174.397045"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "819"
+                  endingLineNumber = "819"
+                  offsetFromSymbolStart = "864">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IFixedMenu::BuildWayPointState(int, bool, int)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
+                  timestampString = "422476174.397326"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "819"
+                  endingLineNumber = "819"
+                  offsetFromSymbolStart = "1330">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IFixedMenu::SearchItem(char const*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
+                  timestampString = "422476176.768504"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "819"
+                  endingLineNumber = "819"
+                  offsetFromSymbolStart = "868">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/NewsScene.cpp"
-            timestampString = "422366964.892828"
+            filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
+            timestampString = "422473825.435629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
-            landmarkName = "NewsScene::CCListView_didClickCellAtRow(CCListView *listView, CCListViewProtrolData *data)"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data, float space)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/Enumerations.cpp"
+            timestampString = "422474409.526382"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "IFixedMenu::setDefaultListView(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data, float space)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/HowToGoScene.cpp"
+            timestampString = "422475679.540277"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "HowToGoScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HowToGoScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HowToGoScene.cpp"
+                  timestampString = "422476176.769415"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "2">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to HowToGoScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HowToGoScene.cpp"
+                  timestampString = "422476176.769711"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "6">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/NewsScene.cpp"
+            timestampString = "422475697.913217"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
+            landmarkName = "NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolData *data)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/ParkingScene.cpp"
+            timestampString = "422476174.000366"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "ParkingScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/TraceRouteScene.cpp"
+            timestampString = "422475719.931269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "TraceRouteScene::CCListView_cellForRow(cocos2d::extension::CCListView *listView, cocos2d::extension::CCListViewProtrolData *data)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TraceRouteScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/TraceRouteScene.cpp"
+                  timestampString = "422476176.773776"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "6">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to TraceRouteScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/TraceRouteScene.cpp"
+                  timestampString = "422476176.774066"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "10">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -36,7 +36,7 @@ THE SOFTWARE.
 #include "CCSAXParser.h"
 #include "CCDictionary.h"
 #include "support/zip_support/unzip.h"
-
+#include <iostream>
 #define MAX_PATH 260
 
 USING_NS_CC;
@@ -245,6 +245,11 @@ void CCFileUtils::setResourcePath(const char *pszResourcePath)
 
 std::string& CCFileUtils::removeSuffixFromFile(std::string& cpath )
 {
+    std::string tmpstring = cpath;
+    tmpstring = tmpstring+"\n";
+   // printf(tmpstring.c_str());
+    std::cout << tmpstring;
+    std::cerr << tmpstring;
     NSString *ret = nil;
     NSString *path = [NSString stringWithUTF8String:cpath.c_str()];
 

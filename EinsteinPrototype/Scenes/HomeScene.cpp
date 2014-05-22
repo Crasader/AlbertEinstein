@@ -48,7 +48,7 @@ void HomeScene::InitHome()
     
 	createMenuItem(options, ESTACIOMENTOS, "estacionamento_new.png", "estacionamento_new_hover.png",winsize.width/2 - 35, 90, menu_selector(HomeScene::FixedMenuCallBack), this);
     
-    createMenuItem(options, INFORMACOES, "informacoes_new.png", "informacoes_new_hover.png",winsize.width - 20 - 70, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
+    createMenuItem(options, INFORMACOES, "informacoes_new_badge.png", "informacoes_new_hover.png",winsize.width - 20 - 70, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
 
     options->setAnchorPoint(ccp(0, 0));
 	options->setPosition(ccp(0, 0)); 

@@ -176,6 +176,8 @@ void ParkingScene::insertItemListView( int tagValue, const char* datatext)
     data.text = strdup(datatext);
     data.hasChild =  false;
     data.keyParent = 0;
+    data.img = NULL;
+    data.featured = false;
     
     me->plistMenuCurrent.push_back(data);
 }

@@ -719,6 +719,8 @@
 		ACE325D1191712ED00CBCE20 /* value.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE325C2191712ED00CBCE20 /* value.c */; };
 		ACE325D51917167A00CBCE20 /* gason.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE325D31917167A00CBCE20 /* gason.cpp */; };
 		ACE325D8191728E400CBCE20 /* News.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE325D7191728E400CBCE20 /* News.cpp */; };
+		ACEAAAF0192D1393002EBC0C /* informacoes_new_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEAAAEE192D1393002EBC0C /* informacoes_new_badge.png */; };
+		ACEAAAF1192D1394002EBC0C /* informacoes_new_hover_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEAAAEF192D1393002EBC0C /* informacoes_new_hover_badge.png */; };
 		ACEF55B8180844E600CFBB7E /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B4180844E600CFBB7E /* AppController.mm */; };
 		ACEF55B9180844E600CFBB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B5180844E600CFBB7E /* main.m */; };
 		ACEF55BA180844E600CFBB7E /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B7180844E600CFBB7E /* RootViewController.mm */; };
@@ -1708,6 +1710,8 @@
 		ACE325D41917167A00CBCE20 /* gason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gason.h; sourceTree = "<group>"; };
 		ACE325D61917288200CBCE20 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		ACE325D7191728E400CBCE20 /* News.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = News.cpp; sourceTree = "<group>"; };
+		ACEAAAEE192D1393002EBC0C /* informacoes_new_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = informacoes_new_badge.png; sourceTree = "<group>"; };
+		ACEAAAEF192D1393002EBC0C /* informacoes_new_hover_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = informacoes_new_hover_badge.png; sourceTree = "<group>"; };
 		ACEF55A0180743F900CFBB7E /* CCFinishDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFinishDelegate.h; sourceTree = "<group>"; };
 		ACEF55B3180844E600CFBB7E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		ACEF55B4180844E600CFBB7E /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
@@ -1741,6 +1745,8 @@
 		5DE3401116CE74EC00C108ED /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				ACEAAAEE192D1393002EBC0C /* informacoes_new_badge.png */,
+				ACEAAAEF192D1393002EBC0C /* informacoes_new_hover_badge.png */,
 				8A86067B17B404B1006260DE /* bt_proxMapa.png */,
 				AC0257431925B64B00BC5D90 /* bt_saibamais.png */,
 				ACB57E06190950C6001C7C8B /* bt_proxMapa_old.png */,
@@ -3377,6 +3383,7 @@
 				5DE3402116CE751700C108ED /* ComoChegar.png in Resources */,
 				5DE3402216CE751700C108ED /* EspecialidadesMedicas_D.png in Resources */,
 				5DE3402316CE751700C108ED /* EspecialidadesMedicas_H.png in Resources */,
+				ACEAAAF1192D1394002EBC0C /* informacoes_new_hover_badge.png in Resources */,
 				5DE3402416CE751700C108ED /* Estacionamento_H.png in Resources */,
 				5DE3402516CE751700C108ED /* Estacionamento.png in Resources */,
 				5DE3402616CE751700C108ED /* Informacoes_H.png in Resources */,
@@ -3694,6 +3701,7 @@
 				787B9CFF170A116D00A57D25 /* selecao.png in Resources */,
 				787B9D00170A116D00A57D25 /* selecao3.png in Resources */,
 				787B9D01170A116D00A57D25 /* tit_banheiros.png in Resources */,
+				ACEAAAF0192D1393002EBC0C /* informacoes_new_badge.png in Resources */,
 				787B9D02170A116D00A57D25 /* tit_comochegar.png in Resources */,
 				787B9D03170A116D00A57D25 /* tit_especialidadesmedicas.png in Resources */,
 				787B9D04170A116D00A57D25 /* tit_Estacionamento.png in Resources */,

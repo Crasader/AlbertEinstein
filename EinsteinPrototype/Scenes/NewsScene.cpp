@@ -318,7 +318,7 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
     int textFontSize =12;
     CCSprite * img = getImageFromURL(item->imagem.c_str());
     
-    if (img != NULL) {
+    if (img->boundingBox().size.width > 0 && img->boundingBox().size.height > 0) {
         img->setAnchorPoint(ccp(0,0));
         img->setScale(0.35);
         img->setPosition(ccp(10,margem));

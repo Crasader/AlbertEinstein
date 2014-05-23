@@ -22,11 +22,19 @@
 #include "MinhasRotasScenes.h"
 #include "LayerWebView.h"
 #include "NewsScene.h"
- 
+#include "FileFunctions.h"
+#include "CCHttpRequest.h"
+
+
 class HomeScene : public IFixedMenu{
+    
+    void onHttpRequestCompleted(CCObject *pSender, void *data);
+
 public:
     HomeScene();
     void InitHome();
+    void CreateMenu();
+    void loadInfo();
     ~HomeScene();
 };
 

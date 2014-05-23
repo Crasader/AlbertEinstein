@@ -94,7 +94,7 @@
                   symbolName = "BathRoomScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/BathRoomScene.cpp"
-                  timestampString = "422476176.74246"
+                  timestampString = "422548625.710396"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -108,7 +108,7 @@
                   symbolName = "non-virtual thunk to BathRoomScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/BathRoomScene.cpp"
-                  timestampString = "422476176.742936"
+                  timestampString = "422548625.710926"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -172,7 +172,7 @@
                   symbolName = "MinhasRotasScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MinhasRotasScenes.cpp"
-                  timestampString = "422476176.765459"
+                  timestampString = "422548625.76466"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
@@ -186,7 +186,7 @@
                   symbolName = "non-virtual thunk to MinhasRotasScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/MinhasRotasScenes.cpp"
-                  timestampString = "422476176.765763"
+                  timestampString = "422548625.765221"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
@@ -218,7 +218,7 @@
                   symbolName = "SearchScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/SearchScene.cpp"
-                  timestampString = "422476176.766081"
+                  timestampString = "422548625.767698"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -232,7 +232,7 @@
                   symbolName = "non-virtual thunk to SearchScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/SearchScene.cpp"
-                  timestampString = "422476176.766378"
+                  timestampString = "422548625.768055"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -374,7 +374,7 @@
                   symbolName = "IFixedMenu::BuildFavorites(bool, int)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "422476176.767622"
+                  timestampString = "422548625.769441"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "819"
@@ -388,7 +388,7 @@
                   symbolName = "IFixedMenu::insertItemListView(int, char const*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "422476176.767918"
+                  timestampString = "422548625.769736"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "819"
@@ -402,7 +402,7 @@
                   symbolName = "IFixedMenu::BuildFloorState(int)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "422476176.76821"
+                  timestampString = "422548625.770034"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "819"
@@ -416,7 +416,7 @@
                   symbolName = "IFixedMenu::SearchItem(char const*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "422476174.397045"
+                  timestampString = "422548623.241688"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "819"
@@ -430,7 +430,7 @@
                   symbolName = "IFixedMenu::BuildWayPointState(int, bool, int)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "422476174.397326"
+                  timestampString = "422548623.241966"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "819"
@@ -444,7 +444,7 @@
                   symbolName = "IFixedMenu::SearchItem(char const*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/Enumerations.cpp"
-                  timestampString = "422476176.768504"
+                  timestampString = "422548625.770329"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "819"
@@ -508,7 +508,7 @@
                   symbolName = "HowToGoScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HowToGoScene.cpp"
-                  timestampString = "422476176.769415"
+                  timestampString = "422548625.772659"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "167"
@@ -522,7 +522,7 @@
                   symbolName = "non-virtual thunk to HowToGoScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HowToGoScene.cpp"
-                  timestampString = "422476176.769711"
+                  timestampString = "422548625.77495"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "167"
@@ -530,22 +530,6 @@
                   offsetFromSymbolStart = "6">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EinsteinPrototype/Scenes/NewsScene.cpp"
-            timestampString = "422475697.913217"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
-            landmarkName = "NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolData *data)"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -586,7 +570,7 @@
                   symbolName = "TraceRouteScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-                  timestampString = "422476176.773776"
+                  timestampString = "422548625.779117"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "221"
@@ -600,12 +584,74 @@
                   symbolName = "non-virtual thunk to TraceRouteScene::CCListView_cellForRow(cocos2d::extension::CCListView*, cocos2d::extension::_CCListViewProtrolData*)"
                   moduleName = "EinsteinMaps"
                   urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/TraceRouteScene.cpp"
-                  timestampString = "422476176.774066"
+                  timestampString = "422548625.779415"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "221"
                   endingLineNumber = "221"
                   offsetFromSymbolStart = "10">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/HomeScene.cpp"
+            timestampString = "422551126.482297"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "HomeScene::InitHome()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EinsteinPrototype/Scenes/HomeScene.cpp"
+            timestampString = "422551126.482297"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "HomeScene::onHttpRequestCompleted(cocos2d::CCObject *pSender, void *data)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeScene::onHttpRequestCompleted(cocos2d::CCObject*, void*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HomeScene.cpp"
+                  timestampString = "422548623.280308"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeScene::onHttpRequestCompleted(cocos2d::CCObject*, void*)"
+                  moduleName = "EinsteinMaps"
+                  urlString = "file:///Users/camargo/fontes/albert/EinsteinPrototype/Scenes/HomeScene.cpp"
+                  timestampString = "422548625.784116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "62">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -54,17 +54,18 @@ NewsScene::NewsScene()
  
     
     std::stringstream ss;
+    std::stringstream ss2;
     ss << today->tm_mday<<"-" << today->tm_mon<<"-" << today->tm_year+1900;
+    ss2 << today->tm_mday<<"-" << today->tm_mon+1<<"-" << today->tm_year+1900;
+    //   ss << "28"<<"-" << "05"<<"-" << "2014";
     
     // Create a new dictionary
-    CCDictionary * myDictionary = new CCDictionary();
-    CCDictionary * myData = new CCDictionary();
-    
     // Add the data you would like to store
     
     
     string url;
-    
+    FileFunctions * tmpFile = new FileFunctions;
+    tmpFile->writeDay(ss2.str());
     url = url +"http://clientes.farofastudios.com.br/Einstein/admin/v2/json.php?data=" + ss.str();
     string postData = "key=val";
     

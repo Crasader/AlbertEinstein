@@ -20,6 +20,7 @@
 #include "gason.h"
 #include "News.h"
 #include "NewsDetailScene.h"
+#include "FileFunctions.h"
 
 using namespace cocos2d;
 using namespace cocos2d::extension;

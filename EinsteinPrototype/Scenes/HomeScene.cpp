@@ -8,6 +8,7 @@
 
 #include "HomeScene.h"
 #import "CCEGLView.h"
+#include "CCAction.h"
 
  
 HomeScene::HomeScene()
@@ -16,13 +17,116 @@ HomeScene::HomeScene()
     InitHome();
 }
 
+bool showNotification = false;
+
+void HomeScene::CreateMenu()
+{
+    CCSize winsize = CCDirector::sharedDirector()->getWinSize();
+    CCMenu* options = CCMenu::create();
+    
+    createMenuItem(options, LUGARES, "especialidades_new.png","especialidade_new_hover.png", 40, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
+    
+	createMenuItem(options, SERVICOS, "servicos_new.png", "servicos_new_hover.png",winsize.width - 20 - 90, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
+
+    createMenuItem(options, BANHEIROS, "sanitarios_new.png", "sanitarios_new_hover.png", 20, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
+    
+	createMenuItem(options, ESTACIOMENTOS, "estacionamento_new.png","estacionamento_new_hover.png",winsize.width/2 - 35, 90, menu_selector(HomeScene::FixedMenuCallBack), this);
+    
+    if (showNotification) {
+        createMenuItem(options, INFORMACOES, "informacoes_new_badge.png", "informacoes_new_hover_badge.png",winsize.width - 20 - 70, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
+    }
+    else
+    {
+        createMenuItem(options, INFORMACOES, "informacoes_new.png", "informacoes_new_hover.png",winsize.width - 20 - 70, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
+        
+    }
+    
+    options->setAnchorPoint(ccp(0, 0));
+	options->setPosition(ccp(0, 0));
+    CCNode * homeConteiner = this->getChildByTag(1009);
+    CCNode * optionsOld = homeConteiner->getChildByTag(1010);
+    if (optionsOld != NULL) {
+        optionsOld->removeFromParentAndCleanup(true);
+    }
+    homeConteiner->addChild(options,101,1010);
+    
+    CCDelayTime *delayAction = CCDelayTime::actionWithDuration(30.0f);
+    // perform the selector call
+    CCCallFunc *callSelectorAction = CCCallFunc::actionWithTarget(this,
+                                                                  callfunc_selector(HomeScene::loadInfo));
+    // run the action
+    this->runAction(CCSequence::actions(delayAction,
+                                        callSelectorAction,
+                                        NULL));
+    
+    
+    
+}
+
+void HomeScene::loadInfo()
+{
+    CCHttpRequest *requestor = CCHttpRequest::sharedHttpRequest();
+    
+    FileFunctions * tmpFile = new FileFunctions;
+    string sufix = tmpFile->loadDay();
+    
+    string url;
+    std::stringstream ss;
+    ss << sufix;
+    
+    url = url +"http://clientes.farofastudios.com.br/Einstein/admin/v2/json.php?data=" + ss.str();
+    string postData = "key=val";
+    
+    requestor->addGetTask(url, this, callfuncND_selector(HomeScene::onHttpRequestCompleted));
+
+}
+
+void HomeScene::onHttpRequestCompleted(cocos2d::CCObject *pSender, void *data)
+{
+    HttpResponsePacket *response = (HttpResponsePacket *)data;
+    
+    if (response->request->reqType == cocos2d::extension::kHttpRequestGet) {
+        if (response->succeed) {
+            CCLog("Get Request Completed!");
+            CCLog("Content: %s", response->responseData.c_str());
+            if (response->responseData.length() >100)
+            {
+                showNotification = true;
+                CreateMenu();
+            }
+            else
+                showNotification = false;
+           // parseResult((char*)response->responseData.c_str());
+        } else {
+            CCLog("Get Error: %s", response->responseData.c_str());
+            
+        }
+    } else if (response->request->reqType == cocos2d::extension::kHttpRequestPost) {
+        if (response->succeed) {
+            CCLog("Post Request Completed!");
+            CCLog("Content: %s", response->responseData.c_str());
+        } else {
+            CCLog("Post Error: %s", response->responseData.c_str());
+        }
+    } else if (response->request->reqType == cocos2d::extension::kHttpRequestDownloadFile) {
+        if (response->succeed) {
+            CCLog("Download Request Completed! Downloaded:");
+            
+  
+//            std::vector<std::string>::iterator iter;
+//            for (iter = response->request->files.begin(); iter != response->request->files.end(); ++iter) {
+//                std::string url = *iter;
+//                CCLog("%s", url.c_str());
+//            }
+        } else {
+            CCLog("Download Error: %s", response->responseData.c_str());
+        }
+    }
+}
+
 void HomeScene::InitHome()
 {
     IFixedMenu::initFixedMenu(INICIO);
-    CCMenu* options = CCMenu::create();
-    
-    
-    
 	CCSprite* logo ;
 	   
 	CCSize winsize = CCDirector::sharedDirector()->getWinSize();
@@ -38,21 +142,10 @@ void HomeScene::InitHome()
     //Cria os menus que ficam no meio da tela ( como chegar, banheiros, especialidades e etc) 
    // createMenuItem(options, COMO_CHEGAR, "comochegar_new.png", "comochegar_new_hover.png", 20, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
     
-	createMenuItem(options, LUGARES, "especialidades_new.png", "especialidade_new_hover.png", 40, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
-    
-	createMenuItem(options, SERVICOS, "servicos_new.png", "servicos_new_hover.png",winsize.width - 20 - 90, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
   
 //   createMenuItem(options, NOTICIAS, "icon_news.png", "icon_news.png",winsize.width - 20 - 70, winsize.height - 186, menu_selector(HomeScene::FixedMenuCallBack), this);
 	
-	createMenuItem(options, BANHEIROS, "sanitarios_new.png", "sanitarios_new_hover.png", 20, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
-    
-	createMenuItem(options, ESTACIOMENTOS, "estacionamento_new.png", "estacionamento_new_hover.png",winsize.width/2 - 35, 90, menu_selector(HomeScene::FixedMenuCallBack), this);
-    
-    createMenuItem(options, INFORMACOES, "informacoes_new_badge.png", "informacoes_new_hover.png",winsize.width - 20 - 70, 170, menu_selector(HomeScene::FixedMenuCallBack), this);
-
-    options->setAnchorPoint(ccp(0, 0));
-	options->setPosition(ccp(0, 0)); 
-    
+	   
     CCSprite* welcome = CCSprite::create("BemVindo.png");
 	welcome->setAnchorPoint(ccp(0, 0));
 	welcome->setPosition(ccp(0, welcome->boundingBox().size.height -10));
@@ -60,8 +153,9 @@ void HomeScene::InitHome()
     CCLayerColor* container = CCLayerColor::create(ccc4(255,255,255,255));
     container->addChild(welcome);
 	container->addChild(logo);
-    container->addChild(options);
-    this->addChild(container);
+    this->addChild(container, 100, 1009);
+    CreateMenu();
+    loadInfo();
 }
 
 /*******************************************************************************************************************************/
@@ -157,7 +251,10 @@ void IFixedMenu::FixedMenuCallBack(CCObject *sender)
             newNode =  new HomeScene();
             break;
         case INFORMACOES://noticias
+        {
+            showNotification = false;
             newNode = (CCLayer*)new NewsScene();
+        }
             break;
         default:
             newNode = new HowToGoScene((HomeMenuState)((CCNode*)sender)->getTag());

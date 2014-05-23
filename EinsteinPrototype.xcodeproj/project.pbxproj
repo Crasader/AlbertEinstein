@@ -721,6 +721,7 @@
 		ACE325D8191728E400CBCE20 /* News.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE325D7191728E400CBCE20 /* News.cpp */; };
 		ACEAAAF0192D1393002EBC0C /* informacoes_new_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEAAAEE192D1393002EBC0C /* informacoes_new_badge.png */; };
 		ACEAAAF1192D1394002EBC0C /* informacoes_new_hover_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEAAAEF192D1393002EBC0C /* informacoes_new_hover_badge.png */; };
+		ACEAAAF8192E8B42002EBC0C /* FileFunctions.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEAAAF6192E8B42002EBC0C /* FileFunctions.mm */; };
 		ACEF55B8180844E600CFBB7E /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B4180844E600CFBB7E /* AppController.mm */; };
 		ACEF55B9180844E600CFBB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B5180844E600CFBB7E /* main.m */; };
 		ACEF55BA180844E600CFBB7E /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEF55B7180844E600CFBB7E /* RootViewController.mm */; };
@@ -1712,6 +1713,8 @@
 		ACE325D7191728E400CBCE20 /* News.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = News.cpp; sourceTree = "<group>"; };
 		ACEAAAEE192D1393002EBC0C /* informacoes_new_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = informacoes_new_badge.png; sourceTree = "<group>"; };
 		ACEAAAEF192D1393002EBC0C /* informacoes_new_hover_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = informacoes_new_hover_badge.png; sourceTree = "<group>"; };
+		ACEAAAF6192E8B42002EBC0C /* FileFunctions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileFunctions.mm; sourceTree = "<group>"; };
+		ACEAAAF7192E8B42002EBC0C /* FileFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFunctions.h; sourceTree = "<group>"; };
 		ACEF55A0180743F900CFBB7E /* CCFinishDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFinishDelegate.h; sourceTree = "<group>"; };
 		ACEF55B3180844E600CFBB7E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		ACEF55B4180844E600CFBB7E /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
@@ -2031,6 +2034,8 @@
 				A5AD987F1725D19000994FDD /* AnimatedSprite.h */,
 				A5D66A0D1721D8F900DF2494 /* PListFunctions.h */,
 				A5D66A0E1721D8F900DF2494 /* PListFunctions.mm */,
+				ACEAAAF6192E8B42002EBC0C /* FileFunctions.mm */,
+				ACEAAAF7192E8B42002EBC0C /* FileFunctions.h */,
 				A525BE4816E0D46600EF454A /* 3D */,
 				787EAFDD15EE687800AED252 /* AStar */,
 				787C1F9B1623229400295906 /* ChangeAnchorPoint.cpp */,
@@ -3921,6 +3926,7 @@
 				788160B215DBE99B00D64777 /* CCControlUtils.cpp in Sources */,
 				788160B515DBE99B00D64777 /* CCInvocation.cpp in Sources */,
 				788160B815DBE99B00D64777 /* CCMenuPassive.cpp in Sources */,
+				ACEAAAF8192E8B42002EBC0C /* FileFunctions.mm in Sources */,
 				788160BB15DBE99B00D64777 /* CCScale9Sprite.cpp in Sources */,
 				788160BE15DBE99B00D64777 /* CCSpacer.cpp in Sources */,
 				788160C315DBE99B00D64777 /* CCListView.cpp in Sources */,

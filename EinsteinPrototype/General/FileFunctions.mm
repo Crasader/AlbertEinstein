@@ -22,6 +22,12 @@ std::string FileFunctions::loadDay()
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString * theStringDate = [defaults objectForKey:@"noticias"];
     NSLog(@"%@:%@",@"Data lida",theStringDate);
-    return [theStringDate cStringUsingEncoding:NSUTF8StringEncoding];
+    std::string result = "";
+    
+    if (theStringDate != nil) {
+        result = [theStringDate cStringUsingEncoding:NSUTF8StringEncoding];
+    }
+    
+    return result;
    
 }

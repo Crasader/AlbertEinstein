@@ -55,8 +55,8 @@ NewsScene::NewsScene()
     
     std::stringstream ss;
     std::stringstream ss2;
-    ss << today->tm_mday<<"-" << today->tm_mon<<"-" << today->tm_year+1900;
-    ss2 << today->tm_mday<<"-" << today->tm_mon+1<<"-" << today->tm_year+1900;
+    ss << today->tm_mday<<"-" << today->tm_mon<<"-" << today->tm_year+1900<<"&hora="<<today->tm_hour<<"-"<<today->tm_min;
+    ss2 << today->tm_mday<<"-" << today->tm_mon+1<<"-" << today->tm_year+1900<<"&hora="<<today->tm_hour<<"-"<<today->tm_min;
     //   ss << "28"<<"-" << "05"<<"-" << "2014";
     
     // Create a new dictionary

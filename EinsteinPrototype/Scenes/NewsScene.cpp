@@ -319,10 +319,10 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
     int textFontSize =12;
     CCSprite * img = getImageFromURL(item->imagem.c_str());
     
-    if (img != NULL) {
+    if (img->boundingBox().size.width > 0 && img->boundingBox().size.height > 0) {
         img->setAnchorPoint(ccp(0,0));
         img->setScale(0.35);
-        img->setPosition(ccp(10,margem));
+        img->setPosition(ccp(10,margem-4));
         cell->addChild(img);
         recuo = 130;
     }
@@ -335,14 +335,14 @@ void NewsScene::CCListView_cellForRow(CCListView *listView, CCListViewProtrolDat
 //    else
 //         labelTitle = CCLabelTTF::create(datatext, "Lucida Grande", size);
     
-    labelTitle->setPosition(ccp(10, cell->getContentSize().height-titleFontSize*titleLines-3));
+    labelTitle->setPosition(ccp(10, cell->getContentSize().height-titleFontSize*titleLines-7));
     labelTitle->setAnchorPoint(ccp(0,0));
     labelTitle->setColor(ccc3(80, 80, 80));
     cell->addChild(labelTitle);
     
     CCLabelTTF *labelDesc;
 
-    labelDesc = CCLabelTTF::criar(item->texto.c_str(), CCSizeMake(cell->getContentSize().width-recuo-margem, textFontSize*textLines), kCCTextAlignmentLeft, "Lucida Grande", textFontSize);
+    labelDesc = CCLabelTTF::criar(item->texto.c_str(), CCSizeMake(cell->getContentSize().width-recuo-margem, textFontSize*textLines-4), kCCTextAlignmentLeft, "Lucida Grande", textFontSize);
     
     labelDesc->setPosition(ccp(recuo, margem));
     labelDesc->setAnchorPoint(ccp(0,0));
